@@ -1,0 +1,65 @@
+{
+  "name": "@sxzz/eslint-config",
+  "version": "3.0.0",
+  "packageManager": "pnpm@7.27.0",
+  "description": "ESLint config for @sxzz.",
+  "type": "module",
+  "license": "MIT",
+  "homepage": "https://github.com/sxzz/eslint-config#readme",
+  "bugs": {
+    "url": "https://github.com/sxzz/eslint-config/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sxzz/eslint-config.git"
+  },
+  "files": [
+    "index.js",
+    "src"
+  ],
+  "main": "./index.js",
+  "module": "./index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    "types": "./index.d.ts",
+    "require": "./index.js",
+    "import": "./index.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "pnpm run lint --fix",
+    "release": "bumpp && pnpm publish"
+  },
+  "peerDependencies": {
+    "eslint": "^8.0.0"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.52.0",
+    "@typescript-eslint/parser": "^5.52.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsonc": "^2.6.0",
+    "eslint-plugin-markdown": "^3.0.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-unicorn": "^45.0.2",
+    "eslint-plugin-yml": "^1.5.0",
+    "globals": "^13.20.0",
+    "jsonc-eslint-parser": "^2.1.0",
+    "prettier": "^2.8.4",
+    "yaml-eslint-parser": "^1.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.14.2",
+    "bumpp": "^9.0.0",
+    "eslint": "^8.35.0",
+    "eslint-define-config": "^1.15.0",
+    "typescript": "^5.0.0-beta"
+  },
+  "engines": {
+    "node": ">=14.19.0"
+  }
+}
