@@ -1,11 +1,12 @@
 import globals from 'globals'
+import jsConfig from '@eslint/js'
 import importPlugin from 'eslint-plugin-import'
 import unicornPlugin from 'eslint-plugin-unicorn'
 import { GLOB_EXCLUDE } from './shared.js'
 
 /** @type {import('eslint-define-config').FlatESLintConfig[]} */
 export const js = [
-  'eslint:recommended',
+  jsConfig.configs.recommended,
   {
     languageOptions: {
       globals: {
@@ -76,6 +77,8 @@ export const js = [
           allowTaggedTemplates: true,
         },
       ],
+      'no-lonely-if': 'error',
+      'prefer-exponentiation-operator': 'error',
     },
   },
   {
@@ -116,7 +119,7 @@ export const imports = [
     },
     settings: {
       'import/resolver': {
-        node: { extensions: ['.js', '.mjs', '.ts', '.d.ts'] },
+        node: { extensions: ['.js', '.mjs', '.ts', '.mts', '.d.ts'] },
       },
     },
     rules: {

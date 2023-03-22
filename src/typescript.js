@@ -3,7 +3,7 @@ import tsPlugin from '@typescript-eslint/eslint-plugin'
 import { GLOB_EXCLUDE, GLOB_TS, GLOB_TSX } from './shared.js'
 
 /** @type {import('eslint-define-config').FlatESLintConfig[]} */
-export const ts = [
+export const typescript = [
   {
     files: [GLOB_TS, GLOB_TSX],
     ignores: GLOB_EXCLUDE,
@@ -27,7 +27,7 @@ export const ts = [
       '@typescript-eslint/ban-types': 'off',
       '@typescript-eslint/consistent-type-imports': [
         'error',
-        { fixStyle: 'inline-type-imports', disallowTypeAnnotations: false },
+        { fixStyle: 'separate-type-imports', disallowTypeAnnotations: false },
       ],
       '@typescript-eslint/explicit-module-boundary-types': 'off',
       '@typescript-eslint/no-explicit-any': 'off',
@@ -44,8 +44,16 @@ export const ts = [
   },
   {
     files: ['**/*.{test,spec}.ts?(x)'],
+    ignores: GLOB_EXCLUDE,
     rules: {
       'no-unused-expressions': 'off',
+    },
+  },
+  {
+    files: ['**/*.js', '**/*.cjs'],
+    ignores: GLOB_EXCLUDE,
+    rules: {
+      '@typescript-eslint/no-var-requires': 'off',
     },
   },
 ]

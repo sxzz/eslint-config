@@ -2,15 +2,16 @@ import { eslintComments } from './eslint-comments.js'
 import { imports, js, jsx, unicorn } from './js.js'
 import { jsonc, pkgOrder } from './jsonc.js'
 import { markdown } from './markdown.js'
-import { ts } from './ts.js'
+import { prettier } from './prettier.js'
+import { typescript } from './typescript.js'
+import { vue } from './vue.js'
 import { yml } from './yml.js'
 
 /** @type {import('eslint-define-config').FlatESLintConfig[]} */
-export const presetBasic = [
-  'eslint:recommended',
+export const basic = [
   ...js,
   ...jsx,
-  ...ts,
+  ...typescript,
   ...imports,
   ...unicorn,
   ...jsonc,
@@ -19,3 +20,6 @@ export const presetBasic = [
   ...markdown,
   ...eslintComments,
 ]
+
+/** @type {import('eslint-define-config').FlatESLintConfig[]} */
+export const all = [...basic, ...vue, ...prettier]
