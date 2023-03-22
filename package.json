@@ -26,7 +26,8 @@
     "import": "./index.js"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "tag": "beta"
   },
   "scripts": {
     "lint": "eslint .",
