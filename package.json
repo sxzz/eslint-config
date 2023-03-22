@@ -37,27 +37,27 @@
     "eslint": "^8.0.0"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.52.0",
-    "@typescript-eslint/parser": "^5.52.0",
-    "eslint-config-prettier": "^8.6.0",
+    "@typescript-eslint/eslint-plugin": "^5.56.0",
+    "@typescript-eslint/parser": "^5.56.0",
+    "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-jsonc": "^2.6.0",
+    "eslint-plugin-jsonc": "^2.7.0",
     "eslint-plugin-markdown": "^3.0.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-unicorn": "^45.0.2",
+    "eslint-plugin-unicorn": "^46.0.0",
     "eslint-plugin-yml": "^1.5.0",
     "globals": "^13.20.0",
-    "jsonc-eslint-parser": "^2.1.0",
-    "prettier": "^2.8.4",
-    "yaml-eslint-parser": "^1.1.0"
+    "jsonc-eslint-parser": "^2.2.0",
+    "prettier": "^2.8.6",
+    "yaml-eslint-parser": "^1.2.0"
   },
   "devDependencies": {
-    "@types/node": "^18.14.2",
+    "@types/node": "^18.15.5",
     "bumpp": "^9.0.0",
-    "eslint": "^8.35.0",
-    "eslint-define-config": "^1.15.0",
-    "typescript": "^5.0.0-beta"
+    "eslint": "^8.36.0",
+    "eslint-define-config": "^1.17.0",
+    "typescript": "^5.0.2"
   },
   "engines": {
     "node": ">=14.19.0"
