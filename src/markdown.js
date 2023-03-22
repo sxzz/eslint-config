@@ -1,11 +1,10 @@
 import markdownPlugin from 'eslint-plugin-markdown'
-import { GLOB_EXCLUDE, GLOB_MARKDOWN } from './shared.js'
+import { GLOB_MARKDOWN } from './shared.js'
 
 /** @type {import('eslint-define-config').FlatESLintConfig[]} */
 export const markdown = [
   {
     files: [GLOB_MARKDOWN],
-    ignores: GLOB_EXCLUDE,
     plugins: {
       markdown: markdownPlugin,
     },

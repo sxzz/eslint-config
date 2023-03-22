@@ -1,7 +1,6 @@
 import { getPackageInfoSync } from 'local-pkg'
 import vueParser from 'vue-eslint-parser'
 import vuePlugin from 'eslint-plugin-vue'
-import { GLOB_EXCLUDE } from './shared.js'
 import { typescript } from './typescript.js'
 
 export function getVueVersion() {
@@ -77,7 +76,6 @@ const vue2Rules = {
 export const vue = [
   {
     files: ['**/*.vue'],
-    ignores: GLOB_EXCLUDE,
     plugins: {
       vue: vuePlugin,
       ...typescript[0].plugins,

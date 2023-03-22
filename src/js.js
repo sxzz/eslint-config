@@ -2,7 +2,6 @@ import globals from 'globals'
 import jsConfig from '@eslint/js'
 import importPlugin from 'eslint-plugin-import'
 import unicornPlugin from 'eslint-plugin-unicorn'
-import { GLOB_EXCLUDE } from './shared.js'
 
 /** @type {import('eslint-define-config').FlatESLintConfig[]} */
 export const js = [
@@ -83,7 +82,6 @@ export const js = [
   },
   {
     files: ['**/scripts/*', '**/cli.*'],
-    ignores: GLOB_EXCLUDE,
     rules: {
       'no-console': 'off',
     },
@@ -100,7 +98,6 @@ export const js = [
 export const jsx = [
   {
     files: ['**/*.jsx'],
-    ignores: GLOB_EXCLUDE,
     languageOptions: {
       parserOptions: {
         ecmaFeatures: {
