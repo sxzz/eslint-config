@@ -1,5 +1,6 @@
 import markdownPlugin from 'eslint-plugin-markdown'
-import { GLOB_MARKDOWN } from './shared.js'
+import tsPlugin from '@typescript-eslint/eslint-plugin'
+import { GLOB_MARKDOWN, GLOB_SRC, GLOB_VUE } from './shared.js'
 
 /** @type {import('eslint-define-config').FlatESLintConfigItem[]} */
 export const markdown = [
@@ -11,13 +12,16 @@ export const markdown = [
     processor: 'markdown/markdown',
   },
   {
-    files: ['**/*.md/*'],
+    files: [`**/*.md/${GLOB_SRC}`, `**/*.md/${GLOB_VUE}`],
     languageOptions: {
       parserOptions: {
         ecmaFeatures: {
           impliedStrict: true,
         },
       },
+    },
+    plugins: {
+      '@typescript-eslint': tsPlugin,
     },
     rules: {
       ...markdownPlugin.configs.recommended.overrides[1].rules,

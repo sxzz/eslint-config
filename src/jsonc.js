@@ -5,7 +5,7 @@ import { GLOB_JSON, GLOB_JSON5, GLOB_JSONC } from './shared.js'
 /** @type {import('eslint-define-config').FlatESLintConfigItem[]} */
 export const jsonc = [
   {
-    files: [GLOB_JSON, GLOB_JSON5, GLOB_JSONC, '**/*rc'],
+    files: [GLOB_JSON, GLOB_JSON5, GLOB_JSONC],
     plugins: {
       jsonc: jsoncPlugin,
     },

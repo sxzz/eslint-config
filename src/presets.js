@@ -16,10 +16,8 @@ import { yml } from './yml.js'
 
 /** @type {FlatESLintConfigItem[]} */
 export const basic = [
-  {
-    // @ts-ignore
-    ignores: GLOB_EXCLUDE,
-  },
+  // @ts-ignore
+  { ignores: GLOB_EXCLUDE },
   ...js,
   ...jsx,
   ...typescript,
@@ -28,31 +26,38 @@ export const basic = [
   ...jsonc,
   ...pkgOrder,
   ...yml,
-  ...markdown,
   ...eslintComments,
 ]
 
 /** @type { FlatESLintConfigItem[] } */
-export const all = [...basic, ...vue, ...prettier]
+export const all = [...vue, ...basic, ...prettier]
 
-/** @type {(options: Partial<{
+/** @type {(config?: FlatESLintConfigItem | FlatESLintConfigItem[], enables?: Partial<{
  * vue: boolean
  * prettier: boolean
- * } & FlatESLintConfigItem>) => FlatESLintConfigItem[]} */
-export function sxzz({
-  vue: enableVue = true,
-  prettier: enablePrettier = true,
-  ...config
-} = {}) {
-  const configs = [...basic]
+ * markdown: boolean
+ * }>) => FlatESLintConfigItem[]} */
+export function sxzz(
+  config = [],
+  {
+    vue: enableVue = true,
+    prettier: enablePrettier = true,
+    markdown: enableMarkdown = true,
+  } = {}
+) {
+  const configs = []
+  configs.push(...basic)
   if (enableVue !== false) {
     configs.push(...vue)
+  }
+  if (enableMarkdown !== false) {
+    configs.push(...markdown)
   }
   if (enablePrettier !== false) {
     configs.push(...prettier)
   }
   if (Object.keys(config).length > 0) {
-    configs.push(config)
+    configs.push(...(Array.isArray(config) ? config : [config]))
   }
   return configs
 }

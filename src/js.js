@@ -3,6 +3,8 @@ import jsConfig from '@eslint/js'
 import importPlugin from 'eslint-plugin-import'
 import unicornPlugin from 'eslint-plugin-unicorn'
 
+export { importPlugin, unicornPlugin }
+
 /** @type {import('eslint-define-config').FlatESLintConfigItem[]} */
 export const js = [
   jsConfig.configs.recommended,

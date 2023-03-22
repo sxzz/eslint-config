@@ -3,6 +3,8 @@ import vueParser from 'vue-eslint-parser'
 import vuePlugin from 'eslint-plugin-vue'
 import { typescript } from './typescript.js'
 
+export { vueParser, vuePlugin }
+
 export function getVueVersion() {
   const pkg = getPackageInfoSync('vue', { paths: [process.cwd()] })
   if (

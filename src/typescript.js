@@ -2,6 +2,8 @@ import tsParser from '@typescript-eslint/parser'
 import tsPlugin from '@typescript-eslint/eslint-plugin'
 import { GLOB_TS, GLOB_TSX } from './shared.js'
 
+export { tsParser, tsPlugin }
+
 /** @type {import('eslint-define-config').FlatESLintConfigItem[]} */
 export const typescript = [
   {
