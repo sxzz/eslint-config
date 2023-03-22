@@ -3,7 +3,7 @@ import jsConfig from '@eslint/js'
 import importPlugin from 'eslint-plugin-import'
 import unicornPlugin from 'eslint-plugin-unicorn'
 
-/** @type {import('eslint-define-config').FlatESLintConfig[]} */
+/** @type {import('eslint-define-config').FlatESLintConfigItem[]} */
 export const js = [
   jsConfig.configs.recommended,
   {
@@ -94,7 +94,7 @@ export const js = [
   },
 ]
 
-/** @type {import('eslint-define-config').FlatESLintConfig[]} */
+/** @type {import('eslint-define-config').FlatESLintConfigItem[]} */
 export const jsx = [
   {
     files: ['**/*.jsx'],
@@ -108,7 +108,7 @@ export const jsx = [
   },
 ]
 
-/** @type {import('eslint-define-config').FlatESLintConfig[]} */
+/** @type {import('eslint-define-config').FlatESLintConfigItem[]} */
 export const imports = [
   {
     plugins: {
@@ -144,7 +144,7 @@ export const imports = [
   },
 ]
 
-/** @type {import('eslint-define-config').FlatESLintConfig[]} */
+/** @type {import('eslint-define-config').FlatESLintConfigItem[]} */
 export const unicorn = [
   {
     plugins: {

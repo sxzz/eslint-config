@@ -2,7 +2,7 @@ import jsoncPlugin, { configs } from 'eslint-plugin-jsonc'
 import jsoncParser from 'jsonc-eslint-parser'
 import { GLOB_JSON, GLOB_JSON5, GLOB_JSONC } from './shared.js'
 
-/** @type {import('eslint-define-config').FlatESLintConfig[]} */
+/** @type {import('eslint-define-config').FlatESLintConfigItem[]} */
 export const jsonc = [
   {
     files: [GLOB_JSON, GLOB_JSON5, GLOB_JSONC, '**/*rc'],
@@ -20,7 +20,7 @@ export const jsonc = [
   },
 ]
 
-/** @type {import('eslint-define-config').FlatESLintConfig[]} */
+/** @type {import('eslint-define-config').FlatESLintConfigItem[]} */
 export const pkgOrder = [
   {
     files: ['**/package.json'],

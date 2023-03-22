@@ -15,7 +15,7 @@ export function getVueVersion() {
   return 3
 }
 
-/** @type {import('eslint-define-config').FlatESLintConfig[]} */
+/** @type {import('eslint-define-config').FlatESLintConfigItem[]} */
 export const reactivityTransform = [
   {
     languageOptions: {
@@ -72,7 +72,7 @@ const vue2Rules = {
   ...vueBaseRules,
 }
 
-/** @type {import('eslint-define-config').FlatESLintConfig[]} */
+/** @type {import('eslint-define-config').FlatESLintConfigItem[]} */
 export const vue = [
   {
     files: ['**/*.vue'],

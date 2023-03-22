@@ -1,7 +1,7 @@
 import markdownPlugin from 'eslint-plugin-markdown'
 import { GLOB_MARKDOWN } from './shared.js'
 
-/** @type {import('eslint-define-config').FlatESLintConfig[]} */
+/** @type {import('eslint-define-config').FlatESLintConfigItem[]} */
 export const markdown = [
   {
     files: [GLOB_MARKDOWN],

@@ -1,6 +1,6 @@
 import commentsPlugin from 'eslint-plugin-eslint-comments'
 
-/** @type {import('eslint-define-config').FlatESLintConfig[]} */
+/** @type {import('eslint-define-config').FlatESLintConfigItem[]} */
 export const eslintComments = [
   {
     plugins: {
