@@ -1,7 +1,9 @@
 import { getPackageInfoSync } from 'local-pkg'
 import vueParser from 'vue-eslint-parser'
 import vuePlugin from 'eslint-plugin-vue'
+import tsPlugin from '@typescript-eslint/eslint-plugin'
 import { typescript } from './typescript.js'
+import { GLOB_VUE } from './shared.js'
 
 export { vueParser, vuePlugin }
 
@@ -16,6 +18,7 @@ export function getVueVersion() {
   }
   return 3
 }
+const isVue3 = getVueVersion() === 3
 
 /** @type {import('eslint-define-config').FlatESLintConfigItem[]} */
 export const reactivityTransform = [
@@ -30,6 +33,9 @@ export const reactivityTransform = [
         $toRef: 'readonly',
         $customRef: 'readonly',
       },
+    },
+    plugins: {
+      vue: vuePlugin,
     },
     rules: {
       'vue/no-setup-props-destructure': 'off',
@@ -77,10 +83,10 @@ const vue2Rules = {
 /** @type {import('eslint-define-config').FlatESLintConfigItem[]} */
 export const vue = [
   {
-    files: ['**/*.vue'],
+    files: [GLOB_VUE],
     plugins: {
       vue: vuePlugin,
-      ...typescript[0].plugins,
+      '@typescript-eslint': tsPlugin,
     },
     languageOptions: {
       parser: vueParser,
@@ -95,8 +101,15 @@ export const vue = [
     },
     processor: vuePlugin.processors['.vue'],
     rules: {
-      ...(getVueVersion() === 3 ? vue3Rules : vue2Rules),
       ...typescript[0].rules,
+    },
+  },
+  {
+    plugins: {
+      vue: vuePlugin,
+    },
+    rules: {
+      ...(isVue3 ? vue3Rules : vue2Rules),
     },
   },
   ...reactivityTransform,
