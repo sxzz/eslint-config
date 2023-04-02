@@ -4,10 +4,37 @@ Flat ESLint config for JavaScript, TypeScript, Vue 2, Vue 3, Prettier.
 
 [Legacy Version](https://github.com/sxzz/eslint-config-legacy)
 
+## Features
+
+- Support Vue 2 and 3 out-of-box.
+- Select the required file types as needed.
+- Support JSON(5), YAML, Markdown...
+
 ## Install
 
 ```bash
 npm i @sxzz/eslint-config
+```
+
+## Usage
+
+```js
+// eslint.config.js
+import { all } from '@sxzz/eslint-config'
+
+export default defineFlatConfig(all)
+```
+
+### Custom Config
+
+```js
+import { sxzz } from '@sxzz/eslint-config'
+export default sxzz(
+  [
+    /* your custom config */
+  ],
+  { vue: true, prettier: true, markdown: true }
+)
 ```
 
 ## Sponsors
