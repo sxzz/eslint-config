@@ -2,8 +2,9 @@ import globals from 'globals'
 import jsConfig from '@eslint/js'
 import importPlugin from 'eslint-plugin-import'
 import unicornPlugin from 'eslint-plugin-unicorn'
+import antfuPlugin from 'eslint-plugin-antfu'
 
-export { importPlugin, unicornPlugin }
+export { importPlugin, unicornPlugin, antfuPlugin }
 
 /** @type {import('eslint-define-config').FlatESLintConfigItem[]} */
 export const js = [
@@ -115,6 +116,7 @@ export const imports = [
   {
     plugins: {
       import: importPlugin,
+      antfu: antfuPlugin,
     },
     settings: {
       'import/resolver': {
@@ -142,6 +144,9 @@ export const imports = [
           pathGroupsExcludedImportTypes: ['type'],
         },
       ],
+
+      'antfu/import-dedupe': 'error',
+      'antfu/prefer-inline-type-import': 'error',
     },
   },
 ]

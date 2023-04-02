@@ -42,6 +42,7 @@
     "@typescript-eslint/eslint-plugin": "^5.56.0",
     "@typescript-eslint/parser": "^5.56.0",
     "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-antfu": "^0.38.2",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jsonc": "^2.7.0",
