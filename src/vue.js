@@ -48,6 +48,8 @@ const vueBaseRules = {
   'vue/max-attributes-per-line': 'off',
   'vue/no-v-html': 'off',
   'vue/multi-word-component-names': 'off',
+  'vue/require-prop-types': 'off',
+
   'vue/html-self-closing': [
     'error',
     {
@@ -60,6 +62,28 @@ const vueBaseRules = {
       math: 'always',
     },
   ],
+  'vue/component-tags-order': [
+    'error',
+    { order: ['script', 'template', 'style'] },
+  ],
+  'vue/custom-event-name-casing': ['error', 'camelCase'],
+  'vue/no-useless-v-bind': 'error',
+  'vue/no-unused-refs': 'error',
+  'vue/padding-line-between-blocks': ['error', 'always'],
+
+  'vue/prefer-template': 'error',
+  'vue/eqeqeq': ['error', 'smart'],
+  'vue/no-constant-condition': 'warn',
+  'vue/object-shorthand': [
+    'error',
+    'always',
+    {
+      ignoreConstructors: false,
+      avoidQuotes: true,
+    },
+  ],
+  'vue/no-loss-of-precision': 'error',
+  'vue/no-empty-pattern': 'error',
 }
 
 /** @type {import('eslint-define-config').Rules} */
