@@ -38,32 +38,32 @@
     "eslint": "^8.0.0"
   },
   "dependencies": {
-    "@eslint/js": "^8.36.0",
-    "@typescript-eslint/eslint-plugin": "^5.56.0",
-    "@typescript-eslint/parser": "^5.56.0",
+    "@eslint/js": "^8.38.0",
+    "@typescript-eslint/eslint-plugin": "^5.58.0",
+    "@typescript-eslint/parser": "^5.58.0",
     "eslint-config-prettier": "^8.8.0",
-    "eslint-plugin-antfu": "^0.38.2",
+    "eslint-plugin-antfu": "^0.38.4",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jsonc": "^2.7.0",
     "eslint-plugin-markdown": "^3.0.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-unicorn": "^46.0.0",
-    "eslint-plugin-vue": "^9.9.0",
+    "eslint-plugin-vue": "^9.11.0",
     "eslint-plugin-yml": "^1.5.0",
     "globals": "^13.20.0",
     "jsonc-eslint-parser": "^2.2.0",
     "local-pkg": "^0.4.3",
-    "prettier": "^2.8.6",
-    "vue-eslint-parser": "^9.1.0",
+    "prettier": "^2.8.7",
+    "vue-eslint-parser": "^9.1.1",
     "yaml-eslint-parser": "^1.2.0"
   },
   "devDependencies": {
-    "@types/node": "^18.15.5",
-    "bumpp": "^9.0.0",
-    "eslint": "^8.36.0",
-    "eslint-define-config": "^1.17.0",
-    "typescript": "^5.0.2"
+    "@types/node": "^18.15.11",
+    "bumpp": "^9.1.0",
+    "eslint": "^8.38.0",
+    "eslint-define-config": "^1.18.0",
+    "typescript": "^5.0.4"
   },
   "engines": {
     "node": ">=14.19.0"
