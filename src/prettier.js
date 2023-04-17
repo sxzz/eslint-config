@@ -1,5 +1,5 @@
-import prettierPlugin from 'eslint-plugin-prettier'
 import prettierConfig from 'eslint-config-prettier'
+import prettierPlugin from 'eslint-plugin-prettier'
 
 const prettierConflictRules = { ...prettierConfig.rules }
 delete prettierConflictRules['vue/html-self-closing']
