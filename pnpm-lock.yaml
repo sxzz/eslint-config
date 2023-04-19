@@ -13,6 +13,9 @@ dependencies:
   eslint-config-prettier:
     specifier: ^8.8.0
     version: 8.8.0(eslint@8.38.0)
+  eslint-define-config:
+    specifier: ^1.18.0
+    version: 1.18.0
   eslint-plugin-antfu:
     specifier: ^0.38.4
     version: 0.38.4(eslint@8.38.0)(typescript@5.0.4)
@@ -69,9 +72,6 @@ devDependencies:
   eslint:
     specifier: ^8.38.0
     version: 8.38.0
-  eslint-define-config:
-    specifier: ^1.18.0
-    version: 1.18.0
   typescript:
     specifier: ^5.0.4
     version: 5.0.4
@@ -750,7 +750,7 @@ packages:
   /eslint-define-config@1.18.0:
     resolution: {integrity: sha512-8qWT7aNU5M0W+WfoUixVaR79sqt3b280CK4bNPCkqXlTWUOYlEy3yEcXZFduvWawkNjuYWpZ2UjcBfvfnvGpvA==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0, npm: '>=6.14.13', pnpm: '>= 7.0.0'}
-    dev: true
+    dev: false
 
   /eslint-import-resolver-node@0.3.7:
     resolution: {integrity: sha512-gozW2blMLJCeFpBwugLTGyvVjNoeo1knonXAcatC6bjPBZitotxdWf7Gimr25N4c0AAOo4eOUfaG82IJPDpqCA==}

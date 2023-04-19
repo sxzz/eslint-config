@@ -3,6 +3,7 @@ import jsConfig from '@eslint/js'
 import importPlugin from 'eslint-plugin-import'
 import unicornPlugin from 'eslint-plugin-unicorn'
 import antfuPlugin from 'eslint-plugin-antfu'
+import { GLOB_SRC, GLOB_SRC_EXT } from './shared.js'
 
 export { importPlugin, unicornPlugin, antfuPlugin }
 
@@ -144,9 +145,24 @@ export const imports = [
           pathGroupsExcludedImportTypes: ['type'],
         },
       ],
+      'import/no-default-export': 'error',
 
       'antfu/import-dedupe': 'error',
       'antfu/prefer-inline-type-import': 'error',
+    },
+  },
+  {
+    files: [
+      `**/*config*.${GLOB_SRC_EXT}`,
+      `**/views/${GLOB_SRC}`,
+      `**/pages/${GLOB_SRC}`,
+      `**/{index,vite,esbuild,rollup,webpack,rspack}.ts`,
+    ],
+    plugins: {
+      import: importPlugin,
+    },
+    rules: {
+      'import/no-default-export': 'off',
     },
   },
 ]

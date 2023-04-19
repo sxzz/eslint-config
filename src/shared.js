@@ -1,5 +1,6 @@
 // @ts-check
 
+export const GLOB_SRC_EXT = '?([mt])[jt]s?(x)'
 export const GLOB_SRC = '**/*.?([mt])[jt]s?(x)'
 
 export const GLOB_JS = '**/*.?([mt])js'
