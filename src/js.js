@@ -1,8 +1,8 @@
+import globals from 'globals'
 import jsConfig from '@eslint/js'
-import antfuPlugin from 'eslint-plugin-antfu'
 import importPlugin from 'eslint-plugin-import'
 import unicornPlugin from 'eslint-plugin-unicorn'
-import globals from 'globals'
+import antfuPlugin from 'eslint-plugin-antfu'
 
 export { importPlugin, unicornPlugin, antfuPlugin }
 
@@ -138,11 +138,10 @@ export const imports = [
             'sibling',
             'index',
             'object',
+            'type',
           ],
           pathGroups: [{ pattern: '@/**', group: 'internal' }],
-          alphabetize: {
-            order: 'asc',
-          },
+          pathGroupsExcludedImportTypes: ['type'],
         },
       ],
 

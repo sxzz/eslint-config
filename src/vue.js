@@ -1,9 +1,9 @@
-import tsPlugin from '@typescript-eslint/eslint-plugin'
-import vuePlugin from 'eslint-plugin-vue'
 import { getPackageInfoSync } from 'local-pkg'
 import vueParser from 'vue-eslint-parser'
-import { GLOB_VUE } from './shared.js'
+import vuePlugin from 'eslint-plugin-vue'
+import tsPlugin from '@typescript-eslint/eslint-plugin'
 import { typescript } from './typescript.js'
+import { GLOB_VUE } from './shared.js'
 
 export { vueParser, vuePlugin }
 

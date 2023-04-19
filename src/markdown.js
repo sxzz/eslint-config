@@ -1,5 +1,5 @@
-import tsPlugin from '@typescript-eslint/eslint-plugin'
 import markdownPlugin from 'eslint-plugin-markdown'
+import tsPlugin from '@typescript-eslint/eslint-plugin'
 import { GLOB_MARKDOWN, GLOB_SRC, GLOB_VUE } from './shared.js'
 
 /** @type {import('eslint-define-config').FlatESLintConfigItem[]} */
