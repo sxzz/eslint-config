@@ -157,6 +157,7 @@ export const imports = [
       `**/views/${GLOB_SRC}`,
       `**/pages/${GLOB_SRC}`,
       `**/{index,vite,esbuild,rollup,webpack,rspack}.ts`,
+      '**/*.d.ts',
     ],
     plugins: {
       import: importPlugin,
