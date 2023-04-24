@@ -13,7 +13,7 @@ Flat ESLint config for JavaScript, TypeScript, Vue 2, Vue 3, Prettier.
 ## Install
 
 ```bash
-npm i @sxzz/eslint-config -D
+npm i -D @sxzz/eslint-config
 ```
 
 ## Usage
