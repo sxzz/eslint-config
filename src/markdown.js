@@ -12,7 +12,7 @@ export const markdown = [
     processor: 'markdown/markdown',
   },
   {
-    files: [`**/*.md/${GLOB_SRC}`, `**/*.md/${GLOB_VUE}`],
+    files: [`${GLOB_MARKDOWN}/${GLOB_SRC}`, `${GLOB_MARKDOWN}/${GLOB_VUE}`],
     languageOptions: {
       parserOptions: {
         ecmaFeatures: {

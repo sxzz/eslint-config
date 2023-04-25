@@ -3,7 +3,7 @@ import jsConfig from '@eslint/js'
 import importPlugin from 'eslint-plugin-import'
 import unicornPlugin from 'eslint-plugin-unicorn'
 import antfuPlugin from 'eslint-plugin-antfu'
-import { GLOB_SRC, GLOB_SRC_EXT } from './shared.js'
+import { GLOB_MARKDOWN, GLOB_SRC, GLOB_SRC_EXT } from './shared.js'
 
 export { importPlugin, unicornPlugin, antfuPlugin }
 
@@ -158,6 +158,7 @@ export const imports = [
       `**/pages/${GLOB_SRC}`,
       `**/{index,vite,esbuild,rollup,webpack,rspack}.ts`,
       '**/*.d.ts',
+      `${GLOB_MARKDOWN}/**`,
     ],
     plugins: {
       import: importPlugin,
