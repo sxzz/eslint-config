@@ -1,7 +1,7 @@
 {
   "name": "@sxzz/eslint-config",
   "version": "3.0.0-beta.9",
-  "packageManager": "pnpm@8.2.0",
+  "packageManager": "pnpm@8.3.1",
   "description": "ESLint config for @sxzz.",
   "type": "module",
   "license": "MIT",
@@ -38,12 +38,12 @@
     "eslint": "^8.0.0"
   },
   "dependencies": {
-    "@eslint/js": "^8.38.0",
-    "@typescript-eslint/eslint-plugin": "^5.58.0",
-    "@typescript-eslint/parser": "^5.58.0",
+    "@eslint/js": "^8.39.0",
+    "@typescript-eslint/eslint-plugin": "^5.59.1",
+    "@typescript-eslint/parser": "^5.59.1",
     "eslint-config-prettier": "^8.8.0",
-    "eslint-define-config": "^1.18.0",
-    "eslint-plugin-antfu": "^0.38.4",
+    "eslint-define-config": "^1.20.0",
+    "eslint-plugin-antfu": "^0.38.5",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jsonc": "^2.7.0",
@@ -55,14 +55,14 @@
     "globals": "^13.20.0",
     "jsonc-eslint-parser": "^2.2.0",
     "local-pkg": "^0.4.3",
-    "prettier": "^2.8.7",
+    "prettier": "^2.8.8",
     "vue-eslint-parser": "^9.1.1",
     "yaml-eslint-parser": "^1.2.0"
   },
   "devDependencies": {
-    "@types/node": "^18.15.11",
+    "@types/node": "^18.16.3",
     "bumpp": "^9.1.0",
-    "eslint": "^8.38.0",
+    "eslint": "^8.39.0",
     "typescript": "^5.0.4"
   },
   "engines": {
