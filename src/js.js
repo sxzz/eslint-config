@@ -71,6 +71,7 @@ export const js = [
       'no-multi-str': 'error',
       'no-with': 'error',
       'no-void': 'error',
+      'no-duplicate-imports': 'error',
 
       'no-unused-expressions': [
         'error',
