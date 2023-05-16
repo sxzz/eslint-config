@@ -44,11 +44,12 @@ export const reactivityTransform = [
 ]
 
 /** @type {import('eslint-define-config').Rules} */
-const vueBaseRules = {
+const vueCustomRules = {
   'vue/max-attributes-per-line': 'off',
   'vue/no-v-html': 'off',
   'vue/multi-word-component-names': 'off',
   'vue/require-prop-types': 'off',
+  'vue/require-default-prop': 'off',
 
   'vue/html-self-closing': [
     'error',
@@ -92,7 +93,6 @@ const vue3Rules = {
   ...vuePlugin.configs['vue3-essential'].rules,
   ...vuePlugin.configs['vue3-strongly-recommended'].rules,
   ...vuePlugin.configs['vue3-recommended'].rules,
-  ...vueBaseRules,
 }
 
 /** @type {import('eslint-define-config').Rules} */
@@ -101,7 +101,6 @@ const vue2Rules = {
   ...vuePlugin.configs['essential'].rules,
   ...vuePlugin.configs['strongly-recommended'].rules,
   ...vuePlugin.configs['recommended'].rules,
-  ...vueBaseRules,
 }
 
 /** @type {import('eslint-define-config').FlatESLintConfigItem[]} */
@@ -134,6 +133,7 @@ export const vue = [
     },
     rules: {
       ...(isVue3 ? vue3Rules : vue2Rules),
+      ...vueCustomRules,
     },
   },
   ...reactivityTransform,
