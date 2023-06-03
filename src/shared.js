@@ -1,13 +1,13 @@
 // @ts-check
 
-export const GLOB_SRC_EXT = '?([mt])[jt]s?(x)'
-export const GLOB_SRC = '**/*.?([mt])[jt]s?(x)'
+export const GLOB_SRC_EXT = '?([cm])[jt]s?(x)'
+export const GLOB_SRC = '**/*.?([cm])[jt]s?(x)'
 
-export const GLOB_JS = '**/*.?([mt])js'
-export const GLOB_JSX = '**/*.?([mt])jsx'
+export const GLOB_JS = '**/*.?([cm])js'
+export const GLOB_JSX = '**/*.?([cm])jsx'
 
-export const GLOB_TS = '**/*.?([mt])ts'
-export const GLOB_TSX = '**/*.?([mt])tsx'
+export const GLOB_TS = '**/*.?([cm])ts'
+export const GLOB_TSX = '**/*.?([cm])tsx'
 
 export const GLOB_STYLE = '**/*.{c,le,sc}ss'
 export const GLOB_CSS = '**/*.css'
