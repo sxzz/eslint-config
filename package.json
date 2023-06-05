@@ -1,6 +1,6 @@
 {
   "name": "@sxzz/eslint-config",
-  "version": "3.0.0-beta.12",
+  "version": "3.0.0",
   "packageManager": "pnpm@8.6.0",
   "description": "ESLint config for @sxzz.",
   "type": "module",
@@ -26,8 +26,7 @@
     "import": "./index.js"
   },
   "publishConfig": {
-    "access": "public",
-    "tag": "beta"
+    "access": "public"
   },
   "scripts": {
     "lint": "eslint .",
