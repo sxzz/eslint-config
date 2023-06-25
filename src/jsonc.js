@@ -70,6 +70,7 @@ export const pkgOrder = [
             'husky',
             'lint-staged',
             'eslintConfig',
+            'prettier',
           ],
         },
         {
