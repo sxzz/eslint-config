@@ -15,23 +15,24 @@
   },
   "files": [
     "index.js",
+    "index.cjs",
     "src"
   ],
   "main": "./index.js",
   "module": "./index.js",
-  "types": "./index.d.ts",
   "exports": {
-    "types": "./index.d.ts",
-    "require": "./index.js",
+    "require": "./index.cjs",
     "import": "./index.js"
   },
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
+    "build": "tsup",
     "lint": "eslint .",
     "lint:fix": "pnpm run lint --fix",
-    "release": "bumpp && pnpm publish"
+    "release": "bumpp && pnpm publish",
+    "prepublishOnly": "pnpm run build"
   },
   "peerDependencies": {
     "eslint": "^8.0.0"
@@ -59,12 +60,15 @@
     "yaml-eslint-parser": "^1.2.2"
   },
   "devDependencies": {
+    "@sxzz/prettier-config": "^1.0.1",
     "@types/node": "^18.16.18",
     "bumpp": "^9.1.1",
     "eslint": "^8.43.0",
+    "tsup": "^7.0.0",
     "typescript": "^5.1.3"
   },
   "engines": {
     "node": ">=16.14.0"
-  }
+  },
+  "prettier": "@sxzz/prettier-config"
 }
