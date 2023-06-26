@@ -68,8 +68,8 @@ dependencies:
 
 devDependencies:
   '@sxzz/prettier-config':
-    specifier: ^1.0.1
-    version: 1.0.1
+    specifier: ^1.0.2
+    version: 1.0.2
   '@types/node':
     specifier: ^18.16.18
     version: 18.16.18
@@ -80,8 +80,8 @@ devDependencies:
     specifier: ^8.43.0
     version: 8.43.0
   tsup:
-    specifier: ^7.0.0
-    version: 7.0.0(typescript@5.1.3)
+    specifier: ^7.1.0
+    version: 7.1.0(typescript@5.1.3)
   typescript:
     specifier: ^5.1.3
     version: 5.1.3
@@ -419,8 +419,8 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.15.0
 
-  /@sxzz/prettier-config@1.0.1:
-    resolution: {integrity: sha512-3umz3lsCN2otBIwqTVpUTWy+GDcJ3sCKWOIySWGCfCCOpp6aQgRbnf7EgBppbekTVbNu673R3PgAYFbbdNmCvA==}
+  /@sxzz/prettier-config@1.0.2:
+    resolution: {integrity: sha512-ZYZkTmmWwJFtz2/TmIADY8Ez0InNUtYY7J5evu+viNzjDZ4olHMPzGw58gGLbORTN6/8T/TgDZTucmwLbAwGjg==}
     dev: true
 
   /@types/json-schema@7.0.12:
@@ -2758,8 +2758,8 @@ packages:
     resolution: {integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==}
     dev: false
 
-  /tsup@7.0.0(typescript@5.1.3):
-    resolution: {integrity: sha512-yYARDRkPq07mO3YUXTvF12ISwWQG57Odve8aFEgLdHyeGungxuKxb19yf9G0W8y59SZFkLnRj1gkoVk1gd5fbQ==}
+  /tsup@7.1.0(typescript@5.1.3):
+    resolution: {integrity: sha512-mazl/GRAk70j8S43/AbSYXGgvRP54oQeX8Un4iZxzATHt0roW0t6HYDVZIXMw0ZQIpvr1nFMniIVnN5186lW7w==}
     engines: {node: '>=16.14'}
     hasBin: true
     peerDependencies:
