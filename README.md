@@ -37,6 +37,14 @@ export default sxzz(
 )
 ```
 
+### VSCode
+
+```jsonc
+{
+  "eslint.experimental.useFlatConfig": true
+}
+```
+
 ## Sponsors
 
 <p align="center">
