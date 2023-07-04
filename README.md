@@ -22,7 +22,7 @@ npm i -D @sxzz/eslint-config
 // eslint.config.js
 import { all } from '@sxzz/eslint-config'
 
-export default defineFlatConfig(all)
+export default all
 ```
 
 ### Custom Config
