@@ -48,7 +48,7 @@
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jsonc": "^2.9.0",
     "eslint-plugin-markdown": "^3.0.0",
-    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-prettier": "^5.0.0-alpha.2",
     "eslint-plugin-unicorn": "^47.0.0",
     "eslint-plugin-vue": "^9.15.1",
     "eslint-plugin-yml": "^1.8.0",
