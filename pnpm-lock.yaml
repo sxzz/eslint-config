@@ -68,11 +68,11 @@ dependencies:
 
 devDependencies:
   '@sxzz/prettier-config':
-    specifier: ^1.0.3
-    version: 1.0.3
+    specifier: ^1.0.4
+    version: 1.0.4
   '@types/node':
-    specifier: ^20.4.0
-    version: 20.4.0
+    specifier: ^20.4.1
+    version: 20.4.1
   bumpp:
     specifier: ^9.1.1
     version: 9.1.1
@@ -435,8 +435,8 @@ packages:
       tslib: 2.6.0
     dev: false
 
-  /@sxzz/prettier-config@1.0.3:
-    resolution: {integrity: sha512-qROHum6E939wpRN3vAIMf0aHhWdQlB56W4O3ePx61/qxSGSsXdX5E8+RLhOwXBp1bkeBjNzrR9rlF58mVf1r7w==}
+  /@sxzz/prettier-config@1.0.4:
+    resolution: {integrity: sha512-KqgPNwMYloKI+LGAW8LwS0hEJHgwnrIJjgQC0B/saoDJZKUIrqc+lLme/lobrzBetPNhrCuhSDELRrZTg32l0w==}
     dev: true
 
   /@types/json-schema@7.0.12:
@@ -453,8 +453,8 @@ packages:
       '@types/unist': 3.0.0
     dev: false
 
-  /@types/node@20.4.0:
-    resolution: {integrity: sha512-jfT7iTf/4kOQ9S7CHV9BIyRaQqHu67mOjsIQBC3BKZvzvUB6zLxEwJ6sBE3ozcvP8kF6Uk5PXN0Q+c0dfhGX0g==}
+  /@types/node@20.4.1:
+    resolution: {integrity: sha512-JIzsAvJeA/5iY6Y/OxZbv1lUcc8dNSE77lb2gnBH+/PJ3lFR1Ccvgwl5JWnHAkNHcRsT0TbpVOsiMKZ1F/yyJg==}
     dev: true
 
   /@types/normalize-package-data@2.4.1:

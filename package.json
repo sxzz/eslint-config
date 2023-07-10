@@ -1,7 +1,7 @@
 {
   "name": "@sxzz/eslint-config",
   "version": "3.1.2",
-  "packageManager": "pnpm@8.6.5",
+  "packageManager": "pnpm@8.6.7",
   "description": "ESLint config for @sxzz.",
   "type": "module",
   "license": "MIT",
@@ -60,8 +60,8 @@
     "yaml-eslint-parser": "^1.2.2"
   },
   "devDependencies": {
-    "@sxzz/prettier-config": "^1.0.3",
-    "@types/node": "^20.4.0",
+    "@sxzz/prettier-config": "^1.0.4",
+    "@types/node": "^20.4.1",
     "bumpp": "^9.1.1",
     "eslint": "^8.44.0",
     "tsup": "^7.1.0",
