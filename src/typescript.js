@@ -19,9 +19,8 @@ export const typescript = [
     },
     rules: {
       ...tsPlugin.configs['eslint-recommended'].overrides[0].rules,
-      ...tsPlugin.configs['recommended'].rules,
+      ...tsPlugin.configs['strict'].overrides[0].rules,
 
-      '@typescript-eslint/no-unused-vars': 'error',
       '@typescript-eslint/no-redeclare': 'error',
 
       '@typescript-eslint/ban-ts-comment': 'off',
@@ -30,7 +29,6 @@ export const typescript = [
         'error',
         { fixStyle: 'inline-type-imports', disallowTypeAnnotations: false },
       ],
-      '@typescript-eslint/explicit-module-boundary-types': 'off',
       '@typescript-eslint/no-explicit-any': 'off',
       '@typescript-eslint/no-non-null-assertion': 'off',
       '@typescript-eslint/prefer-as-const': 'warn',
