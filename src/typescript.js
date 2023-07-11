@@ -19,7 +19,7 @@ export const typescript = [
     },
     rules: {
       ...tsPlugin.configs['eslint-recommended'].overrides[0].rules,
-      ...tsPlugin.configs['strict'].overrides[0].rules,
+      ...tsPlugin.configs['strict'].rules,
 
       '@typescript-eslint/no-redeclare': 'error',
 
