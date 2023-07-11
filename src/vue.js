@@ -89,7 +89,7 @@ const vueCustomRules = {
 
 /** @type {import('eslint-define-config').Rules} */
 const vue3Rules = {
-  ...vuePlugin.configs['base'].rules,
+  ...vuePlugin.configs.base.rules,
   ...vuePlugin.configs['vue3-essential'].rules,
   ...vuePlugin.configs['vue3-strongly-recommended'].rules,
   ...vuePlugin.configs['vue3-recommended'].rules,
@@ -97,10 +97,10 @@ const vue3Rules = {
 
 /** @type {import('eslint-define-config').Rules} */
 const vue2Rules = {
-  ...vuePlugin.configs['base'].rules,
-  ...vuePlugin.configs['essential'].rules,
+  ...vuePlugin.configs.base.rules,
+  ...vuePlugin.configs.essential.rules,
   ...vuePlugin.configs['strongly-recommended'].rules,
-  ...vuePlugin.configs['recommended'].rules,
+  ...vuePlugin.configs.recommended.rules,
 }
 
 /** @type {import('eslint-define-config').FlatESLintConfigItem[]} */

@@ -42,6 +42,7 @@ export const js = [
           allowSeparatedGroups: false,
         },
       ],
+      'dot-notation': 'warn',
 
       'no-var': 'error',
       'prefer-const': [
