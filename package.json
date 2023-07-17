@@ -14,8 +14,8 @@
     "url": "git+https://github.com/sxzz/eslint-config.git"
   },
   "files": [
-    "index.js",
     "index.cjs",
+    "index.js",
     "src"
   ],
   "main": "./index.js",

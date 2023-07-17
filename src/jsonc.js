@@ -77,6 +77,17 @@ export const pkgOrder = [
           pathPattern: '^(?:dev|peer|optional|bundled)?[Dd]ependencies$',
           order: { type: 'asc' },
         },
+        {
+          pathPattern: '^exports.*$',
+          order: ['types', 'require', 'import', 'default'],
+        },
+      ],
+      'jsonc/sort-array-values': [
+        'error',
+        {
+          pathPattern: '^files$',
+          order: { type: 'asc' },
+        },
       ],
     },
   },
