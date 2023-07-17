@@ -30,6 +30,7 @@ export const markdown = [
       '@typescript-eslint/no-unused-vars': 'off',
       '@typescript-eslint/no-use-before-define': 'off',
       '@typescript-eslint/no-var-requires': 'off',
+      '@typescript-eslint/no-extraneous-class': 'off',
       'no-alert': 'off',
       'no-console': 'off',
       'no-restricted-imports': 'off',
