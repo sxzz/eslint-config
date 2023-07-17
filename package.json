@@ -38,12 +38,12 @@
     "eslint": "^8.0.0"
   },
   "dependencies": {
-    "@eslint/js": "^8.44.0",
+    "@eslint/js": "^8.45.0",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-define-config": "^1.21.0",
-    "eslint-plugin-antfu": "^0.39.7",
+    "eslint-plugin-antfu": "^0.39.8",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jsonc": "^2.9.0",
@@ -61,9 +61,9 @@
   },
   "devDependencies": {
     "@sxzz/prettier-config": "^1.0.4",
-    "@types/node": "^20.4.1",
+    "@types/node": "^20.4.2",
     "bumpp": "^9.1.1",
-    "eslint": "^8.44.0",
+    "eslint": "^8.45.0",
     "tsup": "^7.1.0",
     "typescript": "^5.1.6"
   },
