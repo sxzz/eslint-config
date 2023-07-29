@@ -50,6 +50,7 @@ export const pkgOrder = [
             'types',
             'exports',
             'typesVersions',
+            'sideEffects',
             'unpkg',
             'jsdelivr',
             'browser',
