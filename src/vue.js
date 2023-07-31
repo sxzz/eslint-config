@@ -85,11 +85,6 @@ const vueCustomRules = {
   ],
   'vue/no-loss-of-precision': 'error',
   'vue/no-empty-pattern': 'error',
-
-  'unicorn/filename-case': [
-    'error',
-    { cases: { kebabCase: true, pascalCase: true } },
-  ],
 }
 
 /** @type {import('eslint-define-config').Rules} */

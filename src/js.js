@@ -186,7 +186,10 @@ export const unicorn = [
       'unicorn/explicit-length-check': 'error',
       'unicorn/filename-case': [
         'error',
-        { case: 'kebabCase', ignore: [/^[A-Z]+\..*$/] },
+        {
+          cases: { kebabCase: true, pascalCase: true },
+          ignore: [/^[A-Z]+\..*$/],
+        },
       ],
       'unicorn/new-for-builtins': 'error',
       'unicorn/no-array-callback-reference': 'error',
