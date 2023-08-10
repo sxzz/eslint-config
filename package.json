@@ -41,6 +41,7 @@
     "@eslint/js": "^8.46.0",
     "@typescript-eslint/eslint-plugin": "^6.2.1",
     "@typescript-eslint/parser": "^6.2.1",
+    "@unocss/eslint-plugin": "^0.55.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-define-config": "^1.23.0",
     "eslint-plugin-antfu": "^0.40.2",

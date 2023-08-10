@@ -7,6 +7,7 @@ import { markdown } from './markdown.js'
 import { prettier } from './prettier.js'
 import { GLOB_EXCLUDE } from './shared.js'
 import { typescript } from './typescript.js'
+import { unocss } from './unocss.js'
 import { vue } from './vue.js'
 import { yml } from './yml.js'
 
@@ -30,12 +31,13 @@ export const basic = [
 ]
 
 /** @type { FlatESLintConfigItem[] } */
-export const all = [...vue, ...basic, ...prettier]
+export const all = [...basic, ...vue, ...unocss, ...prettier]
 
 /** @type {(config?: FlatESLintConfigItem | FlatESLintConfigItem[], enables?: Partial<{
  * vue: boolean
  * prettier: boolean
  * markdown: boolean
+ * unocss: boolean
  * }>) => FlatESLintConfigItem[]} */
 export function sxzz(
   config = [],
@@ -43,17 +45,21 @@ export function sxzz(
     vue: enableVue = true,
     prettier: enablePrettier = true,
     markdown: enableMarkdown = true,
+    unocss: enableUnocss = false,
   } = {}
 ) {
   const configs = []
   configs.push(...basic)
-  if (enableVue !== false) {
+  if (enableVue) {
     configs.push(...vue)
   }
-  if (enableMarkdown !== false) {
+  if (enableMarkdown) {
     configs.push(...markdown)
   }
-  if (enablePrettier !== false) {
+  if (enableUnocss) {
+    configs.push(...unocss)
+  }
+  if (enablePrettier) {
     configs.push(...prettier)
   }
   if (Object.keys(config).length > 0) {
