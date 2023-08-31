@@ -38,7 +38,7 @@ export const reactivityTransform = [
       vue: vuePlugin,
     },
     rules: {
-      'vue/no-setup-props-destructure': 'off',
+      'vue/no-setup-props-reactivity-loss': 'off',
     },
   },
 ]
@@ -63,10 +63,7 @@ const vueCustomRules = {
       math: 'always',
     },
   ],
-  'vue/component-tags-order': [
-    'error',
-    { order: ['script', 'template', 'style'] },
-  ],
+  'vue/block-order': ['error', { order: ['script', 'template', 'style'] }],
   'vue/custom-event-name-casing': ['error', 'camelCase'],
   'vue/no-useless-v-bind': 'error',
   'vue/no-unused-refs': 'error',
