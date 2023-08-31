@@ -3,7 +3,11 @@ import jsConfig from '@eslint/js'
 import importPlugin from 'eslint-plugin-import'
 import unicornPlugin from 'eslint-plugin-unicorn'
 import antfuPlugin from 'eslint-plugin-antfu'
+import unusedImportsPlugin from 'eslint-plugin-unused-imports'
 import { GLOB_MARKDOWN, GLOB_SRC, GLOB_SRC_EXT } from './shared.js'
+
+const isInEditor =
+  (process.env.VSCODE_PID || process.env.JETBRAINS_IDE) && !process.env.CI
 
 export { importPlugin, unicornPlugin, antfuPlugin }
 
@@ -19,8 +23,11 @@ export const js = [
       },
       sourceType: 'module',
     },
+    plugins: {
+      'unused-imports': unusedImportsPlugin,
+    },
     rules: {
-      'no-unused-vars': ['error', { args: 'none', ignoreRestSiblings: true }],
+      'no-unused-vars': 'off',
       'no-constant-condition': 'warn',
       'no-debugger': 'warn',
       'no-console': ['warn', { allow: ['warn', 'error'] }],
@@ -84,6 +91,12 @@ export const js = [
       ],
       'no-lonely-if': 'error',
       'prefer-exponentiation-operator': 'error',
+
+      'unused-imports/no-unused-imports': isInEditor ? 'off' : 'error',
+      [isInEditor ? 'no-unused-vars' : 'unused-imports/no-unused-vars']: [
+        'error',
+        { args: 'after-used', ignoreRestSiblings: true },
+      ],
     },
   },
   {
