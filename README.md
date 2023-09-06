@@ -16,6 +16,8 @@ Flat ESLint config for JavaScript, TypeScript, Vue 2, Vue 3, Prettier.
 npm i -D @sxzz/eslint-config
 ```
 
+Require Node.js >= 16.14.
+
 ## Usage
 
 ```js
