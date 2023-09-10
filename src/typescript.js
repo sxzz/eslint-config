@@ -32,6 +32,9 @@ export const typescript = [
       '@typescript-eslint/no-explicit-any': 'off',
       '@typescript-eslint/no-non-null-assertion': 'off',
       '@typescript-eslint/prefer-as-const': 'warn',
+
+      // handled by unused-imports/no-unused-imports
+      '@typescript-eslint/no-unused-vars': 'off',
     },
   },
   {
