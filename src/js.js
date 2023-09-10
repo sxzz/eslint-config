@@ -93,7 +93,7 @@ export const js = [
       'prefer-exponentiation-operator': 'error',
 
       'unused-imports/no-unused-imports': isInEditor ? 'off' : 'error',
-      [isInEditor ? 'no-unused-vars' : 'unused-imports/no-unused-vars']: [
+      'unused-imports/no-unused-vars': [
         'error',
         { args: 'after-used', ignoreRestSiblings: true },
       ],
