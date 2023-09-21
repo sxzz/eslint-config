@@ -1,6 +1,6 @@
 import globals from 'globals'
 import jsConfig from '@eslint/js'
-import importPlugin from 'eslint-plugin-import'
+import importPlugin from 'eslint-plugin-i'
 import unicornPlugin from 'eslint-plugin-unicorn'
 import antfuPlugin from 'eslint-plugin-antfu'
 import unusedImportsPlugin from 'eslint-plugin-unused-imports'
