@@ -3,6 +3,6 @@ import { defineConfig } from 'tsup'
 export default defineConfig({
   entry: ['src/index.ts'],
   format: ['cjs', 'esm'],
-  target: 'es2022',
+  target: 'node16.14',
   dts: true,
 })
