@@ -1,11 +1,9 @@
 import { getPackageInfoSync } from 'local-pkg'
-import vueParser from 'vue-eslint-parser'
-import vuePlugin from 'eslint-plugin-vue'
 import tsPlugin from '@typescript-eslint/eslint-plugin'
-import { typescript } from './typescript.js'
-import { GLOB_VUE } from './shared.js'
-
-export { vueParser, vuePlugin }
+import { type FlatESLintConfigItem, type Rules } from 'eslint-define-config'
+import { GLOB_VUE } from '../globs'
+import { parserVue, pluginVue } from '../plugins'
+import { typescript } from './typescript'
 
 export function getVueVersion() {
   const pkg = getPackageInfoSync('vue', { paths: [process.cwd()] })
@@ -20,8 +18,7 @@ export function getVueVersion() {
 }
 const isVue3 = getVueVersion() === 3
 
-/** @type {import('eslint-define-config').FlatESLintConfigItem[]} */
-export const reactivityTransform = [
+export const reactivityTransform: FlatESLintConfigItem[] = [
   {
     languageOptions: {
       globals: {
@@ -35,7 +32,7 @@ export const reactivityTransform = [
       },
     },
     plugins: {
-      vue: vuePlugin,
+      vue: pluginVue,
     },
     rules: {
       'vue/no-setup-props-reactivity-loss': 'off',
@@ -43,8 +40,7 @@ export const reactivityTransform = [
   },
 ]
 
-/** @type {import('eslint-define-config').Rules} */
-const vueCustomRules = {
+const vueCustomRules: Rules = {
   'vue/max-attributes-per-line': 'off',
   'vue/no-v-html': 'off',
   'vue/multi-word-component-names': 'off',
@@ -84,32 +80,29 @@ const vueCustomRules = {
   'vue/no-empty-pattern': 'error',
 }
 
-/** @type {import('eslint-define-config').Rules} */
-const vue3Rules = {
-  ...vuePlugin.configs.base.rules,
-  ...vuePlugin.configs['vue3-essential'].rules,
-  ...vuePlugin.configs['vue3-strongly-recommended'].rules,
-  ...vuePlugin.configs['vue3-recommended'].rules,
+const vue3Rules: Rules = {
+  ...pluginVue.configs.base.rules,
+  ...pluginVue.configs['vue3-essential'].rules,
+  ...pluginVue.configs['vue3-strongly-recommended'].rules,
+  ...pluginVue.configs['vue3-recommended'].rules,
 }
 
-/** @type {import('eslint-define-config').Rules} */
-const vue2Rules = {
-  ...vuePlugin.configs.base.rules,
-  ...vuePlugin.configs.essential.rules,
-  ...vuePlugin.configs['strongly-recommended'].rules,
-  ...vuePlugin.configs.recommended.rules,
+const vue2Rules: Rules = {
+  ...pluginVue.configs.base.rules,
+  ...pluginVue.configs.essential.rules,
+  ...pluginVue.configs['strongly-recommended'].rules,
+  ...pluginVue.configs.recommended.rules,
 }
 
-/** @type {import('eslint-define-config').FlatESLintConfigItem[]} */
-export const vue = [
+export const vue: FlatESLintConfigItem[] = [
   {
     files: [GLOB_VUE],
     plugins: {
-      vue: vuePlugin,
+      vue: pluginVue,
       '@typescript-eslint': tsPlugin,
     },
     languageOptions: {
-      parser: vueParser,
+      parser: parserVue,
       parserOptions: {
         parser: '@typescript-eslint/parser',
         sourceType: 'module',
@@ -119,14 +112,14 @@ export const vue = [
         },
       },
     },
-    processor: vuePlugin.processors['.vue'],
+    processor: pluginVue.processors['.vue'],
     rules: {
       ...typescript[0].rules,
     },
   },
   {
     plugins: {
-      vue: vuePlugin,
+      vue: pluginVue,
     },
     rules: {
       ...(isVue3 ? vue3Rules : vue2Rules),

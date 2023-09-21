@@ -1,25 +1,22 @@
-import tsParser from '@typescript-eslint/parser'
-import tsPlugin from '@typescript-eslint/eslint-plugin'
-import { GLOB_TS, GLOB_TSX } from './shared.js'
+import { type FlatESLintConfigItem } from 'eslint-define-config'
+import { GLOB_TS, GLOB_TSX } from '../globs'
+import { parserTypeScript, pluginTypeScript } from '../plugins'
 
-export { tsParser, tsPlugin }
-
-/** @type {import('eslint-define-config').FlatESLintConfigItem[]} */
-export const typescript = [
+export const typescript: FlatESLintConfigItem[] = [
   {
     files: [GLOB_TS, GLOB_TSX],
     languageOptions: {
-      parser: tsParser,
+      parser: parserTypeScript,
       parserOptions: {
         sourceType: 'module',
       },
     },
     plugins: {
-      '@typescript-eslint': tsPlugin,
+      '@typescript-eslint': pluginTypeScript,
     },
     rules: {
-      ...tsPlugin.configs['eslint-recommended'].overrides[0].rules,
-      ...tsPlugin.configs.strict.rules,
+      ...pluginTypeScript.configs['eslint-recommended'].overrides![0].rules,
+      ...pluginTypeScript.configs.strict.rules,
 
       '@typescript-eslint/no-redeclare': 'error',
 
@@ -47,7 +44,9 @@ export const typescript = [
   {
     files: ['**/*.d.ts'],
     rules: {
+      'eslint-comments/no-unlimited-disable': 'off',
       'import/no-duplicates': 'off',
+      'unused-imports/no-unused-vars': 'off',
     },
   },
   {
@@ -59,6 +58,7 @@ export const typescript = [
   {
     files: ['**/*.js', '**/*.cjs'],
     rules: {
+      '@typescript-eslint/no-require-imports': 'off',
       '@typescript-eslint/no-var-requires': 'off',
     },
   },
