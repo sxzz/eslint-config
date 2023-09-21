@@ -35,6 +35,10 @@ import * as _pluginPrettier from 'eslint-plugin-prettier'
 export const pluginPrettier = interopDefault(_pluginPrettier)
 
 // @ts-expect-error missing types
+import * as _configPrettier from 'eslint-config-prettier'
+export const configPrettier = interopDefault(_configPrettier)
+
+// @ts-expect-error missing types
 export * as pluginImport from 'eslint-plugin-i'
 export * as pluginJsonc from 'eslint-plugin-jsonc'
 // @ts-expect-error missing types
@@ -46,6 +50,3 @@ export * as parserTypeScript from '@typescript-eslint/parser'
 export * as parserVue from 'vue-eslint-parser'
 export * as parserYml from 'yaml-eslint-parser'
 export * as parserJsonc from 'jsonc-eslint-parser'
-
-// @ts-expect-error missing types
-export * as configPrettier from 'eslint-config-prettier'
