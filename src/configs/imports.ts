@@ -5,10 +5,12 @@ import { GLOB_MARKDOWN, GLOB_SRC, GLOB_SRC_EXT } from '../globs'
 export const imports: FlatESLintConfigItem[] = [
   {
     plugins: {
-      import: pluginImport,
       antfu: pluginAntfu,
+      import: pluginImport,
     },
     rules: {
+      'antfu/import-dedupe': 'error',
+      'antfu/prefer-inline-type-import': 'error',
       'import/first': 'error',
       'import/no-default-export': 'error',
       'import/no-duplicates': 'error',
@@ -29,13 +31,10 @@ export const imports: FlatESLintConfigItem[] = [
             'object',
             'type',
           ],
-          pathGroups: [{ pattern: '{{@,~}/,#}**', group: 'internal' }],
+          pathGroups: [{ group: 'internal', pattern: '{{@,~}/,#}**' }],
           pathGroupsExcludedImportTypes: ['type'],
         },
       ],
-
-      'antfu/import-dedupe': 'error',
-      'antfu/prefer-inline-type-import': 'error',
     },
   },
   {

@@ -5,11 +5,11 @@ import { parserYml, pluginYml } from '../plugins'
 export const yml: FlatESLintConfigItem[] = [
   {
     files: [GLOB_YAML],
-    plugins: {
-      yml: pluginYml,
-    },
     languageOptions: {
       parser: parserYml,
+    },
+    plugins: {
+      yml: pluginYml,
     },
     rules: {
       ...(pluginYml.configs.standard.rules as Rules),

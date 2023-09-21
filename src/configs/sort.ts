@@ -7,14 +7,13 @@ export const sortPackageJson: FlatESLintConfigItem[] = [
       'jsonc/sort-array-values': [
         'error',
         {
-          pathPattern: '^files$',
           order: { type: 'asc' },
+          pathPattern: '^files$',
         },
       ],
       'jsonc/sort-keys': [
         'error',
         {
-          pathPattern: '^$',
           order: [
             'name',
             'version',
@@ -59,14 +58,15 @@ export const sortPackageJson: FlatESLintConfigItem[] = [
             'eslintConfig',
             'prettier',
           ],
+          pathPattern: '^$',
         },
         {
-          pathPattern: '^(?:dev|peer|optional|bundled)?[Dd]ependencies$',
           order: { type: 'asc' },
+          pathPattern: '^(?:dev|peer|optional|bundled)?[Dd]ependencies$',
         },
         {
-          pathPattern: '^exports.*$',
           order: ['types', 'require', 'import', 'default'],
+          pathPattern: '^exports.*$',
         },
         {
           order: { type: 'asc' },

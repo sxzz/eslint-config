@@ -18,8 +18,6 @@ export const typescript: FlatESLintConfigItem[] = [
       ...pluginTypeScript.configs['eslint-recommended'].overrides![0].rules,
       ...pluginTypeScript.configs.strict.rules,
 
-      '@typescript-eslint/no-redeclare': 'error',
-
       '@typescript-eslint/ban-ts-comment': 'off',
       '@typescript-eslint/ban-types': 'off',
       '@typescript-eslint/consistent-type-assertions': [
@@ -31,14 +29,16 @@ export const typescript: FlatESLintConfigItem[] = [
       ],
       '@typescript-eslint/consistent-type-imports': [
         'error',
-        { fixStyle: 'inline-type-imports', disallowTypeAnnotations: false },
+        { disallowTypeAnnotations: false, fixStyle: 'inline-type-imports' },
       ],
       '@typescript-eslint/no-explicit-any': 'off',
       '@typescript-eslint/no-non-null-assertion': 'off',
-      '@typescript-eslint/prefer-as-const': 'warn',
+      '@typescript-eslint/no-redeclare': 'error',
 
       // handled by unused-imports/no-unused-imports
       '@typescript-eslint/no-unused-vars': 'off',
+
+      '@typescript-eslint/prefer-as-const': 'warn',
     },
   },
   {

@@ -5,11 +5,11 @@ import { GLOB_JSON, GLOB_JSON5, GLOB_JSONC } from '../globs'
 export const jsonc: FlatESLintConfigItem[] = [
   {
     files: [GLOB_JSON, GLOB_JSON5, GLOB_JSONC],
-    plugins: {
-      jsonc: pluginJsonc,
-    },
     languageOptions: {
       parser: parserJsonc,
+    },
+    plugins: {
+      jsonc: pluginJsonc,
     },
     rules: {
       ...(pluginJsonc.configs['recommended-with-jsonc'].rules as Rules),
