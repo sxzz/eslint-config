@@ -6,9 +6,12 @@ Flat ESLint config for JavaScript, TypeScript, Vue 2, Vue 3, Prettier.
 
 ## Features
 
-- Support Vue 2 and 3 out-of-box.
-- Select the required file types as needed.
+- Format with Prettier.
+- Designed to work with TypeScript, Vue 2 and 3 out-of-box.
 - Support JSON(5), YAML, Markdown...
+- Sort imports, `package.json`, `tsconfig.json`...
+- [ESLint Flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new), compose easily!
+- Reasonable defaults, best practices, only one-line of config
 
 ## Install
 
@@ -35,7 +38,7 @@ export default sxzz(
   [
     /* your custom config */
   ],
-  { vue: true, prettier: true, markdown: true }
+  { vue: true, prettier: true, markdown: true, unocss: false }
 )
 ```
 
@@ -46,6 +49,15 @@ export default sxzz(
   "eslint.experimental.useFlatConfig": true
 }
 ```
+
+## Comparing to [`@antfu/eslint-config`](https://github.com/antfu/eslint-config)
+
+Most of the rules are the same, but there are some differences:
+
+- Use Prettier instead of [ESLint Stylistic](https://github.com/eslint-stylistic/eslint-stylistic).
+- Support both Vue 2 and Vue 3.
+- Support Vue Reactivity Transform.
+- More stricter rules.
 
 ## Sponsors
 
