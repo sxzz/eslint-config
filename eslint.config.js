@@ -5,3 +5,6 @@ require('sucrase/register')
 const config = require('./src/index.ts')
 
 export default config.all
+
+// import { all } from './dist/index.js'
+// export default all
