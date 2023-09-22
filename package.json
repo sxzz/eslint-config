@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/sxzz/eslint-config.git"
   },
-  "funding": "https://github.com/sponsors/antfu",
+  "funding": "https://github.com/sponsors/sxzz",
   "files": [
     "dist"
   ],
