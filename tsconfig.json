@@ -12,5 +12,5 @@
     "noUnusedLocals": true,
     "skipLibCheck": true
   },
-  "include": ["*.js", "src"]
+  "include": ["src"]
 }
