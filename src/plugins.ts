@@ -1,5 +1,6 @@
 /* eslint-disable import/first */
 
+/* #__NO_SIDE_EFFECTS__ */
 function interopDefault(m: any) {
   return m.default || m
 }
