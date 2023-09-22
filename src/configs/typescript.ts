@@ -1,6 +1,6 @@
 import { type FlatESLintConfigItem } from 'eslint-define-config'
 import { GLOB_TS, GLOB_TSX } from '../globs'
-import { parserTypeScript, pluginTypeScript } from '../plugins'
+import { parserTypeScript, pluginAntfu, pluginTypeScript } from '../plugins'
 
 export const typescript: FlatESLintConfigItem[] = [
   {
@@ -13,6 +13,7 @@ export const typescript: FlatESLintConfigItem[] = [
     },
     plugins: {
       '@typescript-eslint': pluginTypeScript,
+      antfu: pluginAntfu,
     },
     rules: {
       ...pluginTypeScript.configs['eslint-recommended'].overrides![0].rules,
@@ -39,6 +40,8 @@ export const typescript: FlatESLintConfigItem[] = [
       '@typescript-eslint/no-unused-vars': 'off',
 
       '@typescript-eslint/prefer-as-const': 'warn',
+
+      'antfu/no-const-enum': 'error',
     },
   },
   {
