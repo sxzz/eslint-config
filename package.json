@@ -29,9 +29,9 @@
   "scripts": {
     "build": "tsup",
     "lint": "eslint .",
-    "lint:fix": "pnpm run lint --fix",
-    "release": "bumpp && pnpm publish",
-    "prepublishOnly": "pnpm run build"
+    "lint:fix": "npm run lint --fix",
+    "release": "npm publish",
+    "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
     "eslint": "^8.0.0"
