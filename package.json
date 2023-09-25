@@ -5,13 +5,13 @@
   "description": "ESLint config for @frabbit.",
   "type": "module",
   "license": "MIT",
-  "homepage": "https://github.com/frabbit/eslint-config#readme",
+  "homepage": "https://github.com/frenchrabbit/eslint-config#readme",
   "bugs": {
-    "url": "https://github.com/frabbit/eslint-config/issues"
+    "url": "https://github.com/frenchrabbit/eslint-config/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/frabbit/eslint-config.git"
+    "url": "git+https://github.com/frenchrabbit/eslint-config.git"
   },
   "files": [
     "dist"

@@ -3,7 +3,7 @@
 Flat ESLint config for JavaScript, TypeScript, Vue 2, Vue 3, Prettier.
 based on https://github.com/sxzz/eslint-config
 
-[Legacy Version](https://github.com/frabbit/eslint-config-legacy)
+[Legacy Version](https://github.com/sxzz/eslint-config-legacy)
 
 ## Features
 
@@ -70,4 +70,4 @@ Most of the rules are the same, but there are some differences:
 
 ## License
 
-[MIT](./LICENSE) License © 2021-PRESENT [三咲智子](https://github.com/frabbit)
+[MIT](./LICENSE) License © 2021-PRESENT [三咲智子](https://github.com/frenchrabbit)
