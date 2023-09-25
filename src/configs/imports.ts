@@ -12,6 +12,7 @@ export const imports: FlatESLintConfigItem[] = [
       'antfu/import-dedupe': 'error',
       'antfu/prefer-inline-type-import': 'error',
       'import/first': 'error',
+      'import/newline-after-import': ['error', { count: 1 }],
       'import/no-default-export': 'error',
       'import/no-duplicates': 'error',
       'import/no-mutable-exports': 'error',
@@ -21,6 +22,7 @@ export const imports: FlatESLintConfigItem[] = [
       'import/order': [
         'error',
         {
+          alphabetize: { caseInsensitive: true, order: 'asc' },
           groups: [
             'builtin',
             'external',
@@ -31,6 +33,7 @@ export const imports: FlatESLintConfigItem[] = [
             'object',
             'type',
           ],
+          'newlines-between': 'always',
           pathGroups: [{ group: 'internal', pattern: '{{@,~}/,#}**' }],
           pathGroupsExcludedImportTypes: ['type'],
         },

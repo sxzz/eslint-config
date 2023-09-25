@@ -16,7 +16,7 @@ export const unicorn: FlatESLintConfigItem[] = [
       'unicorn/filename-case': [
         'error',
         {
-          cases: { kebabCase: true, pascalCase: true },
+          case: 'kebabCase',
           ignore: [/^[A-Z]+\..*$/],
         },
       ],

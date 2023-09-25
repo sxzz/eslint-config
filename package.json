@@ -1,19 +1,18 @@
 {
-  "name": "@sxzz/eslint-config",
+  "name": "@frabbit/eslint-config",
   "version": "3.6.1",
   "packageManager": "pnpm@8.7.6",
-  "description": "ESLint config for @sxzz.",
+  "description": "ESLint config for @frabbit.",
   "type": "module",
   "license": "MIT",
-  "homepage": "https://github.com/sxzz/eslint-config#readme",
+  "homepage": "https://github.com/frabbit/eslint-config#readme",
   "bugs": {
-    "url": "https://github.com/sxzz/eslint-config/issues"
+    "url": "https://github.com/frabbit/eslint-config/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sxzz/eslint-config.git"
+    "url": "git+https://github.com/frabbit/eslint-config.git"
   },
-  "funding": "https://github.com/sponsors/sxzz",
   "files": [
     "dist"
   ],
@@ -61,7 +60,7 @@
     "yaml-eslint-parser": "^1.2.2"
   },
   "devDependencies": {
-    "@sxzz/prettier-config": "^1.0.4",
+    "@frabbit/prettier-config": "^2.0.0",
     "@types/node": "^20.6.5",
     "bumpp": "^9.2.0",
     "eslint": "^8.50.0",
@@ -73,5 +72,5 @@
   "engines": {
     "node": ">=16.14.0"
   },
-  "prettier": "@sxzz/prettier-config"
+  "prettier": "@frabbit/prettier-config"
 }

@@ -41,7 +41,7 @@ export { basic as presetBasic }
 
 export const all = [...basic, ...vue, ...unocss, ...prettier]
 
-export function sxzz(
+export function frabbit(
   config: FlatESLintConfigItem | FlatESLintConfigItem[] = [],
   {
     vue: enableVue = true,

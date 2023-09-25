@@ -5,11 +5,11 @@ import { createRequire } from 'node:module'
 const require = createRequire(import.meta.url)
 require('sucrase/register')
 /** @type {typeof import('./src/index.ts')} */
-const { sxzz } = require('./src/index.ts')
+const { frabbit } = require('./src/index.ts')
 
-// import { sxzz } from './dist/index.js'
+// import { frabbit } from './dist/index.js'
 
-export default sxzz([
+export default frabbit([
   {
     files: ['src/**/*.ts'],
     plugins: {

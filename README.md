@@ -1,8 +1,9 @@
-# @sxzz/eslint-config [![npm](https://img.shields.io/npm/v/@sxzz/eslint-config.svg)](https://npmjs.com/package/@sxzz/eslint-config)
+# @frabbit/eslint-config [![npm](https://img.shields.io/npm/v/@frabbit/eslint-config.svg)](https://npmjs.com/package/@frabbit/eslint-config)
 
 Flat ESLint config for JavaScript, TypeScript, Vue 2, Vue 3, Prettier.
+based on https://github.com/sxzz/eslint-config
 
-[Legacy Version](https://github.com/sxzz/eslint-config-legacy)
+[Legacy Version](https://github.com/frabbit/eslint-config-legacy)
 
 ## Features
 
@@ -16,7 +17,7 @@ Flat ESLint config for JavaScript, TypeScript, Vue 2, Vue 3, Prettier.
 ## Install
 
 ```bash
-npm i -D @sxzz/eslint-config
+npm i -D @frabbit/eslint-config
 ```
 
 Require Node.js >= 16.14.
@@ -25,7 +26,7 @@ Require Node.js >= 16.14.
 
 ```js
 // eslint.config.js
-import { all } from '@sxzz/eslint-config'
+import { all } from '@frabbit/eslint-config'
 
 export default all
 ```
@@ -33,8 +34,8 @@ export default all
 ### Custom Config
 
 ```js
-import { sxzz } from '@sxzz/eslint-config'
-export default sxzz(
+import { frabbit } from '@frabbit/eslint-config'
+export default frabbit(
   [
     /* your custom config */
   ],
@@ -62,11 +63,11 @@ Most of the rules are the same, but there are some differences:
 ## Sponsors
 
 <p align="center">
-  <a href="https://cdn.jsdelivr.net/gh/sxzz/sponsors/sponsors.svg">
-    <img src='https://cdn.jsdelivr.net/gh/sxzz/sponsors/sponsors.svg'/>
+  <a href="https://cdn.jsdelivr.net/gh/frabbit/sponsors/sponsors.svg">
+    <img src='https://cdn.jsdelivr.net/gh/frabbit/sponsors/sponsors.svg'/>
   </a>
 </p>
 
 ## License
 
-[MIT](./LICENSE) License © 2021-PRESENT [三咲智子](https://github.com/sxzz)
+[MIT](./LICENSE) License © 2021-PRESENT [三咲智子](https://github.com/frabbit)
