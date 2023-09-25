@@ -41,7 +41,43 @@ export const reactivityTransform: FlatESLintConfigItem[] = [
 ]
 
 const vueCustomRules: Rules = {
+  'vue/attributes-order': [
+    'warn',
+    {
+      alphabetical: false,
+      order: [
+        'DEFINITION',
+        'LIST_RENDERING',
+        'CONDITIONALS',
+        'RENDER_MODIFIERS',
+        'GLOBAL',
+        'UNIQUE',
+        'TWO_WAY_BINDING',
+        'OTHER_DIRECTIVES',
+        'OTHER_ATTR',
+        'EVENTS',
+        'CONTENT',
+      ],
+    },
+  ],
   'vue/block-order': ['error', { order: ['script', 'template', 'style'] }],
+  'vue/component-definition-name-casing': ['error', 'PascalCase'],
+  'vue/component-name-in-template-casing': [
+    'error',
+    'kebab-case',
+    {
+      ignores: [],
+      registeredComponentsOnly: false,
+    },
+  ],
+  'vue/component-options-name-casing': ['error', 'PascalCase'],
+
+  'vue/component-tags-order': [
+    'error',
+    {
+      order: ['docs', 'template', 'script', 'style'],
+    },
+  ],
   'vue/custom-event-name-casing': ['error', 'camelCase'],
   'vue/eqeqeq': ['error', 'smart'],
   'vue/html-self-closing': [
@@ -56,16 +92,84 @@ const vueCustomRules: Rules = {
       svg: 'always',
     },
   ],
+  'vue/match-component-import-name': 'warn',
   'vue/max-attributes-per-line': 'off',
-
   'vue/multi-word-component-names': 'off',
+  'vue/no-boolean-default': ['error', 'default-false'],
   'vue/no-constant-condition': 'warn',
+  'vue/no-duplicate-attr-inheritance': 'warn',
   'vue/no-empty-pattern': 'error',
+  'vue/no-irregular-whitespace': 'error',
   'vue/no-loss-of-precision': 'error',
-  'vue/no-unused-refs': 'error',
-  'vue/no-useless-v-bind': 'error',
+  'vue/no-multiple-objects-in-class': 'error',
+  'vue/no-potential-component-option-typo': [
+    'error',
+    {
+      presets: ['vue', 'nuxt'],
+      threshold: 5,
+    },
+  ],
+  'vue/no-reserved-component-names': 'error',
+  'vue/no-static-inline-styles': [
+    'error',
+    {
+      allowBinding: false,
+    },
+  ],
+  'vue/no-this-in-before-route-enter': 'error',
+  // 'vue/no-restricted-static-attribute': [
+  //   'error',
+  //   {
+  //     key: 'stlye',
+  //     message: 'Using "stlye" is not allowed. Use "style" instead.',
+  //   },
+  // ],
+  // 'vue/no-template-target-blank': [
+  //   'error',
+  //   {
+  //     allowReferrer: true,
+  //     enforceDynamicLinks: 'always',
+  //   },
+  // ],
+  'vue/no-undef-components': [
+    'error',
+    {
+      ignorePatterns: ['lazy-hydrate', 'no-ssr', 'client-only'],
+    },
+  ],
 
+  'vue/no-unsupported-features': [
+    'error',
+    {
+      ignores: [],
+      version: '^2.7.14',
+    },
+  ],
+  'vue/no-unused-properties': [
+    'error',
+    {
+      groups: ['props', 'data', 'computed', 'methods', 'setup'],
+      ignorePublicMembers: true,
+    },
+  ],
+  'vue/no-unused-refs': 'error',
+  'vue/no-useless-concat': 'warn',
+  'vue/no-useless-mustaches': [
+    'warn',
+    {
+      ignoreIncludesComment: true,
+      ignoreStringEscape: true,
+    },
+  ],
+  'vue/no-useless-v-bind': [
+    'warn',
+    {
+      ignoreIncludesComment: true,
+      ignoreStringEscape: true,
+    },
+  ],
   'vue/no-v-html': 'off',
+  'vue/object-curly-spacing': 'error',
   'vue/object-shorthand': [
     'error',
     'always',
@@ -75,9 +179,34 @@ const vueCustomRules: Rules = {
     },
   ],
   'vue/padding-line-between-blocks': ['error', 'always'],
+  'vue/prefer-prop-type-boolean-first': 'error',
+  'vue/prefer-separate-static-class': 'error',
   'vue/prefer-template': 'error',
-  'vue/require-default-prop': 'off',
-  'vue/require-prop-types': 'off',
+  'vue/prefer-true-attribute-shorthand': 'warn',
+  'vue/prop-name-casing': ['error', 'camelCase'],
+  'vue/require-default-prop': 'error',
+  'vue/require-prop-types': 'error',
+  // TODO: отступы в <script>
+  'vue/script-indent': [
+    'error',
+    2,
+    {
+      baseIndent: 1,
+      ignores: [],
+      switchCase: 1,
+    },
+  ],
+  'vue/space-in-parens': 'error',
+  'vue/static-class-names-order': 'off',
+  'vue/v-on-handler-style': [
+    'error',
+    ['method', 'inline-function'], // ["method", "inline-function"] | ["method", "inline"] | "inline-function" | "inline"
+    {
+      ignoreIncludesComment: true,
+    },
+  ],
+  'vue/valid-v-bind-sync': 'error',
+  'vue/valid-v-slot': 'error',
 }
 
 const vue3Rules: Rules = {
