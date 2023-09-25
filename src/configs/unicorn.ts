@@ -13,9 +13,7 @@ export const unicorn: FlatESLintConfigItem[] = [
       'unicorn/custom-error-definition': 'off',
       // 'unicorn/custom-error-definition': 'error',
       'unicorn/error-message': 'error',
-
       'unicorn/escape-case': 'error',
-
       'unicorn/expiring-todo-comments': 'error',
       'unicorn/explicit-length-check': 'error',
       'unicorn/filename-case': [

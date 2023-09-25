@@ -38,6 +38,10 @@ export const pluginPrettier = interopDefault(_pluginPrettier)
 import * as _configPrettier from 'eslint-config-prettier'
 export const configPrettier = interopDefault(_configPrettier)
 
+export * as pluginSonar from 'eslint-plugin-sonarjs'
+// @ts-expect-error missing types
+export * as pluginSecurity from 'eslint-plugin-security'
+
 // @ts-expect-error missing types
 export * as pluginImport from 'eslint-plugin-i'
 export * as pluginJsonc from 'eslint-plugin-jsonc'
