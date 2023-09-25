@@ -21,6 +21,8 @@ jobs:
         with:
           node-version: lts/*
 
+      - run: npm ci
+
       - name: Release
         run: npx semantic-release --branches main
         env:
