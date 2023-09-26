@@ -40,6 +40,10 @@ export const typescript: FlatESLintConfigItem[] = [
       '@typescript-eslint/no-unused-vars': 'off',
 
       '@typescript-eslint/prefer-as-const': 'warn',
+      '@typescript-eslint/prefer-literal-enum-member': [
+        'error',
+        { allowBitwiseExpressions: true },
+      ],
 
       'antfu/no-const-enum': 'error',
     },
