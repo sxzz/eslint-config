@@ -4,7 +4,7 @@ import { pluginSonar } from '../plugins'
 export const sonar: FlatESLintConfigItem[] = [
   {
     plugins: {
-      unicorn: pluginSonar,
+      sonar: pluginSonar,
     },
     rules: {
       'sonarjs/cognitive-complexity': 'error',

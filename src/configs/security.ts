@@ -4,7 +4,7 @@ import { pluginSecurity } from '../plugins'
 export const security: FlatESLintConfigItem[] = [
   {
     plugins: {
-      unicorn: pluginSecurity,
+      security: pluginSecurity,
     },
     rules: {
       'security/detect-bidi-characters': 'warn',
