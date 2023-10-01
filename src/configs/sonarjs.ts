@@ -1,10 +1,10 @@
 import { type FlatESLintConfigItem } from 'eslint-define-config'
 import { pluginSonar } from '../plugins'
 
-export const sonar: FlatESLintConfigItem[] = [
+export const sonarjs: FlatESLintConfigItem[] = [
   {
     plugins: {
-      sonar: pluginSonar,
+      sonarjs: pluginSonar,
     },
     rules: {
       'sonarjs/cognitive-complexity': 'error',

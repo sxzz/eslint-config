@@ -8,7 +8,7 @@ import {
   markdown,
   prettier,
   security,
-  sonar,
+  sonarjs,
   sortPackageJson,
   sortTsconfig,
   typescript,
@@ -25,7 +25,7 @@ export const presetJavaScript = [
   ...imports,
   ...unicorn,
   ...security,
-  ...sonar,
+  ...sonarjs,
 ]
 
 export const presetLangsExtensions = [
