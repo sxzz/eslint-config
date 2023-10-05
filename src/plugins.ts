@@ -28,7 +28,6 @@ export const pluginUnicorn = interopDefault(_pluginUnicorn)
 import * as _pluginVue from 'eslint-plugin-vue'
 export const pluginVue = interopDefault(_pluginVue)
 
-// @ts-expect-error missing types
 import * as _pluginUnocss from '@unocss/eslint-plugin'
 export const pluginUnocss = interopDefault(_pluginUnocss)
 
