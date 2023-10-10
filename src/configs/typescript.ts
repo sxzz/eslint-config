@@ -33,6 +33,7 @@ export const typescript: FlatESLintConfigItem[] = [
         { disallowTypeAnnotations: false, fixStyle: 'inline-type-imports' },
       ],
       '@typescript-eslint/no-explicit-any': 'off',
+      '@typescript-eslint/no-import-type-side-effects': 'error',
       '@typescript-eslint/no-non-null-assertion': 'off',
       '@typescript-eslint/no-redeclare': 'error',
 
