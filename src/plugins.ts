@@ -5,7 +5,6 @@ function interopDefault(m: any) {
   return m.default || m
 }
 
-// @ts-expect-error missing types
 import * as _pluginAntfu from 'eslint-plugin-antfu'
 export const pluginAntfu = interopDefault(_pluginAntfu)
 
