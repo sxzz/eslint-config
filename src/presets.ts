@@ -1,4 +1,3 @@
-import { type FlatESLintConfigItem } from 'eslint-define-config'
 import {
   comments,
   ignores,
@@ -15,6 +14,7 @@ import {
   vue,
   yml,
 } from './configs'
+import type { FlatESLintConfigItem } from 'eslint-define-config'
 
 export const presetJavaScript = [
   ...ignores,

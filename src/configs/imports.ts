@@ -1,6 +1,6 @@
-import { type FlatESLintConfigItem } from 'eslint-define-config'
 import { pluginAntfu, pluginImport } from '../plugins'
 import { GLOB_MARKDOWN, GLOB_SRC, GLOB_SRC_EXT } from '../globs'
+import type { FlatESLintConfigItem } from 'eslint-define-config'
 
 export const imports: FlatESLintConfigItem[] = [
   {
@@ -10,7 +10,6 @@ export const imports: FlatESLintConfigItem[] = [
     },
     rules: {
       'antfu/import-dedupe': 'error',
-      'antfu/prefer-inline-type-import': 'error',
       'import/first': 'error',
       'import/no-default-export': 'error',
       'import/no-duplicates': 'error',

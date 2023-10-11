@@ -1,5 +1,5 @@
-import { type FlatESLintConfigItem } from 'eslint-define-config'
 import { pluginUnocss } from '../plugins'
+import type { FlatESLintConfigItem } from 'eslint-define-config'
 
 export const unocss: FlatESLintConfigItem[] = [
   {

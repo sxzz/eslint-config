@@ -1,4 +1,4 @@
-import { type FlatESLintConfigItem } from 'eslint-define-config'
+import type { FlatESLintConfigItem } from 'eslint-define-config'
 
 export const sortPackageJson: FlatESLintConfigItem[] = [
   {

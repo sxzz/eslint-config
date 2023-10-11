@@ -1,9 +1,9 @@
 import { getPackageInfoSync } from 'local-pkg'
 import tsPlugin from '@typescript-eslint/eslint-plugin'
-import { type FlatESLintConfigItem, type Rules } from 'eslint-define-config'
 import { GLOB_VUE } from '../globs'
 import { parserVue, pluginVue } from '../plugins'
 import { typescript } from './typescript'
+import type { FlatESLintConfigItem, Rules } from 'eslint-define-config'
 
 export function getVueVersion() {
   const pkg = getPackageInfoSync('vue', { paths: [process.cwd()] })

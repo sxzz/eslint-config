@@ -1,7 +1,7 @@
 import globals from 'globals'
-import { type FlatESLintConfigItem } from 'eslint-define-config'
 import { pluginUnusedImports } from '../plugins'
 import { isInEditor } from '../env'
+import type { FlatESLintConfigItem } from 'eslint-define-config'
 
 export const javascript: FlatESLintConfigItem[] = [
   {

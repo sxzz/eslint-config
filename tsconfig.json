@@ -5,11 +5,11 @@
     "module": "esnext",
     "moduleResolution": "bundler",
     "types": ["node"],
+    "strict": true,
+    "noUnusedLocals": true,
     "declaration": true,
     "noEmit": true,
     "esModuleInterop": true,
-    "strict": true,
-    "noUnusedLocals": true,
     "skipLibCheck": true
   },
   "include": ["src"]
