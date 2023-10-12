@@ -1,4 +1,4 @@
-/* eslint-disable import/first */
+/* eslint-disable import/first,import/order */
 
 /* #__NO_SIDE_EFFECTS__ */
 function interopDefault(m: any) {
