@@ -1,8 +1,10 @@
-import { getPackageInfoSync } from 'local-pkg'
 import tsPlugin from '@typescript-eslint/eslint-plugin'
 import { type FlatESLintConfigItem, type Rules } from 'eslint-define-config'
-import { GLOB_VUE } from '../globs'
+import { getPackageInfoSync } from 'local-pkg'
+
+import { GLOB_NUXT_LAYOUTS, GLOB_NUXT_PAGE, GLOB_VUE } from '../globs'
 import { parserVue, pluginVue } from '../plugins'
+
 import { typescript } from './typescript'
 
 export function getVueVersion() {
@@ -61,7 +63,7 @@ const vueCustomRules: Rules = {
     },
   ],
   'vue/block-order': ['error', { order: ['script', 'template', 'style'] }],
-  'vue/component-definition-name-casing': ['error', 'PascalCase'],
+  'vue/component-definition-name-casing': ['error', 'kebab-case'],
   'vue/component-name-in-template-casing': [
     'error',
     'kebab-case',
@@ -71,13 +73,13 @@ const vueCustomRules: Rules = {
     },
   ],
   'vue/component-options-name-casing': ['error', 'PascalCase'],
-
   'vue/component-tags-order': [
     'error',
     {
       order: ['docs', 'template', 'script', 'style'],
     },
   ],
+
   'vue/custom-event-name-casing': ['error', 'camelCase'],
   'vue/eqeqeq': ['error', 'smart'],
   'vue/html-self-closing': [
@@ -92,9 +94,16 @@ const vueCustomRules: Rules = {
       svg: 'always',
     },
   ],
+  'vue/match-component-file-name': [
+    'error',
+    {
+      extensions: ['vue'],
+      shouldMatchCase: false,
+    },
+  ],
   'vue/match-component-import-name': 'warn',
   'vue/max-attributes-per-line': 'off',
-  'vue/multi-word-component-names': 'off',
+  'vue/multi-word-component-names': 'error',
   'vue/no-boolean-default': ['error', 'default-false'],
   'vue/no-constant-condition': 'warn',
   'vue/no-duplicate-attr-inheritance': 'warn',
@@ -256,4 +265,10 @@ export const vue: FlatESLintConfigItem[] = [
     },
   },
   ...reactivityTransform,
+  {
+    files: [GLOB_NUXT_PAGE, GLOB_NUXT_LAYOUTS],
+    rules: {
+      'vue/multi-word-component-names': 'off',
+    },
+  },
 ]

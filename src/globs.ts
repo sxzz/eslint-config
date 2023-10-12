@@ -18,6 +18,9 @@ export const GLOB_JSONC = '**/*.jsonc'
 
 export const GLOB_MARKDOWN = '**/*.md'
 export const GLOB_VUE = '**/*.vue'
+
+export const GLOB_NUXT_PAGE = 'pages/**/*.vue'
+export const GLOB_NUXT_LAYOUTS = 'layouts/**/*.vue'
 export const GLOB_YAML = '**/*.y?(a)ml'
 export const GLOB_HTML = '**/*.htm?(l)'
 
@@ -28,6 +31,8 @@ export const GLOB_ALL_SRC = [
   GLOB_JSON5,
   GLOB_MARKDOWN,
   GLOB_VUE,
+  GLOB_NUXT_PAGE,
+  GLOB_NUXT_LAYOUTS,
   GLOB_YAML,
   GLOB_HTML,
 ]
