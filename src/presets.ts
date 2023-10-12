@@ -1,4 +1,5 @@
 import { type FlatESLintConfigItem } from 'eslint-define-config'
+
 import {
   comments,
   ignores,

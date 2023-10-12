@@ -1,4 +1,5 @@
 import { type FlatESLintConfigItem, type Rules } from 'eslint-define-config'
+
 import { GLOB_YAML } from '../globs'
 import { parserYml, pluginYml } from '../plugins'
 

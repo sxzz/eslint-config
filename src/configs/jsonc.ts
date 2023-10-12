@@ -1,6 +1,7 @@
 import { type FlatESLintConfigItem, type Rules } from 'eslint-define-config'
-import { parserJsonc, pluginJsonc } from '../plugins'
+
 import { GLOB_JSON, GLOB_JSON5, GLOB_JSONC } from '../globs'
+import { parserJsonc, pluginJsonc } from '../plugins'
 
 export const jsonc: FlatESLintConfigItem[] = [
   {

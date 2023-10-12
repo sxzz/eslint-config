@@ -40,7 +40,8 @@ export const configPrettier = interopDefault(_configPrettier)
 
 export * as pluginSonar from 'eslint-plugin-sonarjs'
 // @ts-expect-error missing types
-export * as pluginSecurity from 'eslint-plugin-security'
+import * as _pluginSecurity from 'eslint-plugin-security'
+export const pluginSecurity = interopDefault(_pluginSecurity)
 
 // @ts-expect-error missing types
 export * as pluginImport from 'eslint-plugin-i'

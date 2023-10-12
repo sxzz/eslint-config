@@ -1,4 +1,5 @@
 import { type FlatESLintConfigItem } from 'eslint-define-config'
+
 import { pluginSonar } from '../plugins'
 
 export const sonarjs: FlatESLintConfigItem[] = [

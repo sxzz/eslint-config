@@ -1,4 +1,5 @@
 import { type FlatESLintConfigItem } from 'eslint-define-config'
+
 import { GLOB_TS, GLOB_TSX } from '../globs'
 import { parserTypeScript, pluginAntfu, pluginTypeScript } from '../plugins'
 
