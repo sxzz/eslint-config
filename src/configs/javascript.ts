@@ -1,7 +1,8 @@
-import globals from 'globals'
 import { type FlatESLintConfigItem } from 'eslint-define-config'
-import { pluginUnusedImports } from '../plugins'
+import globals from 'globals'
+
 import { isInEditor } from '../env'
+import { pluginUnusedImports } from '../plugins'
 
 export const javascript: FlatESLintConfigItem[] = [
   {
@@ -119,13 +120,14 @@ export const javascript: FlatESLintConfigItem[] = [
         },
       ],
       'no-unused-labels': 'error',
-      'no-unused-vars': 'off',
 
+      'no-unused-vars': 'off',
       'no-useless-backreference': 'error',
       'no-useless-call': 'error',
-      'no-useless-catch': 'error',
 
+      'no-useless-catch': 'error',
       'no-useless-escape': 'error',
+
       'no-useless-return': 'error',
       'no-void': 'error',
       'no-with': 'error',
