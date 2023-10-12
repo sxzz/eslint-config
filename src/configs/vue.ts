@@ -266,7 +266,7 @@ export const vue: FlatESLintConfigItem[] = [
   },
   ...reactivityTransform,
   {
-    files: [GLOB_NUXT_PAGE, GLOB_NUXT_LAYOUTS],
+    files: [GLOB_NUXT_PAGE, GLOB_NUXT_LAYOUTS, 'app.vue'],
     rules: {
       'vue/multi-word-component-names': 'off',
     },
