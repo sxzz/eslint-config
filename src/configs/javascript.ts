@@ -25,6 +25,14 @@ export const javascript: FlatESLintConfigItem[] = [
     rules: {
       'array-callback-return': 'error',
       'block-scoped-var': 'error',
+      camelcase: [
+        'error',
+        {
+          ignoreDestructuring: true,
+          ignoreImports: true,
+          properties: 'always',
+        },
+      ],
       'class-methods-use-this': 'error',
       'constructor-super': 'error',
       'dot-notation': 'warn',
