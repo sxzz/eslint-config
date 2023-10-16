@@ -62,7 +62,18 @@ const vueCustomRules: Rules = {
       ],
     },
   ],
-  'vue/block-order': ['error', { order: ['script', 'template', 'style'] }],
+  'vue/block-order': [
+    'error',
+    {
+      order: [
+        'docs',
+        'script[setup]',
+        'template',
+        'script:not([setup])',
+        'style',
+      ],
+    },
+  ],
   'vue/component-definition-name-casing': ['error', 'kebab-case'],
   'vue/component-name-in-template-casing': [
     'error',
@@ -73,12 +84,6 @@ const vueCustomRules: Rules = {
     },
   ],
   'vue/component-options-name-casing': ['error', 'PascalCase'],
-  'vue/component-tags-order': [
-    'error',
-    {
-      order: ['docs', 'template', 'script', 'style'],
-    },
-  ],
 
   'vue/custom-event-name-casing': ['error', 'camelCase'],
   'vue/eqeqeq': ['error', 'smart'],
