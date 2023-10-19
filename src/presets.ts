@@ -6,6 +6,7 @@ import {
   jsonc,
   markdown,
   prettier,
+  sortKeys,
   sortPackageJson,
   sortTsconfig,
   typescript,
@@ -39,7 +40,7 @@ export const basic = [
 ]
 export { basic as presetBasic }
 
-export const all = [...basic, ...vue, ...unocss, ...prettier]
+export const all = [...basic, ...sortKeys, ...vue, ...unocss, ...prettier]
 
 export function sxzz(
   config: FlatESLintConfigItem | FlatESLintConfigItem[] = [],
@@ -47,16 +48,21 @@ export function sxzz(
     vue: enableVue = true,
     prettier: enablePrettier = true,
     markdown: enableMarkdown = true,
+    sortKeys: enableSortKeys = true,
     unocss: enableUnocss = false,
   }: Partial<{
     vue: boolean
     prettier: boolean
     markdown: boolean
     unocss: boolean
+    sortKeys: boolean
   }> = {}
 ): FlatESLintConfigItem[] {
   const configs = []
   configs.push(...basic)
+  if (enableSortKeys) {
+    configs.push(...sortKeys)
+  }
   if (enableVue) {
     configs.push(...vue)
   }

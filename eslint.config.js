@@ -1,6 +1,3 @@
-/* eslint-disable import/order */
-import sortKeys from 'eslint-plugin-sort-keys'
-
 import { createRequire } from 'node:module'
 const require = createRequire(import.meta.url)
 require('sucrase/register')
@@ -12,9 +9,6 @@ const { sxzz } = require('./src/index.ts')
 export default sxzz([
   {
     files: ['src/**/*.ts'],
-    plugins: {
-      'sort-keys': sortKeys,
-    },
     rules: {
       'sort-keys/sort-keys-fix': 'error',
     },

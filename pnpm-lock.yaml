@@ -38,6 +38,9 @@ dependencies:
   eslint-plugin-prettier:
     specifier: ^5.0.0
     version: 5.0.0(eslint-config-prettier@9.0.0)(eslint@8.51.0)(prettier@3.0.3)
+  eslint-plugin-sort-keys:
+    specifier: ^2.3.5
+    version: 2.3.5
   eslint-plugin-unicorn:
     specifier: ^48.0.1
     version: 48.0.1(eslint@8.51.0)
@@ -82,9 +85,6 @@ devDependencies:
   eslint:
     specifier: ^8.51.0
     version: 8.51.0
-  eslint-plugin-sort-keys:
-    specifier: ^2.3.5
-    version: 2.3.5
   sucrase:
     specifier: ^3.34.0
     version: 3.34.0
@@ -1190,7 +1190,7 @@ packages:
     resolution: {integrity: sha512-2j/XKQ9sNJwK8kIp/U0EvuF6stS6/8aIc53/NskE4C5NRNh4dt3xzbZyOdrVC11cTH6Zo59/pdzA0Kb+2fQGWg==}
     dependencies:
       natural-compare: 1.4.0
-    dev: true
+    dev: false
 
   /eslint-plugin-unicorn@48.0.1(eslint@8.51.0):
     resolution: {integrity: sha512-FW+4r20myG/DqFcCSzoumaddKBicIPeFnTrifon2mWIzlfyvzwyqZjqVP7m4Cqr/ZYisS2aiLghkUWaPg6vtCw==}

@@ -44,6 +44,8 @@ export * as pluginJsonc from 'eslint-plugin-jsonc'
 export * as pluginUnusedImports from 'eslint-plugin-unused-imports'
 // @ts-expect-error missing types
 export * as pluginYml from 'eslint-plugin-yml'
+// @ts-expect-error missing types
+export * as pluginSortKeys from 'eslint-plugin-sort-keys'
 
 export * as parserTypeScript from '@typescript-eslint/parser'
 export * as parserVue from 'vue-eslint-parser'
