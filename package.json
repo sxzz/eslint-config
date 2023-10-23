@@ -63,8 +63,13 @@
   },
   "devDependencies": {
     "@frabbit/prettier-config": "^2.0.0",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^9.2.1",
+    "@semantic-release/npm": "^11.0.0",
     "@types/node": "^20.8.0",
     "bumpp": "^9.2.0",
+    "conventional-changelog-conventionalcommits": "^7.0.2",
     "eslint": "^8.50.0",
     "eslint-plugin-sort-keys": "^2.3.5",
     "sucrase": "^3.34.0",

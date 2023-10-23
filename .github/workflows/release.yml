@@ -23,8 +23,6 @@ jobs:
 
       - run: npm ci
 
-      - run: npm i @semantic-release/changelog @semantic-release/npm @semantic-release/github @semantic-release/git
-
       - name: Release
         run: npx semantic-release --branches main
         env:
