@@ -19,16 +19,17 @@ jobs:
       - name: Set node
         uses: actions/setup-node@v3
         with:
-          node-version: lts/*
+          node-version: 20.x
 
       - run: npm ci
+
+      - run: npm i @semantic-release/changelog @semantic-release/npm @semantic-release/github @semantic-release/git
 
       - name: Release
         run: npx semantic-release --branches main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-
 
       - run: npx changelogithub
         env:
