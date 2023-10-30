@@ -74,6 +74,7 @@ const vueCustomRules: Rules = {
       ignoreConstructors: false,
     },
   ],
+  'vue/one-component-per-file': 'off',
   'vue/padding-line-between-blocks': ['error', 'always'],
   'vue/prefer-template': 'error',
   'vue/require-default-prop': 'off',
