@@ -25,22 +25,20 @@ export const presetJavaScript = [
   ...unicorn,
 ]
 
-export const presetLangsExtensions = [
-  ...markdown,
-  ...yml,
-  ...jsonc,
-  ...sortPackageJson,
-  ...sortTsconfig,
-]
+export const presetJsonc = [...jsonc, ...sortPackageJson, ...sortTsconfig]
+export const presetLangsExtensions = [...markdown, ...yml, ...presetJsonc]
 
-export const basic = [
-  ...presetJavaScript,
-  ...typescript,
-  ...presetLangsExtensions,
-]
+export const basic = [...presetJavaScript, ...typescript]
 export { basic as presetBasic }
 
-export const all = [...basic, ...sortKeys, ...vue, ...unocss, ...prettier]
+export const all = [
+  ...basic,
+  ...presetLangsExtensions,
+  ...sortKeys,
+  ...vue,
+  ...unocss,
+  ...prettier,
+]
 
 export function sxzz(
   config: FlatESLintConfigItem | FlatESLintConfigItem[] = [],
@@ -58,8 +56,7 @@ export function sxzz(
     sortKeys: boolean
   }> = {}
 ): FlatESLintConfigItem[] {
-  const configs = []
-  configs.push(...basic)
+  const configs = [...basic, ...yml, ...presetJsonc]
   if (enableSortKeys) {
     configs.push(...sortKeys)
   }
