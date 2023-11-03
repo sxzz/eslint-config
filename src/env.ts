@@ -10,4 +10,6 @@ export const hasVue =
   isPackageExists('vitepress') ||
   isPackageExists('@slidev/cli')
 export const hasUnocss =
-  isPackageExists('unocss') || isPackageExists('@unocss/webpack')
+  isPackageExists('unocss') ||
+  isPackageExists('@unocss/webpack') ||
+  isPackageExists('@unocss/nuxt')
