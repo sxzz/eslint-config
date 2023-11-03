@@ -1,3 +1,4 @@
+import { hasUnocss, hasVue } from './env'
 import {
   comments,
   ignores,
@@ -43,11 +44,11 @@ export const all = [
 export function sxzz(
   config: FlatESLintConfigItem | FlatESLintConfigItem[] = [],
   {
-    vue: enableVue = true,
+    vue: enableVue = hasVue,
     prettier: enablePrettier = true,
     markdown: enableMarkdown = true,
     sortKeys: enableSortKeys = true,
-    unocss: enableUnocss = false,
+    unocss: enableUnocss = hasUnocss,
   }: Partial<{
     vue: boolean
     prettier: boolean
