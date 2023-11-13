@@ -1,7 +1,7 @@
 {
   "name": "@sxzz/eslint-config",
   "version": "3.7.4",
-  "packageManager": "pnpm@8.10.2",
+  "packageManager": "pnpm@8.10.3",
   "description": "ESLint config for @sxzz.",
   "type": "module",
   "license": "MIT",
@@ -38,9 +38,9 @@
     "eslint": "^8.0.0"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.9.1",
-    "@typescript-eslint/parser": "^6.9.1",
-    "@unocss/eslint-plugin": "^0.57.2",
+    "@typescript-eslint/eslint-plugin": "^6.10.0",
+    "@typescript-eslint/parser": "^6.10.0",
+    "@unocss/eslint-plugin": "^0.57.3",
     "eslint-config-prettier": "^9.0.0",
     "eslint-define-config": "^1.24.1",
     "eslint-plugin-antfu": "^1.0.2",
@@ -57,13 +57,13 @@
     "globals": "^13.23.0",
     "jsonc-eslint-parser": "^2.4.0",
     "local-pkg": "^0.5.0",
-    "prettier": "^3.0.3",
+    "prettier": "^3.1.0",
     "vue-eslint-parser": "^9.3.2",
     "yaml-eslint-parser": "^1.2.2"
   },
   "devDependencies": {
     "@sxzz/prettier-config": "^1.0.4",
-    "@types/node": "^20.8.10",
+    "@types/node": "^20.9.0",
     "bumpp": "^9.2.0",
     "eslint": "^8.53.0",
     "sucrase": "^3.34.0",
