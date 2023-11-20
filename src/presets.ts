@@ -55,7 +55,7 @@ export function sxzz(
     markdown: boolean
     unocss: boolean
     sortKeys: boolean
-  }> = {}
+  }> = {},
 ): FlatESLintConfigItem[] {
   const configs = [...basic, ...yml, ...presetJsonc]
   if (enableSortKeys) {

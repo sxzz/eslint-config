@@ -38,7 +38,7 @@ export default sxzz(
   [
     /* your custom config */
   ],
-  { vue: true, prettier: true, markdown: true, unocss: false }
+  { vue: true, prettier: true, markdown: true, unocss: false },
 )
 ```
 
