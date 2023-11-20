@@ -74,8 +74,8 @@ dependencies:
 
 devDependencies:
   '@sxzz/prettier-config':
-    specifier: ^1.0.4
-    version: 1.0.4
+    specifier: ^2.0.0
+    version: 2.0.0
   '@types/node':
     specifier: ^20.9.2
     version: 20.9.2
@@ -444,8 +444,8 @@ packages:
       tslib: 2.6.2
     dev: false
 
-  /@sxzz/prettier-config@1.0.4:
-    resolution: {integrity: sha512-KqgPNwMYloKI+LGAW8LwS0hEJHgwnrIJjgQC0B/saoDJZKUIrqc+lLme/lobrzBetPNhrCuhSDELRrZTg32l0w==}
+  /@sxzz/prettier-config@2.0.0:
+    resolution: {integrity: sha512-qckaqLpgHzfuoNXzdXfyQW8NyidxYQ1aPTSZRg9hSg7aiIaKtjxZQsdcOs8Pw9sk+/LPNhRchrxa8N55qJitBQ==}
     dev: true
 
   /@types/json-schema@7.0.13:
