@@ -1,5 +1,5 @@
 import tsPlugin from '@typescript-eslint/eslint-plugin'
-import { type FlatESLintConfigItem, type Rules } from 'eslint-define-config'
+import { type FlatESLintConfig, type Rules } from 'eslint-define-config'
 import { getPackageInfoSync } from 'local-pkg'
 
 import { GLOB_NUXT_LAYOUTS, GLOB_NUXT_PAGE, GLOB_VUE } from '../globs'
@@ -20,7 +20,7 @@ export function getVueVersion() {
 }
 const isVue3 = getVueVersion() === 3
 
-export const reactivityTransform: FlatESLintConfigItem[] = [
+export const reactivityTransform: FlatESLintConfig[] = [
   {
     languageOptions: {
       globals: {
@@ -42,7 +42,7 @@ export const reactivityTransform: FlatESLintConfigItem[] = [
   },
 ]
 
-const vueCustomRules: Rules = {
+const vueCustomRules: Partial<Rules> = {
   'vue/attributes-order': [
     'warn',
     {
@@ -238,7 +238,7 @@ const vue2Rules: Rules = {
   ...pluginVue.configs.recommended.rules,
 }
 
-export const vue: FlatESLintConfigItem[] = [
+export const vue: FlatESLintConfig[] = [
   {
     files: [GLOB_VUE],
     languageOptions: {

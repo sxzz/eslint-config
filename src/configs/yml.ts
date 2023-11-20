@@ -1,9 +1,9 @@
-import { type FlatESLintConfigItem, type Rules } from 'eslint-define-config'
+import { type FlatESLintConfig, type Rules } from 'eslint-define-config'
 
 import { GLOB_YAML } from '../globs'
 import { parserYml, pluginYml } from '../plugins'
 
-export const yml: FlatESLintConfigItem[] = [
+export const yml: FlatESLintConfig[] = [
   {
     files: [GLOB_YAML],
     languageOptions: {

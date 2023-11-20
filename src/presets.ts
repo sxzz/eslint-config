@@ -1,4 +1,4 @@
-import { type FlatESLintConfigItem } from 'eslint-define-config'
+import { type FlatESLintConfig } from 'eslint-define-config'
 
 import {
   comments,
@@ -47,7 +47,7 @@ export { basic as presetBasic }
 export const all = [...basic, ...vue, ...unocss, ...prettier]
 
 export function frabbit(
-  config: FlatESLintConfigItem | FlatESLintConfigItem[] = [],
+  config: FlatESLintConfig | FlatESLintConfig[] = [],
   {
     vue: enableVue = true,
     prettier: enablePrettier = true,
@@ -59,7 +59,7 @@ export function frabbit(
     markdown: boolean
     unocss: boolean
   }> = {}
-): FlatESLintConfigItem[] {
+): FlatESLintConfig[] {
   const configs = []
   configs.push(...basic)
   if (enableVue) {

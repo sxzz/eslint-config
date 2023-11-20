@@ -1,8 +1,8 @@
-import { type FlatESLintConfigItem } from 'eslint-define-config'
+import { type FlatESLintConfig } from 'eslint-define-config'
 
 import { pluginSecurity } from '../plugins'
 
-export const security: FlatESLintConfigItem[] = [
+export const security: FlatESLintConfig[] = [
   {
     plugins: {
       security: pluginSecurity,
