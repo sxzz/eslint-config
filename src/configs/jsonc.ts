@@ -13,7 +13,8 @@ export const jsonc: FlatESLintConfig[] = [
       jsonc: pluginJsonc,
     },
     rules: {
-      ...(pluginJsonc.configs['recommended-with-jsonc'].rules as Rules),
+      ...(pluginJsonc.configs['recommended-with-jsonc']
+        .rules as Partial<Rules>),
       'jsonc/quote-props': 'off',
       'jsonc/quotes': 'off',
     },

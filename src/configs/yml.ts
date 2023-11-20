@@ -13,8 +13,8 @@ export const yml: FlatESLintConfig[] = [
       yml: pluginYml,
     },
     rules: {
-      ...(pluginYml.configs.standard.rules as Rules),
-      ...(pluginYml.configs.prettier.rules as Rules),
+      ...(pluginYml.configs.standard.rules as Partial<Rules>),
+      ...(pluginYml.configs.prettier.rules as Partial<Rules>),
       'yml/no-empty-mapping-value': 'off',
     },
   },
