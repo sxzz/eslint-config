@@ -44,6 +44,7 @@ export const imports: FlatESLintConfigItem[] = [
       `**/{index,vite,esbuild,rollup,webpack,rspack}.ts`,
       '**/*.d.ts',
       `${GLOB_MARKDOWN}/**`,
+      '**/.prettierrc*',
     ],
     plugins: {
       import: pluginImport,
