@@ -1,12 +1,15 @@
 /* eslint-disable import/first */
 
+export type InteropDefault<T> = T extends { default: infer U } ? U : T
+
 /* #__NO_SIDE_EFFECTS__ */
-function interopDefault(m: any) {
-  return m.default || m
+function interopDefault<T>(m: T): InteropDefault<T> {
+  return (m as any).default || m
 }
 
 import * as _pluginAntfu from 'eslint-plugin-antfu'
-export const pluginAntfu = interopDefault(_pluginAntfu)
+export const pluginAntfu: typeof import('eslint-plugin-antfu').default =
+  interopDefault(_pluginAntfu)
 
 // @ts-expect-error missing types
 import * as _pluginComments from 'eslint-plugin-eslint-comments'
