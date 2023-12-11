@@ -1,5 +1,6 @@
 import { GLOB_TS, GLOB_TSX } from '../globs'
 import { parserTypeScript, pluginAntfu, pluginTypeScript } from '../plugins'
+import { restrictedSyntaxJs } from './javascript'
 import type { FlatESLintConfigItem } from 'eslint-define-config'
 
 export const typescript: FlatESLintConfigItem[] = [
@@ -46,7 +47,11 @@ export const typescript: FlatESLintConfigItem[] = [
         { allowBitwiseExpressions: true },
       ],
 
-      'antfu/no-const-enum': 'error',
+      'no-restricted-syntax': [
+        'error',
+        ...restrictedSyntaxJs,
+        'TSEnumDeclaration[const=true]',
+      ],
     },
   },
   {

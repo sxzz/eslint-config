@@ -3,6 +3,12 @@ import { pluginUnusedImports } from '../plugins'
 import { isInEditor } from '../env'
 import type { FlatESLintConfigItem } from 'eslint-define-config'
 
+export const restrictedSyntaxJs = [
+  'ForInStatement',
+  'LabeledStatement',
+  'WithStatement',
+]
+
 export const javascript: FlatESLintConfigItem[] = [
   {
     languageOptions: {
@@ -72,12 +78,7 @@ export const javascript: FlatESLintConfigItem[] = [
       'no-prototype-builtins': 'error',
       'no-redeclare': 'error',
       'no-regex-spaces': 'error',
-      'no-restricted-syntax': [
-        'error',
-        'ForInStatement',
-        'LabeledStatement',
-        'WithStatement',
-      ],
+      'no-restricted-syntax': ['error', ...restrictedSyntaxJs],
       'no-return-await': 'warn',
       'no-self-assign': 'error',
       'no-setter-return': 'error',
