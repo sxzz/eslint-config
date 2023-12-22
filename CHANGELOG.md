@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.14](https://github.com/frenchrabbit/eslint-config/compare/v1.5.13...v1.5.14) (2023-12-22)
+
+
+### Bug Fixes
+
+* **ci:** fix release ([33663a4](https://github.com/frenchrabbit/eslint-config/commit/33663a4693d3cc23b4b5cafec86adcdca7ffee58))
+
 ## [1.5.13](https://github.com/frenchrabbit/eslint-config/compare/v1.5.12...v1.5.13) (2023-11-20)
 
 

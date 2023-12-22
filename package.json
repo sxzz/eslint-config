@@ -1,6 +1,6 @@
 {
   "name": "@frabbit/eslint-config",
-  "version": "1.5.13",
+  "version": "1.5.14",
   "packageManager": "npm@9.6.7",
   "description": "ESLint config for @frabbit.",
   "type": "module",
