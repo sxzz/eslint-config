@@ -42,7 +42,7 @@ export const typescript: FlatESLintConfig[] = [
 
       '@typescript-eslint/prefer-as-const': 'warn',
 
-      'antfu/no-const-enum': 'error',
+      'no-restricted-syntax': ['error', 'TSEnumDeclaration[const=true]'],
     },
   },
   {

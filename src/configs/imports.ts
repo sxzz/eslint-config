@@ -11,7 +11,6 @@ export const imports: FlatESLintConfig[] = [
     },
     rules: {
       'antfu/import-dedupe': 'error',
-      'antfu/prefer-inline-type-import': 'error',
       'import/first': 'error',
       'import/newline-after-import': ['error', { count: 1 }],
       'import/no-default-export': 'error',
