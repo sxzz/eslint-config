@@ -31,7 +31,8 @@ import * as _pluginVue from 'eslint-plugin-vue'
 export const pluginVue = interopDefault(_pluginVue)
 
 import * as _pluginUnocss from '@unocss/eslint-plugin'
-export const pluginUnocss = interopDefault(_pluginUnocss)
+export const pluginUnocss: typeof import('@unocss/eslint-plugin').default =
+  interopDefault(_pluginUnocss)
 
 import * as _pluginPrettier from 'eslint-plugin-prettier'
 export const pluginPrettier = interopDefault(_pluginPrettier)
