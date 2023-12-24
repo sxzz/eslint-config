@@ -50,7 +50,7 @@ const vueCustomRules: Rules = {
       html: {
         component: 'always',
         normal: 'always',
-        void: 'always',
+        void: 'any',
       },
       math: 'always',
       svg: 'always',

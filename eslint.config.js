@@ -6,11 +6,14 @@ const { sxzz } = require('./src/index.ts')
 
 // import { sxzz } from './dist/index.js'
 
-export default sxzz([
-  {
-    files: ['src/**/*.ts'],
-    rules: {
-      'sort-keys/sort-keys-fix': 'error',
+export default sxzz(
+  [
+    {
+      files: ['src/**/*.ts'],
+      rules: {
+        'sort-keys/sort-keys-fix': 'error',
+      },
     },
-  },
-])
+  ],
+  { vue: true },
+)
