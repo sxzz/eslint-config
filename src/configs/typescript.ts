@@ -1,4 +1,4 @@
-import { GLOB_TS, GLOB_TSX } from '../globs'
+import { GLOB_JS, GLOB_TS, GLOB_TSX } from '../globs'
 import { parserTypeScript, pluginAntfu, pluginTypeScript } from '../plugins'
 import { restrictedSyntaxJs } from './javascript'
 import type { FlatESLintConfigItem } from 'eslint-define-config'
@@ -69,10 +69,16 @@ export const typescript: FlatESLintConfigItem[] = [
     },
   },
   {
-    files: ['**/*.js', '**/*.cjs'],
+    files: [GLOB_JS, '**/*.cjs'],
     rules: {
       '@typescript-eslint/no-require-imports': 'off',
       '@typescript-eslint/no-var-requires': 'off',
+    },
+  },
+  {
+    files: ['**/*.d.ts'],
+    rules: {
+      'no-restricted-syntax': ['error', ...restrictedSyntaxJs],
     },
   },
 ]
