@@ -38,8 +38,8 @@
     "eslint": "^8.0.0"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.17.0",
-    "@typescript-eslint/parser": "^6.17.0",
+    "@typescript-eslint/eslint-plugin": "^6.18.1",
+    "@typescript-eslint/parser": "^6.18.1",
     "@unocss/eslint-plugin": "^0.58.3",
     "eslint-config-prettier": "^9.1.0",
     "eslint-define-config": "^1.24.1",
@@ -58,12 +58,12 @@
     "jsonc-eslint-parser": "^2.4.0",
     "local-pkg": "^0.5.0",
     "prettier": "^3.1.1",
-    "vue-eslint-parser": "^9.3.2",
+    "vue-eslint-parser": "^9.4.0",
     "yaml-eslint-parser": "^1.2.2"
   },
   "devDependencies": {
     "@sxzz/prettier-config": "^2.0.0",
-    "@types/node": "^20.10.6",
+    "@types/node": "^20.10.7",
     "bumpp": "^9.2.1",
     "eslint": "^8.56.0",
     "sucrase": "^3.35.0",
