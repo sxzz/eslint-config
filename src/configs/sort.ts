@@ -62,7 +62,7 @@ export const sortPackageJson: FlatESLintConfigItem[] = [
         },
         {
           order: { type: 'asc' },
-          pathPattern: '^(?:dev|peer|optional|bundled)?[Dd]ependencies$',
+          pathPattern: '^(?:dev|peer|optional|bundled)?[Dd]ependencies(Meta)?$',
         },
         {
           order: ['types', 'require', 'import', 'default'],
