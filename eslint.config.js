@@ -14,6 +14,12 @@ export default sxzz(
         'sort-keys/sort-keys-fix': 'error',
       },
     },
+    {
+      files: ['**/*.md/*'],
+      rules: {
+        'sort-imports': 'off',
+      },
+    },
   ],
   { vue: true },
 )

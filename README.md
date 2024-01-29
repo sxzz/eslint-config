@@ -24,23 +24,44 @@ Require Node.js >= 16.14.
 ## Usage
 
 ```js
-// eslint.config.js
-import { all } from '@sxzz/eslint-config'
-
-export default all
-```
-
-### Custom Config
-
-```js
 import { sxzz } from '@sxzz/eslint-config'
 export default sxzz(
   [
     /* your custom config */
   ],
-  { vue: true, prettier: true, markdown: true, unocss: false },
+  // Features: it'll detect installed dependency and enable necessary features automatically
+  {
+    prettier: true,
+    markdown: true,
+    vue: true, // auto detection
+    unocss: false, // auto detection
+  },
 )
 ```
+
+### Presets
+
+```js
+// eslint.config.js
+import {
+  presetJavaScript, // Ignore common files and include javascript support
+  presetJsonc, // Includes basic json(c) file support and sorting json keys
+  presetLangsExtensions, // Includes markdown, yaml + `presetJsonc` support
+  presetBasic, // Includes `presetJavaScript` and typescript support
+
+  // Includes
+  // - `presetBasic` (JS+TS) support
+  // - `presetLangsExtensions` (markdown, yaml, jsonc) support
+  // - Vue support
+  // - UnoCSS support (`uno.config.ts` is required)
+  // - Prettier support
+  presetAll,
+} from '@sxzz/eslint-config'
+
+export default presetAll
+```
+
+See [preset.ts](./src/presets.ts) for more details.
 
 ### VSCode
 

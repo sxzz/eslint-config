@@ -18,6 +18,7 @@ import {
 } from './configs'
 import type { FlatESLintConfigItem } from 'eslint-define-config'
 
+/** Ignore common files and include javascript support */
 export const presetJavaScript = [
   ...ignores,
   ...javascript,
@@ -25,42 +26,55 @@ export const presetJavaScript = [
   ...imports,
   ...unicorn,
 ]
-
+/** Includes basic json(c) file support and sorting json keys */
 export const presetJsonc = [...jsonc, ...sortPackageJson, ...sortTsconfig]
+/** Includes markdown, yaml + `presetJsonc` support */
 export const presetLangsExtensions = [...markdown, ...yml, ...presetJsonc]
-
-export const basic = [...presetJavaScript, ...typescript]
-export { basic as presetBasic }
-
-export const all = [
-  ...basic,
+/** Includes `presetJavaScript` and typescript support */
+export const presetBasic = [...presetJavaScript, ...typescript, ...sortKeys]
+/**
+ * Includes
+ * - `presetBasic` (JS+TS) support
+ * - `presetLangsExtensions` (markdown, yaml, jsonc) support
+ * - Vue support
+ * - UnoCSS support (`uno.config.ts` is required)
+ * - Prettier support
+ */
+export const presetAll = [
+  ...presetBasic,
   ...presetLangsExtensions,
-  ...sortKeys,
   ...vue,
   ...unocss,
   ...prettier,
 ]
+export { presetBasic as basic, presetAll as all }
 
+/**
+ *
+ * @param config
+ * @param features
+ * @returns
+ */
 export function sxzz(
   config: FlatESLintConfigItem | FlatESLintConfigItem[] = [],
   {
     vue: enableVue = hasVue,
     prettier: enablePrettier = true,
     markdown: enableMarkdown = true,
-    sortKeys: enableSortKeys = true,
     unocss: enableUnocss = hasUnocss,
   }: Partial<{
+    /** Vue support. Auto-enable. */
     vue: boolean
+    /** Prettier support. Default: true */
     prettier: boolean
+    /** markdown support. Default: true */
     markdown: boolean
+    /** UnoCSS support. Auto-enable. */
     unocss: boolean
     sortKeys: boolean
   }> = {},
 ): FlatESLintConfigItem[] {
-  const configs = [...basic, ...yml, ...presetJsonc]
-  if (enableSortKeys) {
-    configs.push(...sortKeys)
-  }
+  const configs = [...presetBasic, ...yml, ...presetJsonc]
   if (enableVue) {
     configs.push(...vue)
   }
