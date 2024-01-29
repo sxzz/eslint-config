@@ -70,11 +70,7 @@ export const sortPackageJson: FlatESLintConfigItem[] = [
         },
         {
           order: { type: 'asc' },
-          pathPattern: '^resolutions$',
-        },
-        {
-          order: { type: 'asc' },
-          pathPattern: '^pnpm.overrides$',
+          pathPattern: '^(?:resolutions|overrides|pnpm.overrides)$',
         },
       ],
     },
