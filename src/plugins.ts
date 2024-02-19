@@ -27,6 +27,12 @@ export const pluginUnicorn = interopDefault(_pluginUnicorn)
 import * as _pluginVue from 'eslint-plugin-vue'
 export const pluginVue = interopDefault(_pluginVue)
 
+import * as _pluginNode from 'eslint-plugin-n'
+export const pluginNode = interopDefault(_pluginNode)
+
+import * as _pluginPerfectionist from 'eslint-plugin-perfectionist'
+export const pluginPerfectionist = interopDefault(_pluginPerfectionist)
+
 import * as _pluginUnocss from '@unocss/eslint-plugin'
 export const pluginUnocss: typeof import('@unocss/eslint-plugin').default =
   interopDefault(_pluginUnocss)
@@ -41,8 +47,6 @@ export * as pluginImport from 'eslint-plugin-i'
 export * as pluginJsonc from 'eslint-plugin-jsonc'
 export * as pluginUnusedImports from 'eslint-plugin-unused-imports'
 export * as pluginYml from 'eslint-plugin-yml'
-export * as pluginSortKeys from 'eslint-plugin-sort-keys'
-export * as pluginNode from 'eslint-plugin-n'
 
 export * as parserVue from 'vue-eslint-parser'
 export * as parserYml from 'yaml-eslint-parser'

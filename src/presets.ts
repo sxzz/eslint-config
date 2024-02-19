@@ -60,10 +60,10 @@ export { presetBasic as basic, presetAll as all }
 export function sxzz(
   config: FlatESLintConfigItem | FlatESLintConfigItem[] = [],
   {
-    vue: enableVue = hasVue,
-    prettier: enablePrettier = true,
     markdown: enableMarkdown = true,
+    prettier: enablePrettier = true,
     unocss: enableUnocss = hasUnocss,
+    vue: enableVue = hasVue,
   }: Partial<{
     /** Vue support. Auto-enable. */
     vue: boolean
