@@ -19,8 +19,8 @@ export const pluginComments = interopDefault(_pluginComments)
 import * as _pluginMarkdown from 'eslint-plugin-markdown'
 export const pluginMarkdown = interopDefault(_pluginMarkdown)
 
-import * as _pluginTypeScript from '@typescript-eslint/eslint-plugin'
-export const pluginTypeScript = interopDefault(_pluginTypeScript)
+import tseslint from 'typescript-eslint'
+export { tseslint }
 
 // @ts-expect-error missing types
 import * as _pluginUnicorn from 'eslint-plugin-unicorn'
@@ -51,7 +51,6 @@ export * as pluginYml from 'eslint-plugin-yml'
 // @ts-expect-error missing types
 export * as pluginSortKeys from 'eslint-plugin-sort-keys'
 
-export * as parserTypeScript from '@typescript-eslint/parser'
 export * as parserVue from 'vue-eslint-parser'
 export * as parserYml from 'yaml-eslint-parser'
 export * as parserJsonc from 'jsonc-eslint-parser'

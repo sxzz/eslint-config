@@ -1,8 +1,7 @@
 import { getPackageInfoSync } from 'local-pkg'
-import tsPlugin from '@typescript-eslint/eslint-plugin'
 import { GLOB_VUE } from '../globs'
-import { parserVue, pluginVue } from '../plugins'
-import { typescript } from './typescript'
+import { parserVue, pluginVue, tseslint } from '../plugins'
+import { typescriptRules } from './typescript'
 import type { FlatESLintConfigItem, Rules } from 'eslint-define-config'
 
 export function getVueVersion() {
@@ -110,19 +109,12 @@ export const vue: FlatESLintConfigItem[] = [
       },
     },
     plugins: {
-      '@typescript-eslint': tsPlugin,
+      '@typescript-eslint': tseslint.plugin,
       vue: pluginVue,
     },
     processor: pluginVue.processors['.vue'],
     rules: {
-      ...typescript[0].rules,
-    },
-  },
-  {
-    plugins: {
-      vue: pluginVue,
-    },
-    rules: {
+      ...typescriptRules,
       ...(isVue3 ? vue3Rules : vue2Rules),
       ...vueCustomRules,
     },
