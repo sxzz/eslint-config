@@ -35,7 +35,7 @@
     "prepublishOnly": "pnpm run build"
   },
   "peerDependencies": {
-    "eslint": "^8.56.0"
+    "eslint": "^8.56.0 || ^9.0.0"
   },
   "dependencies": {
     "@unocss/eslint-plugin": "^0.58.5",
