@@ -6,6 +6,7 @@ import {
   javascript,
   jsonc,
   markdown,
+  node,
   prettier,
   sortKeys,
   sortPackageJson,
@@ -25,6 +26,7 @@ export const presetJavaScript = [
   ...comments,
   ...imports,
   ...unicorn,
+  ...node,
 ]
 /** Includes basic json(c) file support and sorting json keys */
 export const presetJsonc = [...jsonc, ...sortPackageJson, ...sortTsconfig]
