@@ -2,7 +2,7 @@ import process from 'node:process'
 import { getPackageInfoSync } from 'local-pkg'
 import { GLOB_VUE } from '../globs'
 import { parserVue, pluginVue, tseslint } from '../plugins'
-import { typescriptRules } from './typescript'
+import { typescriptCore } from './typescript'
 import type { FlatESLintConfigItem, Rules } from 'eslint-define-config'
 
 export function getVueVersion() {
@@ -96,6 +96,10 @@ const vue2Rules: Rules = {
 }
 
 export const vue: FlatESLintConfigItem[] = [
+  ...(tseslint.config({
+    extends: typescriptCore as any[],
+    files: [GLOB_VUE],
+  }) as any),
   {
     files: [GLOB_VUE],
     languageOptions: {
@@ -115,7 +119,6 @@ export const vue: FlatESLintConfigItem[] = [
     },
     processor: pluginVue.processors['.vue'],
     rules: {
-      ...typescriptRules,
       ...(isVue3 ? vue3Rules : vue2Rules),
       ...vueCustomRules,
     },
