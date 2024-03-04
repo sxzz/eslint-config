@@ -39,8 +39,7 @@ export const imports: FlatESLintConfigItem[] = [
   {
     files: [
       `**/*config*.${GLOB_SRC_EXT}`,
-      `**/views/${GLOB_SRC}`,
-      `**/pages/${GLOB_SRC}`,
+      `**/{views,pages,routes,middleware,plugins,api}/**`,
       `**/{index,vite,esbuild,rollup,webpack,rspack}.ts`,
       '**/*.d.ts',
       `${GLOB_MARKDOWN}/**`,
