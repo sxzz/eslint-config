@@ -17,7 +17,7 @@ export const unicorn: FlatESLintConfigItem[] = [
         'error',
         {
           cases: { kebabCase: true, pascalCase: true },
-          ignore: [/^[A-Z]+\..*$/],
+          ignore: [/^[A-Z]+\..*$/, /import_map\.json/],
         },
       ],
       'unicorn/new-for-builtins': 'error',
