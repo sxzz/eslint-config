@@ -3,25 +3,11 @@ import { GLOB_MARKDOWN, GLOB_SRC, GLOB_VUE } from '../globs'
 import type { FlatESLintConfigItem } from 'eslint-define-config'
 
 export const markdown: FlatESLintConfigItem[] = [
-  {
-    files: [GLOB_MARKDOWN],
-    plugins: {
-      markdown: pluginMarkdown,
-    },
-    processor: 'markdown/markdown',
-  },
+  ...pluginMarkdown.configs.recommended,
+
   {
     files: [`${GLOB_MARKDOWN}/${GLOB_SRC}`, `${GLOB_MARKDOWN}/${GLOB_VUE}`],
-    languageOptions: {
-      parserOptions: {
-        ecmaFeatures: {
-          impliedStrict: true,
-        },
-      },
-    },
     rules: {
-      ...pluginMarkdown.configs.recommended.overrides[1].rules,
-
       '@typescript-eslint/comma-dangle': 'off',
       '@typescript-eslint/consistent-type-imports': 'off',
       '@typescript-eslint/no-extraneous-class': 'off',
