@@ -25,6 +25,9 @@ export const markdown: FlatESLintConfigItem[] = [
       'no-unused-expressions': 'off',
       'no-unused-vars': 'off',
 
+      'node/prefer-global/buffer': 'off',
+      'node/prefer-global/process': 'off',
+
       'unused-imports/no-unused-imports': 'off',
       'unused-imports/no-unused-vars': 'off',
     },
