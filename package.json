@@ -53,7 +53,7 @@
     "eslint-plugin-unused-imports": "^3.1.0",
     "eslint-plugin-vue": "^9.21.1",
     "eslint-plugin-yml": "^1.12.2",
-    "globals": "^14.0.0",
+    "globals": "^15.0.0",
     "jsonc-eslint-parser": "^2.4.0",
     "local-pkg": "^0.5.0",
     "prettier": "^3.2.5",
