@@ -65,7 +65,7 @@
     "@sxzz/prettier-config": "^2.0.0",
     "@types/node": "^20.11.19",
     "bumpp": "^9.3.0",
-    "eslint": "^8.56.0",
+    "eslint": "^9.0.0",
     "sucrase": "^3.35.0",
     "tsup": "^8.0.2",
     "typescript": "^5.3.3"
