@@ -20,10 +20,7 @@
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "exports": {
-    "require": "./dist/index.cjs",
-    "import": "./dist/index.js"
-  },
+  "exports": "./dist/index.js",
   "publishConfig": {
     "access": "public"
   },
