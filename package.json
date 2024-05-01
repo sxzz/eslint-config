@@ -37,7 +37,7 @@
   "dependencies": {
     "@unocss/eslint-plugin": "^0.59.4",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-define-config": "^1.24.1",
+    "eslint-define-config": "^2.1.0",
     "eslint-plugin-antfu": "^2.1.2",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-import-x": "^0.5.0",
