@@ -12,7 +12,8 @@ export const unicorn: FlatESLintConfigItem[] = [
       'unicorn/custom-error-definition': 'error',
       'unicorn/error-message': 'error',
       'unicorn/escape-case': 'error',
-      'unicorn/explicit-length-check': 'error',
+      // disabled for better bundle size
+      // 'unicorn/explicit-length-check': 'error',
       'unicorn/filename-case': [
         'error',
         {
@@ -21,7 +22,8 @@ export const unicorn: FlatESLintConfigItem[] = [
         },
       ],
       'unicorn/new-for-builtins': 'error',
-      'unicorn/no-array-callback-reference': 'error',
+      // disabled for better bundle size
+      // 'unicorn/no-array-callback-reference': 'error',
       'unicorn/no-array-method-this-argument': 'error',
       'unicorn/no-array-push-push': 'error',
       'unicorn/no-await-in-promise-methods': 'error',
@@ -66,7 +68,8 @@ export const unicorn: FlatESLintConfigItem[] = [
       'unicorn/prefer-string-slice': 'error',
       'unicorn/prefer-string-starts-ends-with': 'error',
       'unicorn/prefer-string-trim-start-end': 'error',
-      'unicorn/prefer-top-level-await': 'error',
+      // top level await is not supported in all environments
+      // 'unicorn/prefer-top-level-await': 'error',
       'unicorn/prefer-type-error': 'error',
       'unicorn/throw-new-error': 'error',
     },
