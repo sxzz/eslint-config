@@ -1,10 +1,9 @@
-import { createRequire } from 'node:module'
+// @ts-check
 // import { sxzz } from './dist/index.js'
 
-const require = createRequire(import.meta.url)
-require('sucrase/register')
+import { require } from 'tsx/cjs/api'
 /** @type {typeof import('./src/index.ts')} */
-const { sxzz } = require('./src/index.ts')
+const { sxzz } = require('./src/index.ts', import.meta.url)
 
 export default sxzz(
   [
