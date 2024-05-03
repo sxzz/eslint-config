@@ -1,5 +1,6 @@
 import { hasUnocss, hasVue } from './env'
 import {
+  command,
   comments,
   ignores,
   imports,
@@ -60,6 +61,7 @@ export { presetBasic as basic, presetAll as all }
 export function sxzz(
   config: FlatESLintConfigItem | FlatESLintConfigItem[] = [],
   {
+    command: enableCommand = true,
     markdown: enableMarkdown = true,
     prettier: enablePrettier = true,
     unocss: enableUnocss = hasUnocss,
@@ -74,6 +76,7 @@ export function sxzz(
     /** UnoCSS support. Auto-enable. */
     unocss: boolean
     sortKeys: boolean
+    command: boolean
   }> = {},
 ): FlatESLintConfigItem[] {
   const configs = [...presetBasic, ...yml, ...presetJsonc]
@@ -88,6 +91,9 @@ export function sxzz(
   }
   if (enablePrettier) {
     configs.push(...prettier)
+  }
+  if (enableCommand) {
+    configs.push(...command)
   }
   if (Object.keys(config).length > 0) {
     configs.push(...(Array.isArray(config) ? config : [config]))
