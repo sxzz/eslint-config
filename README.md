@@ -12,6 +12,7 @@ Flat ESLint config for JavaScript, TypeScript, Vue 2, Vue 3, Prettier.
 - Sort imports, `package.json`, `tsconfig.json`...
 - [ESLint Flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new), compose easily!
 - Reasonable defaults, best practices, only one-line of config
+- Reasonable strict, but with better code quality.
 
 ## Install
 
