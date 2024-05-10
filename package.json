@@ -37,7 +37,7 @@
     "eslint": "^8.0.0"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/eslint-plugin": "^7.8.0",
     "@typescript-eslint/parser": "^7.8.0",
     "@unocss/eslint-plugin": "^0.60.0",
     "eslint-config-prettier": "^9.1.0",
