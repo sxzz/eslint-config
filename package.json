@@ -65,7 +65,7 @@
     "@frabbit/prettier-config": "^2.0.0",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
-    "@semantic-release/github": "^9.2.5",
+    "@semantic-release/github": "^10.0.3",
     "@semantic-release/npm": "^11.0.2",
     "@types/node": "^20.10.5",
     "bumpp": "^9.2.1",
