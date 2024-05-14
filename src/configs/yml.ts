@@ -1,8 +1,8 @@
 import { GLOB_YAML } from '../globs'
 import { parserYml, pluginYml } from '../plugins'
-import type { FlatESLintConfigItem, Rules } from 'eslint-define-config'
+import type { CustomRuleOptions, FlatESLintConfig } from 'eslint-define-config'
 
-export const yml: FlatESLintConfigItem[] = [
+export const yml: FlatESLintConfig[] = [
   {
     files: [GLOB_YAML],
     languageOptions: {
@@ -12,8 +12,8 @@ export const yml: FlatESLintConfigItem[] = [
       yml: pluginYml,
     },
     rules: {
-      ...(pluginYml.configs.standard.rules as Rules),
-      ...(pluginYml.configs.prettier.rules as Rules),
+      ...(pluginYml.configs.standard.rules as CustomRuleOptions),
+      ...(pluginYml.configs.prettier.rules as CustomRuleOptions),
       'yml/no-empty-mapping-value': 'off',
     },
   },

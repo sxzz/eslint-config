@@ -1,4 +1,4 @@
 import { configCommand } from '../plugins'
-import type { FlatESLintConfigItem } from 'eslint-define-config'
+import type { FlatESLintConfig } from 'eslint-define-config'
 
-export const command: FlatESLintConfigItem[] = [configCommand()]
+export const command: FlatESLintConfig[] = [configCommand()]

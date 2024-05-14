@@ -3,7 +3,7 @@ import { getPackageInfoSync } from 'local-pkg'
 import { GLOB_VUE } from '../globs'
 import { parserVue, pluginVue, tseslint } from '../plugins'
 import { typescriptCore } from './typescript'
-import type { FlatESLintConfigItem, Rules } from 'eslint-define-config'
+import type { CustomRuleOptions, FlatESLintConfig } from 'eslint-define-config'
 
 export function getVueVersion() {
   const pkg = getPackageInfoSync('vue', { paths: [process.cwd()] })
@@ -18,7 +18,7 @@ export function getVueVersion() {
 }
 const isVue3 = getVueVersion() === 3
 
-export const reactivityTransform: FlatESLintConfigItem[] = [
+export const reactivityTransform: FlatESLintConfig[] = [
   {
     languageOptions: {
       globals: {
@@ -40,7 +40,7 @@ export const reactivityTransform: FlatESLintConfigItem[] = [
   },
 ]
 
-const vueCustomRules: Rules = {
+const vueCustomRules: CustomRuleOptions = {
   'vue/block-order': ['error', { order: ['script', 'template', 'style'] }],
   'vue/custom-event-name-casing': ['error', 'camelCase'],
   'vue/eqeqeq': ['error', 'smart'],
@@ -81,21 +81,21 @@ const vueCustomRules: Rules = {
   'vue/require-prop-types': 'off',
 }
 
-const vue3Rules: Rules = {
+const vue3Rules: CustomRuleOptions = {
   ...pluginVue.configs.base.rules,
   ...pluginVue.configs['vue3-essential'].rules,
   ...pluginVue.configs['vue3-strongly-recommended'].rules,
   ...pluginVue.configs['vue3-recommended'].rules,
 }
 
-const vue2Rules: Rules = {
+const vue2Rules: CustomRuleOptions = {
   ...pluginVue.configs.base.rules,
   ...pluginVue.configs.essential.rules,
   ...pluginVue.configs['strongly-recommended'].rules,
   ...pluginVue.configs.recommended.rules,
 }
 
-export const vue: FlatESLintConfigItem[] = [
+export const vue: FlatESLintConfig[] = [
   ...(tseslint.config({
     extends: typescriptCore as any[],
     files: [GLOB_VUE],

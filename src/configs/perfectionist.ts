@@ -1,7 +1,7 @@
 import { pluginPerfectionist } from '../plugins'
-import type { FlatESLintConfigItem } from 'eslint-define-config'
+import type { FlatESLintConfig } from 'eslint-define-config'
 
-export const sortKeys: FlatESLintConfigItem[] = [
+export const sortKeys: FlatESLintConfig[] = [
   {
     plugins: {
       perfectionist: pluginPerfectionist,

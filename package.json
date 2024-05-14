@@ -29,6 +29,7 @@
     "lint": "eslint .",
     "lint:fix": "pnpm run lint --fix",
     "release": "bumpp && pnpm publish",
+    "typecheck": "tsc --noEmit",
     "prepublishOnly": "pnpm run build"
   },
   "peerDependencies": {

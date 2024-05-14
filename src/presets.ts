@@ -18,7 +18,7 @@ import {
   vue,
   yml,
 } from './configs'
-import type { FlatESLintConfigItem } from 'eslint-define-config'
+import type { FlatESLintConfig } from 'eslint-define-config'
 
 /** Ignore common files and include javascript support */
 export const presetJavaScript = [
@@ -59,7 +59,7 @@ export { presetBasic as basic, presetAll as all }
  * @returns
  */
 export function sxzz(
-  config: FlatESLintConfigItem | FlatESLintConfigItem[] = [],
+  config: FlatESLintConfig | FlatESLintConfig[] = [],
   {
     command: enableCommand = true,
     markdown: enableMarkdown = true,
@@ -78,7 +78,7 @@ export function sxzz(
     sortKeys: boolean
     command: boolean
   }> = {},
-): FlatESLintConfigItem[] {
+): FlatESLintConfig[] {
   const configs = [...presetBasic, ...yml, ...presetJsonc]
   if (enableVue) {
     configs.push(...vue)
