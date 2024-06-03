@@ -44,9 +44,11 @@ export const pluginPrettier: any = interopDefault(_pluginPrettier)
 import * as _configPrettier from 'eslint-config-prettier'
 export const configPrettier: any = interopDefault(_configPrettier)
 
+import * as _pluginUnusedImports from 'eslint-plugin-unused-imports'
+export const pluginUnusedImports: any = interopDefault(_pluginUnusedImports)
+
 export * as pluginImport from 'eslint-plugin-import-x'
 export * as pluginJsonc from 'eslint-plugin-jsonc'
-export * as pluginUnusedImports from 'eslint-plugin-unused-imports'
 export * as pluginYml from 'eslint-plugin-yml'
 
 export * as parserVue from 'vue-eslint-parser'
