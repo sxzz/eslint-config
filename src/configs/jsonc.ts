@@ -9,7 +9,7 @@ export const jsonc: FlatESLintConfig[] = [
       parser: parserJsonc,
     },
     plugins: {
-      jsonc: pluginJsonc,
+      jsonc: pluginJsonc as any,
     },
     rules: {
       ...(pluginJsonc.configs['recommended-with-jsonc']

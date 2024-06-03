@@ -6,7 +6,7 @@ export const imports: FlatESLintConfig[] = [
   {
     plugins: {
       antfu: pluginAntfu,
-      import: pluginImport,
+      import: pluginImport as any,
     },
     rules: {
       'antfu/import-dedupe': 'error',
@@ -46,7 +46,7 @@ export const imports: FlatESLintConfig[] = [
       '**/.prettierrc*',
     ],
     plugins: {
-      import: pluginImport,
+      import: pluginImport as any,
     },
     rules: {
       'import/no-default-export': 'off',

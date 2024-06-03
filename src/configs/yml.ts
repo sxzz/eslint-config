@@ -9,7 +9,7 @@ export const yml: FlatESLintConfig[] = [
       parser: parserYml,
     },
     plugins: {
-      yml: pluginYml,
+      yml: pluginYml as any,
     },
     rules: {
       ...(pluginYml.configs.standard.rules as CustomRuleOptions),
