@@ -59,7 +59,10 @@ export const javascript: FlatESLintConfig[] = [
       'no-empty-pattern': 'error',
       'no-ex-assign': 'error',
       'no-extra-boolean-cast': 'error',
-      'no-fallthrough': ['warn', { commentPattern: 'break[\\s\\w]*omitted' }],
+      'no-fallthrough': [
+        'warn',
+        { commentPattern: String.raw`break[\s\w]*omitted` },
+      ],
       'no-func-assign': 'error',
       'no-global-assign': 'error',
       'no-import-assign': 'error',
