@@ -169,6 +169,7 @@ export const sortTsconfig: FlatESLintConfig[] = [
             'importsNotUsedAsValues',
             'inlineSourceMap',
             'inlineSources',
+            'isolatedDeclarations',
             'mapRoot',
             'newLine',
             'noEmit',
