@@ -66,6 +66,8 @@ See [preset.ts](./src/presets.ts) for more details.
 
 ### VSCode
 
+Enable flat config if you are using ESLint < 9.
+
 ```jsonc
 {
   "eslint.experimental.useFlatConfig": true,
