@@ -1,7 +1,7 @@
 import globals from 'globals'
 import { pluginUnusedImports } from '../plugins'
 import { isInEditor } from '../env'
-import type { FlatESLintConfig } from 'eslint-define-config'
+import type { Linter } from 'eslint'
 
 export const restrictedSyntaxJs = [
   'ForInStatement',
@@ -9,7 +9,7 @@ export const restrictedSyntaxJs = [
   'WithStatement',
 ]
 
-export const javascript: FlatESLintConfig[] = [
+export const javascript: Linter.FlatConfig[] = [
   {
     languageOptions: {
       globals: {

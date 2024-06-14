@@ -1,6 +1,6 @@
-import type { FlatESLintConfig } from 'eslint-define-config'
+import type { Linter } from 'eslint'
 
-export const sortPackageJson: FlatESLintConfig[] = [
+export const sortPackageJson: Linter.FlatConfig[] = [
   {
     files: ['**/package.json'],
     rules: {
@@ -77,7 +77,7 @@ export const sortPackageJson: FlatESLintConfig[] = [
   },
 ]
 
-export const sortTsconfig: FlatESLintConfig[] = [
+export const sortTsconfig: Linter.FlatConfig[] = [
   {
     files: ['**/tsconfig.json', '**/tsconfig.*.json'],
     rules: {

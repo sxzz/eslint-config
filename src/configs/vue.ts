@@ -3,7 +3,7 @@ import { getPackageInfoSync } from 'local-pkg'
 import { GLOB_VUE } from '../globs'
 import { parserVue, pluginVue, tseslint } from '../plugins'
 import { typescriptCore } from './typescript'
-import type { CustomRuleOptions, FlatESLintConfig } from 'eslint-define-config'
+import type { Linter } from 'eslint'
 
 export function getVueVersion() {
   const pkg = getPackageInfoSync('vue', { paths: [process.cwd()] })
@@ -18,7 +18,7 @@ export function getVueVersion() {
 }
 const isVue3 = getVueVersion() === 3
 
-export const reactivityTransform: FlatESLintConfig[] = [
+export const reactivityTransform: Linter.FlatConfig[] = [
   {
     languageOptions: {
       globals: {
@@ -40,7 +40,7 @@ export const reactivityTransform: FlatESLintConfig[] = [
   },
 ]
 
-const vueCustomRules: CustomRuleOptions = {
+const vueCustomRules: Linter.RulesRecord = {
   'vue/block-order': ['error', { order: ['script', 'template', 'style'] }],
   'vue/custom-event-name-casing': ['error', 'camelCase'],
   'vue/eqeqeq': ['error', 'smart'],
@@ -81,21 +81,21 @@ const vueCustomRules: CustomRuleOptions = {
   'vue/require-prop-types': 'off',
 }
 
-const vue3Rules: CustomRuleOptions = {
+const vue3Rules: Linter.RulesRecord = {
   ...pluginVue.configs.base.rules,
   ...pluginVue.configs['vue3-essential'].rules,
   ...pluginVue.configs['vue3-strongly-recommended'].rules,
   ...pluginVue.configs['vue3-recommended'].rules,
 }
 
-const vue2Rules: CustomRuleOptions = {
+const vue2Rules: Linter.RulesRecord = {
   ...pluginVue.configs.base.rules,
   ...pluginVue.configs.essential.rules,
   ...pluginVue.configs['strongly-recommended'].rules,
   ...pluginVue.configs.recommended.rules,
 }
 
-export const vue: FlatESLintConfig[] = [
+export const vue: Linter.FlatConfig[] = [
   ...(tseslint.config({
     extends: typescriptCore as any[],
     files: [GLOB_VUE],

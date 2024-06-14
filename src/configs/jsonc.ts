@@ -1,8 +1,8 @@
 import { parserJsonc, pluginJsonc } from '../plugins'
 import { GLOB_JSON, GLOB_JSON5, GLOB_JSONC } from '../globs'
-import type { CustomRuleOptions, FlatESLintConfig } from 'eslint-define-config'
+import type { Linter } from 'eslint'
 
-export const jsonc: FlatESLintConfig[] = [
+export const jsonc: Linter.FlatConfig[] = [
   {
     files: [GLOB_JSON, GLOB_JSON5, GLOB_JSONC],
     languageOptions: {
@@ -13,7 +13,7 @@ export const jsonc: FlatESLintConfig[] = [
     },
     rules: {
       ...(pluginJsonc.configs['recommended-with-jsonc']
-        .rules as CustomRuleOptions),
+        .rules as Linter.RulesRecord),
       'jsonc/quote-props': 'off',
       'jsonc/quotes': 'off',
     },

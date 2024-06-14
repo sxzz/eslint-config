@@ -1,8 +1,8 @@
 import { pluginMarkdown } from '../plugins'
 import { GLOB_MARKDOWN, GLOB_SRC, GLOB_VUE } from '../globs'
-import type { FlatESLintConfig } from 'eslint-define-config'
+import type { Linter } from 'eslint'
 
-export const markdown: FlatESLintConfig[] = [
+export const markdown: Linter.FlatConfig[] = [
   ...pluginMarkdown.configs.recommended,
 
   {
