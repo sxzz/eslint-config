@@ -72,5 +72,11 @@
   "engines": {
     "node": "^18.18.0 || >=20.0.0"
   },
-  "prettier": "@sxzz/prettier-config"
+  "prettier": "@sxzz/prettier-config",
+  "pnpm": {
+    "overrides": {
+      "is-core-module": "npm:@no-shims/is-core-module",
+      "normalize-package-data": "npm:@no-shims/normalize-package-data"
+    }
+  }
 }
