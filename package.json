@@ -42,6 +42,7 @@
     "eslint-plugin-command": "^0.2.3",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-import-x": "^3.0.1",
+    "eslint-plugin-jsdoc": "^48.8.3",
     "eslint-plugin-jsonc": "^2.16.0",
     "eslint-plugin-markdown": "^5.1.0",
     "eslint-plugin-n": "^17.9.0",

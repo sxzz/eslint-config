@@ -47,6 +47,9 @@ export const configPrettier: any = interopDefault(_configPrettier)
 import * as _pluginUnusedImports from 'eslint-plugin-unused-imports'
 export const pluginUnusedImports: any = interopDefault(_pluginUnusedImports)
 
+import * as _pluginJsdoc from 'eslint-plugin-jsdoc'
+export const pluginJsdoc: any = interopDefault(_pluginJsdoc)
+
 export * as pluginImport from 'eslint-plugin-import-x'
 export * as pluginJsonc from 'eslint-plugin-jsonc'
 export * as pluginYml from 'eslint-plugin-yml'

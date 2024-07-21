@@ -5,6 +5,7 @@ import {
   ignores,
   imports,
   javascript,
+  jsdoc,
   jsonc,
   markdown,
   node,
@@ -28,6 +29,7 @@ export const presetJavaScript = [
   ...imports,
   ...unicorn,
   ...node,
+  ...jsdoc,
 ]
 /** Includes basic json(c) file support and sorting json keys */
 export const presetJsonc = [...jsonc, ...sortPackageJson, ...sortTsconfig]
@@ -52,12 +54,7 @@ export const presetAll = [
 ]
 export { presetBasic as basic, presetAll as all }
 
-/**
- *
- * @param config
- * @param features
- * @returns
- */
+/** `sxzz`'s preset. */
 export function sxzz(
   config: Linter.FlatConfig | Linter.FlatConfig[] = [],
   {
