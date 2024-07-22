@@ -13,7 +13,8 @@ export default sxzz(
     {
       files: ['**/*.md/*'],
       rules: {
-        'sort-imports': 'off',
+        'perfectionist/sort-imports': 'off',
+        'perfectionist/sort-named-imports': 'off',
       },
     },
   ],

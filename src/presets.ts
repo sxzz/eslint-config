@@ -1,4 +1,3 @@
-import { hasUnocss, hasVue } from './env'
 import {
   command,
   comments,
@@ -19,6 +18,7 @@ import {
   vue,
   yml,
 } from './configs'
+import { hasUnocss, hasVue } from './env'
 import type { Linter } from 'eslint'
 
 /** Ignore common files and include javascript support */
@@ -52,7 +52,7 @@ export const presetAll = [
   ...unocss,
   ...prettier,
 ]
-export { presetBasic as basic, presetAll as all }
+export { presetAll as all, presetBasic as basic }
 
 /** `sxzz`'s preset. */
 export function sxzz(

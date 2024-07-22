@@ -1,6 +1,6 @@
 import globals from 'globals'
-import { pluginUnusedImports } from '../plugins'
 import { isInEditor } from '../env'
+import { pluginUnusedImports } from '../plugins'
 import type { Linter } from 'eslint'
 
 export const restrictedSyntaxJs = [
@@ -129,16 +129,6 @@ export const javascript: Linter.FlatConfig[] = [
       'prefer-template': 'error',
       'require-await': 'error',
       'require-yield': 'error',
-      'sort-imports': [
-        'error',
-        {
-          allowSeparatedGroups: false,
-          ignoreCase: false,
-          ignoreDeclarationSort: true,
-          ignoreMemberSort: false,
-          memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
-        },
-      ],
       'unicode-bom': ['error', 'never'],
       'unused-imports/no-unused-imports': isInEditor ? 'off' : 'error',
       'unused-imports/no-unused-vars': [

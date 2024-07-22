@@ -46,7 +46,7 @@
     "eslint-plugin-jsonc": "^2.16.0",
     "eslint-plugin-markdown": "^5.1.0",
     "eslint-plugin-n": "^17.9.0",
-    "eslint-plugin-perfectionist": "^2.11.0",
+    "eslint-plugin-perfectionist": "^3.0.0",
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-unicorn": "^54.0.0",
     "eslint-plugin-unused-imports": "^4.0.0",
@@ -76,8 +76,7 @@
   },
   "pnpm": {
     "overrides": {
-      "is-core-module": "npm:@no-shims/is-core-module",
-      "normalize-package-data": "npm:@no-shims/normalize-package-data"
+      "is-core-module": "npm:@no-shims/is-core-module"
     }
   },
   "prettier": "@sxzz/prettier-config"

@@ -1,5 +1,5 @@
-import { pluginAntfu, pluginImport } from '../plugins'
 import { GLOB_MARKDOWN, GLOB_SRC, GLOB_SRC_EXT } from '../globs'
+import { pluginAntfu, pluginImport } from '../plugins'
 import type { Linter } from 'eslint'
 
 export const imports: Linter.FlatConfig[] = [
@@ -17,23 +17,6 @@ export const imports: Linter.FlatConfig[] = [
       'import/no-named-default': 'error',
       'import/no-self-import': 'error',
       'import/no-webpack-loader-syntax': 'error',
-      'import/order': [
-        'error',
-        {
-          groups: [
-            'builtin',
-            'external',
-            'internal',
-            'parent',
-            'sibling',
-            'index',
-            'object',
-            'type',
-          ],
-          pathGroups: [{ group: 'internal', pattern: '{{@,~}/,#}**' }],
-          pathGroupsExcludedImportTypes: ['type'],
-        },
-      ],
     },
   },
   {
