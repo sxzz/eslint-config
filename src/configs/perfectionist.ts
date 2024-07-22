@@ -1,7 +1,7 @@
 import { pluginPerfectionist } from '../plugins'
 import type { Linter } from 'eslint'
 
-export const sortKeys: Linter.FlatConfig[] = [
+export const sortKeys: Linter.Config[] = [
   {
     plugins: {
       perfectionist: pluginPerfectionist,

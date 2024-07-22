@@ -1,7 +1,7 @@
 import { pluginNode } from '../plugins'
 import type { Linter } from 'eslint'
 
-export const node: Linter.FlatConfig[] = [
+export const node: Linter.Config[] = [
   {
     plugins: {
       node: pluginNode,

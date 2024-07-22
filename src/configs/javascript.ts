@@ -9,7 +9,7 @@ export const restrictedSyntaxJs = [
   'WithStatement',
 ]
 
-export const javascript: Linter.FlatConfig[] = [
+export const javascript: Linter.Config[] = [
   {
     languageOptions: {
       globals: {

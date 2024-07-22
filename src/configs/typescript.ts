@@ -47,9 +47,9 @@ export const typescriptCore = tseslint.config({
       'TSEnumDeclaration[const=true]',
     ],
   },
-}) as Linter.FlatConfig[]
+}) as Linter.Config[]
 
-export const typescript: Linter.FlatConfig[] = [
+export const typescript: Linter.Config[] = [
   ...typescriptCore,
 
   {

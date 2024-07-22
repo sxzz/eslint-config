@@ -18,7 +18,7 @@ export function getVueVersion() {
 }
 const isVue3 = getVueVersion() === 3
 
-export const reactivityTransform: Linter.FlatConfig[] = [
+export const reactivityTransform: Linter.Config[] = [
   {
     languageOptions: {
       globals: {
@@ -95,7 +95,7 @@ const vue2Rules: Linter.RulesRecord = {
   ...pluginVue.configs.recommended.rules,
 }
 
-export const vue: Linter.FlatConfig[] = [
+export const vue: Linter.Config[] = [
   ...(tseslint.config({
     extends: typescriptCore as any[],
     files: [GLOB_VUE],

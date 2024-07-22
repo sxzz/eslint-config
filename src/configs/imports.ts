@@ -2,7 +2,7 @@ import { GLOB_MARKDOWN, GLOB_SRC, GLOB_SRC_EXT } from '../globs'
 import { pluginAntfu, pluginImport } from '../plugins'
 import type { Linter } from 'eslint'
 
-export const imports: Linter.FlatConfig[] = [
+export const imports: Linter.Config[] = [
   {
     plugins: {
       antfu: pluginAntfu,

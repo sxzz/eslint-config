@@ -1,4 +1,4 @@
 import { GLOB_EXCLUDE } from '../globs'
 import type { Linter } from 'eslint'
 
-export const ignores: Linter.FlatConfig[] = [{ ignores: GLOB_EXCLUDE }]
+export const ignores: Linter.Config[] = [{ ignores: GLOB_EXCLUDE }]

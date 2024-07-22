@@ -56,7 +56,7 @@ export { presetAll as all, presetBasic as basic }
 
 /** `sxzz`'s preset. */
 export function sxzz(
-  config: Linter.FlatConfig | Linter.FlatConfig[] = [],
+  config: Linter.Config | Linter.Config[] = [],
   {
     command: enableCommand = true,
     markdown: enableMarkdown = true,
@@ -75,7 +75,7 @@ export function sxzz(
     sortKeys: boolean
     command: boolean
   }> = {},
-): Linter.FlatConfig[] {
+): Linter.Config[] {
   const configs = [...presetBasic, ...yml, ...presetJsonc]
   if (enableVue) {
     configs.push(...vue)

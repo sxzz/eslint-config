@@ -1,7 +1,7 @@
 import { pluginJsdoc } from '../plugins'
 import type { Linter } from 'eslint'
 
-export const jsdoc: Linter.FlatConfig[] = [
+export const jsdoc: Linter.Config[] = [
   {
     plugins: {
       jsdoc: pluginJsdoc,

@@ -2,7 +2,7 @@ import { GLOB_YAML } from '../globs'
 import { parserYml, pluginYml } from '../plugins'
 import type { Linter } from 'eslint'
 
-export const yml: Linter.FlatConfig[] = [
+export const yml: Linter.Config[] = [
   {
     files: [GLOB_YAML],
     languageOptions: {
