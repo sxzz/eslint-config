@@ -1,9 +1,6 @@
-// @ts-check
 // import { sxzz } from './dist/index.js'
 
-import { tsImport } from 'tsx/esm/api'
-/** @type {typeof import('./src/index.ts')} */
-const { sxzz } = await tsImport('./src/index.ts', import.meta.url)
+import { sxzz } from './src/index.ts'
 
 export default sxzz(
   [
