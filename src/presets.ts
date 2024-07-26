@@ -9,6 +9,7 @@ import {
   markdown,
   node,
   prettier,
+  regexp,
   sortKeys,
   sortPackageJson,
   sortTsconfig,
@@ -30,6 +31,7 @@ export const presetJavaScript = [
   ...unicorn,
   ...node,
   ...jsdoc,
+  ...regexp,
 ]
 /** Includes basic json(c) file support and sorting json keys */
 export const presetJsonc = [...jsonc, ...sortPackageJson, ...sortTsconfig]
