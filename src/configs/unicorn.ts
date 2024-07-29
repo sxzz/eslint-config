@@ -7,7 +7,6 @@ export const unicorn: Linter.Config[] = [
       unicorn: pluginUnicorn,
     },
     rules: {
-      'unicorn/better-regex': 'error',
       'unicorn/catch-error-name': 'error',
       'unicorn/consistent-empty-array-spread': 'error',
       'unicorn/custom-error-definition': 'error',
