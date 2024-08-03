@@ -14,7 +14,6 @@ export const typescriptCore = tseslint.config({
   },
   rules: {
     '@typescript-eslint/ban-ts-comment': 'off',
-    '@typescript-eslint/ban-types': 'off',
     '@typescript-eslint/consistent-type-assertions': [
       'error',
       {
@@ -70,7 +69,6 @@ export const typescript: Linter.Config[] = [
     files: [GLOB_JS, '**/*.cjs'],
     rules: {
       '@typescript-eslint/no-require-imports': 'off',
-      '@typescript-eslint/no-var-requires': 'off',
     },
   },
   {

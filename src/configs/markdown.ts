@@ -16,7 +16,6 @@ export const markdown: Linter.Config[] = [
       '@typescript-eslint/no-require-imports': 'off',
       '@typescript-eslint/no-unused-vars': 'off',
       '@typescript-eslint/no-use-before-define': 'off',
-      '@typescript-eslint/no-var-requires': 'off',
 
       'no-alert': 'off',
       'no-console': 'off',
