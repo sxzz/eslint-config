@@ -57,7 +57,7 @@
     "jsonc-eslint-parser": "^2.4.0",
     "local-pkg": "^0.5.0",
     "prettier": "^3.3.3",
-    "typescript-eslint": "^7.17.0",
+    "typescript-eslint": "^8.0.0",
     "vue-eslint-parser": "^9.4.3",
     "yaml-eslint-parser": "^1.2.3"
   },
