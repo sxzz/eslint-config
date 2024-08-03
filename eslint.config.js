@@ -1,6 +1,11 @@
+// @ts-check
 // import { sxzz } from './dist/index.js'
+import { importx } from 'importx'
 
-import { sxzz } from './src/index.ts'
+const { sxzz } = await importx('./src/index.ts', {
+  parentURL: import.meta.url,
+  loader: 'jiti',
+})
 
 export default sxzz(
   [

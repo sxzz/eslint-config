@@ -5,7 +5,7 @@ export type InteropDefault<T> = T extends { default: infer U } ? U : T
 
 /* #__NO_SIDE_EFFECTS__ */
 function interopDefault<T>(m: T): InteropDefault<T> {
-  return (m as any).default || m
+  return 'default' in m ? interopDefault(m.default) : m
 }
 
 import * as _pluginAntfu from 'eslint-plugin-antfu'
@@ -58,4 +58,5 @@ export * as parserVue from 'vue-eslint-parser'
 export * as parserYml from 'yaml-eslint-parser'
 export * as parserJsonc from 'jsonc-eslint-parser'
 
-export { default as configCommand } from 'eslint-plugin-command/config'
+import _configCommand from 'eslint-plugin-command/config'
+export const configCommand = interopDefault(_configCommand)

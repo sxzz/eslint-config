@@ -66,8 +66,8 @@
     "@types/eslint": "^9.6.0",
     "@types/node": "^20.14.13",
     "bumpp": "^9.4.1",
-    "eslint": "npm:eslint-ts-patch@9.5.0-0",
-    "eslint-ts-patch": "9.5.0-0",
+    "eslint": "^9.8.0",
+    "importx": "^0.4.3",
     "tsup": "^8.2.3",
     "tsx": "^4.16.2",
     "typescript": "^5.5.4"
