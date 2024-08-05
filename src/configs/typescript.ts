@@ -26,10 +26,13 @@ export const typescriptCore = tseslint.config({
       { disallowTypeAnnotations: false, fixStyle: 'inline-type-imports' },
     ],
     '@typescript-eslint/method-signature-style': ['error', 'property'], // https://www.totaltypescript.com/method-shorthand-syntax-considered-harmful
+    '@typescript-eslint/no-empty-object-type': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/no-import-type-side-effects': 'error',
     '@typescript-eslint/no-non-null-assertion': 'off',
     '@typescript-eslint/no-redeclare': 'error',
+    '@typescript-eslint/no-unsafe-function-type': 'off',
+    '@typescript-eslint/no-unused-expressions': 'off',
 
     // handled by unused-imports/no-unused-imports
     '@typescript-eslint/no-unused-vars': 'off',
