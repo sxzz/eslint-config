@@ -20,8 +20,8 @@ import {
   yml,
 } from './configs'
 import { hasUnocss, hasVue } from './env'
+import type { Rules } from './typegen'
 import type { Linter } from 'eslint'
-import { Rules } from './typegen'
 
 /** Ignore common files and include javascript support */
 export const presetJavaScript = [
