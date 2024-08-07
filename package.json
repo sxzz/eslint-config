@@ -27,6 +27,7 @@
   "scripts": {
     "dev": "eslint-config-inspector --config eslint-inspector.config.ts",
     "build": "tsup",
+    "build:inspector": "eslint-config-inspector build --config eslint-inspector.config.ts",
     "lint": "eslint .",
     "lint:fix": "pnpm run lint --fix",
     "release": "bumpp && pnpm publish",
