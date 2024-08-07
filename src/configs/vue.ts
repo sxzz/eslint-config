@@ -96,6 +96,9 @@ const vue2Rules: Linter.RulesRecord = {
   ...pluginVue.configs.recommended.rules,
 }
 
+delete vue2Rules['vue/component-tags-order']
+delete vue3Rules['vue/component-tags-order']
+
 export const vue: Linter.Config[] = [
   ...(tseslint.config({
     extends: typescriptCore as any[],
