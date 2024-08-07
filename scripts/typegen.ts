@@ -2,7 +2,7 @@ import { writeFile } from 'node:fs/promises'
 import { flatConfigsToRulesDTS } from 'eslint-typegen/core'
 import { builtinRules } from 'eslint/use-at-your-own-risk'
 import pico from 'picocolors'
-import { sxzz } from '../src'
+import { sxzz } from '../src/presets'
 
 const dts = await flatConfigsToRulesDTS(
   sxzz(
