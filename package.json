@@ -1,7 +1,7 @@
 {
   "name": "@sxzz/eslint-config",
   "version": "3.17.0",
-  "packageManager": "pnpm@9.6.0",
+  "packageManager": "pnpm@9.7.0",
   "description": "ESLint config for @sxzz.",
   "type": "module",
   "license": "MIT",
@@ -49,8 +49,8 @@
     "eslint-plugin-jsdoc": "^48.11.0",
     "eslint-plugin-jsonc": "^2.16.0",
     "eslint-plugin-markdown": "^5.1.0",
-    "eslint-plugin-n": "^17.10.1",
-    "eslint-plugin-perfectionist": "^3.1.0",
+    "eslint-plugin-n": "^17.10.2",
+    "eslint-plugin-perfectionist": "^3.1.2",
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-regexp": "^2.6.0",
     "eslint-plugin-unicorn": "^55.0.0",
@@ -61,7 +61,7 @@
     "jsonc-eslint-parser": "^2.4.0",
     "local-pkg": "^0.5.0",
     "prettier": "^3.3.3",
-    "typescript-eslint": "^8.0.0",
+    "typescript-eslint": "^8.0.1",
     "vue-eslint-parser": "^9.4.3",
     "yaml-eslint-parser": "^1.2.3"
   },
