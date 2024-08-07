@@ -6,12 +6,6 @@ import type { Linter } from 'eslint'
 export const typescriptCore = tseslint.config({
   extends: [...tseslint.configs.recommended],
   files: [GLOB_TS, GLOB_TSX],
-  languageOptions: {
-    parser: tseslint.parser,
-    parserOptions: {
-      sourceType: 'module',
-    },
-  },
   name: 'sxzz/typescript',
   rules: {
     '@typescript-eslint/ban-ts-comment': 'off',

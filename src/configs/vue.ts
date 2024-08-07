@@ -99,13 +99,15 @@ const vue2Rules: Linter.RulesRecord = {
 delete vue2Rules['vue/component-tags-order']
 delete vue3Rules['vue/component-tags-order']
 
-const vueTs: Linter.Config[] = typescriptCore.map((config) => {
-  return {
-    ...config,
-    files: [GLOB_VUE],
-    name: `sxzz/vue/${config.name?.replace('sxzz/', '') || 'anonymous'}`,
-  }
-})
+const vueTs: Linter.Config[] = typescriptCore
+  .filter((config) => config.name !== 'typescript-eslint/base')
+  .map((config) => {
+    return {
+      ...config,
+      files: [GLOB_VUE],
+      name: `sxzz/vue/${config.name?.replace('sxzz/', '') || 'anonymous'}`,
+    }
+  })
 
 export const vue: Linter.Config[] = [
   ...vueTs,
