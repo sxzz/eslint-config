@@ -5,3 +5,4 @@ dist
 *.log
 .eslint-config-inspector
 .vercel
+src/typegen.ts

@@ -21,6 +21,7 @@ import {
 } from './configs'
 import { hasUnocss, hasVue } from './env'
 import type { Linter } from 'eslint'
+import { Rules } from './typegen'
 
 /** Ignore common files and include javascript support */
 export const presetJavaScript = [
@@ -56,9 +57,11 @@ export const presetAll = [
 ]
 export { presetAll as all, presetBasic as basic }
 
+export type Config = Linter.Config<Linter.RulesRecord & Rules>
+
 /** `sxzz`'s preset. */
 export function sxzz(
-  config: Linter.Config | Linter.Config[] = [],
+  config: Config | Config[] = [],
   {
     command: enableCommand = true,
     markdown: enableMarkdown = true,

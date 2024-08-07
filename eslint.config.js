@@ -2,6 +2,7 @@
 // import { sxzz } from './dist/index.js'
 import { importx } from 'importx'
 
+/** @type {import('./src/index.ts')} */
 const { sxzz } = await importx('./src/index.ts', {
   parentURL: import.meta.url,
   loader: 'jiti',

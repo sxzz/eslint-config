@@ -26,7 +26,7 @@
   },
   "scripts": {
     "dev": "eslint-config-inspector --config eslint-inspector.config.ts",
-    "build": "tsup",
+    "build": "tsx scripts/typegen.ts && tsup",
     "build:inspector": "eslint-config-inspector build --config eslint-inspector.config.ts",
     "lint": "eslint .",
     "lint:fix": "pnpm run lint --fix",
@@ -71,6 +71,7 @@
     "@types/node": "^20.14.14",
     "bumpp": "^9.4.2",
     "eslint": "^9.8.0",
+    "eslint-typegen": "^0.3.0",
     "importx": "^0.4.3",
     "tsup": "^8.2.4",
     "tsx": "^4.16.5",
