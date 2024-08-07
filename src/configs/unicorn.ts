@@ -3,6 +3,7 @@ import type { Linter } from 'eslint'
 
 export const unicorn: Linter.Config[] = [
   {
+    name: 'sxzz/unicorn',
     plugins: {
       unicorn: pluginUnicorn,
     },

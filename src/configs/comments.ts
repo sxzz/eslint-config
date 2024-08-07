@@ -3,6 +3,7 @@ import type { Linter } from 'eslint'
 
 export const comments: Linter.Config[] = [
   {
+    name: 'sxzz/comments',
     plugins: {
       'eslint-comments': pluginComments,
     },

@@ -8,6 +8,7 @@ export const yml: Linter.Config[] = [
     languageOptions: {
       parser: parserYml,
     },
+    name: 'sxzz/yaml',
     plugins: {
       yml: pluginYml as any,
     },

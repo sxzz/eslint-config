@@ -10,7 +10,7 @@ import {
   node,
   prettier,
   regexp,
-  sortKeys,
+  sortImports,
   sortPackageJson,
   sortTsconfig,
   typescript,
@@ -38,7 +38,7 @@ export const presetJsonc = [...jsonc, ...sortPackageJson, ...sortTsconfig]
 /** Includes markdown, yaml + `presetJsonc` support */
 export const presetLangsExtensions = [...markdown, ...yml, ...presetJsonc]
 /** Includes `presetJavaScript` and typescript support */
-export const presetBasic = [...presetJavaScript, ...typescript, ...sortKeys]
+export const presetBasic = [...presetJavaScript, ...typescript, ...sortImports]
 /**
  * Includes
  * - `presetBasic` (JS+TS) support

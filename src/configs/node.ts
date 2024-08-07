@@ -3,6 +3,7 @@ import type { Linter } from 'eslint'
 
 export const node: Linter.Config[] = [
   {
+    name: 'sxzz/node',
     plugins: {
       node: pluginNode,
     },

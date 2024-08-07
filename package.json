@@ -28,6 +28,7 @@
     "build": "tsup",
     "lint": "eslint .",
     "lint:fix": "pnpm run lint --fix",
+    "inspect": "eslint-config-inspector --config eslint-inspector.config.ts",
     "release": "bumpp && pnpm publish",
     "typecheck": "tsc --noEmit",
     "prepublishOnly": "pnpm run build"
@@ -62,6 +63,7 @@
     "yaml-eslint-parser": "^1.2.3"
   },
   "devDependencies": {
+    "@eslint/config-inspector": "^0.5.2",
     "@sxzz/prettier-config": "^2.0.2",
     "@types/eslint": "^9.6.0",
     "@types/node": "^20.14.14",

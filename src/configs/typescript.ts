@@ -12,6 +12,7 @@ export const typescriptCore = tseslint.config({
       sourceType: 'module',
     },
   },
+  name: 'sxzz/typescript',
   rules: {
     '@typescript-eslint/ban-ts-comment': 'off',
     '@typescript-eslint/consistent-type-assertions': [
@@ -56,28 +57,19 @@ export const typescript: Linter.Config[] = [
 
   {
     files: ['**/*.d.ts'],
+    name: 'sxzz/typescript/dts-rules',
     rules: {
       'eslint-comments/no-unlimited-disable': 'off',
       'import/no-duplicates': 'off',
+      'no-restricted-syntax': 'off',
       'unused-imports/no-unused-vars': 'off',
     },
   },
   {
-    files: ['**/*.{test,spec}.ts?(x)'],
-    rules: {
-      'no-unused-expressions': 'off',
-    },
-  },
-  {
     files: [GLOB_JS, '**/*.cjs'],
+    name: 'sxzz/typescript/cjs-rules',
     rules: {
       '@typescript-eslint/no-require-imports': 'off',
-    },
-  },
-  {
-    files: ['**/*.d.ts'],
-    rules: {
-      'no-restricted-syntax': ['error', ...restrictedSyntaxJs],
     },
   },
 ]

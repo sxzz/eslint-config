@@ -31,6 +31,7 @@ export const reactivityTransform: Linter.Config[] = [
         $toRef: 'readonly',
       },
     },
+    name: 'sxzz/vue/reactivity-transform',
     plugins: {
       vue: pluginVue,
     },
@@ -99,6 +100,7 @@ export const vue: Linter.Config[] = [
   ...(tseslint.config({
     extends: typescriptCore as any[],
     files: [GLOB_VUE],
+    name: 'sxzz/vue/typescript',
   }) as any),
   {
     files: [GLOB_VUE],
@@ -113,6 +115,7 @@ export const vue: Linter.Config[] = [
         sourceType: 'module',
       },
     },
+    name: 'sxzz/vue',
     plugins: {
       '@typescript-eslint': tseslint.plugin,
       vue: pluginVue,

@@ -25,6 +25,7 @@ export const javascript: Linter.Config[] = [
       },
       sourceType: 'module',
     },
+    name: 'sxzz/js',
     plugins: {
       'unused-imports': pluginUnusedImports,
     },
@@ -146,12 +147,14 @@ export const javascript: Linter.Config[] = [
   },
   {
     files: ['**/scripts/*', '**/cli.*'],
+    name: 'sxzz/cli-rules',
     rules: {
       'no-console': 'off',
     },
   },
   {
     files: ['**/*.{test,spec}.js?(x)'],
+    name: 'sxzz/test-rules',
     rules: {
       'no-unused-expressions': 'off',
     },

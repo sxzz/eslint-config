@@ -3,10 +3,14 @@ import { pluginMarkdown } from '../plugins'
 import type { Linter } from 'eslint'
 
 export const markdown: Linter.Config[] = [
-  ...pluginMarkdown.configs.recommended,
+  ...pluginMarkdown.configs.recommended.map((config: any) => ({
+    ...config,
+    name: `sxzz/${config.name}`,
+  })),
 
   {
     files: [`${GLOB_MARKDOWN}/${GLOB_SRC}`, `${GLOB_MARKDOWN}/${GLOB_VUE}`],
+    name: 'sxzz/markdown-rules',
     rules: {
       '@typescript-eslint/comma-dangle': 'off',
       '@typescript-eslint/consistent-type-imports': 'off',
