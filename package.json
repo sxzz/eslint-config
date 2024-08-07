@@ -25,10 +25,10 @@
     "access": "public"
   },
   "scripts": {
+    "dev": "eslint-config-inspector --config eslint-inspector.config.ts",
     "build": "tsup",
     "lint": "eslint .",
     "lint:fix": "pnpm run lint --fix",
-    "inspect": "eslint-config-inspector --config eslint-inspector.config.ts",
     "release": "bumpp && pnpm publish",
     "typecheck": "tsc --noEmit",
     "prepublishOnly": "pnpm run build"
