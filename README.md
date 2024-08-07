@@ -1,8 +1,7 @@
 # @sxzz/eslint-config [![npm](https://img.shields.io/npm/v/@sxzz/eslint-config.svg)](https://npmjs.com/package/@sxzz/eslint-config)
 
-Flat ESLint config for JavaScript, TypeScript, Vue 2, Vue 3, Prettier.
-
-[Legacy Version](https://github.com/sxzz/eslint-config-legacy)
+A opinionated ESLint config preset for JavaScript, TypeScript, Vue 2 or Vue 3,
+and Prettier.
 
 ## Features
 
@@ -11,6 +10,7 @@ Flat ESLint config for JavaScript, TypeScript, Vue 2, Vue 3, Prettier.
 - Support JSON(5), YAML, Markdown...
 - Sort imports, `package.json`, `tsconfig.json`...
 - [ESLint Flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new), compose easily!
+- Ignores common files like `dist`, `node_modules`, `coverage`, and files in `.gitignore`.
 - Reasonable defaults, best practices, only one-line of config
 - Reasonable strict, but with better code quality.
 
@@ -78,7 +78,7 @@ Enable flat config if you are using ESLint < 9.
 
 Most of the rules are the same, but there are some differences:
 
-- Use Prettier instead of [ESLint Stylistic](https://github.com/eslint-stylistic/eslint-stylistic).
+- Use [Prettier](https://prettier.io/) instead of [ESLint Stylistic](https://github.com/eslint-stylistic/eslint-stylistic).
 - Support both Vue 2 and Vue 3.
 - Support Vue Reactivity Transform.
 - More stricter rules.
