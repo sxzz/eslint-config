@@ -50,6 +50,9 @@ export const pluginUnusedImports: any = interopDefault(_pluginUnusedImports)
 import * as _pluginJsdoc from 'eslint-plugin-jsdoc'
 export const pluginJsdoc: any = interopDefault(_pluginJsdoc)
 
+import * as _pluginIgnore from 'eslint-config-flat-gitignore'
+export const pluginIgnore: any = interopDefault(_pluginIgnore)
+
 export * as pluginImport from 'eslint-plugin-import-x'
 export * as pluginJsonc from 'eslint-plugin-jsonc'
 export * as pluginYml from 'eslint-plugin-yml'

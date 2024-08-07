@@ -5,6 +5,7 @@ import type { Linter } from 'eslint'
 export const sortPackageJson: Linter.Config[] = [
   {
     files: ['**/package.json'],
+    name: 'sxzz/sort/package.json',
     rules: {
       'jsonc/sort-array-values': [
         'error',
@@ -82,6 +83,7 @@ export const sortPackageJson: Linter.Config[] = [
 export const sortTsconfig: Linter.Config[] = [
   {
     files: ['**/tsconfig.json', '**/tsconfig.*.json'],
+    name: 'sxzz/sort/tsconfig',
     rules: {
       'jsonc/sort-keys': [
         'error',
@@ -205,7 +207,7 @@ export const sortTsconfig: Linter.Config[] = [
 
 export const sortImports: Linter.Config[] = [
   {
-    name: 'sxzz/sort-imports',
+    name: 'sxzz/sort/imports',
     plugins: {
       perfectionist: pluginPerfectionist,
     },

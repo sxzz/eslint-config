@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "@unocss/eslint-plugin": "^0.61.9",
+    "eslint-config-flat-gitignore": "^0.1.8",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-antfu": "^2.3.4",
     "eslint-plugin-command": "^0.2.3",
