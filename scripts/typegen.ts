@@ -1,6 +1,7 @@
 import { writeFile } from 'node:fs/promises'
 import { flatConfigsToRulesDTS } from 'eslint-typegen/core'
 import { builtinRules } from 'eslint/use-at-your-own-risk'
+import pico from 'picocolors'
 import { sxzz } from '../src'
 
 const dts = await flatConfigsToRulesDTS(
@@ -16,3 +17,5 @@ const dts = await flatConfigsToRulesDTS(
 )
 
 await writeFile('src/typegen.ts', dts)
+
+console.log(pico.green('Type definitions generated!'))

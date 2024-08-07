@@ -26,7 +26,8 @@
   },
   "scripts": {
     "dev": "eslint-config-inspector --config eslint-inspector.config.ts",
-    "build": "tsx scripts/typegen.ts && tsup",
+    "build": "pnpm run build:typegen && tsup",
+    "build:typegen": "tsx scripts/typegen.ts",
     "build:inspector": "eslint-config-inspector build --config eslint-inspector.config.ts",
     "lint": "eslint .",
     "lint:fix": "pnpm run lint --fix",
@@ -73,6 +74,7 @@
     "eslint": "^9.8.0",
     "eslint-typegen": "^0.3.0",
     "importx": "^0.4.3",
+    "picocolors": "^1.0.1",
     "tsup": "^8.2.4",
     "tsx": "^4.16.5",
     "typescript": "^5.5.4"

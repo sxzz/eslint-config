@@ -111,6 +111,9 @@ importers:
       importx:
         specifier: ^0.4.3
         version: 0.4.3
+      picocolors:
+        specifier: ^1.0.1
+        version: 1.0.1
       tsup:
         specifier: ^8.2.4
         version: 8.2.4(jiti@1.21.6)(tsx@4.16.5)(typescript@5.5.4)(yaml@2.5.0)
