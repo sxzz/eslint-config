@@ -99,12 +99,16 @@ const vue2Rules: Linter.RulesRecord = {
 delete vue2Rules['vue/component-tags-order']
 delete vue3Rules['vue/component-tags-order']
 
-export const vue: Linter.Config[] = [
-  ...(tseslint.config({
-    extends: typescriptCore as any[],
+const vueTs: Linter.Config[] = typescriptCore.map((config) => {
+  return {
+    ...config,
     files: [GLOB_VUE],
-    name: 'sxzz/vue/typescript',
-  }) as any),
+    name: `sxzz/vue/${config.name?.replace('sxzz/', '') || 'anonymous'}`,
+  }
+})
+
+export const vue: Linter.Config[] = [
+  ...vueTs,
   {
     files: [GLOB_VUE],
     languageOptions: {
@@ -120,7 +124,7 @@ export const vue: Linter.Config[] = [
     },
     name: 'sxzz/vue',
     plugins: {
-      '@typescript-eslint': tseslint.plugin,
+      '@typescript-eslint': tseslint.plugin as any,
       vue: pluginVue,
     },
     processor: pluginVue.processors['.vue'],

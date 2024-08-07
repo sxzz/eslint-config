@@ -3,9 +3,9 @@ import { pluginMarkdown } from '../plugins'
 import type { Linter } from 'eslint'
 
 export const markdown: Linter.Config[] = [
-  ...pluginMarkdown.configs.recommended.map((config: any) => ({
+  ...pluginMarkdown.configs.recommended.map((config: Linter.Config) => ({
     ...config,
-    name: `sxzz/${config.name}`,
+    name: `sxzz/${config.name || 'anonymous'}`,
   })),
 
   {
