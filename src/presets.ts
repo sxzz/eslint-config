@@ -20,7 +20,7 @@ import {
   yml,
 } from './configs'
 import { hasUnocss, hasVue } from './env'
-import type { Rules } from './typegen'
+import type { Config } from './types'
 import type { Linter } from 'eslint'
 
 /** Ignore common files and include javascript support */
@@ -56,8 +56,6 @@ export const presetAll = [
   ...prettier,
 ]
 export { presetAll as all, presetBasic as basic }
-
-export type Config = Linter.Config<Linter.RulesRecord & Rules>
 
 /** `sxzz`'s preset. */
 export function sxzz(
