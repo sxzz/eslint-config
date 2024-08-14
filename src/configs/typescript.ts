@@ -1,5 +1,6 @@
 import { GLOB_JS, GLOB_TS, GLOB_TSX } from '../globs'
 import { tseslint } from '../plugins'
+import type { Rules } from '../typegen'
 import { restrictedSyntaxJs } from './javascript'
 import type { Linter } from 'eslint'
 
@@ -27,7 +28,14 @@ export const typescriptCore = tseslint.config({
     '@typescript-eslint/no-non-null-assertion': 'off',
     '@typescript-eslint/no-redeclare': 'error',
     '@typescript-eslint/no-unsafe-function-type': 'off',
-    '@typescript-eslint/no-unused-expressions': 'off',
+    '@typescript-eslint/no-unused-expressions': [
+      'error',
+      {
+        allowShortCircuit: true,
+        allowTaggedTemplates: true,
+        allowTernary: true,
+      },
+    ],
 
     // handled by unused-imports/no-unused-imports
     '@typescript-eslint/no-unused-vars': 'off',
@@ -43,7 +51,7 @@ export const typescriptCore = tseslint.config({
       ...restrictedSyntaxJs,
       'TSEnumDeclaration[const=true]',
     ],
-  },
+  } satisfies Rules,
 }) as Linter.Config[]
 
 export const typescript: Linter.Config[] = [
