@@ -8,6 +8,9 @@ function interopDefault<T>(m: T): InteropDefault<T> {
   return 'default' in m ? interopDefault(m.default) : m
 }
 
+import _configJs from '@eslint/js'
+export const configJs: any = interopDefault(_configJs)
+
 import * as _pluginAntfu from 'eslint-plugin-antfu'
 export const pluginAntfu: typeof import('eslint-plugin-antfu').default =
   interopDefault(_pluginAntfu)

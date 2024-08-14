@@ -1,8 +1,6 @@
-// @ts-expect-error missing types
-import js from '@eslint/js'
 import globals from 'globals'
 import { isInEditor } from '../env'
-import { pluginUnusedImports } from '../plugins'
+import { configJs, pluginUnusedImports } from '../plugins'
 import type { Config } from '../types'
 
 export const restrictedSyntaxJs = [
@@ -12,7 +10,7 @@ export const restrictedSyntaxJs = [
 ]
 
 export const javascript: Config[] = [
-  { ...js.configs.recommended, name: 'sxzz/js/recommended' },
+  { ...configJs.configs.recommended, name: 'sxzz/js/recommended' },
   {
     languageOptions: {
       globals: {

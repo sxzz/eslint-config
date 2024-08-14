@@ -8,7 +8,7 @@ const dts = await flatConfigsToRulesDTS(
   sxzz(
     [
       {
-        plugins: { '': { rules: Object.fromEntries(builtinRules.entries()) } },
+        plugins: { '': { rules: Object.fromEntries(builtinRules) } },
       },
     ],
     { vue: true, unocss: true },
