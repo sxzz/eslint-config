@@ -40,6 +40,7 @@
   },
   "dependencies": {
     "@eslint/js": "^9.9.0",
+    "@types/eslint": "^9.6.0",
     "@unocss/eslint-plugin": "^0.61.9",
     "eslint-config-flat-gitignore": "^0.1.8",
     "eslint-config-prettier": "^9.1.0",
@@ -69,7 +70,6 @@
   "devDependencies": {
     "@eslint/config-inspector": "^0.5.2",
     "@sxzz/prettier-config": "^2.0.2",
-    "@types/eslint": "^9.6.0",
     "@types/node": "^20.14.14",
     "bumpp": "^9.4.2",
     "eslint": "^9.9.0",
