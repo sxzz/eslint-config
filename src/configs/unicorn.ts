@@ -10,6 +10,7 @@ export const unicorn: Linter.Config[] = [
     rules: {
       'unicorn/catch-error-name': 'error',
       'unicorn/consistent-empty-array-spread': 'error',
+      'unicorn/consistent-function-scoping': 'error',
       'unicorn/custom-error-definition': 'error',
       'unicorn/error-message': 'error',
       'unicorn/escape-case': 'error',
@@ -34,6 +35,7 @@ export const unicorn: Linter.Config[] = [
       'unicorn/no-instanceof-array': 'error',
       'unicorn/no-invalid-remove-event-listener': 'error',
       'unicorn/no-lonely-if': 'error',
+      'unicorn/no-negation-in-equality-check': 'error',
       'unicorn/no-new-array': 'error',
       'unicorn/no-new-buffer': 'error',
       'unicorn/no-single-promise-in-promise-methods': 'error',
