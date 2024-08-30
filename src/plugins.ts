@@ -18,7 +18,7 @@ export const pluginAntfu: typeof import('eslint-plugin-antfu').default =
 import * as _pluginComments from 'eslint-plugin-eslint-comments'
 export const pluginComments: any = interopDefault(_pluginComments)
 
-import * as _pluginMarkdown from 'eslint-plugin-markdown'
+import * as _pluginMarkdown from '@eslint/markdown'
 export const pluginMarkdown: any = interopDefault(_pluginMarkdown)
 
 import tseslint from 'typescript-eslint'
