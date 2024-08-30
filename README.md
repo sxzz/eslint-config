@@ -20,7 +20,7 @@ and Prettier.
 npm i -D @sxzz/eslint-config
 ```
 
-Require Node.js >= 18.18, and ESLint >= 8.56.0.
+Require Node.js >= 18.18, and ESLint >= 9.5.0.
 
 ## Usage
 
@@ -63,16 +63,6 @@ export default presetAll
 ```
 
 See [preset.ts](./src/presets.ts) for more details.
-
-### VSCode
-
-Enable flat config if you are using ESLint < 9.
-
-```jsonc
-{
-  "eslint.experimental.useFlatConfig": true,
-}
-```
 
 ## Comparing to [`@antfu/eslint-config`](https://github.com/antfu/eslint-config)
 
