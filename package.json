@@ -73,7 +73,7 @@
   "devDependencies": {
     "@eslint/config-inspector": "^0.5.4",
     "@sxzz/prettier-config": "^2.0.2",
-    "@types/node": "^22.5.1",
+    "@types/node": "^22.5.2",
     "bumpp": "^9.5.2",
     "eslint": "^9.9.1",
     "eslint-typegen": "^0.3.1",
