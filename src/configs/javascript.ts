@@ -2,6 +2,7 @@ import globals from 'globals'
 import { isInEditor } from '../env'
 import { configJs, pluginUnusedImports } from '../plugins'
 import type { Config } from '../types'
+import { GLOB_SRC_EXT } from '../globs'
 
 export const restrictedSyntaxJs = [
   'ForInStatement',
@@ -99,7 +100,7 @@ export const javascript: Config[] = [
     },
   },
   {
-    files: ['**/*.{test,spec}.js?(x)'],
+    files: [`**/*.{test,spec}.${GLOB_SRC_EXT}`],
     name: 'sxzz/test-rules',
     rules: {
       'no-unused-expressions': 'off',
