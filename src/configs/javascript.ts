@@ -2,7 +2,6 @@ import globals from 'globals'
 import { isInEditor } from '../env'
 import { configJs, pluginUnusedImports } from '../plugins'
 import type { Config } from '../types'
-import { GLOB_SRC_EXT } from '../globs'
 
 export const restrictedSyntaxJs = [
   'ForInStatement',
@@ -90,21 +89,6 @@ export const javascript: Config[] = [
       ],
       'valid-typeof': ['error', { requireStringLiterals: true }],
       'vars-on-top': 'error',
-    },
-  },
-  {
-    files: ['**/scripts/*', '**/cli.*'],
-    name: 'sxzz/cli-rules',
-    rules: {
-      'no-console': 'off',
-    },
-  },
-  {
-    files: [`**/*.{test,spec}.${GLOB_SRC_EXT}`],
-    name: 'sxzz/test-rules',
-    rules: {
-      'no-unused-expressions': 'off',
-      'unicorn/consistent-function-scoping': 'off',
     },
   },
 ]
