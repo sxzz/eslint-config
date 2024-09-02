@@ -1,7 +1,7 @@
 import { pluginUnicorn } from '../plugins'
-import type { Linter } from 'eslint'
+import { Config } from '../types'
 
-export const unicorn: Linter.Config[] = [
+export const unicorn: Config[] = [
   {
     name: 'sxzz/unicorn',
     plugins: {
@@ -10,7 +10,10 @@ export const unicorn: Linter.Config[] = [
     rules: {
       'unicorn/catch-error-name': 'error',
       'unicorn/consistent-empty-array-spread': 'error',
-      'unicorn/consistent-function-scoping': 'error',
+      'unicorn/consistent-function-scoping': [
+        'error',
+        { checkArrowFunctions: false },
+      ],
       'unicorn/custom-error-definition': 'error',
       'unicorn/error-message': 'error',
       'unicorn/escape-case': 'error',
