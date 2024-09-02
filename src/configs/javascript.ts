@@ -103,6 +103,7 @@ export const javascript: Config[] = [
     name: 'sxzz/test-rules',
     rules: {
       'no-unused-expressions': 'off',
+      'unicorn/consistent-function-scoping': 'off',
     },
   },
 ]
