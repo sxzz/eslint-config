@@ -13,12 +13,12 @@ import {
   sortImports,
   sortPackageJson,
   sortTsconfig,
+  specialCases,
   typescript,
   unicorn,
   unocss,
   vue,
   yml,
-  specialCases,
 } from './configs'
 import { hasUnocss, hasVue } from './env'
 import type { Config } from './types'
