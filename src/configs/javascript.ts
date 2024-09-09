@@ -1,6 +1,6 @@
 import globals from 'globals'
 import { isInEditor } from '../env'
-import { configJs, pluginUnusedImports } from '../plugins'
+import { configJs, pluginSxzz, pluginUnusedImports } from '../plugins'
 import type { Config } from '../types'
 
 export const restrictedSyntaxJs = [
@@ -28,6 +28,7 @@ export const javascript: Config[] = [
     },
     name: 'sxzz/js',
     plugins: {
+      sxzz: pluginSxzz,
       'unused-imports': pluginUnusedImports,
     },
     rules: {
@@ -77,6 +78,7 @@ export const javascript: Config[] = [
       'prefer-spread': 'error',
       'prefer-template': 'error',
       'require-await': 'error',
+      'sxzz/prefer-string-function': 'warn',
       'unicode-bom': ['error', 'never'],
       'unused-imports/no-unused-imports': isInEditor ? 'off' : 'error',
       'unused-imports/no-unused-vars': [
