@@ -19,8 +19,7 @@ import * as _pluginSxzz from 'eslint-plugin-sxzz'
 export const pluginSxzz: typeof import('eslint-plugin-sxzz').default =
   interopDefault(_pluginSxzz)
 
-import * as _pluginComments from 'eslint-plugin-eslint-comments'
-export const pluginComments: any = interopDefault(_pluginComments)
+export { default as configComments } from '@eslint-community/eslint-plugin-eslint-comments/configs'
 
 import * as _pluginMarkdown from '@eslint/markdown'
 export const pluginMarkdown: any = interopDefault(_pluginMarkdown)

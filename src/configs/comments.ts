@@ -1,15 +1,15 @@
-import { pluginComments } from '../plugins'
+import { configComments } from '../plugins'
 import type { Linter } from 'eslint'
 
 export const comments: Linter.Config[] = [
   {
+    ...configComments.recommended,
+    name: 'sxzz/comments/recommended',
+  },
+  {
     name: 'sxzz/comments',
-    plugins: {
-      'eslint-comments': pluginComments,
-    },
     rules: {
-      ...pluginComments.configs.recommended.rules,
-      'eslint-comments/disable-enable-pair': [
+      '@eslint-community/eslint-comments/disable-enable-pair': [
         'error',
         { allowWholeFile: true },
       ],
