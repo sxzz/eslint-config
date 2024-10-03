@@ -37,7 +37,7 @@ export const javascript: Config[] = [
       'dot-notation': 'warn',
       eqeqeq: ['error', 'smart'],
       'no-alert': 'warn',
-      'no-console': ['warn', { allow: ['warn', 'error'] }],
+      'no-console': ['warn', { allow: ['warn', 'error', 'info', 'clear'] }],
       'no-debugger': 'warn',
       'no-duplicate-imports': 'error',
       'no-empty': ['error', { allowEmptyCatch: true }],
