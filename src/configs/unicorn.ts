@@ -10,6 +10,7 @@ export const unicorn: Config[] = [
     rules: {
       'unicorn/catch-error-name': 'error',
       'unicorn/consistent-empty-array-spread': 'error',
+      'unicorn/consistent-existence-index-check': 'error',
       'unicorn/consistent-function-scoping': [
         'error',
         { checkArrowFunctions: false },
@@ -59,6 +60,7 @@ export const unicorn: Config[] = [
       'unicorn/prefer-dom-node-text-content': 'error',
       'unicorn/prefer-includes': 'error',
       'unicorn/prefer-keyboard-event-key': 'error',
+      'unicorn/prefer-math-min-max': 'error',
       'unicorn/prefer-math-trunc': 'error',
       'unicorn/prefer-modern-dom-apis': 'error',
       'unicorn/prefer-modern-math-apis': 'error',
