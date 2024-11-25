@@ -231,7 +231,7 @@ export const sortImports: Linter.Config[] = [
             'side-effect',
             'side-effect-style',
           ],
-          internalPattern: ['~/**', '@/**', '#**'],
+          internalPattern: ['^[~@#]/.*'],
           newlinesBetween: 'ignore',
         },
       ],
