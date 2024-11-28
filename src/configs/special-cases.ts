@@ -22,7 +22,7 @@ export const specialCases: Config[] = [
     files: [
       `**/*config*.${GLOB_SRC_EXT}`,
       `**/{views,pages,routes,middleware,plugins,api,modules}/${GLOB_SRC}`,
-      `**/{index,vite,esbuild,rollup,rolldown,webpack,rspack}.${GLOB_SRC_EXT}`,
+      `**/{index,vite,esbuild,rollup,rolldown,webpack,rspack,farm}.${GLOB_SRC_EXT}`,
       '**/*.d.ts',
       `${GLOB_MARKDOWN}/**`,
       '**/.prettierrc*',
