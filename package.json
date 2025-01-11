@@ -32,7 +32,7 @@
     "build": "pnpm run build:typegen && tsup",
     "build:typegen": "tsx scripts/typegen.ts",
     "build:inspector": "eslint-config-inspector build --config eslint-inspector.config.ts",
-    "lint": "eslint --flag unstable_ts_config .",
+    "lint": "eslint",
     "lint:fix": "pnpm run lint --fix",
     "release": "bumpp && pnpm publish",
     "typecheck": "tsc --noEmit",
