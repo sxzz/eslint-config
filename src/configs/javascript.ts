@@ -3,7 +3,7 @@ import { isInEditor } from '../env'
 import { configJs, pluginSxzz, pluginUnusedImports } from '../plugins'
 import type { Config } from '../types'
 
-export const restrictedSyntaxJs = [
+export const restrictedSyntaxJs: string[] = [
   'ForInStatement',
   'LabeledStatement',
   'WithStatement',

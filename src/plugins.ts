@@ -68,4 +68,5 @@ export * as parserYml from 'yaml-eslint-parser'
 export * as parserJsonc from 'jsonc-eslint-parser'
 
 import _configCommand from 'eslint-plugin-command/config'
-export const configCommand = interopDefault(_configCommand)
+export const configCommand: typeof _configCommand =
+  interopDefault(_configCommand)

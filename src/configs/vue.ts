@@ -5,7 +5,7 @@ import { parserVue, pluginVue, tseslint } from '../plugins'
 import { typescriptCore } from './typescript'
 import type { Linter } from 'eslint'
 
-export function getVueVersion() {
+export function getVueVersion(): number {
   const pkg = getPackageInfoSync('vue', { paths: [process.cwd()] })
   if (
     pkg &&
