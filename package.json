@@ -71,7 +71,7 @@
     "yaml-eslint-parser": "^1.2.3"
   },
   "devDependencies": {
-    "@eslint/config-inspector": "^0.7.1",
+    "@eslint/config-inspector": "^1.0.0",
     "@sxzz/prettier-config": "^2.0.2",
     "@types/node": "^22.10.5",
     "bumpp": "^9.10.0",
