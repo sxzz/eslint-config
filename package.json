@@ -74,7 +74,7 @@
     "@eslint/config-inspector": "^0.7.1",
     "@sxzz/prettier-config": "^2.0.2",
     "@types/node": "^22.10.5",
-    "bumpp": "^9.10.0",
+    "bumpp": "^10.0.1",
     "eslint": "^9.18.0",
     "eslint-typegen": "^1.0.0",
     "importx": "^0.5.1",
