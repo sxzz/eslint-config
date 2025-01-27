@@ -1,16 +1,17 @@
 import process from 'node:process'
 import { isPackageExists } from 'local-pkg'
 
-export const hasTypeScript: boolean = isPackageExists('typescript')
-export const hasVue: boolean =
+export const hasTypeScript = (): boolean => isPackageExists('typescript')
+export const hasVue = (): boolean =>
   isPackageExists('vue') ||
   isPackageExists('nuxt') ||
   isPackageExists('vitepress') ||
   isPackageExists('@slidev/cli')
-export const hasUnocss: boolean =
+export const hasUnocss = (): boolean =>
   isPackageExists('unocss') ||
   isPackageExists('@unocss/webpack') ||
-  isPackageExists('@unocss/nuxt')
+  isPackageExists('@unocss/nuxt') ||
+  isPackageExists('@unocss/eslint-plugin')
 
 export function isInEditorEnv(): boolean {
   if (process.env.CI) return false

@@ -75,8 +75,8 @@ export async function sxzz(
     command: enableCommand = true,
     markdown: enableMarkdown = true,
     prettier: enablePrettier = true,
-    unocss: enableUnocss = hasUnocss,
-    vue: enableVue = hasVue,
+    unocss: enableUnocss = hasUnocss(),
+    vue: enableVue = hasVue(),
   }: Partial<{
     /** Vue support. Auto-enable if detected. */
     vue: boolean
