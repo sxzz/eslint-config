@@ -5,7 +5,7 @@ import pico from 'picocolors'
 import { sxzz } from '../src/presets'
 
 const dts = await flatConfigsToRulesDTS(
-  sxzz(
+  await sxzz(
     [
       {
         plugins: { '': { rules: Object.fromEntries(builtinRules) } },
