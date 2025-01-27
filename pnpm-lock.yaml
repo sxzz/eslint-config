@@ -20,9 +20,6 @@ importers:
       '@eslint/markdown':
         specifier: ^6.2.2
         version: 6.2.2
-      '@unocss/eslint-plugin':
-        specifier: ^65.4.3
-        version: 65.4.3(eslint@9.19.0(jiti@2.4.2))(typescript@5.7.3)
       eslint-config-flat-gitignore:
         specifier: ^1.0.0
         version: 1.0.0(eslint@9.19.0(jiti@2.4.2))
@@ -57,8 +54,8 @@ importers:
         specifier: ^2.7.0
         version: 2.7.0(eslint@9.19.0(jiti@2.4.2))
       eslint-plugin-sxzz:
-        specifier: ^0.1.0
-        version: 0.1.0(eslint@9.19.0(jiti@2.4.2))
+        specifier: ^0.2.0
+        version: 0.2.0(eslint@9.19.0(jiti@2.4.2))
       eslint-plugin-unicorn:
         specifier: ^56.0.1
         version: 56.0.1(eslint@9.19.0(jiti@2.4.2))
@@ -102,6 +99,9 @@ importers:
       '@types/node':
         specifier: ^22.10.10
         version: 22.10.10
+      '@unocss/eslint-plugin':
+        specifier: ^65.4.3
+        version: 65.4.3(eslint@9.19.0(jiti@2.4.2))(typescript@5.7.3)
       bumpp:
         specifier: ^10.0.1
         version: 10.0.1
@@ -1237,8 +1237,8 @@ packages:
     peerDependencies:
       eslint: '>=8.44.0'
 
-  eslint-plugin-sxzz@0.1.0:
-    resolution: {integrity: sha512-ws2yD0yWnFAyujNNsYkw8KlU/yRKcnQHueGJJ7N20i5RCj+zcUZCPck634PejkiexWlNcsrr4G8bhXVzthk4FQ==}
+  eslint-plugin-sxzz@0.2.0:
+    resolution: {integrity: sha512-Gp5XPt3VDDPPKRY5F4cEc/9cE1uJpiHxj965bWr5IV1gPfq/M+vuKhPqaWWiTp18qudyZtOIjiZf6smjdpZlfA==}
     engines: {node: '>=18.12.0'}
     peerDependencies:
       eslint: '*'
@@ -3322,7 +3322,7 @@ snapshots:
       regexp-ast-analysis: 0.7.1
       scslre: 0.3.0
 
-  eslint-plugin-sxzz@0.1.0(eslint@9.19.0(jiti@2.4.2)):
+  eslint-plugin-sxzz@0.2.0(eslint@9.19.0(jiti@2.4.2)):
     dependencies:
       eslint: 9.19.0(jiti@2.4.2)
 

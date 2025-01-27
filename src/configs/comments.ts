@@ -1,7 +1,7 @@
 import { configComments } from '../plugins'
-import type { Linter } from 'eslint'
+import type { Config } from '../types'
 
-export const comments: Linter.Config[] = [
+export const comments = (): Config[] => [
   {
     ...configComments.recommended,
     name: 'sxzz/comments/recommended',

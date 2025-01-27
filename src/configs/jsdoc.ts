@@ -1,7 +1,7 @@
 import { pluginJsdoc } from '../plugins'
-import type { Linter } from 'eslint'
+import type { Config } from '../types'
 
-export const jsdoc: Linter.Config[] = [
+export const jsdoc = (): Config[] => [
   {
     name: 'sxzz/jsdoc',
     plugins: {

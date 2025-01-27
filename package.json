@@ -39,13 +39,18 @@
     "prepublishOnly": "pnpm run build"
   },
   "peerDependencies": {
+    "@unocss/eslint-plugin": ">=65.0.0",
     "eslint": "^9.5.0"
+  },
+  "peerDependenciesMeta": {
+    "@unocss/eslint-plugin": {
+      "optional": true
+    }
   },
   "dependencies": {
     "@eslint-community/eslint-plugin-eslint-comments": "^4.4.1",
     "@eslint/js": "^9.19.0",
     "@eslint/markdown": "^6.2.2",
-    "@unocss/eslint-plugin": "^65.4.3",
     "eslint-config-flat-gitignore": "^1.0.0",
     "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-antfu": "^3.0.0",
@@ -57,7 +62,7 @@
     "eslint-plugin-perfectionist": "^4.7.0",
     "eslint-plugin-prettier": "^5.2.3",
     "eslint-plugin-regexp": "^2.7.0",
-    "eslint-plugin-sxzz": "^0.1.0",
+    "eslint-plugin-sxzz": "^0.2.0",
     "eslint-plugin-unicorn": "^56.0.1",
     "eslint-plugin-unused-imports": "^4.1.4",
     "eslint-plugin-vue": "^9.32.0",
@@ -74,6 +79,7 @@
     "@eslint/config-inspector": "^1.0.0",
     "@sxzz/prettier-config": "^2.1.0",
     "@types/node": "^22.10.10",
+    "@unocss/eslint-plugin": "^65.4.3",
     "bumpp": "^10.0.1",
     "eslint": "^9.19.0",
     "eslint-typegen": "^1.0.0",

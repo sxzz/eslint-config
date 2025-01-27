@@ -1,7 +1,7 @@
 import { configCommand } from '../plugins'
-import type { Linter } from 'eslint'
+import type { Config } from '../types'
 
-export const command: Linter.Config[] = [
+export const command = (): Config[] => [
   {
     ...configCommand(),
     name: 'sxzz/command',

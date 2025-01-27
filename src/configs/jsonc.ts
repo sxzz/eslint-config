@@ -1,8 +1,9 @@
 import { GLOB_JSON, GLOB_JSON5, GLOB_JSONC } from '../globs'
 import { parserJsonc, pluginJsonc } from '../plugins'
+import type { Config } from '../types'
 import type { Linter } from 'eslint'
 
-export const jsonc: Linter.Config[] = [
+export const jsonc = (): Config[] => [
   {
     files: [GLOB_JSON, GLOB_JSON5, GLOB_JSONC],
     languageOptions: {

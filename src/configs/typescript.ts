@@ -1,8 +1,8 @@
 import { GLOB_JS, GLOB_TS, GLOB_TSX } from '../globs'
 import { tseslint } from '../plugins'
 import type { Rules } from '../typegen'
+import type { Config } from '../types'
 import { restrictedSyntaxJs } from './javascript'
-import type { Linter } from 'eslint'
 
 export const typescriptCore = tseslint.config({
   extends: [...tseslint.configs.recommended],
@@ -52,9 +52,9 @@ export const typescriptCore = tseslint.config({
       'TSEnumDeclaration[const=true]',
     ],
   } satisfies Rules,
-}) as Linter.Config[]
+}) as Config[]
 
-export const typescript: Linter.Config[] = [
+export const typescript = (): Config[] => [
   ...typescriptCore,
 
   {

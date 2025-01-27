@@ -1,8 +1,5 @@
 {
   "editor.formatOnSave": true,
-  "exportall.config.folderListener": ["/src", "/src/configs"],
-  "exportall.config.semis": false,
-  "eslint.options": {
-    "flags": ["unstable_ts_config"]
-  }
+  "exportall.config.folderListener": ["/src/configs"],
+  "exportall.config.semis": false
 }

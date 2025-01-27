@@ -1,5 +1,5 @@
 import globals from 'globals'
-import { isInEditor } from '../env'
+import { isInEditorEnv } from '../env'
 import { configJs, pluginSxzz, pluginUnusedImports } from '../plugins'
 import type { Config } from '../types'
 
@@ -9,7 +9,7 @@ export const restrictedSyntaxJs: string[] = [
   'WithStatement',
 ]
 
-export const javascript: Config[] = [
+export const javascript = (): Config[] => [
   { ...configJs.configs.recommended, name: 'sxzz/js/recommended' },
   {
     languageOptions: {
@@ -80,7 +80,7 @@ export const javascript: Config[] = [
       'require-await': 'error',
       'sxzz/prefer-string-function': 'warn',
       'unicode-bom': ['error', 'never'],
-      'unused-imports/no-unused-imports': isInEditor ? 'off' : 'error',
+      'unused-imports/no-unused-imports': isInEditorEnv() ? 'off' : 'error',
       'unused-imports/no-unused-vars': [
         'error',
         { args: 'after-used', ignoreRestSiblings: true },

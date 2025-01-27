@@ -2,8 +2,10 @@ import process from 'node:process'
 import { getPackageInfoSync } from 'local-pkg'
 import { GLOB_VUE } from '../globs'
 import { parserVue, pluginVue, tseslint } from '../plugins'
+import type { Rules } from '../typegen'
+import type { Config } from '../types'
 import { typescriptCore } from './typescript'
-import type { Linter } from 'eslint'
+import type { ESLint } from 'eslint'
 
 export function getVueVersion(): number {
   const pkg = getPackageInfoSync('vue', { paths: [process.cwd()] })
@@ -18,7 +20,7 @@ export function getVueVersion(): number {
 }
 const isVue3 = getVueVersion() === 3
 
-export const reactivityTransform: Linter.Config[] = [
+export const reactivityTransform = (): Config[] => [
   {
     languageOptions: {
       globals: {
@@ -41,7 +43,7 @@ export const reactivityTransform: Linter.Config[] = [
   },
 ]
 
-const vueCustomRules: Linter.RulesRecord = {
+const vueCustomRules: Rules = {
   'vue/block-order': ['error', { order: ['script', 'template', 'style'] }],
   'vue/custom-event-name-casing': ['error', 'camelCase'],
   'vue/eqeqeq': ['error', 'smart'],
@@ -82,14 +84,14 @@ const vueCustomRules: Linter.RulesRecord = {
   'vue/require-prop-types': 'off',
 }
 
-const vue3Rules: Linter.RulesRecord = {
+const vue3Rules: Rules = {
   ...pluginVue.configs.base.rules,
   ...pluginVue.configs['vue3-essential'].rules,
   ...pluginVue.configs['vue3-strongly-recommended'].rules,
   ...pluginVue.configs['vue3-recommended'].rules,
 }
 
-const vue2Rules: Linter.RulesRecord = {
+const vue2Rules: Rules = {
   ...pluginVue.configs.base.rules,
   ...pluginVue.configs.essential.rules,
   ...pluginVue.configs['strongly-recommended'].rules,
@@ -99,7 +101,7 @@ const vue2Rules: Linter.RulesRecord = {
 delete vue2Rules['vue/component-tags-order']
 delete vue3Rules['vue/component-tags-order']
 
-const vueTs: Linter.Config[] = typescriptCore
+const vueTs: Config[] = typescriptCore
   .filter((config) => config.name !== 'typescript-eslint/base')
   .map((config) => {
     return {
@@ -109,7 +111,7 @@ const vueTs: Linter.Config[] = typescriptCore
     }
   })
 
-export const vue: Linter.Config[] = [
+export const vue = (): Config[] => [
   ...vueTs,
   {
     files: [GLOB_VUE],
@@ -126,7 +128,7 @@ export const vue: Linter.Config[] = [
     },
     name: 'sxzz/vue',
     plugins: {
-      '@typescript-eslint': tseslint.plugin as any,
+      '@typescript-eslint': tseslint.plugin as ESLint.Plugin,
       vue: pluginVue,
     },
     processor: pluginVue.processors['.vue'],
@@ -135,5 +137,5 @@ export const vue: Linter.Config[] = [
       ...vueCustomRules,
     },
   },
-  ...reactivityTransform,
+  ...reactivityTransform(),
 ]

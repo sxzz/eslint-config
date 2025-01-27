@@ -1,9 +1,9 @@
 import { GLOB_MARKDOWN, GLOB_SRC, GLOB_VUE } from '../globs'
 import { pluginMarkdown } from '../plugins'
-import type { Linter } from 'eslint'
+import type { Config } from '../types'
 
-export const markdown: Linter.Config[] = [
-  ...pluginMarkdown.configs.processor.map((config: Linter.Config) => ({
+export const markdown = (): Config[] => [
+  ...pluginMarkdown.configs.processor.map((config: Config) => ({
     ...config,
     name: `sxzz/${config.name || 'anonymous'}`,
   })),

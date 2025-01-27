@@ -1,9 +1,9 @@
 import { configs } from 'eslint-plugin-regexp'
-import type { Linter } from 'eslint'
+import type { Config } from '../types'
 
-export const regexp: Linter.Config[] = [
+export const regexp = (): Config[] => [
   {
-    ...(configs['flat/recommended'] as Linter.Config),
+    ...(configs['flat/recommended'] as Config),
     name: 'sxzz/regexp',
   },
 ]

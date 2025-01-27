@@ -1,10 +1,14 @@
-import { configPrettier, pluginPrettier } from '../plugins'
-import type { Linter } from 'eslint'
+import {
+  configPrettier,
+  pluginPrettier,
+  pluginPrettierRecommended,
+} from '../plugins'
+import type { Config } from '../types'
 
 const prettierConflictRules = { ...configPrettier.rules }
 delete prettierConflictRules['vue/html-self-closing']
 
-export const prettier: Linter.Config[] = [
+export const prettier = (): Config[] => [
   {
     name: 'sxzz/prettier',
     plugins: {
@@ -12,7 +16,7 @@ export const prettier: Linter.Config[] = [
     },
     rules: {
       ...prettierConflictRules,
-      ...pluginPrettier.configs.recommended.rules,
+      ...pluginPrettierRecommended.rules,
       'prettier/prettier': 'warn',
     },
   },

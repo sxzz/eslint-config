@@ -1,8 +1,8 @@
 import { pluginPerfectionist } from '../plugins'
 
-import type { Linter } from 'eslint'
+import type { Config } from '../types'
 
-export const sortPackageJson: Linter.Config[] = [
+export const sortPackageJson = (): Config[] => [
   {
     files: ['**/package.json'],
     name: 'sxzz/sort/package.json',
@@ -80,7 +80,7 @@ export const sortPackageJson: Linter.Config[] = [
   },
 ]
 
-export const sortTsconfig: Linter.Config[] = [
+export const sortTsconfig = (): Config[] => [
   {
     files: ['**/tsconfig.json', '**/tsconfig.*.json'],
     name: 'sxzz/sort/tsconfig',
@@ -205,7 +205,7 @@ export const sortTsconfig: Linter.Config[] = [
   },
 ]
 
-export const sortImports: Linter.Config[] = [
+export const sortImports = (): Config[] => [
   {
     name: 'sxzz/sort/imports',
     plugins: {

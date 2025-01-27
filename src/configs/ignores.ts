@@ -1,8 +1,8 @@
 import { GLOB_EXCLUDE } from '../globs'
 import { pluginIgnore } from '../plugins'
-import type { Linter } from 'eslint'
+import type { Config } from '../types'
 
-export const ignores: Linter.Config[] = [
+export const ignores = (): Config[] => [
   {
     ignores: GLOB_EXCLUDE,
     name: 'sxzz/global-ignores',
