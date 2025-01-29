@@ -69,9 +69,8 @@ See [preset.ts](./src/presets.ts) for more details.
 Most of the rules are the same, but there are some differences:
 
 - Use [Prettier](https://prettier.io/) instead of [ESLint Stylistic](https://github.com/eslint-stylistic/eslint-stylistic).
-- Support both Vue 2 and Vue 3.
-- Support Vue Reactivity Transform.
-- More stricter rules.
+- React and Svelte are not supported.
+- Maybe stricter and simpler.
 
 ## Sponsors
 
