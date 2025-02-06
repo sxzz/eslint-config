@@ -13,6 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/sxzz/eslint-config.git"
   },
+  "author": "三咲智子 Kevin Deng <sxzz@sxzz.moe>",
   "funding": "https://github.com/sponsors/sxzz",
   "files": [
     "dist"
