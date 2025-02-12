@@ -1,6 +1,7 @@
 import {
   command,
   comments,
+  deMorgan,
   ignores,
   imports,
   javascript,
@@ -33,6 +34,7 @@ export const presetJavaScript = (): Config[] => [
   ...node(),
   ...jsdoc(),
   ...regexp(),
+  ...deMorgan(),
 ]
 /** Includes basic json(c) file support and sorting json keys */
 export const presetJsonc = (): Config[] => [
