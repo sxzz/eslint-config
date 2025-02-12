@@ -13,6 +13,7 @@ export { default as pluginPrettierRecommended } from 'eslint-plugin-prettier/rec
 export { default as pluginUnusedImports } from 'eslint-plugin-unused-imports'
 export { default as pluginJsdoc } from 'eslint-plugin-jsdoc'
 export { default as pluginIgnore } from 'eslint-config-flat-gitignore'
+export { default as pluginDeMorgan } from 'eslint-plugin-de-morgan'
 
 export * as pluginImport from 'eslint-plugin-import-x'
 export * as pluginJsonc from 'eslint-plugin-jsonc'
