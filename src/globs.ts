@@ -45,7 +45,7 @@ export const GLOB_EXCLUDE: string[] = [
   GLOB_DIST,
   ...GLOB_LOCKFILE,
 
-  '**/output',
+  'output',
   '**/coverage',
   '**/temp',
   '**/fixtures',
