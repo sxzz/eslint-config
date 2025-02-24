@@ -84,7 +84,7 @@
     "@unocss/eslint-plugin": "^65.4.3",
     "bumpp": "^10.0.3",
     "eslint": "^9.20.1",
-    "eslint-typegen": "^1.0.0",
+    "eslint-typegen": "^2.0.0",
     "importx": "^0.5.1",
     "picocolors": "^1.1.1",
     "tsdown": "^0.5.9",
