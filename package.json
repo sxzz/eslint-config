@@ -81,7 +81,7 @@
     "@eslint/config-inspector": "^1.0.0",
     "@sxzz/prettier-config": "^2.2.0",
     "@types/node": "^22.13.2",
-    "@unocss/eslint-plugin": "^65.4.3",
+    "@unocss/eslint-plugin": "^66.0.0",
     "bumpp": "^10.0.3",
     "eslint": "^9.20.1",
     "eslint-typegen": "^2.0.0",
