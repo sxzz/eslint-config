@@ -103,8 +103,8 @@ importers:
         specifier: ^22.13.2
         version: 22.13.2
       '@unocss/eslint-plugin':
-        specifier: ^65.4.3
-        version: 65.4.3(eslint@9.20.1(jiti@2.4.2))(typescript@5.7.3)
+        specifier: ^66.0.0
+        version: 66.0.0(eslint@9.20.1(jiti@2.4.2))(typescript@5.7.3)
       bumpp:
         specifier: ^10.0.3
         version: 10.0.3
@@ -870,19 +870,19 @@ packages:
     resolution: {integrity: sha512-kArLq83QxGLbuHrTMoOEWO+l2MwsNS2TGISEdx8xgqpkbytB07XmlQyQdNDrCc1ecSqx0cnmhGvpX+VBwqqSkg==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@unocss/config@65.4.3':
-    resolution: {integrity: sha512-Z3tnQ10UjM09Y1yVqfCYfZEh2pXFQlUQ1g188mMWxjXWEIXeei3f9dIApRBgC+xcPE6prqdu3fDC5emU+sqyxw==}
+  '@unocss/config@66.0.0':
+    resolution: {integrity: sha512-nFRGop/guBa4jLkrgXjaRDm5JPz4x3YpP10m5IQkHpHwlnHUVn1L9smyPl04ohYWhYn9ZcAHgR28Ih2jwta8hw==}
     engines: {node: '>=14'}
 
-  '@unocss/core@65.4.3':
-    resolution: {integrity: sha512-luFgdcchSlNrYSaDvU2176T2PPQZdxqfREVbxEXNXlFEgyEFrx5hOSUXoJtJSZjRhAcE6zkWyLDf/JkQJ5Eeyw==}
+  '@unocss/core@66.0.0':
+    resolution: {integrity: sha512-PdVbSMHNDDkr++9nkqzsZRAkaU84gxMTEgYbqI7dt2p1DXp/5tomVtmMsr2/whXGYKRiUc0xZ3p4Pzraz8TcXA==}
 
-  '@unocss/eslint-plugin@65.4.3':
-    resolution: {integrity: sha512-uK6WpZPy/zJxunw4lh51KjIO370SRAIFlvg/Knh4Kl5214xiJDezKp7F7NATVBx+JqSf7iHYn2qUdB8Z8I7sXg==}
+  '@unocss/eslint-plugin@66.0.0':
+    resolution: {integrity: sha512-KTP6uK0loH9+PkUjL2F4eyuMcUZRiVYkg4zJfqVWNctE1yGkuTUzCvm6ORRvLakajAU8G/Zzvuo1pE94zyZQbw==}
     engines: {node: '>=14'}
 
-  '@unocss/rule-utils@65.4.3':
-    resolution: {integrity: sha512-bzRRdb9mb82IvgOt3KiRyUh/njRfJC3hoV84lMyUPryT8YTEP/hl6kt2KQ2l1K3WDz7ZPQXVi2eqUbqc+AUpwg==}
+  '@unocss/rule-utils@66.0.0':
+    resolution: {integrity: sha512-UJ51YHbwxYTGyj35ugsPlOT4gaa7tCbXdywZ3m5Nn0JgywwIqGmBFyiN9ZjHBHfJuDxmmPd6lxojoBscih/WMQ==}
     engines: {node: '>=14'}
 
   '@valibot/to-json-schema@1.0.0-beta.4':
@@ -2151,9 +2151,6 @@ packages:
   ufo@1.5.4:
     resolution: {integrity: sha512-UsUk3byDzKd04EyoZ7U4DOlxQaD14JUKQl6/P7wiX4FNvUfm3XL246n9W5AmqwW5RSFJ27NAuM0iLscAOYUiGQ==}
 
-  unconfig@0.6.1:
-    resolution: {integrity: sha512-cVU+/sPloZqOyJEAfNwnQSFCzFrZm85vcVkryH7lnlB/PiTycUkAjt5Ds79cfIshGOZ+M5v3PBDnKgpmlE5DtA==}
-
   unconfig@7.0.0:
     resolution: {integrity: sha512-G5CJSoG6ZTxgzCJblEfgpdRK2tos9+UdD2WtecDUVfImzQ0hFjwpH5RVvGMhP4pRpC9ML7NrC4qBsBl0Ttj35A==}
 
@@ -2861,21 +2858,19 @@ snapshots:
       '@typescript-eslint/types': 8.24.0
       eslint-visitor-keys: 4.2.0
 
-  '@unocss/config@65.4.3':
+  '@unocss/config@66.0.0':
     dependencies:
-      '@unocss/core': 65.4.3
-      unconfig: 0.6.1
-    transitivePeerDependencies:
-      - supports-color
+      '@unocss/core': 66.0.0
+      unconfig: 7.0.0
 
-  '@unocss/core@65.4.3': {}
+  '@unocss/core@66.0.0': {}
 
-  '@unocss/eslint-plugin@65.4.3(eslint@9.20.1(jiti@2.4.2))(typescript@5.7.3)':
+  '@unocss/eslint-plugin@66.0.0(eslint@9.20.1(jiti@2.4.2))(typescript@5.7.3)':
     dependencies:
       '@typescript-eslint/utils': 8.24.0(eslint@9.20.1(jiti@2.4.2))(typescript@5.7.3)
-      '@unocss/config': 65.4.3
-      '@unocss/core': 65.4.3
-      '@unocss/rule-utils': 65.4.3
+      '@unocss/config': 66.0.0
+      '@unocss/core': 66.0.0
+      '@unocss/rule-utils': 66.0.0
       magic-string: 0.30.17
       synckit: 0.9.2
     transitivePeerDependencies:
@@ -2883,9 +2878,9 @@ snapshots:
       - supports-color
       - typescript
 
-  '@unocss/rule-utils@65.4.3':
+  '@unocss/rule-utils@66.0.0':
     dependencies:
-      '@unocss/core': 65.4.3
+      '@unocss/core': 66.0.0
       magic-string: 0.30.17
 
   '@valibot/to-json-schema@1.0.0-beta.4(valibot@1.0.0-beta.12(typescript@5.7.3))':
@@ -4451,14 +4446,6 @@ snapshots:
   typescript@5.7.3: {}
 
   ufo@1.5.4: {}
-
-  unconfig@0.6.1:
-    dependencies:
-      '@antfu/utils': 8.1.0
-      defu: 6.1.4
-      importx: 0.5.1
-    transitivePeerDependencies:
-      - supports-color
 
   unconfig@7.0.0:
     dependencies:
