@@ -1,6 +1,6 @@
 {
   "name": "@sxzz/eslint-config",
-  "version": "5.1.1",
+  "version": "5.2.0",
   "packageManager": "pnpm@10.5.2",
   "description": "ESLint config for @sxzz.",
   "type": "module",
