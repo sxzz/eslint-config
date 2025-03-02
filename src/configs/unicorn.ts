@@ -9,6 +9,7 @@ export const unicorn = (): Config[] => [
     },
     rules: {
       'unicorn/catch-error-name': 'error',
+      'unicorn/consistent-date-clone': 'error',
       'unicorn/consistent-empty-array-spread': 'error',
       'unicorn/consistent-existence-index-check': 'error',
       'unicorn/consistent-function-scoping': [
@@ -37,7 +38,6 @@ export const unicorn = (): Config[] => [
       'unicorn/no-for-loop': 'error',
       'unicorn/no-hex-escape': 'error',
       'unicorn/no-instanceof-builtins': 'error',
-      'unicorn/consistent-date-clone': 'error',
       'unicorn/no-invalid-remove-event-listener': 'error',
       'unicorn/no-lonely-if': 'error',
       'unicorn/no-negation-in-equality-check': 'error',
