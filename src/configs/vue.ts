@@ -18,7 +18,10 @@ export function getVueVersion(): number {
   }
   return 3
 }
-const isVue3 = getVueVersion() === 3
+const isVue2 = getVueVersion() === 2
+if (isVue2) {
+  console.warn('Support for Vue 2 is deprecated. Please upgrade to Vue 3.')
+}
 
 export const reactivityTransform = (): Config[] => [
   {
@@ -133,7 +136,7 @@ export const vue = (): Config[] => [
     },
     processor: pluginVue.processors['.vue'],
     rules: {
-      ...(isVue3 ? vue3Rules : vue2Rules),
+      ...(isVue2 ? vue2Rules : vue3Rules),
       ...vueCustomRules,
     },
   },
