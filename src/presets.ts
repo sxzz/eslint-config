@@ -13,6 +13,7 @@ import {
   regexp,
   sortImports,
   sortPackageJson,
+  sortPnpmWorkspace,
   sortTsconfig,
   specialCases,
   typescript,
@@ -41,6 +42,7 @@ export const presetJsonc = (): Config[] => [
   ...jsonc(),
   ...sortPackageJson(),
   ...sortTsconfig(),
+  ...sortPnpmWorkspace(),
 ]
 /** Includes markdown, yaml + `presetJsonc` support */
 export const presetLangsExtensions = (): Config[] => [

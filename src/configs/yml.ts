@@ -5,14 +5,17 @@ import type { Config } from '../types'
 
 export const yml = (): Config[] => [
   {
+    name: 'sxzz/yaml/setup',
+    plugins: {
+      yml: pluginYml as any,
+    },
+  },
+  {
     files: [GLOB_YAML],
     languageOptions: {
       parser: parserYml,
     },
-    name: 'sxzz/yaml',
-    plugins: {
-      yml: pluginYml as any,
-    },
+    name: 'sxzz/yaml/rules',
     rules: {
       ...(pluginYml.configs.standard.rules as Rules),
       ...(pluginYml.configs.prettier.rules as Rules),

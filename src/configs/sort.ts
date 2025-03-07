@@ -205,6 +205,27 @@ export const sortTsconfig = (): Config[] => [
   },
 ]
 
+export const sortPnpmWorkspace = (): Config[] => [
+  {
+    files: ['**/pnpm-workspace.yaml'],
+    name: 'sxzz/sort/pnpm-workspace',
+    rules: {
+      'yml/sort-keys': [
+        'error',
+        {
+          order: ['packages', 'catalog', 'catalogs'],
+          pathPattern: '^$',
+        },
+        {
+          allowLineSeparatedGroups: true,
+          order: { type: 'asc' },
+          pathPattern: '^catalogs?',
+        },
+      ],
+    },
+  },
+]
+
 export const sortImports = (): Config[] => [
   {
     name: 'sxzz/sort/imports',
