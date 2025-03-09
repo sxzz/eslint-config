@@ -1,4 +1,3 @@
-// import { sxzz } from './dist/index.js'
 import { sxzz } from './src/index'
 
 export default sxzz(

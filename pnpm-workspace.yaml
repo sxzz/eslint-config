@@ -4,6 +4,7 @@ overrides:
 catalog:
   '@eslint/js': ^9.21.0
   eslint: ^9.21.0
+  eslint-flat-config-utils: ^2.0.1
   globals: ^16.0.0
   local-pkg: ^1.1.1
 

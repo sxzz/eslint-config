@@ -54,6 +54,7 @@
     "@eslint/markdown": "catalog:plugins",
     "eslint-config-flat-gitignore": "catalog:plugins",
     "eslint-config-prettier": "catalog:plugins",
+    "eslint-flat-config-utils": "catalog:",
     "eslint-plugin-antfu": "catalog:plugins",
     "eslint-plugin-command": "catalog:plugins",
     "eslint-plugin-de-morgan": "catalog:plugins",

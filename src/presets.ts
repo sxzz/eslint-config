@@ -1,3 +1,4 @@
+import { FlatConfigComposer, type Awaitable } from 'eslint-flat-config-utils'
 import {
   command,
   comments,
@@ -24,6 +25,7 @@ import {
   yml,
 } from './configs'
 import { hasUnocss, hasVue } from './env'
+import type { ConfigNames } from './typegen'
 import type { Config } from './types'
 
 /** Ignore common files and include javascript support */
@@ -74,7 +76,7 @@ export const presetAll = async (): Promise<Config[]> => [
 ]
 
 /** `@sxzz`'s preset. */
-export async function sxzz(
+export function sxzz(
   config: Config | Config[] = [],
   {
     command: enableCommand = true,
@@ -96,29 +98,31 @@ export async function sxzz(
     command: boolean
     pnpm: boolean
   }> = {},
-): Promise<Config[]> {
-  const configs: Config[] = [...presetBasic(), ...yml(), ...presetJsonc()]
+): FlatConfigComposer<Config, ConfigNames> {
+  const configs: Awaitable<Config[]>[] = [presetBasic(), yml(), presetJsonc()]
   if (enableVue) {
-    configs.push(...vue())
+    configs.push(vue())
   }
   if (enableMarkdown) {
-    configs.push(...markdown())
+    configs.push(markdown())
   }
   if (enableUnocss) {
-    configs.push(...(await unocss()))
+    configs.push(unocss())
   }
   if (enablePrettier) {
-    configs.push(...prettier())
+    configs.push(prettier())
   }
   if (enableCommand) {
-    configs.push(...command())
+    configs.push(command())
   }
   if (enablePnpm) {
-    configs.push(...(await pnpm()))
+    configs.push(pnpm())
   }
   if (Object.keys(config).length > 0) {
-    configs.push(...(Array.isArray(config) ? config : [config]))
+    configs.push(Array.isArray(config) ? config : [config])
   }
-  configs.push(...specialCases())
-  return configs
+  configs.push(specialCases())
+
+  const composer = new FlatConfigComposer<Config, ConfigNames>(...configs)
+  return composer
 }
