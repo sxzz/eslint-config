@@ -22,7 +22,6 @@ export * as pluginYml from 'eslint-plugin-yml'
 
 export { default as configJs } from '@eslint/js'
 export { default as configComments } from '@eslint-community/eslint-plugin-eslint-comments/configs'
-export { default as configPrettier } from 'eslint-config-prettier'
 export { default as configCommand } from 'eslint-plugin-command/config'
 
 export * as parserVue from 'vue-eslint-parser'

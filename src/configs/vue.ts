@@ -1,27 +1,8 @@
-import process from 'node:process'
-import { getPackageInfoSync } from 'local-pkg'
 import { GLOB_VUE } from '../globs'
 import { parserVue, pluginVue, tseslint } from '../plugins'
-import type { Rules } from '../typegen'
 import type { Config } from '../types'
 import { typescriptCore } from './typescript'
 import type { ESLint } from 'eslint'
-
-export function getVueVersion(): number {
-  const pkg = getPackageInfoSync('vue', { paths: [process.cwd()] })
-  if (
-    pkg &&
-    typeof pkg.version === 'string' &&
-    !Number.isNaN(+pkg.version[0])
-  ) {
-    return +pkg.version[0]
-  }
-  return 3
-}
-const isVue2 = getVueVersion() === 2
-if (isVue2) {
-  console.warn('Support for Vue 2 is deprecated. Please upgrade to Vue 3.')
-}
 
 export const reactivityTransform = (): Config[] => [
   {
@@ -46,64 +27,6 @@ export const reactivityTransform = (): Config[] => [
   },
 ]
 
-const vueCustomRules: Rules = {
-  'vue/block-order': ['error', { order: ['script', 'template', 'style'] }],
-  'vue/custom-event-name-casing': ['error', 'camelCase'],
-  'vue/eqeqeq': ['error', 'smart'],
-  'vue/html-self-closing': [
-    'error',
-    {
-      html: {
-        component: 'always',
-        normal: 'always',
-        void: 'any',
-      },
-      math: 'always',
-      svg: 'always',
-    },
-  ],
-  'vue/max-attributes-per-line': 'off',
-
-  'vue/multi-word-component-names': 'off',
-  'vue/no-constant-condition': 'warn',
-  'vue/no-empty-pattern': 'error',
-  'vue/no-loss-of-precision': 'error',
-  'vue/no-unused-refs': 'error',
-  'vue/no-useless-v-bind': 'error',
-
-  'vue/no-v-html': 'off',
-  'vue/object-shorthand': [
-    'error',
-    'always',
-    {
-      avoidQuotes: true,
-      ignoreConstructors: false,
-    },
-  ],
-  'vue/one-component-per-file': 'off',
-  'vue/padding-line-between-blocks': ['error', 'always'],
-  'vue/prefer-template': 'error',
-  'vue/require-default-prop': 'off',
-  'vue/require-prop-types': 'off',
-}
-
-const vue3Rules: Rules = {
-  ...pluginVue.configs.base.rules,
-  ...pluginVue.configs['vue3-essential'].rules,
-  ...pluginVue.configs['vue3-strongly-recommended'].rules,
-  ...pluginVue.configs['vue3-recommended'].rules,
-}
-
-const vue2Rules: Rules = {
-  ...pluginVue.configs.base.rules,
-  ...pluginVue.configs.essential.rules,
-  ...pluginVue.configs['strongly-recommended'].rules,
-  ...pluginVue.configs.recommended.rules,
-}
-
-delete vue2Rules['vue/component-tags-order']
-delete vue3Rules['vue/component-tags-order']
-
 const vueTs: Config[] = typescriptCore
   .filter((config) => config.name !== 'typescript-eslint/base')
   .map((config) => {
@@ -113,6 +36,10 @@ const vueTs: Config[] = typescriptCore
       name: `sxzz/vue/${config.name?.replace('sxzz/', '') || 'anonymous'}`,
     }
   })
+
+const recommendedRules = pluginVue.configs['flat/recommended']
+  .map((c) => c.rules)
+  .reduce((acc, c) => ({ ...acc, ...c }), {}) as any
 
 export const vue = (): Config[] => [
   ...vueTs,
@@ -125,7 +52,7 @@ export const vue = (): Config[] => [
           jsx: true,
         },
         extraFileExtensions: ['.vue'],
-        parser: '@typescript-eslint/parser',
+        parser: tseslint.parser,
         sourceType: 'module',
       },
     },
@@ -136,8 +63,46 @@ export const vue = (): Config[] => [
     },
     processor: pluginVue.processors['.vue'],
     rules: {
-      ...(isVue2 ? vue2Rules : vue3Rules),
-      ...vueCustomRules,
+      ...recommendedRules,
+
+      'vue/block-order': ['error', { order: ['script', 'template', 'style'] }],
+      'vue/custom-event-name-casing': ['error', 'camelCase'],
+      'vue/eqeqeq': ['error', 'smart'],
+      'vue/html-self-closing': [
+        'error',
+        {
+          html: {
+            component: 'always',
+            normal: 'always',
+            void: 'any',
+          },
+          math: 'always',
+          svg: 'always',
+        },
+      ],
+      'vue/max-attributes-per-line': 'off',
+
+      'vue/multi-word-component-names': 'off',
+      'vue/no-constant-condition': 'warn',
+      'vue/no-empty-pattern': 'error',
+      'vue/no-loss-of-precision': 'error',
+      'vue/no-unused-refs': 'error',
+      'vue/no-useless-v-bind': 'error',
+
+      'vue/no-v-html': 'off',
+      'vue/object-shorthand': [
+        'error',
+        'always',
+        {
+          avoidQuotes: true,
+          ignoreConstructors: false,
+        },
+      ],
+      'vue/one-component-per-file': 'off',
+      'vue/padding-line-between-blocks': ['error', 'always'],
+      'vue/prefer-template': 'error',
+      'vue/require-default-prop': 'off',
+      'vue/require-prop-types': 'off',
     },
   },
   ...reactivityTransform(),

@@ -39,13 +39,13 @@ catalogs:
     eslint-plugin-jsdoc: ^50.6.3
     eslint-plugin-jsonc: ^2.19.1
     eslint-plugin-n: ^17.16.2
-    eslint-plugin-perfectionist: ^4.9.0
+    eslint-plugin-perfectionist: ^4.10.1
     eslint-plugin-pnpm: ^0.1.2
     eslint-plugin-prettier: ^5.2.3
     eslint-plugin-regexp: ^2.7.0
     eslint-plugin-sxzz: ^0.2.1
     eslint-plugin-unicorn: ^57.0.0
     eslint-plugin-unused-imports: ^4.1.4
-    eslint-plugin-vue: ^9.32.0
+    eslint-plugin-vue: ^10.0.0
     eslint-plugin-yml: ^1.17.0
     typescript-eslint: ^8.26.0

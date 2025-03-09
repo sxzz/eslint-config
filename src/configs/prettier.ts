@@ -1,12 +1,8 @@
-import {
-  configPrettier,
-  pluginPrettier,
-  pluginPrettierRecommended,
-} from '../plugins'
+import { pluginPrettier, pluginPrettierRecommended } from '../plugins'
 import type { Config } from '../types'
 
-const prettierConflictRules = { ...configPrettier.rules }
-delete prettierConflictRules['vue/html-self-closing']
+const rules = { ...pluginPrettierRecommended.rules }
+delete rules['vue/html-self-closing']
 
 export const prettier = (): Config[] => [
   {
@@ -15,8 +11,7 @@ export const prettier = (): Config[] => [
       prettier: pluginPrettier,
     },
     rules: {
-      ...prettierConflictRules,
-      ...pluginPrettierRecommended.rules,
+      ...rules,
       'prettier/prettier': 'warn',
     },
   },

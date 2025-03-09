@@ -14,9 +14,6 @@ and Prettier.
 - Reasonable defaults, best practices, only one-line of config
 - Reasonable strict, but with better code quality.
 
-> [!TIP]
-> Support for Vue 2 is deprecated.
-
 ## Install
 
 ```bash
