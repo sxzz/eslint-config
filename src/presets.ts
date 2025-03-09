@@ -1,4 +1,8 @@
-import { FlatConfigComposer, type Awaitable } from 'eslint-flat-config-utils'
+import {
+  FlatConfigComposer,
+  type Arrayable,
+  type Awaitable,
+} from 'eslint-flat-config-utils'
 import {
   command,
   comments,
@@ -27,6 +31,7 @@ import {
 import { hasUnocss, hasVue } from './env'
 import type { ConfigNames } from './typegen'
 import type { Config } from './types'
+import type { Linter } from 'eslint'
 
 /** Ignore common files and include javascript support */
 export const presetJavaScript = (): Config[] => [
@@ -75,30 +80,36 @@ export const presetAll = async (): Promise<Config[]> => [
   ...prettier(),
 ]
 
+export interface Options {
+  /** Vue support. Auto-enable if detected. */
+  vue?: boolean
+  /** Prettier support. Default: true */
+  prettier?: boolean
+  /** markdown support. Default: true */
+  markdown?: boolean
+  /** UnoCSS support. Auto-enable if detected. */
+  unocss?: boolean
+  sortKeys?: boolean
+  command?: boolean
+  pnpm?: boolean
+}
+
 /** `@sxzz`'s preset. */
 export function sxzz(
-  config: Config | Config[] = [],
-  {
+  options: Options = {},
+  ...userConfigs: Awaitable<
+    Arrayable<Config> | FlatConfigComposer<any, any> | Linter.Config[]
+  >[]
+): FlatConfigComposer<Config, ConfigNames> {
+  const {
     command: enableCommand = true,
     markdown: enableMarkdown = true,
     pnpm: enablePnpm = false,
     prettier: enablePrettier = true,
     unocss: enableUnocss = hasUnocss(),
     vue: enableVue = hasVue(),
-  }: Partial<{
-    /** Vue support. Auto-enable if detected. */
-    vue: boolean
-    /** Prettier support. Default: true */
-    prettier: boolean
-    /** markdown support. Default: true */
-    markdown: boolean
-    /** UnoCSS support. Auto-enable if detected. */
-    unocss: boolean
-    sortKeys: boolean
-    command: boolean
-    pnpm: boolean
-  }> = {},
-): FlatConfigComposer<Config, ConfigNames> {
+  } = options
+
   const configs: Awaitable<Config[]>[] = [presetBasic(), yml(), presetJsonc()]
   if (enableVue) {
     configs.push(vue())
@@ -118,11 +129,11 @@ export function sxzz(
   if (enablePnpm) {
     configs.push(pnpm())
   }
-  if (Object.keys(config).length > 0) {
-    configs.push(Array.isArray(config) ? config : [config])
-  }
   configs.push(specialCases())
 
-  const composer = new FlatConfigComposer<Config, ConfigNames>(...configs)
+  const composer = new FlatConfigComposer<Config, ConfigNames>(
+    ...configs,
+    ...(userConfigs as any),
+  )
   return composer
 }
