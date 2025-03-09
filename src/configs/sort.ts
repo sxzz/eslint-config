@@ -213,7 +213,27 @@ export const sortPnpmWorkspace = (): Config[] => [
       'yml/sort-keys': [
         'error',
         {
-          order: ['packages', 'catalog', 'catalogs'],
+          order: [
+            'packages',
+            'overrides',
+            'patchedDependencies',
+            'hoistPattern',
+            'defines',
+            'catalog',
+            'catalogs',
+
+            'allowedDeprecatedVersions',
+            'allowNonAppliedPatches',
+            'configDependencies',
+            'ignoredBuiltDependencies',
+            'ignoredOptionalDependencies',
+            'neverBuiltDependencies',
+            'onlyBuiltDependencies',
+            'onlyBuiltDependenciesFile',
+            'packageExtensions',
+            'peerDependencyRules',
+            'supportedArchitectures',
+          ],
           pathPattern: '^$',
         },
         {
