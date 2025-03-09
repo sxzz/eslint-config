@@ -9,6 +9,7 @@ import {
   jsonc,
   markdown,
   node,
+  pnpm,
   prettier,
   regexp,
   sortImports,
@@ -78,6 +79,7 @@ export async function sxzz(
   {
     command: enableCommand = true,
     markdown: enableMarkdown = true,
+    pnpm: enablePnpm = false,
     prettier: enablePrettier = true,
     unocss: enableUnocss = hasUnocss(),
     vue: enableVue = hasVue(),
@@ -92,6 +94,7 @@ export async function sxzz(
     unocss: boolean
     sortKeys: boolean
     command: boolean
+    pnpm: boolean
   }> = {},
 ): Promise<Config[]> {
   const configs: Config[] = [...presetBasic(), ...yml(), ...presetJsonc()]
@@ -109,6 +112,9 @@ export async function sxzz(
   }
   if (enableCommand) {
     configs.push(...command())
+  }
+  if (enablePnpm) {
+    configs.push(...(await pnpm()))
   }
   if (Object.keys(config).length > 0) {
     configs.push(...(Array.isArray(config) ? config : [config]))

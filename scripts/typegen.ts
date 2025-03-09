@@ -11,7 +11,7 @@ const dts = await flatConfigsToRulesDTS(
         plugins: { '': { rules: Object.fromEntries(builtinRules) } },
       },
     ],
-    { vue: true, unocss: true },
+    { vue: true, unocss: true, pnpm: true },
   ),
   { includeAugmentation: false, exportTypeName: 'Rules' },
 )
