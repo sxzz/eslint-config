@@ -1,7 +1,7 @@
 import { writeFile } from 'node:fs/promises'
+import { green } from 'ansis'
 import { flatConfigsToRulesDTS } from 'eslint-typegen/core'
 import { builtinRules } from 'eslint/use-at-your-own-risk'
-import pico from 'picocolors'
 import { sxzz } from '../src/presets'
 
 const configs = await sxzz(
@@ -25,4 +25,4 @@ export type ConfigNames = ${configNames.map((i) => `'${i}'`).join(' | ')}
 
 await writeFile('src/typegen.ts', dts)
 
-console.log(pico.green('Type definitions generated!'))
+console.log(green('Type definitions generated!'))
