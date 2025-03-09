@@ -78,6 +78,9 @@ export const presetAll = async (): Promise<Config[]> => [
   ...vue(),
   ...(await unocss()),
   ...prettier(),
+  ...command(),
+  ...(await pnpm()),
+  ...specialCases(),
 ]
 
 export interface Options {

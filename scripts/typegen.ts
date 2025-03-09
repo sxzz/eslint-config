@@ -2,16 +2,14 @@ import { writeFile } from 'node:fs/promises'
 import { green } from 'ansis'
 import { flatConfigsToRulesDTS } from 'eslint-typegen/core'
 import { builtinRules } from 'eslint/use-at-your-own-risk'
-import { sxzz } from '../src/presets'
+import { presetAll } from '../src/presets'
 
-const configs = await sxzz(
-  [
-    {
-      plugins: { '': { rules: Object.fromEntries(builtinRules) } },
-    },
-  ],
-  { vue: true, unocss: true, pnpm: true },
-)
+const configs = [
+  ...(await presetAll()),
+  {
+    plugins: { '': { rules: Object.fromEntries(builtinRules) } },
+  },
+]
 let dts = await flatConfigsToRulesDTS(configs, {
   includeAugmentation: false,
   exportTypeName: 'Rules',
