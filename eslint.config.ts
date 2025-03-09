@@ -17,5 +17,5 @@ export default sxzz(
       },
     },
   ],
-  { vue: true },
+  { vue: true, pnpm: true },
 )

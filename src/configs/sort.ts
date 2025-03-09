@@ -239,7 +239,16 @@ export const sortPnpmWorkspace = (): Config[] => [
         {
           allowLineSeparatedGroups: true,
           order: { type: 'asc' },
-          pathPattern: '^catalogs?',
+          pathPattern: '^catalog$',
+        },
+        {
+          order: { type: 'asc' },
+          pathPattern: `^catalogs$`,
+        },
+        {
+          allowLineSeparatedGroups: true,
+          order: { type: 'asc' },
+          pathPattern: String.raw`^catalogs\..+$`,
         },
       ],
     },
