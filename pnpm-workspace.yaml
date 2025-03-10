@@ -3,8 +3,8 @@ overrides:
   is-core-module: npm:@no-shims/is-core-module
 
 catalog:
-  '@eslint/js': ^9.21.0
-  eslint: ^9.21.0
+  '@eslint/js': ^9.22.0
+  eslint: ^9.22.0
   eslint-flat-config-utils: ^2.0.1
   globals: ^16.0.0
   local-pkg: ^1.1.1
@@ -13,7 +13,7 @@ catalogs:
   dev:
     '@eslint/config-inspector': ^1.0.2
     '@sxzz/prettier-config': ^2.2.1
-    '@types/node': ^22.13.9
+    '@types/node': ^22.13.10
     ansis: ^3.17.0
     bumpp: ^10.0.3
     eslint-typegen: ^2.0.0
