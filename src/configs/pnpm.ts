@@ -8,14 +8,28 @@ export async function pnpm(): Promise<Config[]> {
       languageOptions: {
         parser: await import('jsonc-eslint-parser'),
       },
-      name: 'sxzz/pnpm/rules',
+      name: 'sxzz/pnpm/package-json',
       plugins: {
         pnpm: pluginPnpm,
       },
       rules: {
-        'pnpm/enforce-catalog': 'error',
-        'pnpm/prefer-workspace-settings': 'error',
-        'pnpm/valid-catalog': 'error',
+        'pnpm/json-enforce-catalog': 'error',
+        'pnpm/json-prefer-workspace-settings': 'error',
+        'pnpm/json-valid-catalog': 'error',
+      },
+    },
+    {
+      files: ['pnpm-workspace.yaml'],
+      languageOptions: {
+        parser: await import('yaml-eslint-parser'),
+      },
+      name: 'sxzz/pnpm/pnpm-workspace-yaml',
+      plugins: {
+        pnpm: pluginPnpm,
+      },
+      rules: {
+        'pnpm/yaml-no-duplicate-catalog-item': 'error',
+        'pnpm/yaml-no-unused-catalog-item': 'error',
       },
     },
   ]
