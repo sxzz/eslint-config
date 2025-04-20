@@ -35,4 +35,11 @@ export const specialCases = (): Config[] => [
       'import/no-default-export': 'off',
     },
   },
+  {
+    files: ['**/ISSUE_TEMPLATE/**'],
+    name: 'sxzz/special/github',
+    rules: {
+      'unicorn/filename-case': 'off',
+    },
+  },
 ]
