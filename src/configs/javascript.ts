@@ -1,5 +1,4 @@
 import globals from 'globals'
-import { isInEditorEnv } from '../env'
 import { configJs, pluginSxzz, pluginUnusedImports } from '../plugins'
 import type { Config } from '../types'
 
@@ -80,7 +79,7 @@ export const javascript = (): Config[] => [
       'require-await': 'error',
       'sxzz/prefer-string-function': 'warn',
       'unicode-bom': ['error', 'never'],
-      'unused-imports/no-unused-imports': isInEditorEnv() ? 'off' : 'error',
+      'unused-imports/no-unused-imports': 'warn',
       'unused-imports/no-unused-vars': [
         'error',
         { args: 'after-used', ignoreRestSiblings: true },
