@@ -93,7 +93,7 @@
     "typescript": "catalog:dev"
   },
   "engines": {
-    "node": "^18.18.0 || >=20.0.0"
+    "node": ">=20.0.0"
   },
   "prettier": "@sxzz/prettier-config"
 }
