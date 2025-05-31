@@ -1,7 +1,7 @@
 {
   "name": "@sxzz/eslint-config",
   "version": "7.0.1",
-  "packageManager": "pnpm@10.10.0",
+  "packageManager": "pnpm@10.11.0",
   "description": "ESLint config for @sxzz.",
   "type": "module",
   "license": "MIT",
