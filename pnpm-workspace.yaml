@@ -3,23 +3,23 @@ overrides:
   is-core-module: npm:@no-shims/is-core-module
 
 catalog:
-  '@eslint/js': ^9.28.0
-  eslint: ^9.28.0
+  '@eslint/js': ^9.29.0
+  eslint: ^9.29.0
   eslint-flat-config-utils: ^2.1.0
   globals: ^16.2.0
   local-pkg: ^1.1.1
 
 catalogs:
   dev:
-    '@eslint/config-inspector': ^1.0.2
+    '@eslint/config-inspector': ^1.1.0
     '@sxzz/prettier-config': ^2.2.1
-    '@types/node': ^22.15.29
+    '@types/node': ^24.0.1
     ansis: ^4.1.0
     bumpp: ^10.1.1
     eslint-typegen: ^2.2.0
     prettier: ^3.5.3
-    tsdown: ^0.12.5
-    tsx: ^4.19.4
+    tsdown: ^0.12.7
+    tsx: ^4.20.3
     typescript: ^5.8.3
 
   parsers:
@@ -29,24 +29,24 @@ catalogs:
 
   plugins:
     '@eslint-community/eslint-plugin-eslint-comments': ^4.5.0
-    '@eslint/markdown': ^6.4.0
-    '@unocss/eslint-plugin': ^66.1.3
+    '@eslint/markdown': ^6.5.0
+    '@unocss/eslint-plugin': ^66.2.0
     eslint-config-flat-gitignore: ^2.1.0
     eslint-config-prettier: ^10.1.5
     eslint-plugin-antfu: ^3.1.1
     eslint-plugin-command: ^3.2.1
-    eslint-plugin-de-morgan: ^1.2.1
-    eslint-plugin-import-x: ^4.15.0
+    eslint-plugin-de-morgan: ^1.3.0
+    eslint-plugin-import-x: ^4.15.2
     eslint-plugin-jsdoc: ^51.0.1
     eslint-plugin-jsonc: ^2.20.1
-    eslint-plugin-n: ^17.18.0
-    eslint-plugin-perfectionist: ^4.13.0
+    eslint-plugin-n: ^17.20.0
+    eslint-plugin-perfectionist: ^4.14.0
     eslint-plugin-pnpm: ^0.3.1
     eslint-plugin-prettier: ^5.4.1
-    eslint-plugin-regexp: ^2.7.0
+    eslint-plugin-regexp: ^2.9.0
     eslint-plugin-sxzz: ^0.3.0
     eslint-plugin-unicorn: ^59.0.1
     eslint-plugin-unused-imports: ^4.1.4
-    eslint-plugin-vue: ^10.1.0
+    eslint-plugin-vue: ^10.2.0
     eslint-plugin-yml: ^1.18.0
-    typescript-eslint: ^8.33.0
+    typescript-eslint: ^8.34.0
