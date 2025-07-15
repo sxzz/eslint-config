@@ -2,10 +2,17 @@ import { writeFile } from 'node:fs/promises'
 import { green } from 'ansis'
 import { flatConfigsToRulesDTS } from 'eslint-typegen/core'
 import { builtinRules } from 'eslint/use-at-your-own-risk'
-import { presetAll } from '../src/presets'
+import { command, pnpm, prettier, specialCases, unocss } from '../src/configs'
+import { presetBasic, presetLangsExtensions } from '../src/presets'
 
 const configs = [
-  ...(await presetAll()),
+  ...presetBasic(),
+  ...presetLangsExtensions(),
+  ...(await unocss()),
+  ...prettier(),
+  ...command(),
+  ...(await pnpm()),
+  ...specialCases(),
   {
     plugins: { '': { rules: Object.fromEntries(builtinRules) } },
   },
