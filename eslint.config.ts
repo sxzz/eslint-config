@@ -17,4 +17,7 @@ export default sxzz({
       'perfectionist/sort-named-imports': 'off',
     },
   },
+  {
+    ignores: ['src/typegen.ts'],
+  },
 )

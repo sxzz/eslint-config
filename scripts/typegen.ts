@@ -2,24 +2,21 @@ import { writeFile } from 'node:fs/promises'
 import { green } from 'ansis'
 import { flatConfigsToRulesDTS } from 'eslint-typegen/core'
 import { builtinRules } from 'eslint/use-at-your-own-risk'
-import { command, pnpm, prettier, specialCases, unocss } from '../src/configs'
-import { presetBasic, presetLangsExtensions } from '../src/presets'
+import { presetAll } from '../src/presets'
 
 const configs = [
-  ...presetBasic(),
-  ...presetLangsExtensions(),
-  ...(await unocss()),
-  ...prettier(),
-  ...command(),
-  ...(await pnpm()),
-  ...specialCases(),
+  ...(await presetAll()),
   {
     plugins: { '': { rules: Object.fromEntries(builtinRules) } },
   },
 ]
+
 let dts = await flatConfigsToRulesDTS(configs, {
   includeAugmentation: false,
   exportTypeName: 'Rules',
+  filterPlugin(name) {
+    return name !== 'sxzz' && name !== 'vue'
+  },
 })
 
 const configNames = configs.map((i) => i.name).filter(Boolean) as string[]

@@ -112,8 +112,8 @@ catalogs:
       specifier: ^2.9.0
       version: 2.9.0
     eslint-plugin-sxzz:
-      specifier: ^0.3.0
-      version: 0.3.0
+      specifier: ^0.4.0
+      version: 0.4.0
     eslint-plugin-unicorn:
       specifier: ^59.0.1
       version: 59.0.1
@@ -190,7 +190,7 @@ importers:
         version: 2.9.0(eslint@9.31.0(jiti@2.4.2))
       eslint-plugin-sxzz:
         specifier: catalog:plugins
-        version: 0.3.0(eslint@9.31.0(jiti@2.4.2))
+        version: 0.4.0(eslint@9.31.0(jiti@2.4.2))
       eslint-plugin-unicorn:
         specifier: catalog:plugins
         version: 59.0.1(eslint@9.31.0(jiti@2.4.2))
@@ -1386,8 +1386,8 @@ packages:
     peerDependencies:
       eslint: '>=8.44.0'
 
-  eslint-plugin-sxzz@0.3.0:
-    resolution: {integrity: sha512-Zf5ubmi+oPqIYAZFJJYvUN7+cyuyShfRpPCLR245PYjYguay/eLDo1c671V8DJqURzk2B6rhhGJAfA9oJDdApA==}
+  eslint-plugin-sxzz@0.4.0:
+    resolution: {integrity: sha512-U1b6CA8RTvWirirHvDLLyfPrHvv3gY6crrpRcyqx0WlkeQmu4m+MR+eGBBnpm48JrhlwcmOSqvJ+DW8Dtsy5gA==}
     engines: {node: '>=20.18.0'}
     peerDependencies:
       eslint: '*'
@@ -3366,7 +3366,7 @@ snapshots:
       regexp-ast-analysis: 0.7.1
       scslre: 0.3.0
 
-  eslint-plugin-sxzz@0.3.0(eslint@9.31.0(jiti@2.4.2)):
+  eslint-plugin-sxzz@0.4.0(eslint@9.31.0(jiti@2.4.2)):
     dependencies:
       eslint: 9.31.0(jiti@2.4.2)
 

@@ -3846,16 +3846,6 @@ export interface Rules {
    */
   'switch-colon-spacing'?: Linter.RuleEntry<SwitchColonSpacing>
   /**
-   * Enforce using String() instead of single-member template expressions.
-   * @see https://github.com/sxzz/eslint-plugin-sxzz/blob/main/src/rules/prefer-string-function.md
-   */
-  'sxzz/prefer-string-function'?: Linter.RuleEntry<[]>
-  /**
-   * Require specific fields in package.json
-   * @see https://github.com/sxzz/eslint-plugin-sxzz/blob/main/src/rules/require-package-field.test.ts
-   */
-  'sxzz/require-package-field'?: Linter.RuleEntry<SxzzRequirePackageField>
-  /**
    * Require symbol descriptions
    * @see https://eslint.org/docs/latest/rules/symbol-description
    */
@@ -11776,11 +11766,6 @@ type SwitchColonSpacing = []|[{
   before?: boolean
   after?: boolean
 }]
-// ----- sxzz/require-package-field -----
-type SxzzRequirePackageField = []|[{
-  fields?: string[]
-  [k: string]: unknown | undefined
-}]
 // ----- template-curly-spacing -----
 type TemplateCurlySpacing = []|[("always" | "never")]
 // ----- template-tag-spacing -----
@@ -12281,4 +12266,4 @@ type Yoda = []|[("always" | "never")]|[("always" | "never"), {
   onlyEquality?: boolean
 }]
 // Names of all the configs
-export type ConfigNames = 'sxzz/global-ignores' | 'sxzz/gitignore' | 'sxzz/js/recommended' | 'sxzz/js' | 'sxzz/comments/recommended' | 'sxzz/comments' | 'sxzz/imports' | 'sxzz/unicorn' | 'sxzz/node' | 'sxzz/jsdoc' | 'sxzz/regexp' | 'sxzz/de-morgan' | 'sxzz/typescript__typescript-eslint/base' | 'sxzz/typescript__typescript-eslint/eslint-recommended' | 'sxzz/typescript__typescript-eslint/recommended' | 'sxzz/typescript' | 'sxzz/typescript/dts-rules' | 'sxzz/typescript/cjs-rules' | 'sxzz/sort/imports' | 'sxzz/markdown/recommended/plugin' | 'sxzz/markdown/recommended/processor' | 'sxzz/markdown/recommended/code-blocks' | 'sxzz/markdown-rules' | 'sxzz/yaml/setup' | 'sxzz/yaml/rules' | 'sxzz/json' | 'sxzz/sort/package.json' | 'sxzz/sort/tsconfig' | 'sxzz/sort/pnpm-workspace' | 'sxzz/unocss' | 'sxzz/prettier' | 'sxzz/command' | 'sxzz/pnpm/package-json' | 'sxzz/pnpm/pnpm-workspace-yaml' | 'sxzz/special/cli' | 'sxzz/special/tests' | 'sxzz/special/allow-default-export' | 'sxzz/special/github'
+export type ConfigNames = 'sxzz/global-ignores' | 'sxzz/gitignore' | 'sxzz/js/recommended' | 'sxzz/js' | 'sxzz/comments/recommended' | 'sxzz/comments' | 'sxzz/imports' | 'sxzz/unicorn' | 'sxzz/node' | 'sxzz/jsdoc' | 'sxzz/regexp' | 'sxzz/de-morgan' | 'sxzz/typescript__typescript-eslint/base' | 'sxzz/typescript__typescript-eslint/eslint-recommended' | 'sxzz/typescript__typescript-eslint/recommended' | 'sxzz/typescript' | 'sxzz/typescript/dts-rules' | 'sxzz/typescript/cjs-rules' | 'sxzz/sort/imports' | 'sxzz/markdown/recommended/plugin' | 'sxzz/markdown/recommended/processor' | 'sxzz/markdown/recommended/code-blocks' | 'sxzz/markdown-rules' | 'sxzz/yaml/setup' | 'sxzz/yaml/rules' | 'sxzz/json' | 'sxzz/sort/package.json' | 'sxzz/sort/tsconfig' | 'sxzz/sort/pnpm-workspace' | 'sxzz/vue/typescript__typescript-eslint/base' | 'sxzz/vue/typescript__typescript-eslint/eslint-recommended' | 'sxzz/vue/typescript__typescript-eslint/recommended' | 'sxzz/vue/typescript' | 'sxzz/vue' | 'sxzz/vue/reactivity-transform' | 'sxzz/unocss' | 'sxzz/prettier' | 'sxzz/command' | 'sxzz/pnpm/package-json' | 'sxzz/pnpm/pnpm-workspace-yaml' | 'sxzz/special/cli' | 'sxzz/special/tests' | 'sxzz/special/allow-default-export' | 'sxzz/special/github'
