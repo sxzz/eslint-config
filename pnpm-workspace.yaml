@@ -29,7 +29,7 @@ catalogs:
 
   plugins:
     '@eslint-community/eslint-plugin-eslint-comments': ^4.5.0
-    '@eslint/markdown': ^6.6.0
+    '@eslint/markdown': ^7.0.0
     '@unocss/eslint-plugin': ^66.2.3
     eslint-config-flat-gitignore: ^2.1.0
     eslint-config-prettier: ^10.1.5
