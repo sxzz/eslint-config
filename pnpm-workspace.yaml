@@ -45,7 +45,7 @@ catalogs:
     eslint-plugin-prettier: ^5.5.1
     eslint-plugin-regexp: ^2.9.0
     eslint-plugin-sxzz: ^0.4.0
-    eslint-plugin-unicorn: ^59.0.1
+    eslint-plugin-unicorn: ^60.0.0
     eslint-plugin-unused-imports: ^4.1.4
     eslint-plugin-vue: ^10.3.0
     eslint-plugin-yml: ^1.18.0
