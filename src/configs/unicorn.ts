@@ -32,6 +32,7 @@ export const unicorn = (): Config[] => [
       // disabled for better bundle size
       // 'unicorn/no-array-callback-reference': 'error',
       'unicorn/no-array-method-this-argument': 'error',
+      'unicorn/no-array-reverse': 'error',
       'unicorn/no-await-in-promise-methods': 'error',
       'unicorn/no-console-spaces': 'error',
       'unicorn/no-for-loop': 'error',
@@ -48,6 +49,7 @@ export const unicorn = (): Config[] => [
       'unicorn/no-unnecessary-array-splice-count': 'error',
       'unicorn/no-unnecessary-await': 'error',
       'unicorn/no-unnecessary-slice-end': 'error',
+      'unicorn/no-useless-error-capture-stack-trace': 'error',
       'unicorn/no-zero-fractions': `error`,
       'unicorn/prefer-add-event-listener': 'error',
       'unicorn/prefer-array-find': 'error',
@@ -56,6 +58,7 @@ export const unicorn = (): Config[] => [
       'unicorn/prefer-array-some': 'error',
       'unicorn/prefer-at': 'error',
       'unicorn/prefer-blob-reading-methods': 'error',
+      'unicorn/prefer-class-fields': 'error',
       'unicorn/prefer-date-now': 'error',
       'unicorn/prefer-dom-node-append': 'error',
       'unicorn/prefer-dom-node-dataset': 'error',
@@ -84,6 +87,7 @@ export const unicorn = (): Config[] => [
       // top level await is not supported in all environments
       // 'unicorn/prefer-top-level-await': 'error',
       'unicorn/prefer-type-error': 'error',
+      'unicorn/require-module-specifiers': 'error',
       'unicorn/throw-new-error': 'error',
     },
   },
