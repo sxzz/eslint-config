@@ -87,7 +87,8 @@ export const unicorn = (): Config[] => [
       // top level await is not supported in all environments
       // 'unicorn/prefer-top-level-await': 'error',
       'unicorn/prefer-type-error': 'error',
-      'unicorn/require-module-specifiers': 'error',
+      // https://github.com/sindresorhus/eslint-plugin-unicorn/issues/2710
+      // 'unicorn/require-module-specifiers': 'error',
       'unicorn/throw-new-error': 'error',
     },
   },
