@@ -5,7 +5,7 @@ overrides:
 catalog:
   '@eslint/js': ^9.32.0
   eslint: ^9.32.0
-  eslint-flat-config-utils: ^2.1.0
+  eslint-flat-config-utils: ^2.1.1
   globals: ^16.3.0
   local-pkg: ^1.1.1
 
@@ -15,7 +15,7 @@ catalogs:
     '@sxzz/prettier-config': ^2.2.3
     '@types/node': ^24.1.0
     ansis: ^4.1.0
-    bumpp: ^10.2.0
+    bumpp: ^10.2.1
     eslint-typegen: ^2.3.0
     prettier: ^3.6.2
     tsdown: ^0.13.0
@@ -39,7 +39,7 @@ catalogs:
     eslint-plugin-import-x: ^4.16.1
     eslint-plugin-jsdoc: ^52.0.0
     eslint-plugin-jsonc: ^2.20.1
-    eslint-plugin-n: ^17.21.2
+    eslint-plugin-n: ^17.21.3
     eslint-plugin-perfectionist: ^4.15.0
     eslint-plugin-pnpm: ^1.1.0
     eslint-plugin-prettier: ^5.5.3
