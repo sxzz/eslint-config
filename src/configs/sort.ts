@@ -191,6 +191,7 @@ export const sortTsconfig = (): Config[] => [
             'stripInternal',
             /* Interop Constraints */
             'allowSyntheticDefaultImports',
+            'erasableSyntaxOnly',
             'esModuleInterop',
             'forceConsistentCasingInFileNames',
             'isolatedModules',
