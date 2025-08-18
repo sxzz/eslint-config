@@ -36,7 +36,7 @@
     "test": "echo Skip",
     "lint": "eslint --max-warnings=0",
     "lint:fix": "pnpm run lint --fix",
-    "release": "bumpp && pnpm publish",
+    "release": "bumpp",
     "typecheck": "tsc --noEmit",
     "prepublishOnly": "pnpm run build"
   },
