@@ -1,4 +1,8 @@
-# @sxzz/eslint-config [![npm](https://img.shields.io/npm/v/@sxzz/eslint-config.svg)](https://npmjs.com/package/@sxzz/eslint-config)
+# @sxzz/eslint-config
+
+[![npm version][npm-version-src]][npm-version-href]
+[![npm downloads][npm-downloads-src]][npm-downloads-href]
+[![Unit Test][unit-test-src]][unit-test-href]
 
 A opinionated ESLint config preset for JavaScript, TypeScript, Vue,
 and Prettier.
@@ -83,3 +87,12 @@ Most of the rules are the same, but there are some differences:
 ## License
 
 [MIT](./LICENSE) License © 2021-PRESENT [Kevin Deng](https://github.com/sxzz)
+
+<!-- Badges -->
+
+[npm-version-src]: https://img.shields.io/npm/v/@sxzz/eslint-config.svg
+[npm-version-href]: https://npmjs.com/package/@sxzz/eslint-config
+[npm-downloads-src]: https://img.shields.io/npm/dm/@sxzz/eslint-config
+[npm-downloads-href]: https://www.npmcharts.com/compare/@sxzz/eslint-config?interval=30
+[unit-test-src]: https://github.com/sxzz/eslint-config/actions/workflows/unit-test.yml/badge.svg
+[unit-test-href]: https://github.com/sxzz/eslint-config/actions/workflows/unit-test.yml
