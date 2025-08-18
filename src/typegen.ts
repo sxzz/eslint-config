@@ -3218,7 +3218,7 @@ export interface Rules {
    */
   'pnpm/json-enforce-catalog'?: Linter.RuleEntry<PnpmJsonEnforceCatalog>
   /**
-   * Prefer having pnpm settings in `pnpm-workspace.yaml` instead of `package.json`. This would requires pnpm v10.6+, see https://github.com/orgs/pnpm/discussions/9037.
+   * Prefer having pnpm settings in `pnpm-workspace.yaml` instead of `package.json`. This requires pnpm v10.6+, see https://github.com/orgs/pnpm/discussions/9037.
    * @see https://github.com/antfu/pnpm-workspace-utils/tree/main/packages/eslint-plugin-pnpm/src/rules/json/json-prefer-workspace-settings.test.ts
    */
   'pnpm/json-prefer-workspace-settings'?: Linter.RuleEntry<PnpmJsonPreferWorkspaceSettings>
@@ -3228,7 +3228,7 @@ export interface Rules {
    */
   'pnpm/json-valid-catalog'?: Linter.RuleEntry<PnpmJsonValidCatalog>
   /**
-   * Disallow unused catalogs in `pnpm-workspace.yaml`
+   * Disallow duplicate catalog items in `pnpm-workspace.yaml`
    * @see https://github.com/antfu/pnpm-workspace-utils/tree/main/packages/eslint-plugin-pnpm/src/rules/yaml/yaml-no-duplicate-catalog-item.test.ts
    */
   'pnpm/yaml-no-duplicate-catalog-item'?: Linter.RuleEntry<PnpmYamlNoDuplicateCatalogItem>
@@ -4569,7 +4569,7 @@ export interface Rules {
    * Order of UnoCSS utilities in class attribute
    * @see https://unocss.dev/integrations/eslint#rules
    */
-  'unocss/order'?: Linter.RuleEntry<[]>
+  'unocss/order'?: Linter.RuleEntry<UnocssOrder>
   /**
    * Order of UnoCSS attributes
    * @see https://unocss.dev/integrations/eslint#rules
@@ -8038,10 +8038,18 @@ type NoRestrictedExports = []|[({
   }
 })]
 // ----- no-restricted-globals -----
-type NoRestrictedGlobals = (string | {
+type NoRestrictedGlobals = ((string | {
   name: string
   message?: string
-})[]
+})[] | []|[{
+  
+  globals: (string | {
+    name: string
+    message?: string
+  })[]
+  checkGlobalObject?: boolean
+  globalObjects?: string[]
+}])
 // ----- no-restricted-imports -----
 type NoRestrictedImports = ((string | {
   name: string
@@ -8577,6 +8585,8 @@ type OneVar = []|[(("always" | "never" | "consecutive") | {
   var?: ("always" | "never" | "consecutive")
   let?: ("always" | "never" | "consecutive")
   const?: ("always" | "never" | "consecutive")
+  using?: ("always" | "never" | "consecutive")
+  awaitUsing?: ("always" | "never" | "consecutive")
 } | {
   initialized?: ("always" | "never" | "consecutive")
   uninitialized?: ("always" | "never" | "consecutive")
@@ -11559,7 +11569,6 @@ type PrettierPrettier = []|[{
   fileInfoOptions?: {
     [k: string]: unknown | undefined
   }
-  [k: string]: unknown | undefined
 }]
 // ----- quote-props -----
 type QuoteProps = ([]|[("always" | "as-needed" | "consistent" | "consistent-as-needed")] | []|[("always" | "as-needed" | "consistent" | "consistent-as-needed")]|[("always" | "as-needed" | "consistent" | "consistent-as-needed"), {
@@ -12015,6 +12024,12 @@ type UnicornTemplateIndent = []|[{
 type UnocssEnforceClassCompile = []|[{
   prefix?: string
   enableFix?: boolean
+}]
+// ----- unocss/order -----
+type UnocssOrder = []|[{
+  unoFunctions?: string[]
+  unoVariables?: string[]
+  [k: string]: unknown | undefined
 }]
 // ----- unused-imports/no-unused-imports -----
 type UnusedImportsNoUnusedImports = []|[(("all" | "local") | {
