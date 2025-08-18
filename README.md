@@ -82,4 +82,4 @@ Most of the rules are the same, but there are some differences:
 
 ## License
 
-[MIT](./LICENSE) License © 2021-PRESENT [三咲智子](https://github.com/sxzz)
+[MIT](./LICENSE) License © 2021-PRESENT [Kevin Deng](https://github.com/sxzz)
