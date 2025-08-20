@@ -39,7 +39,7 @@ export const typescriptCore = tseslint.config({
 
     // handled by unused-imports/no-unused-imports
     '@typescript-eslint/no-unused-vars': 'off',
-
+    '@typescript-eslint/no-useless-constructor': 'error',
     '@typescript-eslint/prefer-as-const': 'warn',
     '@typescript-eslint/prefer-literal-enum-member': [
       'error',

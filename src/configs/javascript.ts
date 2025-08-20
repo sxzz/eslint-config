@@ -5,7 +5,6 @@ import type { Config } from '../types'
 export const restrictedSyntaxJs: string[] = [
   'ForInStatement',
   'LabeledStatement',
-  'WithStatement',
 ]
 
 export const javascript = (): Config[] => [
@@ -57,12 +56,18 @@ export const javascript = (): Config[] => [
         },
       ],
       'no-unused-vars': 'off',
+      'no-useless-call': 'error',
+      'no-useless-computed-key': 'error',
+      'no-useless-constructor': 'error',
+      'no-useless-rename': 'error',
+      'no-var': 'error',
       'no-void': 'error',
       'object-shorthand': [
         'error',
         'always',
         { avoidQuotes: true, ignoreConstructors: false },
       ],
+      'one-var': ['error', { initialized: 'never' }],
       'prefer-arrow-callback': [
         'error',
         { allowNamedFunctions: false, allowUnboundThis: true },
