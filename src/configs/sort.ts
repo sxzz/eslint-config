@@ -62,6 +62,7 @@ export const sortPackageJson = (): Config[] => [
             'lint-staged',
             'eslintConfig',
             'prettier',
+            'tsdown',
           ],
           pathPattern: '^$',
         },
