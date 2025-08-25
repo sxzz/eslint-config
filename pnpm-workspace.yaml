@@ -18,8 +18,8 @@ catalogs:
     bumpp: ^10.2.3
     eslint-typegen: ^2.3.0
     prettier: ^3.6.2
-    tsdown: ^0.14.1
-    tsx: ^4.20.4
+    tsdown: ^0.14.2
+    tsx: ^4.20.5
     typescript: ^5.9.2
 
   parsers:
