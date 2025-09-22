@@ -13,7 +13,7 @@ export const javascript = (): Config[] => [
     languageOptions: {
       globals: {
         ...globals.browser,
-        ...globals.es2021,
+        ...globals.es2026,
         ...globals.node,
       },
       parserOptions: {
