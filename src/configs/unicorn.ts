@@ -32,6 +32,7 @@ export const unicorn = (): Config[] => [
       'unicorn/no-this-assignment': 'off',
       'unicorn/no-unreadable-array-destructuring': 'off',
       'unicorn/numeric-separators-style': 'off',
+      'unicorn/prefer-module': 'off',
       'unicorn/prefer-query-selector': 'error',
       // top level await is not supported in all environments
       'unicorn/prefer-top-level-await': 'off',
