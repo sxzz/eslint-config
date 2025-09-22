@@ -43,6 +43,9 @@ catalogs:
     prettier:
       specifier: ^3.6.2
       version: 3.6.2
+    rolldown-plugin-require-cjs:
+      specifier: ^0.1.5
+      version: 0.1.5
     tsdown:
       specifier: ^0.15.4
       version: 0.15.4
@@ -249,6 +252,9 @@ importers:
       eslint-typegen:
         specifier: catalog:dev
         version: 2.3.0(eslint@9.36.0(jiti@2.5.1))
+      rolldown-plugin-require-cjs:
+        specifier: catalog:dev
+        version: 0.1.5(rolldown@1.0.0-beta.39)
       tsdown:
         specifier: catalog:dev
         version: 0.15.4(typescript@5.9.2)
@@ -1111,6 +1117,9 @@ packages:
   citty@0.1.6:
     resolution: {integrity: sha512-tskPPKEs8D2KPafUypv2gxwJP8h/OaJmC82QQGGDQcHvXX43xF2VDACcJVmZ0EuSxkpO9Kc4MlrA3q0+FG58AQ==}
 
+  cjs-module-lexer@2.1.0:
+    resolution: {integrity: sha512-UX0OwmYRYQQetfrLEZeewIFFI+wSTofC+pMBLNuH3RUuu/xzG1oz84UCEDOSoQlN3fZ4+AzmV50ZYvGqkMh9yA==}
+
   clean-regexp@1.0.0:
     resolution: {integrity: sha512-GfisEZEJvzKrmGWkvfhgzcz/BllN1USeqD2V6tg14OAOgaCD2Z/PUEuxnAZ/nPvmaHRG7a8y77p1T/IRQ4D1Hw==}
     engines: {node: '>=4'}
@@ -1735,6 +1744,10 @@ packages:
   longest-streak@3.1.0:
     resolution: {integrity: sha512-9Ri+o0JYgehTaVBBDoMqIl8GXtbWg711O3srftcHhZ0dqnETqLaoIK0x17fUw9rFSlK/0NlsKe0Ahhyl5pXE2g==}
 
+  magic-string-ast@1.0.2:
+    resolution: {integrity: sha512-8ngQgLhcT0t3YBdn9CGkZqCYlvwW9pm7aWJwd7AxseVWf1RU8ZHCQvG1mt3N5vvUme+pXTcHB8G/7fE666U8Vw==}
+    engines: {node: '>=20.18.0'}
+
   magic-string@0.30.19:
     resolution: {integrity: sha512-2N21sPY9Ws53PZvsEpVtNuSW+ScYbQdp4b9qUaL+9QkHUrGFKo56Lg9Emg5s9V/qrtNBmiR01sYhUOwu3H+VOw==}
 
@@ -2101,6 +2114,12 @@ packages:
         optional: true
       vue-tsc:
         optional: true
+
+  rolldown-plugin-require-cjs@0.1.5:
+    resolution: {integrity: sha512-R4mcYkETVJ/OY9yoraZLszG+HlDhaoaZ5EptKNNJYGmLwn1D210yQmX/kwt7nCPBFPIZOoccimBkBKR4+ddeNw==}
+    engines: {node: '>=20.19.0'}
+    peerDependencies:
+      rolldown: '*'
 
   rolldown@1.0.0-beta.39:
     resolution: {integrity: sha512-05bTT0CJU9dvCRC0Uc4zwB79W5N9MV9OG/Inyx8KNE2pSrrApJoWxEEArW6rmjx113HIx5IreCoTjzLfgvXTdg==}
@@ -3090,6 +3109,8 @@ snapshots:
     dependencies:
       consola: 3.4.2
 
+  cjs-module-lexer@2.1.0: {}
+
   clean-regexp@1.0.0:
     dependencies:
       escape-string-regexp: 1.0.5
@@ -3741,6 +3762,10 @@ snapshots:
 
   longest-streak@3.1.0: {}
 
+  magic-string-ast@1.0.2:
+    dependencies:
+      magic-string: 0.30.19
+
   magic-string@0.30.19:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.5
@@ -4292,6 +4317,14 @@ snapshots:
     transitivePeerDependencies:
       - oxc-resolver
       - supports-color
+
+  rolldown-plugin-require-cjs@0.1.5(rolldown@1.0.0-beta.39):
+    dependencies:
+      cjs-module-lexer: 2.1.0
+      empathic: 2.0.0
+      magic-string-ast: 1.0.2
+      mlly: 1.8.0
+      rolldown: 1.0.0-beta.39
 
   rolldown@1.0.0-beta.39:
     dependencies:

@@ -89,6 +89,7 @@
     "bumpp": "catalog:dev",
     "eslint": "catalog:",
     "eslint-typegen": "catalog:dev",
+    "rolldown-plugin-require-cjs": "catalog:dev",
     "tsdown": "catalog:dev",
     "tsx": "catalog:dev",
     "typescript": "catalog:dev"

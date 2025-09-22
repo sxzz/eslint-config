@@ -1,29 +1,57 @@
+/* eslint-disable perfectionist/sort-imports */
 // @ts-nocheck
 
-export { default as pluginAntfu } from 'eslint-plugin-antfu'
-export { default as pluginSxzz } from 'eslint-plugin-sxzz'
-export { default as pluginMarkdown } from '@eslint/markdown'
-export { default as tseslint } from 'typescript-eslint'
-export { default as pluginUnicorn } from 'eslint-plugin-unicorn'
-export { default as pluginVue } from 'eslint-plugin-vue'
-export { default as pluginNode } from 'eslint-plugin-n'
-export { default as pluginPerfectionist } from 'eslint-plugin-perfectionist'
-export { default as pluginPrettier } from 'eslint-plugin-prettier'
-export { default as pluginPrettierRecommended } from 'eslint-plugin-prettier/recommended'
-export { default as pluginUnusedImports } from 'eslint-plugin-unused-imports'
-export { default as pluginJsdoc } from 'eslint-plugin-jsdoc'
-export { default as pluginIgnore } from 'eslint-config-flat-gitignore'
-export { default as pluginDeMorgan } from 'eslint-plugin-de-morgan'
-export { default as pluginPnpm } from 'eslint-plugin-pnpm'
+import pluginAntfu from 'eslint-plugin-antfu'
+import pluginSxzz from 'eslint-plugin-sxzz'
+import pluginMarkdown from '@eslint/markdown'
+import tseslint from 'typescript-eslint'
+import pluginUnicorn from 'eslint-plugin-unicorn'
+import pluginVue from 'eslint-plugin-vue'
+import pluginNode from 'eslint-plugin-n'
+import pluginPerfectionist from 'eslint-plugin-perfectionist'
+import pluginPrettier from 'eslint-plugin-prettier'
+import pluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
+import pluginUnusedImports from 'eslint-plugin-unused-imports'
+import pluginJsdoc from 'eslint-plugin-jsdoc'
+import pluginIgnore from 'eslint-config-flat-gitignore'
+import pluginDeMorgan from 'eslint-plugin-de-morgan'
+import pluginPnpm from 'eslint-plugin-pnpm'
 
-export * as pluginImport from 'eslint-plugin-import-x'
-export * as pluginJsonc from 'eslint-plugin-jsonc'
-export * as pluginYml from 'eslint-plugin-yml'
+import * as pluginImport from 'eslint-plugin-import-x'
+import pluginJsonc from 'eslint-plugin-jsonc'
+import pluginYml from 'eslint-plugin-yml'
 
-export { default as configJs } from '@eslint/js'
-export { default as configComments } from '@eslint-community/eslint-plugin-eslint-comments/configs'
-export { default as configCommand } from 'eslint-plugin-command/config'
+import configJs from '@eslint/js'
+import configComments from '@eslint-community/eslint-plugin-eslint-comments/configs'
+import configCommand from 'eslint-plugin-command/config'
 
-export * as parserVue from 'vue-eslint-parser'
-export * as parserYml from 'yaml-eslint-parser'
-export * as parserJsonc from 'jsonc-eslint-parser'
+import parserVue from 'vue-eslint-parser'
+import parserYml from 'yaml-eslint-parser'
+import parserJsonc from 'jsonc-eslint-parser'
+
+export {
+  configCommand,
+  configComments,
+  configJs,
+  parserJsonc,
+  parserVue,
+  parserYml,
+  pluginAntfu,
+  pluginDeMorgan,
+  pluginIgnore,
+  pluginImport,
+  pluginJsdoc,
+  pluginJsonc,
+  pluginMarkdown,
+  pluginNode,
+  pluginPerfectionist,
+  pluginPnpm,
+  pluginPrettier,
+  pluginPrettierRecommended,
+  pluginSxzz,
+  pluginUnicorn,
+  pluginUnusedImports,
+  pluginVue,
+  pluginYml,
+  tseslint,
+}

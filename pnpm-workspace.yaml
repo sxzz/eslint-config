@@ -18,6 +18,7 @@ catalogs:
     bumpp: ^10.2.3
     eslint-typegen: ^2.3.0
     prettier: ^3.6.2
+    rolldown-plugin-require-cjs: ^0.1.5
     tsdown: ^0.15.4
     tsx: ^4.20.5
     typescript: ^5.9.2
