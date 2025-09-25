@@ -1451,6 +1451,11 @@ export interface Rules {
    */
   'jsdoc/no-undefined-types'?: Linter.RuleEntry<JsdocNoUndefinedTypes>
   /**
+   * Prefer `@import` tags to inline `import()` statements.
+   * @see https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/prefer-import-tag.md#repos-sticky-header
+   */
+  'jsdoc/prefer-import-tag'?: Linter.RuleEntry<JsdocPreferImportTag>
+  /**
    * Reports use of `any` or `*` type
    * @see https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/reject-any-type.md#repos-sticky-header
    */
@@ -1967,7 +1972,7 @@ export interface Rules {
    * Disallow missing label references
    * @see https://github.com/eslint/markdown/blob/main/docs/rules/no-missing-label-refs.md
    */
-  'markdown/no-missing-label-refs'?: Linter.RuleEntry<[]>
+  'markdown/no-missing-label-refs'?: Linter.RuleEntry<MarkdownNoMissingLabelRefs>
   /**
    * Disallow link fragments that do not reference valid headings
    * @see https://github.com/eslint/markdown/blob/main/docs/rules/no-missing-link-fragments.md
@@ -1978,6 +1983,11 @@ export interface Rules {
    * @see https://github.com/eslint/markdown/blob/main/docs/rules/no-multiple-h1.md
    */
   'markdown/no-multiple-h1'?: Linter.RuleEntry<MarkdownNoMultipleH1>
+  /**
+   * Disallow URLs that match defined reference identifiers
+   * @see https://github.com/eslint/markdown/blob/main/docs/rules/no-reference-like-urls.md
+   */
+  'markdown/no-reference-like-urls'?: Linter.RuleEntry<[]>
   /**
    * Disallow reversed link and image syntax
    * @see https://github.com/eslint/markdown/blob/main/docs/rules/no-reversed-media-syntax.md
@@ -6923,11 +6933,22 @@ type JsdocNoTypes = []|[{
 // ----- jsdoc/no-undefined-types -----
 type JsdocNoUndefinedTypes = []|[{
   
+  checkUsedTypedefs?: boolean
+  
   definedTypes?: string[]
   
   disableReporting?: boolean
   
   markVariablesAsUsed?: boolean
+}]
+// ----- jsdoc/prefer-import-tag -----
+type JsdocPreferImportTag = []|[{
+  
+  enableFixer?: boolean
+  
+  exemptTypedefs?: boolean
+  
+  outputType?: ("named-import" | "namespaced-import")
 }]
 // ----- jsdoc/require-asterisk-prefix -----
 type JsdocRequireAsteriskPrefix = []|[("always" | "never" | "any")]|[("always" | "never" | "any"), {
@@ -8000,6 +8021,10 @@ type MarkdownNoHtml = []|[{
 // ----- markdown/no-missing-atx-heading-space -----
 type MarkdownNoMissingAtxHeadingSpace = []|[{
   checkClosedHeadings?: boolean
+}]
+// ----- markdown/no-missing-label-refs -----
+type MarkdownNoMissingLabelRefs = []|[{
+  allowLabels?: string[]
 }]
 // ----- markdown/no-missing-link-fragments -----
 type MarkdownNoMissingLinkFragments = []|[{
@@ -11818,6 +11843,8 @@ type PnpmJsonEnforceCatalog = []|[{
   conflicts?: ("new-catalog" | "overrides" | "error")
   
   fields?: string[]
+  
+  ignores?: string[]
 }]
 // ----- pnpm/json-prefer-workspace-settings -----
 type PnpmJsonPreferWorkspaceSettings = []|[{
