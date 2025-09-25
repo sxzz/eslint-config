@@ -31,6 +31,10 @@ export const unicorn = (): Config[] => [
       'unicorn/no-process-exit': 'off',
       'unicorn/no-this-assignment': 'off',
       'unicorn/no-unreadable-array-destructuring': 'off',
+      'unicorn/no-useless-undefined': [
+        'error',
+        { checkArguments: false, checkArrowFunctionBody: false },
+      ],
       'unicorn/numeric-separators-style': 'off',
       'unicorn/prefer-module': 'off',
       'unicorn/prefer-query-selector': 'error',
