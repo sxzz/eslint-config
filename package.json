@@ -97,5 +97,8 @@
   "engines": {
     "node": ">=20.0.0"
   },
+  "resolutions": {
+    "@types/eslint": "-"
+  },
   "prettier": "@sxzz/prettier-config"
 }
