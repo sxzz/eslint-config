@@ -38,6 +38,7 @@ export const unicorn = (): Config[] => [
       'unicorn/numeric-separators-style': 'off',
       'unicorn/prefer-module': 'off',
       'unicorn/prefer-query-selector': 'error',
+      'unicorn/prefer-ternary': 'off',
       // top level await is not supported in all environments
       'unicorn/prefer-top-level-await': 'off',
       // https://github.com/sindresorhus/eslint-plugin-unicorn/issues/2710
