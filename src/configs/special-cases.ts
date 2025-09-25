@@ -4,7 +4,6 @@ import {
   GLOB_SRC,
   GLOB_SRC_EXT,
   GLOB_TSX,
-  GLOB_VUE,
 } from '../globs'
 import { pluginImport } from '../plugins'
 import type { Config } from '../types'
