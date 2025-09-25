@@ -50,7 +50,7 @@ export const specialCases = (): Config[] => [
     },
   },
   {
-    files: [GLOB_VUE, GLOB_JSX, GLOB_TSX],
+    files: [GLOB_JSX, GLOB_TSX],
     name: 'sxzz/special/components',
     rules: {
       'unicorn/no-anonymous-default-export': 'off',
