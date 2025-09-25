@@ -32,6 +32,7 @@ export const markdown = (): Config[] => [
       'node/prefer-global/buffer': 'off',
       'node/prefer-global/process': 'off',
 
+      'unicorn/no-anonymous-default-export': 'off',
       'unicorn/no-useless-undefined': 'off',
 
       'unused-imports/no-unused-imports': 'off',

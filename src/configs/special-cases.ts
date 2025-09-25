@@ -1,4 +1,11 @@
-import { GLOB_MARKDOWN, GLOB_SRC, GLOB_SRC_EXT } from '../globs'
+import {
+  GLOB_JSX,
+  GLOB_MARKDOWN,
+  GLOB_SRC,
+  GLOB_SRC_EXT,
+  GLOB_TSX,
+  GLOB_VUE,
+} from '../globs'
 import { pluginImport } from '../plugins'
 import type { Config } from '../types'
 
@@ -40,6 +47,13 @@ export const specialCases = (): Config[] => [
     name: 'sxzz/special/github',
     rules: {
       'unicorn/filename-case': 'off',
+    },
+  },
+  {
+    files: [GLOB_VUE, GLOB_JSX, GLOB_TSX],
+    name: 'sxzz/special/components',
+    rules: {
+      'unicorn/no-anonymous-default-export': 'off',
     },
   },
 ]
