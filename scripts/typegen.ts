@@ -15,7 +15,7 @@ let dts = await flatConfigsToRulesDTS(configs, {
   includeAugmentation: false,
   exportTypeName: 'Rules',
   filterPlugin(name) {
-    return name !== 'sxzz' && name !== 'vue'
+    return name !== 'sxzz'
   },
 })
 
