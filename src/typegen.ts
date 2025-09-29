@@ -1581,6 +1581,11 @@ export interface Rules {
    */
   'jsdoc/require-template'?: Linter.RuleEntry<JsdocRequireTemplate>
   /**
+   * Requires a description for `@template` tags
+   * @see https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/require-template-description.md#repos-sticky-header
+   */
+  'jsdoc/require-template-description'?: Linter.RuleEntry<[]>
+  /**
    * Requires that throw statements are documented with `@throws` tags.
    * @see https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/require-throws.md#repos-sticky-header
    */
@@ -7951,6 +7956,8 @@ type JsdocCheckTagNames = []|[{
   definedTags?: string[]
   
   enableFixer?: boolean
+  
+  inlineTags?: string[]
   
   jsxTags?: boolean
   

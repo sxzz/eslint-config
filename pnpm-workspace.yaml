@@ -14,13 +14,13 @@ catalogs:
     '@eslint/config-inspector': ^1.3.0
     '@sxzz/prettier-config': ^2.2.4
     '@types/node': ^24.5.2
-    ansis: ^4.1.0
+    ansis: ^4.2.0
     bumpp: ^10.2.3
     eslint-typegen: ^2.3.0
     prettier: ^3.6.2
-    rolldown-plugin-require-cjs: ^0.1.5
-    tsdown: ^0.15.4
-    tsx: ^4.20.5
+    rolldown-plugin-require-cjs: ^0.3.0
+    tsdown: ^0.15.5
+    tsx: ^4.20.6
     typescript: ^5.9.2
 
   parsers:
@@ -38,7 +38,7 @@ catalogs:
     eslint-plugin-command: ^3.3.1
     eslint-plugin-de-morgan: ^1.3.1
     eslint-plugin-import-x: ^4.16.1
-    eslint-plugin-jsdoc: ^60.3.1
+    eslint-plugin-jsdoc: ^60.5.0
     eslint-plugin-jsonc: ^2.20.1
     eslint-plugin-n: ^17.23.1
     eslint-plugin-perfectionist: ^4.15.0
