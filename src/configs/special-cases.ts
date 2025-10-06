@@ -35,7 +35,7 @@ export const specialCases = (): Config[] => [
     ],
     name: 'sxzz/special/allow-default-export',
     plugins: {
-      import: pluginImport as any,
+      import: pluginImport,
     },
     rules: {
       'import/no-default-export': 'off',

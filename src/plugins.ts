@@ -17,7 +17,7 @@ import pluginIgnore from 'eslint-config-flat-gitignore'
 import pluginDeMorgan from 'eslint-plugin-de-morgan'
 import pluginPnpm from 'eslint-plugin-pnpm'
 
-import * as pluginImport from 'eslint-plugin-import-x'
+import pluginImport from 'eslint-plugin-import-x'
 import pluginJsonc from 'eslint-plugin-jsonc'
 import pluginYml from 'eslint-plugin-yml'
 

@@ -6,7 +6,7 @@ export const imports = (): Config[] => [
     name: 'sxzz/imports',
     plugins: {
       antfu: pluginAntfu,
-      import: pluginImport as any,
+      import: pluginImport,
     },
     rules: {
       'antfu/import-dedupe': 'error',
