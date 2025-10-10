@@ -1,5 +1,5 @@
 import { writeFile } from 'node:fs/promises'
-import { green } from 'ansis'
+import { styleText } from 'node:util'
 import { flatConfigsToRulesDTS } from 'eslint-typegen/core'
 import { builtinRules } from 'eslint/use-at-your-own-risk'
 import { presetAll } from '../src/presets'
@@ -27,4 +27,4 @@ export type ConfigNames = ${configNames.map((i) => `'${i}'`).join(' | ')}
 
 await writeFile('src/typegen.ts', dts)
 
-console.log(green('Type definitions generated!'))
+console.log(styleText('green', 'Type definitions generated!'))

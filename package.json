@@ -85,7 +85,6 @@
     "@sxzz/prettier-config": "catalog:dev",
     "@types/node": "catalog:dev",
     "@unocss/eslint-plugin": "catalog:plugins",
-    "ansis": "catalog:dev",
     "bumpp": "catalog:dev",
     "eslint": "catalog:",
     "eslint-typegen": "catalog:dev",
