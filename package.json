@@ -1,7 +1,7 @@
 {
   "name": "@sxzz/eslint-config",
   "version": "7.2.7",
-  "packageManager": "pnpm@10.18.0",
+  "packageManager": "pnpm@10.20.0",
   "description": "ESLint config for @sxzz.",
   "type": "module",
   "license": "MIT",
@@ -31,7 +31,7 @@
   "scripts": {
     "dev": "eslint-config-inspector --config eslint-inspector.config.ts",
     "build": "pnpm run build:typegen && tsdown",
-    "build:typegen": "tsx scripts/typegen.ts",
+    "build:typegen": "unrun scripts/typegen.ts",
     "build:inspector": "eslint-config-inspector build --config eslint-inspector.config.ts",
     "test": "echo Skip",
     "lint": "eslint --max-warnings=0",
@@ -90,8 +90,8 @@
     "eslint-typegen": "catalog:dev",
     "rolldown-plugin-require-cjs": "catalog:dev",
     "tsdown": "catalog:dev",
-    "tsx": "catalog:dev",
-    "typescript": "catalog:dev"
+    "typescript": "catalog:dev",
+    "unrun": "catalog:dev"
   },
   "engines": {
     "node": ">=20.0.0"
