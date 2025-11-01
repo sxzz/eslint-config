@@ -24,7 +24,7 @@ export const unicorn: FlatESLintConfig[] = [
           ignore: [/^[A-Z]+\..*$/],
         },
       ],
-      'unicorn/import-index': 'warn',
+      // 'unicorn/import-index': 'warn', // Removed in v44
       'unicorn/new-for-builtins': 'off',
       // 'unicorn/new-for-builtins': 'error',
       'unicorn/no-abusive-eslint-disable': 'error',
@@ -32,7 +32,7 @@ export const unicorn: FlatESLintConfig[] = [
       'unicorn/no-array-method-this-argument': 'error',
       'unicorn/no-array-push-push': 'error',
       'unicorn/no-console-spaces': 'error',
-      'unicorn/no-fn-reference-in-iterator': 'off',
+      // 'unicorn/no-fn-reference-in-iterator': 'off', // Removed in v34, replaced by no-array-callback-reference
       'unicorn/no-for-loop': 'warn',
       // 'unicorn/no-for-loop': 'error',
       'unicorn/no-hex-escape': 'warn',
@@ -51,7 +51,7 @@ export const unicorn: FlatESLintConfig[] = [
       'unicorn/no-static-only-class': 'error',
       'unicorn/no-unnecessary-await': 'error',
       'unicorn/no-unreadable-array-destructuring': 'off',
-      'unicorn/no-unsafe-regex': 'warn',
+      // 'unicorn/no-unsafe-regex': 'warn', // Removed in v47
       'unicorn/no-unused-properties': 'off',
       'unicorn/no-useless-undefined': 'warn',
       'unicorn/no-zero-fractions': 'warn',
@@ -66,43 +66,42 @@ export const unicorn: FlatESLintConfig[] = [
       'unicorn/prefer-array-some': 'error',
       'unicorn/prefer-at': 'error',
       'unicorn/prefer-blob-reading-methods': 'error',
-      'unicorn/prefer-dataset': 'warn',
+      // 'unicorn/prefer-dataset': 'warn', // Removed
       'unicorn/prefer-date-now': 'error',
       'unicorn/prefer-dom-node-append': 'error',
       'unicorn/prefer-dom-node-dataset': 'error',
       'unicorn/prefer-dom-node-remove': 'error',
       'unicorn/prefer-dom-node-text-content': 'error',
-      'unicorn/prefer-event-key': 'off',
-      'unicorn/prefer-flat-map': 'error',
+      // 'unicorn/prefer-event-key': 'off', // Removed
+      // 'unicorn/prefer-flat-map': 'error', // Removed, renamed to prefer-array-flat-map (already defined above)
       'unicorn/prefer-includes': 'error',
       'unicorn/prefer-keyboard-event-key': 'error',
       'unicorn/prefer-math-trunc': 'error',
-      'unicorn/prefer-modern-dom-apis': 'warn',
-      // 'unicorn/prefer-modern-dom-apis': 'error',
+      // 'unicorn/prefer-modern-dom-apis': 'warn', // Removed in v36
+      // 'unicorn/prefer-modern-dom-apis': 'error', // Removed in v36
       'unicorn/prefer-modern-math-apis': 'error',
       'unicorn/prefer-negative-index': 'error',
-      'unicorn/prefer-node-append': 'warn',
+      // 'unicorn/prefer-node-append': 'warn', // Removed in v36, use prefer-dom-node-append
       'unicorn/prefer-node-protocol': 'error',
-      'unicorn/prefer-node-remove': 'warn',
+      // 'unicorn/prefer-node-remove': 'warn', // Removed in v36, use prefer-dom-node-remove
       'unicorn/prefer-number-properties': 'error',
       'unicorn/prefer-optional-catch-binding': 'warn',
       // 'unicorn/prefer-optional-catch-binding': 'error',
       'unicorn/prefer-prototype-methods': 'error',
-      'unicorn/prefer-query-selector': 'warn',
-      // 'unicorn/prefer-query-selector': 'error',
+      // 'unicorn/prefer-query-selector': 'warn', // Removed in v36
+      // 'unicorn/prefer-query-selector': 'error', // Removed in v36
       'unicorn/prefer-reflect-apply': 'error',
       'unicorn/prefer-regexp-test': 'error',
-      'unicorn/prefer-replace-all': 'warn',
+      // 'unicorn/prefer-replace-all': 'warn', // Removed, use prefer-string-replace-all
       'unicorn/prefer-set-has': 'warn',
       'unicorn/prefer-spread': 'error',
-      'unicorn/prefer-starts-ends-with': 'error',
+      // 'unicorn/prefer-starts-ends-with': 'error', // Removed, use prefer-string-starts-ends-with
       'unicorn/prefer-string-replace-all': 'error',
       'unicorn/prefer-string-slice': 'warn',
-      // 'unicorn/prefer-string-slice': 'error',
       'unicorn/prefer-string-starts-ends-with': 'error',
       'unicorn/prefer-string-trim-start-end': 'error',
       'unicorn/prefer-top-level-await': 'error',
-      'unicorn/prefer-trim-start-end': 'error',
+      // 'unicorn/prefer-trim-start-end': 'error', // Removed, use prefer-string-trim-start-end
       'unicorn/prefer-type-error': 'error',
       'unicorn/prevent-abbreviations': 'off',
       'unicorn/string-content': 'off',

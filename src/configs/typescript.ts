@@ -41,6 +41,7 @@ export const typescript: FlatESLintConfig[] = [
       '@typescript-eslint/no-unused-vars': 'off',
 
       '@typescript-eslint/prefer-as-const': 'warn',
+      '@typescript-eslint/unified-signatures': 'off', // Disabled due to bug in ESLint 9
 
       'no-restricted-syntax': ['error', 'TSEnumDeclaration[const=true]'],
     },

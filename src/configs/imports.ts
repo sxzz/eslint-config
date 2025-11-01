@@ -7,6 +7,7 @@ export const imports: FlatESLintConfig[] = [
   {
     plugins: {
       antfu: pluginAntfu,
+      // @ts-expect-error type incompatibility between import-x and eslint-define-config
       import: pluginImport,
     },
     rules: {
@@ -50,6 +51,7 @@ export const imports: FlatESLintConfig[] = [
       `${GLOB_MARKDOWN}/**`,
     ],
     plugins: {
+      // @ts-expect-error type incompatibility between import-x and eslint-define-config
       import: pluginImport,
     },
     rules: {

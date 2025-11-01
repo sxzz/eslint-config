@@ -21,7 +21,7 @@ export const markdown: FlatESLintConfig[] = [
       },
     },
     rules: {
-      ...pluginMarkdown.configs.recommended.overrides[1].rules,
+      ...pluginMarkdown.configs.recommended[2].rules,
 
       '@typescript-eslint/comma-dangle': 'off',
       '@typescript-eslint/consistent-type-imports': 'off',

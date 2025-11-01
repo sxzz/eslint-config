@@ -226,16 +226,16 @@ const vueCustomRules: Partial<Rules> = {
 
 const vue3Rules: Rules = {
   ...pluginVue.configs.base.rules,
-  ...pluginVue.configs['vue3-essential'].rules,
-  ...pluginVue.configs['vue3-strongly-recommended'].rules,
-  ...pluginVue.configs['vue3-recommended'].rules,
+  ...pluginVue.configs.essential.rules,
+  ...pluginVue.configs['strongly-recommended'].rules,
+  ...pluginVue.configs.recommended.rules,
 }
 
 const vue2Rules: Rules = {
   ...pluginVue.configs.base.rules,
-  ...pluginVue.configs.essential.rules,
-  ...pluginVue.configs['strongly-recommended'].rules,
-  ...pluginVue.configs.recommended.rules,
+  ...pluginVue.configs['vue2-essential'].rules,
+  ...pluginVue.configs['vue2-strongly-recommended'].rules,
+  ...pluginVue.configs['vue2-recommended'].rules,
 }
 
 export const vue: FlatESLintConfig[] = [
@@ -253,6 +253,7 @@ export const vue: FlatESLintConfig[] = [
       },
     },
     plugins: {
+      // @ts-expect-error type incompatibility between typescript-eslint and eslint-define-config
       '@typescript-eslint': tsPlugin,
       vue: pluginVue,
     },

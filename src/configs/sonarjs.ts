@@ -5,6 +5,7 @@ import { pluginSonar } from '../plugins'
 export const sonarjs: FlatESLintConfig[] = [
   {
     plugins: {
+      // @ts-expect-error type incompatibility between sonarjs and eslint-define-config
       sonarjs: pluginSonar,
     },
     rules: {

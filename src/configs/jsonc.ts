@@ -10,6 +10,7 @@ export const jsonc: FlatESLintConfig[] = [
       parser: parserJsonc,
     },
     plugins: {
+      // @ts-expect-error type incompatibility between jsonc and eslint-define-config
       jsonc: pluginJsonc,
     },
     rules: {

@@ -10,6 +10,7 @@ export const yml: FlatESLintConfig[] = [
       parser: parserYml,
     },
     plugins: {
+      // @ts-expect-error type incompatibility between yml and eslint-define-config
       yml: pluginYml,
     },
     rules: {

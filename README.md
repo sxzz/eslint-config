@@ -1,7 +1,9 @@
 # @frabbit/eslint-config [![npm](https://img.shields.io/npm/v/@frabbit/eslint-config.svg)](https://npmjs.com/package/@frabbit/eslint-config)
 
 Flat ESLint config for JavaScript, TypeScript, Vue 2, Vue 3, Prettier.
-based on https://github.com/sxzz/eslint-config
+Based on https://github.com/sxzz/eslint-config
+
+**Now supports ESLint 9!**
 
 [Legacy Version](https://github.com/sxzz/eslint-config-legacy)
 
@@ -17,10 +19,12 @@ based on https://github.com/sxzz/eslint-config
 ## Install
 
 ```bash
-npm i -D @frabbit/eslint-config
+npm i -D @frabbit/eslint-config eslint@^9
 ```
 
-Require Node.js >= 16.14.
+Requires:
+- Node.js >= 18
+- ESLint >= 9.0.0
 
 ## Usage
 
@@ -45,11 +49,7 @@ export default frabbit(
 
 ### VSCode
 
-```jsonc
-{
-  "eslint.experimental.useFlatConfig": true
-}
-```
+No additional configuration needed for ESLint 9. The flat config format is now the default.
 
 ## Comparing to [`@antfu/eslint-config`](https://github.com/antfu/eslint-config)
 

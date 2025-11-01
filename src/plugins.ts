@@ -23,12 +23,10 @@ import * as _pluginTypeScript from '@typescript-eslint/eslint-plugin'
 
 export const pluginTypeScript = interopDefault(_pluginTypeScript)
 
-// @ts-expect-error missing types
 import * as _pluginUnicorn from 'eslint-plugin-unicorn'
 
 export const pluginUnicorn = interopDefault(_pluginUnicorn)
 
-// @ts-expect-error missing types
 import * as _pluginVue from 'eslint-plugin-vue'
 
 export const pluginVue = interopDefault(_pluginVue)
@@ -52,8 +50,7 @@ import * as _pluginSecurity from 'eslint-plugin-security'
 
 export const pluginSecurity = interopDefault(_pluginSecurity)
 
-// @ts-expect-error missing types
-export * as pluginImport from 'eslint-plugin-i'
+export * as pluginImport from 'eslint-plugin-import-x'
 export * as pluginJsonc from 'eslint-plugin-jsonc'
 // @ts-expect-error missing types
 export * as pluginUnusedImports from 'eslint-plugin-unused-imports'
