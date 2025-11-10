@@ -3,4 +3,5 @@ import { defineConfig } from 'tsdown'
 
 export default defineConfig({
   plugins: [RequireCJS()],
+  exports: true,
 })
