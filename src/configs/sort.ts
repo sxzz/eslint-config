@@ -233,11 +233,7 @@ export const sortPnpmWorkspace = (): Config[] => [
         {
           allowLineSeparatedGroups: true,
           order: { type: 'asc' },
-          pathPattern: '^catalog$',
-        },
-        {
-          order: { type: 'asc' },
-          pathPattern: `^catalogs$`,
+          pathPattern: '^(catalog|catalogs|overrides)$',
         },
         {
           allowLineSeparatedGroups: true,
