@@ -4,6 +4,7 @@ import {
   type Awaitable,
 } from 'eslint-flat-config-utils'
 import {
+  baseline,
   command,
   comments,
   deMorgan,
@@ -80,21 +81,26 @@ export const presetAll = async (): Promise<Config[]> => [
   ...prettier(),
   ...command(),
   ...(await pnpm()),
+  ...baseline(),
   ...specialCases(),
 ]
 
+/// keep-sorted
 export interface Options {
-  /** Vue support. Auto-enable if detected. */
-  vue?: boolean
-  /** Prettier support. Default: true */
-  prettier?: boolean
-  /** markdown support. Default: true */
+  /** @default true */
+  baseline?: boolean
+  /** @default true */
+  command?: boolean
+  /** markdown support. @default true */
   markdown?: boolean
+  /** @default false */
+  pnpm?: boolean
+  /** Prettier support. @default true */
+  prettier?: boolean
   /** UnoCSS support. Auto-enable if detected. */
   unocss?: boolean
-  sortKeys?: boolean
-  command?: boolean
-  pnpm?: boolean
+  /** Vue support. Auto-enable if detected. */
+  vue?: boolean
 }
 
 /** `@sxzz`'s preset. */
@@ -105,6 +111,7 @@ export function sxzz(
   >[]
 ): FlatConfigComposer<Config, ConfigNames> {
   const {
+    baseline: enableBaseline = true,
     command: enableCommand = true,
     markdown: enableMarkdown = true,
     pnpm: enablePnpm = false,
@@ -131,6 +138,9 @@ export function sxzz(
   }
   if (enablePnpm) {
     configs.push(pnpm())
+  }
+  if (enableBaseline) {
+    configs.push(baseline())
   }
   configs.push(specialCases())
 

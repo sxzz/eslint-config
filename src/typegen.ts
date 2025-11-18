@@ -811,6 +811,26 @@ export interface Rules {
    */
   'arrow-spacing'?: Linter.RuleEntry<ArrowSpacing>
   /**
+   * disallow BigInt64Array/BigUint64Array usage
+   */
+  'baseline-js/no-bigint64array'?: Linter.RuleEntry<[]>
+  /**
+   * disallow Function#caller and Function#arguments
+   */
+  'baseline-js/no-function-caller-arguments'?: Linter.RuleEntry<[]>
+  /**
+   * disallow Math.sumPrecise() usage
+   */
+  'baseline-js/no-math-sum-precise'?: Linter.RuleEntry<[]>
+  /**
+   * disallow Temporal API usage
+   */
+  'baseline-js/no-temporal'?: Linter.RuleEntry<[]>
+  /**
+   * Enforce JS Baseline by delegating to underlying syntax rules (es-x)
+   */
+  'baseline-js/use-baseline'?: Linter.RuleEntry<BaselineJsUseBaseline>
+  /**
    * Enforce the use of variables within the scope they are defined
    * @see https://eslint.org/docs/latest/rules/block-scoped-var
    */
@@ -7432,6 +7452,27 @@ type ArrowParens = []|[("always" | "as-needed")]|[("always" | "as-needed"), {
 type ArrowSpacing = []|[{
   before?: boolean
   after?: boolean
+}]
+// ----- baseline-js/use-baseline -----
+type BaselineJsUseBaseline = []|[{
+  baseline?: (("widely" | "newly") | number)
+  available?: (("widely" | "newly") | number)
+  ignoreFeatures?: string[]
+  ignoreNodeTypes?: string[]
+  includeWebApis?: (boolean | {
+    preset?: ("auto" | "safe" | "type-aware" | "heuristic")
+    useTypes?: ("off" | "auto" | "require")
+    heuristics?: ("off" | "conservative" | "aggressive")
+    only?: string[]
+    ignore?: string[]
+  })
+  includeJsBuiltins?: (boolean | {
+    preset?: ("auto" | "safe" | "type-aware" | "heuristic")
+    useTypes?: ("off" | "auto" | "require")
+    heuristics?: ("off" | "conservative" | "aggressive")
+    only?: string[]
+    ignore?: string[]
+  })
 }]
 // ----- block-spacing -----
 type BlockSpacing = []|[("always" | "never")]
@@ -15254,4 +15295,4 @@ type Yoda = []|[("always" | "never")]|[("always" | "never"), {
   onlyEquality?: boolean
 }]
 // Names of all the configs
-export type ConfigNames = 'sxzz/global-ignores' | 'sxzz/gitignore' | 'sxzz/js/recommended' | 'sxzz/js' | 'sxzz/comments/recommended' | 'sxzz/comments' | 'sxzz/imports' | 'sxzz/unicorn/unopinionated' | 'sxzz/unicorn' | 'sxzz/node' | 'sxzz/jsdoc' | 'sxzz/regexp' | 'sxzz/de-morgan' | 'sxzz/typescript > typescript-eslint/base' | 'sxzz/typescript > typescript-eslint/eslint-recommended' | 'sxzz/typescript > typescript-eslint/recommended' | 'sxzz/typescript' | 'sxzz/typescript/dts-rules' | 'sxzz/typescript/cjs-rules' | 'sxzz/sort/imports' | 'sxzz/markdown/recommended/plugin' | 'sxzz/markdown/recommended/processor' | 'sxzz/markdown/recommended/code-blocks' | 'sxzz/markdown-rules' | 'sxzz/yaml/setup' | 'sxzz/yaml/rules' | 'sxzz/json' | 'sxzz/sort/package.json' | 'sxzz/sort/tsconfig' | 'sxzz/sort/pnpm-workspace' | 'sxzz/vue/typescript > typescript-eslint/base' | 'sxzz/vue/typescript > typescript-eslint/eslint-recommended' | 'sxzz/vue/typescript > typescript-eslint/recommended' | 'sxzz/vue/typescript' | 'sxzz/vue' | 'sxzz/vue/reactivity-transform' | 'sxzz/unocss' | 'sxzz/prettier' | 'sxzz/command' | 'sxzz/pnpm/package-json' | 'sxzz/pnpm/pnpm-workspace-yaml' | 'sxzz/special/cli' | 'sxzz/special/tests' | 'sxzz/special/allow-default-export' | 'sxzz/special/github' | 'sxzz/special/components'
+export type ConfigNames = 'sxzz/global-ignores' | 'sxzz/gitignore' | 'sxzz/js/recommended' | 'sxzz/js' | 'sxzz/comments/recommended' | 'sxzz/comments' | 'sxzz/imports' | 'sxzz/unicorn/unopinionated' | 'sxzz/unicorn' | 'sxzz/node' | 'sxzz/jsdoc' | 'sxzz/regexp' | 'sxzz/de-morgan' | 'sxzz/typescript > typescript-eslint/base' | 'sxzz/typescript > typescript-eslint/eslint-recommended' | 'sxzz/typescript > typescript-eslint/recommended' | 'sxzz/typescript' | 'sxzz/typescript/dts-rules' | 'sxzz/typescript/cjs-rules' | 'sxzz/sort/imports' | 'sxzz/markdown/recommended/plugin' | 'sxzz/markdown/recommended/processor' | 'sxzz/markdown/recommended/code-blocks' | 'sxzz/markdown-rules' | 'sxzz/yaml/setup' | 'sxzz/yaml/rules' | 'sxzz/json' | 'sxzz/sort/package.json' | 'sxzz/sort/tsconfig' | 'sxzz/sort/pnpm-workspace' | 'sxzz/vue/typescript > typescript-eslint/base' | 'sxzz/vue/typescript > typescript-eslint/eslint-recommended' | 'sxzz/vue/typescript > typescript-eslint/recommended' | 'sxzz/vue/typescript' | 'sxzz/vue' | 'sxzz/vue/reactivity-transform' | 'sxzz/unocss' | 'sxzz/prettier' | 'sxzz/command' | 'sxzz/pnpm/package-json' | 'sxzz/pnpm/pnpm-workspace-yaml' | 'sxzz/baseline' | 'sxzz/special/cli' | 'sxzz/special/tests' | 'sxzz/special/allow-default-export' | 'sxzz/special/github' | 'sxzz/special/components'

@@ -1,3 +1,4 @@
+export * from './baseline'
 export * from './command'
 export * from './comments'
 export * from './de-morgan'
