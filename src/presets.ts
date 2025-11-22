@@ -121,6 +121,9 @@ export function sxzz(
   } = options
 
   const configs: Awaitable<Config[]>[] = [presetBasic(), yml(), presetJsonc()]
+  if (enableBaseline) {
+    configs.push(baseline())
+  }
   if (enableVue) {
     configs.push(vue())
   }
@@ -138,9 +141,6 @@ export function sxzz(
   }
   if (enablePnpm) {
     configs.push(pnpm())
-  }
-  if (enableBaseline) {
-    configs.push(baseline())
   }
   configs.push(specialCases())
 
