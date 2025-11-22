@@ -24,6 +24,8 @@ export const markdown = (): Config[] => [
       '@typescript-eslint/no-unused-vars': 'off',
       '@typescript-eslint/no-use-before-define': 'off',
 
+      'baseline-js/use-baseline': 'off',
+
       'no-alert': 'off',
       'no-console': 'off',
       'no-restricted-imports': 'off',
