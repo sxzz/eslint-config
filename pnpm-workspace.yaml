@@ -11,7 +11,7 @@ catalog:
 
 catalogs:
   dev:
-    '@eslint/config-inspector': ^1.4.1
+    '@eslint/config-inspector': ^1.4.2
     '@sxzz/prettier-config': ^2.2.5
     '@types/node': ^24.10.1
     bumpp: ^10.3.1
@@ -38,7 +38,7 @@ catalogs:
     eslint-plugin-command: ^3.3.1
     eslint-plugin-de-morgan: ^2.0.0
     eslint-plugin-import-x: ^4.16.1
-    eslint-plugin-jsdoc: ^61.4.0
+    eslint-plugin-jsdoc: ^61.4.1
     eslint-plugin-jsonc: ^2.21.0
     eslint-plugin-n: ^17.23.1
     eslint-plugin-perfectionist: ^4.15.1
