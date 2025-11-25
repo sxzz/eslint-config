@@ -76,7 +76,6 @@
     "globals": "catalog:",
     "jsonc-eslint-parser": "catalog:parsers",
     "local-pkg": "catalog:",
-    "prettier": "catalog:dev",
     "typescript-eslint": "catalog:plugins",
     "vue-eslint-parser": "catalog:parsers",
     "yaml-eslint-parser": "catalog:parsers"
@@ -89,6 +88,7 @@
     "bumpp": "catalog:dev",
     "eslint": "catalog:",
     "eslint-typegen": "catalog:dev",
+    "prettier": "catalog:dev",
     "rolldown-plugin-require-cjs": "catalog:dev",
     "tsdown": "catalog:dev",
     "typescript": "catalog:dev",

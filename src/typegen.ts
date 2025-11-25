@@ -492,6 +492,11 @@ export interface Rules {
    */
   '@typescript-eslint/no-unused-expressions'?: Linter.RuleEntry<TypescriptEslintNoUnusedExpressions>
   /**
+   * Disallow unused private class members
+   * @see https://typescript-eslint.io/rules/no-unused-private-class-members
+   */
+  '@typescript-eslint/no-unused-private-class-members'?: Linter.RuleEntry<[]>
+  /**
    * Disallow unused variables
    * @see https://typescript-eslint.io/rules/no-unused-vars
    */
@@ -1575,6 +1580,11 @@ export interface Rules {
    * @see https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/require-property-type.md#repos-sticky-header
    */
   'jsdoc/require-property-type'?: Linter.RuleEntry<[]>
+  /**
+   * Requires that Promise rejections are documented with `@rejects` tags.
+   * @see https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/require-rejects.md#repos-sticky-header
+   */
+  'jsdoc/require-rejects'?: Linter.RuleEntry<JsdocRequireRejects>
   /**
    * Requires that returns are documented with `@returns`.
    * @see https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/require-returns.md#repos-sticky-header
@@ -5216,6 +5226,11 @@ export interface Rules {
    */
   'vue/no-duplicate-attributes'?: Linter.RuleEntry<VueNoDuplicateAttributes>
   /**
+   * disallow duplication of class names in class attributes
+   * @see https://eslint.vuejs.org/rules/no-duplicate-class-names.html
+   */
+  'vue/no-duplicate-class-names'?: Linter.RuleEntry<[]>
+  /**
    * disallow the `<template>` `<script>` `<style>` block to be empty
    * @see https://eslint.vuejs.org/rules/no-empty-component-block.html
    */
@@ -8007,6 +8022,8 @@ type JsdocCheckExamples = []|[{
 // ----- jsdoc/check-indentation -----
 type JsdocCheckIndentation = []|[{
   
+  allowIndentedSections?: boolean
+  
   excludeTags?: string[]
 }]
 // ----- jsdoc/check-line-alignment -----
@@ -8512,6 +8529,16 @@ type JsdocRequireParamType = []|[{
   
   setDefaultDestructuredRootType?: boolean
 }]
+// ----- jsdoc/require-rejects -----
+type JsdocRequireRejects = []|[{
+  
+  contexts?: (string | {
+    comment?: string
+    context?: string
+  })[]
+  
+  exemptedBy?: string[]
+}]
 // ----- jsdoc/require-returns -----
 type JsdocRequireReturns = []|[{
   
@@ -8635,6 +8662,10 @@ type JsdocSortTags = []|[{
   reportIntraTagGroupSpacing?: boolean
   
   reportTagGroupSpacing?: boolean
+  
+  tagExceptions?: {
+    [k: string]: number
+  }
   
   tagSequence?: {
     
