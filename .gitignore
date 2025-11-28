@@ -5,4 +5,3 @@ dist
 *.log
 .eslint-config-inspector
 .vercel
-test-cases

@@ -88,7 +88,7 @@ export const presetAll = async (): Promise<Config[]> => [
 /// keep-sorted
 export interface Options {
   /** @default true */
-  baseline?: boolean
+  baseline?: boolean | { ignoreFeatures?: string[] }
   /** @default true */
   command?: boolean
   /** markdown support. @default true */
@@ -122,7 +122,9 @@ export function sxzz(
 
   const configs: Awaitable<Config[]>[] = [presetBasic(), yml(), presetJsonc()]
   if (enableBaseline) {
-    configs.push(baseline())
+    configs.push(
+      baseline(typeof enableBaseline === 'object' ? enableBaseline : {}),
+    )
   }
   if (enableVue) {
     configs.push(vue())
