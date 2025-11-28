@@ -28,6 +28,7 @@ import {
   unocss,
   vue,
   yml,
+  type BaselineOptions,
 } from './configs'
 import { hasUnocss, hasVue } from './env'
 import type { ConfigNames } from './typegen'
@@ -88,7 +89,7 @@ export const presetAll = async (): Promise<Config[]> => [
 /// keep-sorted
 export interface Options {
   /** @default true */
-  baseline?: boolean | { ignoreFeatures?: string[] }
+  baseline?: boolean | BaselineOptions
   /** @default true */
   command?: boolean
   /** markdown support. @default true */
