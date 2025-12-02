@@ -87,7 +87,7 @@ export const sortPackageJson = (): Config[] => [
 
 export const sortTsconfig = (): Config[] => [
   {
-    files: ['**/tsconfig.json', '**/tsconfig.*.json'],
+    files: ['**/[jt]sconfig.json', '**/[jt]sconfig.*.json'],
     name: 'sxzz/sort/tsconfig',
     rules: {
       'jsonc/sort-keys': [
@@ -125,6 +125,7 @@ export const sortTsconfig = (): Config[] => [
             'useDefineForClassFields',
             'emitDecoratorMetadata',
             'experimentalDecorators',
+            'libReplacement',
             /* Modules */
             'baseUrl',
             'rootDir',
@@ -178,7 +179,6 @@ export const sortTsconfig = (): Config[] => [
             'importsNotUsedAsValues',
             'inlineSourceMap',
             'inlineSources',
-            'isolatedDeclarations',
             'mapRoot',
             'newLine',
             'noEmit',
@@ -194,12 +194,13 @@ export const sortTsconfig = (): Config[] => [
             'stripInternal',
             /* Interop Constraints */
             'allowSyntheticDefaultImports',
-            'erasableSyntaxOnly',
             'esModuleInterop',
             'forceConsistentCasingInFileNames',
+            'isolatedDeclarations',
             'isolatedModules',
             'preserveSymlinks',
             'verbatimModuleSyntax',
+            'erasableSyntaxOnly',
             /* Completeness */
             'skipDefaultLibCheck',
             'skipLibCheck',

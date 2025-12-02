@@ -1,32 +1,35 @@
 {
   "name": "@sxzz/eslint-config",
+  "type": "module",
   "version": "7.4.0",
   "packageManager": "pnpm@10.24.0",
   "description": "ESLint config for @sxzz.",
-  "type": "module",
+  "author": "Kevin Deng <sxzz@sxzz.moe>",
   "license": "MIT",
+  "funding": "https://github.com/sponsors/sxzz",
   "homepage": "https://github.com/sxzz/eslint-config#readme",
-  "bugs": {
-    "url": "https://github.com/sxzz/eslint-config/issues"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sxzz/eslint-config.git"
   },
-  "author": "Kevin Deng <sxzz@sxzz.moe>",
-  "funding": "https://github.com/sponsors/sxzz",
-  "files": [
-    "dist"
-  ],
-  "main": "./dist/index.mjs",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.mts",
+  "bugs": {
+    "url": "https://github.com/sxzz/eslint-config/issues"
+  },
   "exports": {
     ".": "./dist/index.mjs",
     "./package.json": "./package.json"
   },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "files": [
+    "dist"
+  ],
   "publishConfig": {
     "access": "public"
+  },
+  "engines": {
+    "node": ">=20.0.0"
   },
   "scripts": {
     "dev": "eslint-config-inspector --config eslint-inspector.config.ts",
@@ -93,9 +96,6 @@
     "tsdown": "catalog:dev",
     "typescript": "catalog:dev",
     "unrun": "catalog:dev"
-  },
-  "engines": {
-    "node": ">=20.0.0"
   },
   "resolutions": {
     "@types/eslint": "-"
