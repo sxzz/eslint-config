@@ -40,7 +40,7 @@
     "lint": "eslint --max-warnings=0",
     "lint:fix": "pnpm run lint --fix",
     "release": "bumpp",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "tsgo --noEmit",
     "prepublishOnly": "pnpm run build"
   },
   "peerDependencies": {
@@ -87,6 +87,7 @@
     "@eslint/config-inspector": "catalog:dev",
     "@sxzz/prettier-config": "catalog:dev",
     "@types/node": "catalog:dev",
+    "@typescript/native-preview": "catalog:dev",
     "@unocss/eslint-plugin": "catalog:plugins",
     "bumpp": "catalog:dev",
     "eslint": "catalog:",
