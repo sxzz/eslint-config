@@ -255,6 +255,10 @@ export const sortImports = (): Config[] => [
       perfectionist: pluginPerfectionist,
     },
     rules: {
+      'perfectionist/sort-exports': [
+        'error',
+        { groups: ['value-export', 'type-export'], type: 'natural' },
+      ],
       'perfectionist/sort-imports': [
         'warn',
         {
@@ -276,15 +280,16 @@ export const sortImports = (): Config[] => [
           ],
           internalPattern: ['^[~@#]/.*'],
           newlinesBetween: 'ignore',
+          type: 'natural',
         },
       ],
       'perfectionist/sort-named-exports': [
         'warn',
-        { groupKind: 'values-first' },
+        { groupKind: 'values-first', type: 'natural' },
       ],
       'perfectionist/sort-named-imports': [
         'warn',
-        { groupKind: 'values-first' },
+        { groupKind: 'values-first', type: 'natural' },
       ],
     },
   },
