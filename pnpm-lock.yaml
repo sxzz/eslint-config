@@ -94,8 +94,8 @@ catalogs:
       specifier: ^2.0.0
       version: 2.0.0
     eslint-plugin-importer:
-      specifier: ^0.1.0
-      version: 0.1.0
+      specifier: ^0.2.0
+      version: 0.2.0
     eslint-plugin-jsdoc:
       specifier: ^61.4.1
       version: 61.4.1
@@ -175,7 +175,7 @@ importers:
         version: 2.0.0(eslint@9.39.1(jiti@2.6.1))
       eslint-plugin-importer:
         specifier: catalog:plugins
-        version: 0.1.0(eslint@9.39.1(jiti@2.6.1))
+        version: 0.2.0(eslint@9.39.1(jiti@2.6.1))
       eslint-plugin-jsdoc:
         specifier: catalog:plugins
         version: 61.4.1(eslint@9.39.1(jiti@2.6.1))
@@ -1223,8 +1223,8 @@ packages:
     peerDependencies:
       eslint: '>=9.29.0'
 
-  eslint-plugin-importer@0.1.0:
-    resolution: {integrity: sha512-peP9gXaXo301PRpiAFMVUcpSLeZE2GXkMT8EGHQZLUKCgm1XkGovyJlcUExyv3oTBqzAy8UP76LV6cQdkEgylQ==}
+  eslint-plugin-importer@0.2.0:
+    resolution: {integrity: sha512-X3zBjAlwclDcO/u1sKu/CZ8YUxVHOP+0U0yq0pqExxkuQAE8GsTHVH7gDqYPC+qmyzzJYxSM0xaY2wajS12K9g==}
     engines: {node: '>=20.19.0'}
     peerDependencies:
       eslint: ^9.0.0
@@ -2973,7 +2973,7 @@ snapshots:
       eslint: 9.39.1(jiti@2.6.1)
       eslint-type-tracer: 0.4.1(eslint@9.39.1(jiti@2.6.1))
 
-  eslint-plugin-importer@0.1.0(eslint@9.39.1(jiti@2.6.1)):
+  eslint-plugin-importer@0.2.0(eslint@9.39.1(jiti@2.6.1)):
     dependencies:
       eslint: 9.39.1(jiti@2.6.1)
 
