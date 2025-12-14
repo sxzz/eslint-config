@@ -63,7 +63,7 @@
     "eslint-plugin-baseline-js": "catalog:plugins",
     "eslint-plugin-command": "catalog:plugins",
     "eslint-plugin-de-morgan": "catalog:plugins",
-    "eslint-plugin-import-x": "catalog:plugins",
+    "eslint-plugin-importer": "catalog:plugins",
     "eslint-plugin-jsdoc": "catalog:plugins",
     "eslint-plugin-jsonc": "catalog:plugins",
     "eslint-plugin-n": "catalog:plugins",
