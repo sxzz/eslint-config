@@ -1,7 +1,7 @@
 import { GLOB_VUE } from '../globs'
 import { parserVue, pluginVue, tseslint } from '../plugins'
-import type { Config } from '../types'
 import { typescriptCore } from './typescript'
+import type { Config } from '../types'
 import type { ESLint } from 'eslint'
 
 export const reactivityTransform = (): Config[] => [
