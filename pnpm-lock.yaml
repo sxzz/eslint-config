@@ -16,8 +16,8 @@ catalogs:
       specifier: ^2.1.4
       version: 2.1.4
     globals:
-      specifier: ^16.5.0
-      version: 16.5.0
+      specifier: ^17.0.0
+      version: 17.0.0
     local-pkg:
       specifier: ^1.1.2
       version: 1.1.2
@@ -214,7 +214,7 @@ importers:
         version: 1.19.1(eslint@9.39.2(jiti@2.6.1))
       globals:
         specifier: 'catalog:'
-        version: 16.5.0
+        version: 17.0.0
       jsonc-eslint-parser:
         specifier: catalog:parsers
         version: 2.4.2
@@ -1447,6 +1447,10 @@ packages:
 
   globals@16.5.0:
     resolution: {integrity: sha512-c/c15i26VrJ4IRt5Z89DnIzCGDn9EcebibhAOjw5ibqEHsE1wLUgkPn9RDmNcUKyU87GeaL633nyJ+pplFR2ZQ==}
+    engines: {node: '>=18'}
+
+  globals@17.0.0:
+    resolution: {integrity: sha512-gv5BeD2EssA793rlFWVPMMCqefTlpusw6/2TbAVMy0FzcG8wKJn4O+NqJ4+XWmmwrayJgw5TzrmWjFgmz1XPqw==}
     engines: {node: '>=18'}
 
   globrex@0.1.2:
@@ -3278,6 +3282,8 @@ snapshots:
   globals@15.15.0: {}
 
   globals@16.5.0: {}
+
+  globals@17.0.0: {}
 
   globrex@0.1.2: {}
 
