@@ -37,7 +37,7 @@ catalogs:
     eslint-plugin-command: ^3.4.0
     eslint-plugin-de-morgan: ^2.0.0
     eslint-plugin-importer: ^0.2.1
-    eslint-plugin-jsdoc: ^61.5.0
+    eslint-plugin-jsdoc: ^62.0.0
     eslint-plugin-jsonc: ^2.21.0
     eslint-plugin-n: ^17.23.1
     eslint-plugin-perfectionist: ^5.2.0
