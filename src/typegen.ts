@@ -690,6 +690,11 @@ export interface Rules {
    */
   '@typescript-eslint/strict-boolean-expressions'?: Linter.RuleEntry<TypescriptEslintStrictBooleanExpressions>
   /**
+   * Disallow passing a value-returning function in a position accepting a void function
+   * @see https://typescript-eslint.io/rules/strict-void-return
+   */
+  '@typescript-eslint/strict-void-return'?: Linter.RuleEntry<TypescriptEslintStrictVoidReturn>
+  /**
    * Require switch-case statements to be exhaustive
    * @see https://typescript-eslint.io/rules/switch-exhaustiveness-check
    */
@@ -5100,6 +5105,11 @@ export interface Rules {
    */
   'vue/no-lifecycle-after-await'?: Linter.RuleEntry<[]>
   /**
+   * disallow object, array, and function literals in template
+   * @see https://eslint.vuejs.org/rules/no-literals-in-template.html
+   */
+  'vue/no-literals-in-template'?: Linter.RuleEntry<[]>
+  /**
    * disallow unnecessary `<template>`
    * @see https://eslint.vuejs.org/rules/no-lone-template.html
    */
@@ -5309,6 +5319,11 @@ export interface Rules {
    * @see https://eslint.vuejs.org/rules/no-undef-components.html
    */
   'vue/no-undef-components'?: Linter.RuleEntry<VueNoUndefComponents>
+  /**
+   * disallow use of undefined custom directives
+   * @see https://eslint.vuejs.org/rules/no-undef-directives.html
+   */
+  'vue/no-undef-directives'?: Linter.RuleEntry<VueNoUndefDirectives>
   /**
    * disallow undefined properties
    * @see https://eslint.vuejs.org/rules/no-undef-properties.html
@@ -6878,6 +6893,11 @@ type TypescriptEslintNoUnusedVars = []|[(("all" | "local") | {
   
   destructuredArrayIgnorePattern?: string
   
+  enableAutofixRemoval?: {
+    
+    imports?: boolean
+  }
+  
   ignoreClassWithStaticInitBlock?: boolean
   
   ignoreRestSiblings?: boolean
@@ -7161,6 +7181,11 @@ type TypescriptEslintStrictBooleanExpressions = []|[{
   allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing?: boolean
   
   allowString?: boolean
+}]
+// ----- @typescript-eslint/strict-void-return -----
+type TypescriptEslintStrictVoidReturn = []|[{
+  
+  allowReturnAny?: boolean
 }]
 // ----- @typescript-eslint/switch-exhaustiveness-check -----
 type TypescriptEslintSwitchExhaustivenessCheck = []|[{
@@ -14582,6 +14607,11 @@ type UnusedImportsNoUnusedImports = []|[(("all" | "local") | {
   
   destructuredArrayIgnorePattern?: string
   
+  enableAutofixRemoval?: {
+    
+    imports?: boolean
+  }
+  
   ignoreClassWithStaticInitBlock?: boolean
   
   ignoreRestSiblings?: boolean
@@ -14606,6 +14636,11 @@ type UnusedImportsNoUnusedVars = []|[(("all" | "local") | {
   caughtErrorsIgnorePattern?: string
   
   destructuredArrayIgnorePattern?: string
+  
+  enableAutofixRemoval?: {
+    
+    imports?: boolean
+  }
   
   ignoreClassWithStaticInitBlock?: boolean
   
@@ -15411,6 +15446,7 @@ type VueNoLoneTemplate = []|[{
 // ----- vue/no-multi-spaces -----
 type VueNoMultiSpaces = []|[{
   ignoreProperties?: boolean
+  ignoreEOLComments?: boolean
 }]
 // ----- vue/no-multiple-template-root -----
 type VueNoMultipleTemplateRoot = []|[{
@@ -15570,6 +15606,10 @@ type VueNoTemplateTargetBlank = []|[{
 // ----- vue/no-undef-components -----
 type VueNoUndefComponents = []|[{
   ignorePatterns?: unknown[]
+}]
+// ----- vue/no-undef-directives -----
+type VueNoUndefDirectives = []|[{
+  ignore?: string[]
 }]
 // ----- vue/no-undef-properties -----
 type VueNoUndefProperties = []|[{
@@ -16045,4 +16085,4 @@ type Yoda = []|[("always" | "never")]|[("always" | "never"), {
   onlyEquality?: boolean
 }]
 // Names of all the configs
-export type ConfigNames = 'sxzz/global-ignores' | 'sxzz/gitignore' | 'sxzz/js/recommended' | 'sxzz/js' | 'sxzz/comments/recommended' | 'sxzz/comments' | 'sxzz/imports' | 'sxzz/unicorn/unopinionated' | 'sxzz/unicorn' | 'sxzz/node' | 'sxzz/jsdoc' | 'sxzz/regexp' | 'sxzz/de-morgan' | 'sxzz/typescript > typescript-eslint/base' | 'sxzz/typescript > typescript-eslint/eslint-recommended' | 'sxzz/typescript > typescript-eslint/recommended' | 'sxzz/typescript' | 'sxzz/typescript/dts-rules' | 'sxzz/typescript/cjs-rules' | 'sxzz/sort/imports' | 'sxzz/markdown/recommended/plugin' | 'sxzz/markdown/recommended/processor' | 'sxzz/markdown/recommended/code-blocks' | 'sxzz/markdown-rules' | 'sxzz/yaml/setup' | 'sxzz/yaml/rules' | 'sxzz/json' | 'sxzz/sort/package.json' | 'sxzz/sort/tsconfig' | 'sxzz/sort/pnpm-workspace' | 'sxzz/vue/typescript > typescript-eslint/base' | 'sxzz/vue/typescript > typescript-eslint/eslint-recommended' | 'sxzz/vue/typescript > typescript-eslint/recommended' | 'sxzz/vue/typescript' | 'sxzz/vue' | 'sxzz/vue/reactivity-transform' | 'sxzz/unocss' | 'sxzz/prettier' | 'sxzz/command' | 'sxzz/pnpm/package-json' | 'sxzz/pnpm/pnpm-workspace-yaml' | 'sxzz/baseline' | 'sxzz/special/cli' | 'sxzz/special/tests' | 'sxzz/special/allow-default-export' | 'sxzz/special/github' | 'sxzz/special/components'
+export type ConfigNames = 'sxzz/global-ignores' | 'sxzz/gitignore' | 'sxzz/js/recommended' | 'sxzz/js' | 'sxzz/comments/recommended' | 'sxzz/comments' | 'sxzz/imports' | 'sxzz/unicorn/unopinionated' | 'sxzz/unicorn' | 'sxzz/node' | 'sxzz/jsdoc' | 'sxzz/regexp' | 'sxzz/de-morgan' | 'sxzz/typescript > typescript-eslint/base' | 'sxzz/typescript > typescript-eslint/eslint-recommended' | 'sxzz/typescript > typescript-eslint/recommended' | 'sxzz/typescript' | 'sxzz/typescript/dts-rules' | 'sxzz/typescript/cjs-rules' | 'sxzz/sort/imports' | 'sxzz/markdown/recommended/plugin' | 'sxzz/markdown/recommended/processor' | 'sxzz/markdown/recommended/code-blocks' | 'sxzz/markdown-rules' | 'sxzz/yaml/standard' | 'sxzz/yaml/standard' | 'sxzz/yaml/standard' | 'sxzz/yaml/standard' | 'sxzz/yaml' | 'sxzz/json' | 'sxzz/sort/package.json' | 'sxzz/sort/tsconfig' | 'sxzz/sort/pnpm-workspace' | 'sxzz/vue/typescript > typescript-eslint/base' | 'sxzz/vue/typescript > typescript-eslint/eslint-recommended' | 'sxzz/vue/typescript > typescript-eslint/recommended' | 'sxzz/vue/typescript' | 'sxzz/vue' | 'sxzz/vue/reactivity-transform' | 'sxzz/unocss' | 'sxzz/prettier' | 'sxzz/command' | 'sxzz/pnpm/package-json' | 'sxzz/pnpm/pnpm-workspace-yaml' | 'sxzz/baseline' | 'sxzz/special/cli' | 'sxzz/special/tests' | 'sxzz/special/allow-default-export' | 'sxzz/special/github' | 'sxzz/special/components'

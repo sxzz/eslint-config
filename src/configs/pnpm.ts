@@ -20,9 +20,7 @@ export async function pnpm(): Promise<Config[]> {
     },
     {
       files: ['pnpm-workspace.yaml'],
-      languageOptions: {
-        parser: await import('yaml-eslint-parser'),
-      },
+      language: 'yml/yaml',
       name: 'sxzz/pnpm/pnpm-workspace-yaml',
       plugins: {
         pnpm: pluginPnpm,

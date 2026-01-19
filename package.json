@@ -78,8 +78,7 @@
     "jsonc-eslint-parser": "catalog:parsers",
     "local-pkg": "catalog:",
     "typescript-eslint": "catalog:plugins",
-    "vue-eslint-parser": "catalog:parsers",
-    "yaml-eslint-parser": "catalog:parsers"
+    "vue-eslint-parser": "catalog:parsers"
   },
   "devDependencies": {
     "@eslint/config-inspector": "catalog:dev",
@@ -93,6 +92,7 @@
     "prettier": "catalog:dev",
     "rolldown-plugin-require-cjs": "catalog:dev",
     "tsdown": "catalog:dev",
+    "tsdown-preset-sxzz": "catalog:",
     "typescript": "catalog:dev",
     "unrun": "catalog:dev"
   },

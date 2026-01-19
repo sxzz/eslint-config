@@ -26,7 +26,6 @@ import configComments from '@eslint-community/eslint-plugin-eslint-comments/conf
 import configCommand from 'eslint-plugin-command/config'
 
 import parserVue from 'vue-eslint-parser'
-import parserYml from 'yaml-eslint-parser'
 import parserJsonc from 'jsonc-eslint-parser'
 
 export {
@@ -35,7 +34,6 @@ export {
   configJs,
   parserJsonc,
   parserVue,
-  parserYml,
   pluginAntfu,
   pluginDeMorgan,
   pluginIgnore,

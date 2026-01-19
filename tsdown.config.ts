@@ -1,8 +1,9 @@
 import { RequireCJS } from 'rolldown-plugin-require-cjs'
-import { defineConfig } from 'tsdown'
+import { nodeLib } from 'tsdown-preset-sxzz'
 
-export default defineConfig({
-  plugins: [RequireCJS()],
-  exports: true,
-  inlineOnly: [],
-})
+export default nodeLib(
+  {},
+  {
+    plugins: [RequireCJS()],
+  },
+)
