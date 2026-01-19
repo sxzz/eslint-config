@@ -48,7 +48,7 @@ catalogs:
     eslint-plugin-unicorn: ^62.0.0
     eslint-plugin-unused-imports: ^4.3.0
     eslint-plugin-vue: ^10.6.2
-    eslint-plugin-yml: ^1.19.1
+    eslint-plugin-yml: ^2.0.2
     typescript-eslint: ^8.52.0
 
 allowBuilds:
