@@ -27,7 +27,7 @@
     "access": "public"
   },
   "engines": {
-    "node": ">=20.0.0"
+    "node": ">=20.19.0"
   },
   "scripts": {
     "dev": "eslint-config-inspector --config eslint-inspector.config.ts",

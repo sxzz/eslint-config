@@ -41,7 +41,7 @@ catalogs:
     eslint-plugin-jsonc: ^2.21.0
     eslint-plugin-n: ^17.23.2
     eslint-plugin-perfectionist: ^5.3.1
-    eslint-plugin-pnpm: ^1.4.3
+    eslint-plugin-pnpm: ^1.5.0
     eslint-plugin-prettier: ^5.5.5
     eslint-plugin-regexp: ^2.10.0
     eslint-plugin-sxzz: ^0.4.2
