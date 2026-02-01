@@ -1,3 +1,4 @@
+export * from './astro'
 export * from './baseline'
 export * from './command'
 export * from './comments'

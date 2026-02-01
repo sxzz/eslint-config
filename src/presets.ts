@@ -4,6 +4,7 @@ import {
   type Awaitable,
 } from 'eslint-flat-config-utils'
 import {
+  astro,
   baseline,
   command,
   comments,
@@ -30,7 +31,7 @@ import {
   yml,
   type BaselineOptions,
 } from './configs'
-import { hasUnocss, hasVue } from './env'
+import { hasAstro, hasUnocss, hasVue } from './env'
 import type { ConfigNames } from './typegen'
 import type { Config } from './types'
 import type { Linter } from 'eslint'
@@ -77,6 +78,7 @@ export const presetBasic = (): Config[] => [
 export const presetAll = async (): Promise<Config[]> => [
   ...presetBasic(),
   ...presetLangsExtensions(),
+  ...(await astro()),
   ...vue(),
   ...(await unocss()),
   ...prettier(),
@@ -88,6 +90,8 @@ export const presetAll = async (): Promise<Config[]> => [
 
 /// keep-sorted
 export interface Options {
+  /** Astro support. Auto-enable if detected. */
+  astro?: boolean
   /** @default true */
   baseline?: boolean | BaselineOptions
   /** @default true */
@@ -112,6 +116,7 @@ export function sxzz(
   >[]
 ): FlatConfigComposer<Config, ConfigNames> {
   const {
+    astro: enableAstro = hasAstro(),
     baseline: enableBaseline = true,
     command: enableCommand = true,
     markdown: enableMarkdown = true,
@@ -122,6 +127,9 @@ export function sxzz(
   } = options
 
   const configs: Awaitable<Config[]>[] = [presetBasic(), yml(), presetJsonc()]
+  if (enableAstro) {
+    configs.push(astro())
+  }
   if (enableBaseline) {
     configs.push(
       baseline(typeof enableBaseline === 'object' ? enableBaseline : {}),
