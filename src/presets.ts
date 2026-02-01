@@ -71,6 +71,7 @@ export const presetBasic = (): Config[] => [
  * Includes
  * - `presetBasic` (JS+TS) support
  * - `presetLangsExtensions` (markdown, yaml, jsonc) support
+ * - Astro support (`eslint-plugin-astro` is required)
  * - Vue support
  * - UnoCSS support (`uno.config.ts` is required)
  * - Prettier support
