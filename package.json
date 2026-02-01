@@ -43,10 +43,14 @@
   },
   "peerDependencies": {
     "@unocss/eslint-plugin": ">=65.0.0",
-    "eslint": "^9.5.0"
+    "eslint": "^9.5.0",
+    "eslint-plugin-astro": ">=1.0.0"
   },
   "peerDependenciesMeta": {
     "@unocss/eslint-plugin": {
+      "optional": true
+    },
+    "eslint-plugin-astro": {
       "optional": true
     }
   },
@@ -88,6 +92,7 @@
     "@unocss/eslint-plugin": "catalog:plugins",
     "bumpp": "catalog:dev",
     "eslint": "catalog:",
+    "eslint-plugin-astro": "catalog:plugins",
     "eslint-typegen": "catalog:dev",
     "prettier": "catalog:dev",
     "rolldown-plugin-require-cjs": "catalog:dev",
