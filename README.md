@@ -4,13 +4,13 @@
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![Unit Test][unit-test-src]][unit-test-href]
 
-A opinionated ESLint config preset for JavaScript, TypeScript, Vue,
+A opinionated ESLint config preset for JavaScript, TypeScript, Vue, Astro,
 and Prettier.
 
 ## Features
 
 - Format with Prettier.
-- Designed to work with TypeScript, Vue out-of-box.
+- Designed to work with TypeScript, Vue, Astro out-of-box.
 - Support JSON(5), YAML, Markdown...
 - Sort imports, `package.json`, `tsconfig.json`...
 - [ESLint Flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new), compose easily!
@@ -36,6 +36,7 @@ export default sxzz(
     prettier: true,
     markdown: true,
     vue: true, // auto detection
+    astro: false, // auto detection
     unocss: false, // auto detection
   },
   [
@@ -57,6 +58,7 @@ import {
   // Includes
   // - `presetBasic` (JS+TS) support
   // - `presetLangsExtensions` (markdown, yaml, jsonc) support
+  // - Astro support (`eslint-plugin-astro` is required)
   // - Vue support
   // - UnoCSS support (`uno.config.ts` is required)
   // - Prettier support
