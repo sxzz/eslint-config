@@ -2,7 +2,7 @@
   "name": "@sxzz/eslint-config",
   "type": "module",
   "version": "7.5.1",
-  "packageManager": "pnpm@10.28.1",
+  "packageManager": "pnpm@10.28.2",
   "description": "ESLint config for @sxzz.",
   "author": "Kevin Deng <sxzz@sxzz.moe>",
   "license": "MIT",
