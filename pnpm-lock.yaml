@@ -29,8 +29,8 @@ catalogs:
       specifier: ^1.4.2
       version: 1.4.2
     '@sxzz/prettier-config':
-      specifier: ^2.3.0
-      version: 2.3.0
+      specifier: ^2.3.1
+      version: 2.3.1
     '@types/node':
       specifier: ^25.2.0
       version: 25.2.0
@@ -236,7 +236,7 @@ importers:
         version: 1.4.2(eslint@9.39.2(jiti@2.6.1))
       '@sxzz/prettier-config':
         specifier: catalog:dev
-        version: 2.3.0
+        version: 2.3.1
       '@types/node':
         specifier: catalog:dev
         version: 25.2.0
@@ -826,8 +826,8 @@ packages:
     resolution: {integrity: sha512-TeheYy0ILzBEI/CO55CP6zJCSdSWeRtGnHy8U8dWSUH4I68iqTsy7HkMktR4xakThc9jotkPQUXT4ITdbV7cHA==}
     engines: {node: '>=18'}
 
-  '@sxzz/prettier-config@2.3.0':
-    resolution: {integrity: sha512-xickcu39IWtQlGjgGtCds7D5mJoz6zTLPMGs0ckHe141qhw6C88dXD+UT38mqp0iDp6DNpbKd2KhFdM3CKn7mQ==}
+  '@sxzz/prettier-config@2.3.1':
+    resolution: {integrity: sha512-FOmTI3cFS7KIOdQFbr2bwUj2runmb0/PVh5S8Wqvr7Vqd17qYYG/b0eSgXCe73ADEpMB+0yQ7Y7HzMR9GSAxLQ==}
     peerDependencies:
       prettier-plugin-astro: ^0.14.1
     peerDependenciesMeta:
@@ -2772,7 +2772,7 @@ snapshots:
 
   '@sindresorhus/base62@1.0.0': {}
 
-  '@sxzz/prettier-config@2.3.0':
+  '@sxzz/prettier-config@2.3.1':
     dependencies:
       '@prettier/plugin-oxc': 0.1.3
 

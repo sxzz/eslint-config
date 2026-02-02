@@ -3,6 +3,9 @@ import { sxzz } from './src/index'
 export default sxzz({
   vue: true,
   pnpm: true,
+  baseline: {
+    ignoreFeatures: ['top-level-await'],
+  },
 }).append(
   {
     files: ['src/**/*.ts'],
