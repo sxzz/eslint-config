@@ -5,10 +5,8 @@ export const astro = async (): Promise<Config[]> => {
   const pluginAstro = await importWithError<
     typeof import('eslint-plugin-astro')
   >('eslint-plugin-astro')
-  return (pluginAstro.default.configs.recommended as Config[]).map(
-    (config) => ({
-      ...config,
-      name: `sxzz/${config.name || 'anonymous'}`,
-    }),
-  )
+  return pluginAstro.default.configs.recommended.map((config) => ({
+    ...config,
+    name: `sxzz/${config.name || 'anonymous'}`,
+  }))
 }
