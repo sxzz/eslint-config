@@ -26,6 +26,13 @@ npm i -D @sxzz/eslint-config
 
 Require Node.js >= 20.0.0, and ESLint >= 9.5.0.
 
+### Optional Dependencies
+
+| Feature | Optional Dependency |
+| ------- | ------------------- |
+| Astro   | `eslint-plugin-astro` |
+| UnoCSS  | `@unocss/eslint-plugin` |
+
 ## Usage
 
 ```js
