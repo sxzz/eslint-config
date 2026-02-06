@@ -1,5 +1,14 @@
 import process from 'node:process'
-import { isPackageExists } from 'local-pkg'
+
+const cwd = process.cwd()
+function isPackageExists(name: string): boolean {
+  try {
+    require.resolve(name, { paths: [cwd] })
+    return true
+  } catch {
+    return false
+  }
+}
 
 export const hasTypeScript = (): boolean => isPackageExists('typescript')
 export const hasVue = (): boolean =>

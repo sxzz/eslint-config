@@ -80,7 +80,6 @@
     "eslint-plugin-yml": "catalog:plugins",
     "globals": "catalog:",
     "jsonc-eslint-parser": "catalog:parsers",
-    "local-pkg": "catalog:",
     "typescript-eslint": "catalog:plugins",
     "vue-eslint-parser": "catalog:parsers"
   },

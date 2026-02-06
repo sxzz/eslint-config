@@ -7,7 +7,6 @@ catalog:
   eslint: ^9.39.2
   eslint-flat-config-utils: ^3.0.0
   globals: ^17.3.0
-  local-pkg: ^1.1.2
   tsdown-preset-sxzz: ^0.3.1
 
 catalogs:

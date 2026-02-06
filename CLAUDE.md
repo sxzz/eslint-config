@@ -30,7 +30,7 @@ Each file exports a function returning `Config[]`. Configs are named with the `s
 
 ### Auto-detection (`src/env.ts`)
 
-Uses `local-pkg`'s `isPackageExists()` to detect frameworks (Vue, Astro, UnoCSS, TypeScript) and auto-enable their configs in `sxzz()`.
+Uses `isPackageExists()` to detect frameworks (Vue, Astro, UnoCSS, TypeScript) and auto-enable their configs in `sxzz()`.
 
 ### Presets (`src/presets.ts`)
 
