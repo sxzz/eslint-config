@@ -1096,6 +1096,10 @@ export interface Rules {
    */
   'astro/valid-compile'?: Linter.RuleEntry<[]>
   /**
+   * disallow Atomics.pause() usage
+   */
+  'baseline-js/no-atomics-pause'?: Linter.RuleEntry<[]>
+  /**
    * disallow BigInt64Array/BigUint64Array usage
    */
   'baseline-js/no-bigint64array'?: Linter.RuleEntry<[]>
@@ -10377,7 +10381,7 @@ type PerfectionistSortArrayIncludes = {
         flags?: string
       } | string))
       
-      selector?: ("literal" | "spread")
+      selector?: "literal"
     }, ...({
       
       elementNamePattern?: (({
@@ -10392,7 +10396,7 @@ type PerfectionistSortArrayIncludes = {
         flags?: string
       } | string))
       
-      selector?: ("literal" | "spread")
+      selector?: "literal"
     })[]]
   } | {
     
@@ -10422,7 +10426,7 @@ type PerfectionistSortArrayIncludes = {
       flags?: string
     } | string))
     
-    selector?: ("literal" | "spread")
+    selector?: "literal"
   })[]
   newlinesInside?: (("ignore" | number) | "newlinesBetween")
   
@@ -10700,6 +10704,8 @@ type PerfectionistSortClasses = []|[{
     order?: ("asc" | "desc")
   })[]
   newlinesBetween?: ("ignore" | number)
+  
+  useExperimentalDependencyDetection?: boolean
   
   ignoreCallbackDependenciesPatterns?: (({
     
@@ -13852,7 +13858,7 @@ type PerfectionistSortSets = {
         flags?: string
       } | string))
       
-      selector?: ("literal" | "spread")
+      selector?: "literal"
     }, ...({
       
       elementNamePattern?: (({
@@ -13867,7 +13873,7 @@ type PerfectionistSortSets = {
         flags?: string
       } | string))
       
-      selector?: ("literal" | "spread")
+      selector?: "literal"
     })[]]
   } | {
     
@@ -13897,7 +13903,7 @@ type PerfectionistSortSets = {
       flags?: string
     } | string))
     
-    selector?: ("literal" | "spread")
+    selector?: "literal"
   })[]
   newlinesInside?: (("ignore" | number) | "newlinesBetween")
   
