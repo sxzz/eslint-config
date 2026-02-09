@@ -4,7 +4,7 @@ overrides:
 
 catalog:
   '@eslint/js': ^10.0.1
-  eslint: ^9.39.2
+  eslint: ^10.0.0
   eslint-flat-config-utils: ^3.0.1
   globals: ^17.3.0
   tsdown-preset-sxzz: ^0.3.2
