@@ -4,29 +4,6 @@ import { typescriptCore } from './typescript'
 import type { Config } from '../types'
 import type { ESLint } from 'eslint'
 
-export const reactivityTransform = (): Config[] => [
-  {
-    languageOptions: {
-      globals: {
-        $: 'readonly',
-        $$: 'readonly',
-        $computed: 'readonly',
-        $customRef: 'readonly',
-        $ref: 'readonly',
-        $shallowRef: 'readonly',
-        $toRef: 'readonly',
-      },
-    },
-    name: 'sxzz/vue/reactivity-transform',
-    plugins: {
-      vue: pluginVue,
-    },
-    rules: {
-      'vue/no-setup-props-reactivity-loss': 'off',
-    },
-  },
-]
-
 const vueTs: Config[] = typescriptCore
   .filter((config) => config.name !== 'typescript-eslint/base')
   .map((config) => {
@@ -64,6 +41,8 @@ export const vue = (): Config[] => [
     processor: pluginVue.processors['.vue'],
     rules: {
       ...recommendedRules,
+
+      'no-useless-assignment': 'off',
 
       'vue/block-order': ['error', { order: ['script', 'template', 'style'] }],
       'vue/custom-event-name-casing': ['error', 'camelCase'],
@@ -110,5 +89,4 @@ export const vue = (): Config[] => [
       ],
     },
   },
-  ...reactivityTransform(),
 ]
