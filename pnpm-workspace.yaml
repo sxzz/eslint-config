@@ -3,8 +3,8 @@ overrides:
   is-core-module: npm:@no-shims/is-core-module
 
 catalog:
-  '@eslint/js': ^10.0.1
-  eslint: ^10.0.0
+  '@eslint/js': ^9.39.2
+  eslint: ^9.39.2
   eslint-flat-config-utils: ^3.0.1
   globals: ^17.3.0
   tsdown-preset-sxzz: ^0.3.2
