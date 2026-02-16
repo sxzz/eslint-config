@@ -7,14 +7,14 @@ catalog:
   eslint: ^9.39.2
   eslint-flat-config-utils: ^3.0.1
   globals: ^17.3.0
-  tsdown-preset-sxzz: ^0.3.2
+  tsdown-preset-sxzz: ^0.3.3
 
 catalogs:
   dev:
     '@eslint/config-inspector': ^1.4.2
     '@sxzz/prettier-config': ^2.3.1
-    '@types/node': ^25.2.2
-    '@typescript/native-preview': 7.0.0-dev.20260209.1
+    '@types/node': ^25.2.3
+    '@typescript/native-preview': 7.0.0-dev.20260215.1
     bumpp: ^10.4.1
     eslint-typegen: ^2.3.0
     prettier: ^3.8.1
@@ -24,32 +24,32 @@ catalogs:
     unrun: ^0.2.27
   parsers:
     jsonc-eslint-parser: ^2.4.2
-    vue-eslint-parser: ^10.2.0
+    vue-eslint-parser: ^10.4.0
   plugins:
     '@eslint-community/eslint-plugin-eslint-comments': ^4.6.0
     '@eslint/markdown': ^7.5.1
     '@unocss/eslint-plugin': ^66.6.0
     eslint-config-flat-gitignore: ^2.1.0
     eslint-config-prettier: ^10.1.8
-    eslint-plugin-antfu: ^3.2.0
-    eslint-plugin-astro: ^1.5.0
+    eslint-plugin-antfu: ^3.2.2
+    eslint-plugin-astro: ^1.6.0
     eslint-plugin-baseline-js: ^0.5.0
     eslint-plugin-command: ^3.4.0
     eslint-plugin-de-morgan: ^2.0.0
     eslint-plugin-importer: ^0.3.0
-    eslint-plugin-jsdoc: ^62.5.4
+    eslint-plugin-jsdoc: ^62.5.5
     eslint-plugin-jsonc: ^2.21.1
-    eslint-plugin-n: ^17.23.2
+    eslint-plugin-n: ^17.24.0
     eslint-plugin-perfectionist: ^5.5.0
     eslint-plugin-pnpm: ^1.5.0
     eslint-plugin-prettier: ^5.5.5
     eslint-plugin-regexp: ^3.0.0
-    eslint-plugin-sxzz: ^0.4.2
+    eslint-plugin-sxzz: ^0.4.3
     eslint-plugin-unicorn: ^62.0.0
     eslint-plugin-unused-imports: ^4.4.1
-    eslint-plugin-vue: ^10.7.0
+    eslint-plugin-vue: ^10.8.0
     eslint-plugin-yml: ^3.1.2
-    typescript-eslint: ^8.54.0
+    typescript-eslint: ^8.55.0
 
 allowBuilds:
   esbuild: false
