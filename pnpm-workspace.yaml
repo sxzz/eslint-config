@@ -3,8 +3,8 @@ overrides:
   is-core-module: npm:@no-shims/is-core-module
 
 catalog:
-  '@eslint/js': ^9.39.2
-  eslint: ^9.39.2
+  '@eslint/js': ^10.0.1
+  eslint: ^10.0.0
   eslint-flat-config-utils: ^3.0.1
   globals: ^17.3.0
   tsdown-preset-sxzz: ^0.3.3
@@ -14,7 +14,7 @@ catalogs:
     '@eslint/config-inspector': ^1.4.2
     '@sxzz/prettier-config': ^2.3.1
     '@types/node': ^25.2.3
-    '@typescript/native-preview': 7.0.0-dev.20260215.1
+    '@typescript/native-preview': 7.0.0-dev.20260217.1
     bumpp: ^10.4.1
     eslint-typegen: ^2.3.0
     prettier: ^3.8.1
@@ -44,12 +44,12 @@ catalogs:
     eslint-plugin-pnpm: ^1.5.0
     eslint-plugin-prettier: ^5.5.5
     eslint-plugin-regexp: ^3.0.0
-    eslint-plugin-sxzz: ^0.4.3
-    eslint-plugin-unicorn: ^62.0.0
+    eslint-plugin-sxzz: ^0.4.4
+    eslint-plugin-unicorn: ^63.0.0
     eslint-plugin-unused-imports: ^4.4.1
     eslint-plugin-vue: ^10.8.0
-    eslint-plugin-yml: ^3.1.2
-    typescript-eslint: ^8.55.0
+    eslint-plugin-yml: ^3.2.0
+    typescript-eslint: ^8.56.0
 
 allowBuilds:
   esbuild: false
