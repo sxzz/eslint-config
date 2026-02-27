@@ -13,6 +13,7 @@ export const specialCases = (): Config[] => [
     files: ['**/scripts/*', '**/cli.*'],
     name: 'sxzz/special/cli',
     rules: {
+      'baseline-js/use-baseline': 'off',
       'no-console': 'off',
     },
   },
