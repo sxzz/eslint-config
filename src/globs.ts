@@ -59,6 +59,7 @@ export const GLOB_EXCLUDE: string[] = [
   '**/.output',
   '**/.vite-inspect',
   '**/.nitro',
+  '**/.context', // Conductor
 
   '**/CHANGELOG*.md',
   '**/*.min.*',
