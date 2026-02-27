@@ -8607,6 +8607,8 @@ type JsdocTagLines = []|[("always" | "any" | "never")]|[("always" | "any" | "nev
   
   startLines?: (number | null)
   
+  startLinesWithNoTags?: number
+  
   tags?: {
     [k: string]: {
       count?: number
@@ -8871,6 +8873,7 @@ type JsoncObjectCurlyNewline = []|[((("always" | "never") | {
 type JsoncObjectCurlySpacing = []|[("always" | "never")]|[("always" | "never"), {
   arraysInObjects?: boolean
   objectsInObjects?: boolean
+  emptyObjects?: ("ignore" | "always" | "never")
 }]
 // ----- jsonc/object-property-newline -----
 type JsoncObjectPropertyNewline = []|[{
@@ -16268,6 +16271,7 @@ type YmlFlowMappingCurlyNewline = []|[(("always" | "never") | {
 type YmlFlowMappingCurlySpacing = []|[("always" | "never")]|[("always" | "never"), {
   arraysInObjects?: boolean
   objectsInObjects?: boolean
+  emptyObjects?: ("ignore" | "always" | "never")
 }]
 // ----- yml/flow-sequence-bracket-newline -----
 type YmlFlowSequenceBracketNewline = []|[(("always" | "never" | "consistent") | {
@@ -16448,4 +16452,4 @@ type Yoda = []|[("always" | "never")]|[("always" | "never"), {
   onlyEquality?: boolean
 }]
 // Names of all the configs
-export type ConfigNames = 'sxzz/global-ignores' | 'sxzz/gitignore' | 'sxzz/js/recommended' | 'sxzz/js' | 'sxzz/comments/recommended' | 'sxzz/comments' | 'sxzz/imports' | 'sxzz/unicorn/unopinionated' | 'sxzz/unicorn' | 'sxzz/node' | 'sxzz/jsdoc' | 'sxzz/regexp' | 'sxzz/de-morgan' | 'sxzz/typescript > typescript-eslint/base' | 'sxzz/typescript > typescript-eslint/eslint-recommended' | 'sxzz/typescript > typescript-eslint/recommended' | 'sxzz/typescript' | 'sxzz/typescript/dts-rules' | 'sxzz/typescript/cjs-rules' | 'sxzz/sort/imports' | 'sxzz/markdown/recommended/plugin' | 'sxzz/markdown/recommended/processor' | 'sxzz/markdown/recommended/code-blocks' | 'sxzz/markdown-rules' | 'sxzz/yaml/standard' | 'sxzz/yaml/standard' | 'sxzz/yaml/standard' | 'sxzz/yaml/standard' | 'sxzz/yaml' | 'sxzz/json' | 'sxzz/sort/package.json' | 'sxzz/sort/tsconfig' | 'sxzz/sort/pnpm-workspace' | 'sxzz/astro/base/plugin' | 'sxzz/astro/base' | 'sxzz/astro/base/javascript' | 'sxzz/astro/base/typescript' | 'sxzz/astro/recommended' | 'sxzz/vue/typescript > typescript-eslint/base' | 'sxzz/vue/typescript > typescript-eslint/eslint-recommended' | 'sxzz/vue/typescript > typescript-eslint/recommended' | 'sxzz/vue/typescript' | 'sxzz/vue' | 'sxzz/unocss' | 'sxzz/prettier' | 'sxzz/command' | 'sxzz/pnpm/package-json' | 'sxzz/pnpm/pnpm-workspace-yaml' | 'sxzz/baseline' | 'sxzz/special/cli' | 'sxzz/special/tests' | 'sxzz/special/allow-default-export' | 'sxzz/special/github' | 'sxzz/special/components'
+export type ConfigNames = 'sxzz/global-ignores' | 'sxzz/gitignore' | 'sxzz/js/recommended' | 'sxzz/js' | 'sxzz/comments/recommended' | 'sxzz/comments' | 'sxzz/imports' | 'sxzz/unicorn/unopinionated' | 'sxzz/unicorn' | 'sxzz/node' | 'sxzz/jsdoc' | 'sxzz/regexp' | 'sxzz/de-morgan' | 'sxzz/typescript > typescript-eslint/base' | 'sxzz/typescript > typescript-eslint/eslint-recommended' | 'sxzz/typescript > typescript-eslint/recommended' | 'sxzz/typescript' | 'sxzz/typescript/dts-rules' | 'sxzz/typescript/cjs-rules' | 'sxzz/sort/imports' | 'sxzz/markdown/recommended/plugin' | 'sxzz/markdown/recommended/processor' | 'sxzz/markdown/recommended/code-blocks' | 'sxzz/markdown-rules' | 'sxzz/yaml/standard' | 'sxzz/yaml/standard' | 'sxzz/yaml/standard' | 'sxzz/yaml/standard' | 'sxzz/yaml' | 'sxzz/jsonc/recommended' | 'sxzz/jsonc/recommended' | 'sxzz/jsonc/recommended' | 'sxzz/jsonc' | 'sxzz/sort/package.json' | 'sxzz/sort/tsconfig' | 'sxzz/sort/pnpm-workspace' | 'sxzz/astro/base/plugin' | 'sxzz/astro/base' | 'sxzz/astro/base/javascript' | 'sxzz/astro/base/typescript' | 'sxzz/astro/recommended' | 'sxzz/vue/typescript > typescript-eslint/base' | 'sxzz/vue/typescript > typescript-eslint/eslint-recommended' | 'sxzz/vue/typescript > typescript-eslint/recommended' | 'sxzz/vue/typescript' | 'sxzz/vue' | 'sxzz/unocss' | 'sxzz/prettier' | 'sxzz/command' | 'sxzz/pnpm/package-json' | 'sxzz/pnpm/pnpm-workspace-yaml' | 'sxzz/baseline' | 'sxzz/special/cli' | 'sxzz/special/tests' | 'sxzz/special/allow-default-export' | 'sxzz/special/github' | 'sxzz/special/components'

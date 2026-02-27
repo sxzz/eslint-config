@@ -7,28 +7,28 @@ catalog:
   eslint: ^10.0.2
   eslint-flat-config-utils: ^3.0.1
   globals: ^17.3.0
-  tsdown-preset-sxzz: ^0.3.3
+  tsdown-preset-sxzz: ^0.4.0
 
 catalogs:
   dev:
     '@eslint/config-inspector': ^1.4.2
     '@sxzz/prettier-config': ^2.3.1
-    '@types/node': ^25.3.1
-    '@typescript/native-preview': 7.0.0-dev.20260225.1
+    '@types/node': ^25.3.2
+    '@typescript/native-preview': 7.0.0-dev.20260227.1
     bumpp: ^10.4.1
     eslint-typegen: ^2.3.1
     prettier: ^3.8.1
     rolldown-plugin-require-cjs: ^0.3.3
-    tsdown: ^0.20.3
+    tsdown: ^0.21.0-beta.2
     typescript: ^5.9.3
-    unrun: ^0.2.27
+    unrun: ^0.2.28
   parsers:
     jsonc-eslint-parser: ^3.1.0
     vue-eslint-parser: ^10.4.0
   plugins:
     '@eslint-community/eslint-plugin-eslint-comments': ^4.6.0
     '@eslint/markdown': ^7.5.1
-    '@unocss/eslint-plugin': ^66.6.1
+    '@unocss/eslint-plugin': ^66.6.2
     eslint-config-flat-gitignore: ^2.2.1
     eslint-config-prettier: ^10.1.8
     eslint-plugin-antfu: ^3.2.2
