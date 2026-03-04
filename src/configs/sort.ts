@@ -54,6 +54,7 @@ export const sortPackageJson = (): Config[] => [
             'peerDependencies',
             'peerDependenciesMeta',
             'dependencies',
+            'inlinedDependencies',
             'optionalDependencies',
             'devDependencies',
             'pnpm',
