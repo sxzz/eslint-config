@@ -31,6 +31,7 @@ export interface Rules {
   /**
    * disallow unused `eslint-disable` comments
    * @see https://eslint-community.github.io/eslint-plugin-eslint-comments/rules/no-unused-disable.html
+   * @deprecated
    */
   '@eslint-community/eslint-comments/no-unused-disable'?: Linter.RuleEntry<[]>
   /**
@@ -2066,6 +2067,11 @@ export interface Rules {
    * @see https://github.com/eslint/markdown/blob/main/docs/rules/fenced-code-language.md
    */
   'markdown/fenced-code-language'?: Linter.RuleEntry<MarkdownFencedCodeLanguage>
+  /**
+   * Require or disallow metadata for fenced code blocks
+   * @see https://github.com/eslint/markdown/blob/main/docs/rules/fenced-code-meta.md
+   */
+  'markdown/fenced-code-meta'?: Linter.RuleEntry<MarkdownFencedCodeMeta>
   /**
    * Enforce heading levels increment by one
    * @see https://github.com/eslint/markdown/blob/main/docs/rules/heading-increment.md
@@ -7339,6 +7345,19 @@ type TypescriptEslintPreferOptionalChain = []|[{
 // ----- @typescript-eslint/prefer-promise-reject-errors -----
 type TypescriptEslintPreferPromiseRejectErrors = []|[{
   
+  allow?: (string | {
+    from: "file"
+    name: (string | [string, ...(string)[]])
+    path?: string
+  } | {
+    from: "lib"
+    name: (string | [string, ...(string)[]])
+  } | {
+    from: "package"
+    name: (string | [string, ...(string)[]])
+    package: string
+  })[]
+  
   allowEmptyReject?: boolean
   
   allowThrowingAny?: boolean
@@ -9365,6 +9384,8 @@ type LogicalAssignmentOperators = (([]|["always"]|["always", {
 type MarkdownFencedCodeLanguage = []|[{
   required?: string[]
 }]
+// ----- markdown/fenced-code-meta -----
+type MarkdownFencedCodeMeta = []|[("always" | "never")]
 // ----- markdown/heading-increment -----
 type MarkdownHeadingIncrement = []|[{
   frontmatterTitle?: string
@@ -9373,6 +9394,7 @@ type MarkdownHeadingIncrement = []|[{
 type MarkdownNoDuplicateDefinitions = []|[{
   allowDefinitions?: string[]
   allowFootnoteDefinitions?: string[]
+  checkFootnoteDefinitions?: boolean
 }]
 // ----- markdown/no-duplicate-headings -----
 type MarkdownNoDuplicateHeadings = []|[{
@@ -9414,6 +9436,7 @@ type MarkdownNoSpaceInEmphasis = []|[{
 type MarkdownNoUnusedDefinitions = []|[{
   allowDefinitions?: string[]
   allowFootnoteDefinitions?: string[]
+  checkFootnoteDefinitions?: boolean
 }]
 // ----- markdown/table-column-count -----
 type MarkdownTableColumnCount = []|[{
@@ -10494,6 +10517,8 @@ type PerfectionistSortArrayIncludes = {
       
       flags?: string
     } | string))
+    
+    matchesAstSelector?: string
   }
   
   partitionByComment?: (boolean | (({
@@ -10536,7 +10561,7 @@ type PerfectionistSortArrayIncludes = {
   partitionByNewLine?: boolean
 }[]
 // ----- perfectionist/sort-classes -----
-type PerfectionistSortClasses = []|[{
+type PerfectionistSortClasses = {
   
   fallbackSort?: {
     
@@ -10735,6 +10760,23 @@ type PerfectionistSortClasses = []|[{
   })[]
   newlinesBetween?: ("ignore" | number)
   
+  useConfigurationIf?: {
+    
+    allNamesMatchPattern?: (({
+      
+      pattern: string
+      
+      flags?: string
+    } | string)[] | ({
+      
+      pattern: string
+      
+      flags?: string
+    } | string))
+    
+    matchesAstSelector?: string
+  }
+  
   useExperimentalDependencyDetection?: boolean
   
   ignoreCallbackDependenciesPatterns?: (({
@@ -10787,7 +10829,7 @@ type PerfectionistSortClasses = []|[{
   })
   
   partitionByNewLine?: boolean
-}]
+}[]
 // ----- perfectionist/sort-decorators -----
 type PerfectionistSortDecorators = {
   
@@ -10954,7 +10996,7 @@ type PerfectionistSortDecorators = {
   partitionByNewLine?: boolean
 }[]
 // ----- perfectionist/sort-enums -----
-type PerfectionistSortEnums = []|[{
+type PerfectionistSortEnums = {
   
   fallbackSort?: {
     
@@ -11105,6 +11147,23 @@ type PerfectionistSortEnums = []|[{
   })[]
   newlinesBetween?: ("ignore" | number)
   
+  useConfigurationIf?: {
+    
+    allNamesMatchPattern?: (({
+      
+      pattern: string
+      
+      flags?: string
+    } | string)[] | ({
+      
+      pattern: string
+      
+      flags?: string
+    } | string))
+    
+    matchesAstSelector?: string
+  }
+  
   sortByValue?: ("always" | "ifNumericEnum" | "never")
   
   useExperimentalDependencyDetection?: boolean
@@ -11147,7 +11206,7 @@ type PerfectionistSortEnums = []|[{
   })
   
   partitionByNewLine?: boolean
-}]
+}[]
 // ----- perfectionist/sort-export-attributes -----
 type PerfectionistSortExportAttributes = {
   
@@ -11263,6 +11322,23 @@ type PerfectionistSortExportAttributes = {
     order?: ("asc" | "desc")
   })[]
   newlinesBetween?: ("ignore" | number)
+  
+  useConfigurationIf?: {
+    
+    allNamesMatchPattern?: (({
+      
+      pattern: string
+      
+      flags?: string
+    } | string)[] | ({
+      
+      pattern: string
+      
+      flags?: string
+    } | string))
+    
+    matchesAstSelector?: string
+  }
   
   partitionByComment?: (boolean | (({
     
@@ -11586,6 +11662,23 @@ type PerfectionistSortHeritageClauses = {
   })[]
   newlinesBetween?: ("ignore" | number)
   
+  useConfigurationIf?: {
+    
+    allNamesMatchPattern?: (({
+      
+      pattern: string
+      
+      flags?: string
+    } | string)[] | ({
+      
+      pattern: string
+      
+      flags?: string
+    } | string))
+    
+    matchesAstSelector?: string
+  }
+  
   partitionByNewLine?: boolean
   
   partitionByComment?: (boolean | (({
@@ -11740,6 +11833,23 @@ type PerfectionistSortImportAttributes = {
     order?: ("asc" | "desc")
   })[]
   newlinesBetween?: ("ignore" | number)
+  
+  useConfigurationIf?: {
+    
+    allNamesMatchPattern?: (({
+      
+      pattern: string
+      
+      flags?: string
+    } | string)[] | ({
+      
+      pattern: string
+      
+      flags?: string
+    } | string))
+    
+    matchesAstSelector?: string
+  }
   
   partitionByComment?: (boolean | (({
     
@@ -12183,6 +12293,8 @@ type PerfectionistSortInterfaces = {
       flags?: string
     } | string))
     
+    matchesAstSelector?: string
+    
     declarationMatchesPattern?: (({
       scope?: ("shallow" | "deep")
       
@@ -12358,6 +12470,23 @@ type PerfectionistSortIntersectionTypes = {
     order?: ("asc" | "desc")
   })[]
   newlinesBetween?: ("ignore" | number)
+  
+  useConfigurationIf?: {
+    
+    allNamesMatchPattern?: (({
+      
+      pattern: string
+      
+      flags?: string
+    } | string)[] | ({
+      
+      pattern: string
+      
+      flags?: string
+    } | string))
+    
+    matchesAstSelector?: string
+  }
   
   partitionByComment?: (boolean | (({
     
@@ -12576,6 +12705,8 @@ type PerfectionistSortJsxProps = {
       flags?: string
     } | string))
     
+    matchesAstSelector?: string
+    
     tagMatchesPattern?: (({
       
       pattern: string
@@ -12720,6 +12851,8 @@ type PerfectionistSortMaps = {
       
       flags?: string
     } | string))
+    
+    matchesAstSelector?: string
   }
   
   partitionByComment?: (boolean | (({
@@ -13094,6 +13227,23 @@ type PerfectionistSortNamedExports = {
   })[]
   newlinesBetween?: ("ignore" | number)
   
+  useConfigurationIf?: {
+    
+    allNamesMatchPattern?: (({
+      
+      pattern: string
+      
+      flags?: string
+    } | string)[] | ({
+      
+      pattern: string
+      
+      flags?: string
+    } | string))
+    
+    matchesAstSelector?: string
+  }
+  
   ignoreAlias?: boolean
   
   partitionByComment?: (boolean | (({
@@ -13262,6 +13412,23 @@ type PerfectionistSortNamedImports = {
     order?: ("asc" | "desc")
   })[]
   newlinesBetween?: ("ignore" | number)
+  
+  useConfigurationIf?: {
+    
+    allNamesMatchPattern?: (({
+      
+      pattern: string
+      
+      flags?: string
+    } | string)[] | ({
+      
+      pattern: string
+      
+      flags?: string
+    } | string))
+    
+    matchesAstSelector?: string
+  }
   
   ignoreAlias?: boolean
   
@@ -13505,6 +13672,8 @@ type PerfectionistSortObjectTypes = {
       
       flags?: string
     } | string))
+    
+    matchesAstSelector?: string
     
     declarationMatchesPattern?: (({
       scope?: ("shallow" | "deep")
@@ -13778,6 +13947,8 @@ type PerfectionistSortObjects = {
       flags?: string
     } | string))
     
+    matchesAstSelector?: string
+    
     declarationMatchesPattern?: (({
       scope?: ("shallow" | "deep")
       
@@ -13792,6 +13963,8 @@ type PerfectionistSortObjects = {
       flags?: string
     } | string))
   }
+  
+  partitionByComputedKey?: boolean
   
   styledComponents?: boolean
   
@@ -13971,6 +14144,8 @@ type PerfectionistSortSets = {
       
       flags?: string
     } | string))
+    
+    matchesAstSelector?: string
   }
   
   partitionByComment?: (boolean | (({
@@ -14156,6 +14331,23 @@ type PerfectionistSortUnionTypes = {
   })[]
   newlinesBetween?: ("ignore" | number)
   
+  useConfigurationIf?: {
+    
+    allNamesMatchPattern?: (({
+      
+      pattern: string
+      
+      flags?: string
+    } | string)[] | ({
+      
+      pattern: string
+      
+      flags?: string
+    } | string))
+    
+    matchesAstSelector?: string
+  }
+  
   partitionByComment?: (boolean | (({
     
     pattern: string
@@ -14196,7 +14388,7 @@ type PerfectionistSortUnionTypes = {
   partitionByNewLine?: boolean
 }[]
 // ----- perfectionist/sort-variable-declarations -----
-type PerfectionistSortVariableDeclarations = []|[{
+type PerfectionistSortVariableDeclarations = {
   
   fallbackSort?: {
     
@@ -14317,6 +14509,23 @@ type PerfectionistSortVariableDeclarations = []|[{
   })[]
   newlinesBetween?: ("ignore" | number)
   
+  useConfigurationIf?: {
+    
+    allNamesMatchPattern?: (({
+      
+      pattern: string
+      
+      flags?: string
+    } | string)[] | ({
+      
+      pattern: string
+      
+      flags?: string
+    } | string))
+    
+    matchesAstSelector?: string
+  }
+  
   useExperimentalDependencyDetection?: boolean
   
   partitionByComment?: (boolean | (({
@@ -14357,7 +14566,7 @@ type PerfectionistSortVariableDeclarations = []|[{
   })
   
   partitionByNewLine?: boolean
-}]
+}[]
 // ----- pnpm/json-enforce-catalog -----
 type PnpmJsonEnforceCatalog = []|[{
   
