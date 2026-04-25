@@ -7,14 +7,14 @@ catalog:
   eslint: ^10.1.0
   eslint-flat-config-utils: ^3.0.2
   globals: ^17.4.0
-  tsdown-preset-sxzz: ^0.4.2
+  tsdown-preset-sxzz: ^0.5.0
 
 catalogs:
   dev:
     '@eslint/config-inspector': ^2.0.0
     '@sxzz/prettier-config': ^2.3.1
     '@types/node': ^25.5.0
-    '@typescript/native-preview': 7.0.0-dev.20260327.2
+    '@typescript/native-preview': 7.0.0-dev.20260425.1
     bumpp: ^11.0.1
     eslint-typegen: ^2.3.1
     prettier: ^3.8.1
