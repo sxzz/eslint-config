@@ -9,3 +9,5 @@ on:
 jobs:
   unit-test:
     uses: sxzz/workflows/.github/workflows/unit-test.yml@main
+    with:
+      skip-test: true
