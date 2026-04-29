@@ -15421,9 +15421,6 @@ interface _UnicornPreventAbbreviations_Abbreviations {
 interface _UnicornPreventAbbreviations_BooleanObject {
   [k: string]: boolean | undefined
 }
-interface _UnicornPreventAbbreviations_BooleanObject {
-  [k: string]: boolean | undefined
-}
 // ----- unicorn/relative-url-style -----
 type UnicornRelativeUrlStyle = []|[("never" | "always")]
 // ----- unicorn/string-content -----
