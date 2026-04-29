@@ -1,6 +1,4 @@
 packages: []
-overrides:
-  is-core-module: npm:@no-shims/is-core-module
 
 catalog:
   '@eslint/js': ^10.0.1
