@@ -1,5 +1,5 @@
-import { pluginAntfu, pluginImport } from '../plugins'
-import type { Config } from '../types'
+import { pluginAntfu, pluginImport } from '../plugins.ts'
+import type { Config } from '../types.ts'
 
 export const imports = (): Config[] => [
   {

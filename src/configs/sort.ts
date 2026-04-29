@@ -1,6 +1,5 @@
-import { pluginPerfectionist } from '../plugins'
-
-import type { Config } from '../types'
+import { pluginPerfectionist } from '../plugins.ts'
+import type { Config } from '../types.ts'
 
 export const sortPackageJson = (): Config[] => [
   {

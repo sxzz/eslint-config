@@ -1,5 +1,5 @@
-import { configComments } from '../plugins'
-import type { Config } from '../types'
+import { configComments } from '../plugins.ts'
+import type { Config } from '../types.ts'
 
 export const comments = (): Config[] => [
   {

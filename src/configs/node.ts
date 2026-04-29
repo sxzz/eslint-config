@@ -1,5 +1,5 @@
-import { pluginNode } from '../plugins'
-import type { Config } from '../types'
+import { pluginNode } from '../plugins.ts'
+import type { Config } from '../types.ts'
 
 export const node = (): Config[] => [
   {

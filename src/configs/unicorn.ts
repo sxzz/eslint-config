@@ -1,5 +1,5 @@
-import { pluginUnicorn } from '../plugins'
-import type { Config } from '../types'
+import { pluginUnicorn } from '../plugins.ts'
+import type { Config } from '../types.ts'
 
 export const unicorn = (): Config[] => [
   {

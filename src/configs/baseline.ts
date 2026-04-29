@@ -1,5 +1,5 @@
 import baselineJs from 'eslint-plugin-baseline-js'
-import type { Config } from '../types'
+import type { Config } from '../types.ts'
 
 export interface BaselineOptions {
   baseline?: 'widely' | 'newly' | number

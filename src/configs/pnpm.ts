@@ -1,5 +1,5 @@
-import { pluginPnpm } from '../plugins'
-import type { Config } from '../types'
+import { pluginPnpm } from '../plugins.ts'
+import type { Config } from '../types.ts'
 
 export async function pnpm(): Promise<Config[]> {
   return [

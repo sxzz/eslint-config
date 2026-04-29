@@ -52,9 +52,6 @@ catalogs:
     typescript:
       specifier: ^6.0.3
       version: 6.0.3
-    unrun:
-      specifier: ^0.2.37
-      version: 0.2.37
   parsers:
     jsonc-eslint-parser:
       specifier: ^3.1.0
@@ -267,9 +264,6 @@ importers:
       typescript:
         specifier: catalog:dev
         version: 6.0.3
-      unrun:
-        specifier: catalog:dev
-        version: 0.2.37(synckit@0.11.12)
 
 packages:
 
@@ -2900,8 +2894,8 @@ snapshots:
 
   '@typescript-eslint/project-service@8.56.1(typescript@6.0.3)':
     dependencies:
-      '@typescript-eslint/tsconfig-utils': 8.56.1(typescript@6.0.3)
-      '@typescript-eslint/types': 8.56.1
+      '@typescript-eslint/tsconfig-utils': 8.59.1(typescript@6.0.3)
+      '@typescript-eslint/types': 8.59.1
       debug: 4.4.3
       typescript: 6.0.3
     transitivePeerDependencies:

@@ -21,7 +21,6 @@ catalogs:
     rolldown-plugin-require-cjs: ^0.4.0
     tsdown: ^0.21.10
     typescript: ^6.0.3
-    unrun: ^0.2.37
   parsers:
     jsonc-eslint-parser: ^3.1.0
     vue-eslint-parser: ^10.4.0

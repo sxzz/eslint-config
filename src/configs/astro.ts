@@ -1,5 +1,5 @@
-import { importWithError } from '../utils'
-import type { Config } from '../types'
+import { importWithError } from '../utils.ts'
+import type { Config } from '../types.ts'
 
 export const astro = async (): Promise<Config[]> => {
   const pluginAstro = await importWithError<

@@ -1,7 +1,7 @@
-import { GLOB_VUE } from '../globs'
-import { parserVue, pluginVue, tseslint } from '../plugins'
-import { typescriptCore } from './typescript'
-import type { Config } from '../types'
+import { GLOB_VUE } from '../globs.ts'
+import { parserVue, pluginVue, tseslint } from '../plugins.ts'
+import { typescriptCore } from './typescript.ts'
+import type { Config } from '../types.ts'
 import type { ESLint } from 'eslint'
 
 const vueTs: Config[] = typescriptCore

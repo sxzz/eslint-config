@@ -1,9 +1,9 @@
 import { defineConfig } from 'eslint/config'
-import { GLOB_JS, GLOB_TS, GLOB_TSX } from '../globs'
-import { tseslint } from '../plugins'
-import { restrictedSyntaxJs } from './javascript'
-import type { Rules } from '../typegen'
-import type { Config } from '../types'
+import { GLOB_JS, GLOB_TS, GLOB_TSX } from '../globs.ts'
+import { tseslint } from '../plugins.ts'
+import { restrictedSyntaxJs } from './javascript.ts'
+import type { Rules } from '../typegen.ts'
+import type { Config } from '../types.ts'
 
 export const typescriptCore: Config[] = defineConfig({
   extends: [...tseslint.configs.recommended],

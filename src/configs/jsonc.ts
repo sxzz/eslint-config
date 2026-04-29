@@ -1,5 +1,5 @@
-import { pluginJsonc } from '../plugins'
-import type { Config } from '../types'
+import { pluginJsonc } from '../plugins.ts'
+import type { Config } from '../types.ts'
 
 export const jsonc = (): Config[] => [
   ...pluginJsonc.configs['recommended-with-jsonc'].map((config) => ({

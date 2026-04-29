@@ -1,5 +1,5 @@
-import { pluginDeMorgan } from '../plugins'
-import type { Config } from '../types'
+import { pluginDeMorgan } from '../plugins.ts'
+import type { Config } from '../types.ts'
 
 export const deMorgan = (): Config[] => [
   {

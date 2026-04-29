@@ -1,4 +1,4 @@
-import type { Rules } from './typegen'
+import type { Rules } from './typegen.ts'
 import type { Linter } from 'eslint'
 
 export type Config = Omit<

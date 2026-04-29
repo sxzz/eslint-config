@@ -30,10 +30,10 @@ import {
   vue,
   yml,
   type BaselineOptions,
-} from './configs'
-import { hasAstro, hasUnocss, hasVue } from './env'
-import type { ConfigNames } from './typegen'
-import type { Config } from './types'
+} from './configs/index.ts'
+import { hasAstro, hasUnocss, hasVue } from './env.ts'
+import type { ConfigNames } from './typegen.ts'
+import type { Config } from './types.ts'
 import type { Linter } from 'eslint'
 
 /** Ignore common files and include javascript support */

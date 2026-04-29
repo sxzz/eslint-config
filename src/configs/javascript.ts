@@ -1,6 +1,6 @@
 import globals from 'globals'
-import { configJs, pluginSxzz, pluginUnusedImports } from '../plugins'
-import type { Config } from '../types'
+import { configJs, pluginSxzz, pluginUnusedImports } from '../plugins.ts'
+import type { Config } from '../types.ts'
 
 export const restrictedSyntaxJs: string[] = [
   'ForInStatement',

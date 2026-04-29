@@ -1,5 +1,5 @@
-import { pluginJsdoc } from '../plugins'
-import type { Config } from '../types'
+import { pluginJsdoc } from '../plugins.ts'
+import type { Config } from '../types.ts'
 
 export const jsdoc = (): Config[] => [
   {

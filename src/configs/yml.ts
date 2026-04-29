@@ -1,6 +1,6 @@
-import { GLOB_YAML } from '../globs'
-import { pluginYml } from '../plugins'
-import type { Config } from '../types'
+import { GLOB_YAML } from '../globs.ts'
+import { pluginYml } from '../plugins.ts'
+import type { Config } from '../types.ts'
 
 const yamlConfigs = Array.from(
   new Set([...pluginYml.configs.standard, ...pluginYml.configs.prettier]),

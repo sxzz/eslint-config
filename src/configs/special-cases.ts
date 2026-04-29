@@ -4,9 +4,9 @@ import {
   GLOB_SRC,
   GLOB_SRC_EXT,
   GLOB_TSX,
-} from '../globs'
-import { pluginImport } from '../plugins'
-import type { Config } from '../types'
+} from '../globs.ts'
+import { pluginImport } from '../plugins.ts'
+import type { Config } from '../types.ts'
 
 export const specialCases = (): Config[] => [
   {

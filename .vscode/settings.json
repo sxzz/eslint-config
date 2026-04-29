@@ -1,5 +1,4 @@
 {
   "editor.formatOnSave": true,
-  "exportall.config.folderListener": ["/src/configs"],
-  "exportall.config.semis": false
+  "autoBarrel.files.keepExtensionOnExport": true
 }

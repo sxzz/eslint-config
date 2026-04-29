@@ -1,5 +1,5 @@
-import { pluginPrettier, pluginPrettierRecommended } from '../plugins'
-import type { Config } from '../types'
+import { pluginPrettier, pluginPrettierRecommended } from '../plugins.ts'
+import type { Config } from '../types.ts'
 
 const rules = { ...pluginPrettierRecommended.rules }
 delete rules['vue/html-self-closing']

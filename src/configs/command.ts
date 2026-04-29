@@ -1,5 +1,5 @@
-import { configCommand } from '../plugins'
-import type { Config } from '../types'
+import { configCommand } from '../plugins.ts'
+import type { Config } from '../types.ts'
 
 export const command = (): Config[] => [
   {
