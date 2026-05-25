@@ -9,7 +9,7 @@ catalog:
 
 catalogs:
   dev:
-    '@eslint/config-inspector': ^2.0.1
+    '@eslint/config-inspector': ^3.0.0
     '@sxzz/prettier-config': ^2.3.1
     '@types/node': ^25.6.2
     '@typescript/native-preview': 7.0.0-dev.20260508.1
