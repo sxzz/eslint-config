@@ -1,5 +1,8 @@
 packages: []
 
+overrides:
+  fflate: 0.8.2
+
 catalog:
   '@eslint/js': ^10.0.1
   eslint: ^10.4.0

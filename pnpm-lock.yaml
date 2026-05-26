@@ -24,7 +24,7 @@ catalogs:
   dev:
     '@eslint/config-inspector':
       specifier: ^3.0.2
-      version: 3.0.2
+      version: 3.0.3
     '@sxzz/prettier-config':
       specifier: ^2.3.1
       version: 2.3.1
@@ -133,6 +133,9 @@ catalogs:
       specifier: ^8.59.4
       version: 8.59.4
 
+overrides:
+  fflate: 0.8.2
+
 importers:
 
   .:
@@ -221,7 +224,7 @@ importers:
     devDependencies:
       '@eslint/config-inspector':
         specifier: catalog:dev
-        version: 3.0.2(eslint@10.4.0(jiti@2.7.0))(typescript@6.0.3)
+        version: 3.0.3(eslint@10.4.0(jiti@2.7.0))(typescript@6.0.3)
       '@sxzz/prettier-config':
         specifier: catalog:dev
         version: 2.3.1
@@ -377,8 +380,8 @@ packages:
     resolution: {integrity: sha512-ii6Bw9jJ2zi2cWA2Z+9/QZ/+3DX6kwaV5Q986D/CdP3Lap3w/pgQZ373FV7byY/i7L4IRH/G43I5dz1ClsCbpA==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
 
-  '@eslint/config-inspector@3.0.2':
-    resolution: {integrity: sha512-J/TpVSSXqZs6+dkYfM2EXoTvsgxkO8xQTu6HA295UtugYRiomedOVtRkjnXKMGk+yJHPq0YTka4yFKUzImDbcA==}
+  '@eslint/config-inspector@3.0.3':
+    resolution: {integrity: sha512-KIrUUkHq1SE8oCg01pswMNFxXLREJn3wTqg0wmJMYZVQafp93KHV4najJde2QqNYt/5KCtTUJwnoC9PhI9R2WA==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
     hasBin: true
     peerDependencies:
@@ -1534,8 +1537,8 @@ packages:
       picomatch:
         optional: true
 
-  fflate@0.8.3:
-    resolution: {integrity: sha512-tbZNuJrLwGUp3zshBtdy4W+ORxZuIh8a5ilyIEQDC5rY1f3U20JMry0Ll3WBzU58EZKsEuJFXhb5gwv8CsPvgA==}
+  fflate@0.8.2:
+    resolution: {integrity: sha512-cPJU47OaAoCbg0pBvzsgpTPhmhqI5eJjh/JIu8tPj5q+T7iLvW/JAYUqmE7KOB4R1ZyEhzBaIQpQpardBF5z8A==}
 
   file-entry-cache@8.0.0:
     resolution: {integrity: sha512-XXTUwCvisa5oacNGRP9SfNtYBNAMi+RPwBFmblZEF7N7swHYQS6/Zfk7SRwx4D5j3CH211YNRco1DEMNVfZCnQ==}
@@ -2262,8 +2265,8 @@ packages:
   util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
 
-  valibot@1.4.0:
-    resolution: {integrity: sha512-iC/x7fVcSyOwlm/VSt7RlHnzNGLGvR9GnxdifUeWoCJo0q4ZZvrVkIHC6faTlkxG47I2Y4UrFquPuVHCrOnrLg==}
+  valibot@1.4.1:
+    resolution: {integrity: sha512-klCmFTz2jeDluy9RwX+F884TCiogtdBJ/YaxSx1EOBYXa3NXNWj8kR1jjN8rzluwojJVWWaHJ4r1U5LfICnM3g==}
     peerDependencies:
       typescript: '>=5'
     peerDependenciesMeta:
@@ -2338,7 +2341,7 @@ snapshots:
       '@andrewbranch/untar.js': 1.0.3
       '@loaderkit/resolve': 1.0.6
       cjs-module-lexer: 1.4.3
-      fflate: 0.8.3
+      fflate: 0.8.2
       lru-cache: 11.5.0
       semver: 7.8.1
       typescript: 5.6.1-rc
@@ -2456,7 +2459,7 @@ snapshots:
     dependencies:
       '@eslint/core': 1.2.1
 
-  '@eslint/config-inspector@3.0.2(eslint@10.4.0(jiti@2.7.0))(typescript@6.0.3)':
+  '@eslint/config-inspector@3.0.3(eslint@10.4.0(jiti@2.7.0))(typescript@6.0.3)':
     dependencies:
       ansis: 4.3.0
       cac: 7.0.0
@@ -2976,9 +2979,9 @@ snapshots:
       '@unocss/core': 66.7.0
       magic-string: 0.30.21
 
-  '@valibot/to-json-schema@1.7.0(valibot@1.4.0(typescript@6.0.3))':
+  '@valibot/to-json-schema@1.7.0(valibot@1.4.1(typescript@6.0.3))':
     dependencies:
-      valibot: 1.4.0(typescript@6.0.3)
+      valibot: 1.4.1(typescript@6.0.3)
 
   acorn-jsx@5.3.2(acorn@8.16.0):
     dependencies:
@@ -3131,14 +3134,14 @@ snapshots:
 
   devframe@0.2.3(typescript@6.0.3):
     dependencies:
-      '@valibot/to-json-schema': 1.7.0(valibot@1.4.0(typescript@6.0.3))
+      '@valibot/to-json-schema': 1.7.0(valibot@1.4.1(typescript@6.0.3))
       birpc: 4.0.0
       cac: 7.0.0
       h3: 2.0.1-rc.22
       logs-sdk: 0.0.6
       mrmime: 2.0.1
       pathe: 2.0.3
-      valibot: 1.4.0(typescript@6.0.3)
+      valibot: 1.4.1(typescript@6.0.3)
       ws: 8.21.0
     transitivePeerDependencies:
       - bufferutil
@@ -3521,7 +3524,7 @@ snapshots:
     optionalDependencies:
       picomatch: 4.0.4
 
-  fflate@0.8.3: {}
+  fflate@0.8.2: {}
 
   file-entry-cache@8.0.0:
     dependencies:
@@ -4427,7 +4430,7 @@ snapshots:
 
   util-deprecate@1.0.2: {}
 
-  valibot@1.4.0(typescript@6.0.3):
+  valibot@1.4.1(typescript@6.0.3):
     optionalDependencies:
       typescript: 6.0.3
 
