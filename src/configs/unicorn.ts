@@ -26,6 +26,7 @@ export const unicorn = (): Config[] => [
       'unicorn/import-style': 'off',
       'unicorn/no-abusive-eslint-disable': 'off',
       'unicorn/no-array-for-each': 'off',
+      'unicorn/no-duplicate-set-values': 'error',
       'unicorn/no-empty-file': 'off',
       'unicorn/no-for-loop': 'error',
       'unicorn/no-process-exit': 'off',
