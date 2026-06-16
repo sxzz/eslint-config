@@ -20,7 +20,11 @@ export const unicorn = (): Config[] => [
         'error',
         {
           cases: { kebabCase: true, pascalCase: true },
-          ignore: [/^[A-Z]+\..*$/, /import_map\.json/],
+          ignore: [
+            /^[A-Z]+\..*$/,
+            /^[a-z]{2}-[A-Z]{2}$/, // zh-CN, en-US, etc.
+            /import_map\.json/,
+          ],
         },
       ],
       'unicorn/import-style': 'off',
