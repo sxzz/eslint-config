@@ -29,7 +29,7 @@ catalogs:
     eslint-config-flat-gitignore: ^2.3.0
     eslint-config-prettier: ^10.1.8
     eslint-plugin-antfu: ^3.2.3
-    eslint-plugin-astro: ^1.7.0
+    eslint-plugin-astro: ^2.0.0
     eslint-plugin-baseline-js: ^0.6.2
     eslint-plugin-command: ^3.5.2
     eslint-plugin-de-morgan: ^2.1.2
