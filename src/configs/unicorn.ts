@@ -1,12 +1,15 @@
+import { GLOB_SRC } from '../globs.ts'
 import { pluginUnicorn } from '../plugins.ts'
 import type { Config } from '../types.ts'
 
 export const unicorn = (): Config[] => [
   {
     ...pluginUnicorn.configs.unopinionated,
+    files: [GLOB_SRC],
     name: 'sxzz/unicorn/unopinionated',
   },
   {
+    files: [GLOB_SRC],
     name: 'sxzz/unicorn',
     rules: {
       'unicorn/catch-error-name': 'error',
