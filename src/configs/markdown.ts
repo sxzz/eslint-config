@@ -3,12 +3,10 @@ import { pluginMarkdown } from '../plugins.ts'
 import type { Config } from '../types.ts'
 
 export const markdown = (): Config[] => [
-  ...pluginMarkdown.configs.processor.map(
-    (config): Config => ({
-      ...(config as Config),
-      name: `sxzz/${config.name || 'anonymous'}`,
-    }),
-  ),
+  ...pluginMarkdown.configs.processor.map((config): Config => ({
+    ...(config as Config),
+    name: `sxzz/${config.name || 'anonymous'}`,
+  })),
 
   {
     files: [`${GLOB_MARKDOWN}/${GLOB_SRC}`, `${GLOB_MARKDOWN}/${GLOB_VUE}`],
