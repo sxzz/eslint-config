@@ -1,7 +1,7 @@
 {
   "name": "@sxzz/eslint-config",
   "type": "module",
-  "version": "8.2.1",
+  "version": "8.3.0",
   "packageManager": "pnpm@11.15.1",
   "description": "ESLint config for @sxzz.",
   "author": "Kevin Deng <sxzz@sxzz.moe>",
