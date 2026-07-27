@@ -28,9 +28,9 @@ Require Node.js >= 20.0.0, and ESLint >= 9.5.0.
 
 ### Optional Dependencies
 
-| Feature | Optional Dependency |
-| ------- | ------------------- |
-| Astro   | `eslint-plugin-astro` |
+| Feature | Optional Dependency     |
+| ------- | ----------------------- |
+| Astro   | `eslint-plugin-astro`   |
 | UnoCSS  | `@unocss/eslint-plugin` |
 
 ## Usage
@@ -46,9 +46,7 @@ export default sxzz(
     astro: false, // auto detection
     unocss: false, // auto detection
   },
-  [
-    /* your custom config */
-  ],
+  [/* your custom config */],
 ).removeRules('foo/bar') // see more in https://github.com/antfu/eslint-flat-config-utils
 ```
 

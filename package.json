@@ -36,6 +36,7 @@
     "test": "echo Skip",
     "lint": "eslint --max-warnings=0",
     "lint:fix": "pnpm run lint --fix",
+    "format": "prettier --write .",
     "release": "bumpp",
     "typecheck": "tsgo --noEmit",
     "prepublishOnly": "pnpm run build"

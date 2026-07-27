@@ -35,6 +35,7 @@ export const markdown = (): Config[] => [
       'node/prefer-global/process': 'off',
 
       'unicorn/no-anonymous-default-export': 'off',
+      'unicorn/no-top-level-side-effects': 'off',
       'unicorn/no-useless-undefined': 'off',
 
       'unused-imports/no-unused-imports': 'off',
