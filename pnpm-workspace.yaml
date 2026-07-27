@@ -2,9 +2,9 @@ packages: []
 
 catalog:
   '@eslint/js': ^10.0.1
-  eslint: ^10.7.0
+  eslint: ^10.8.0
   eslint-flat-config-utils: ^3.2.0
-  globals: ^17.7.0
+  globals: ^17.8.0
   tsdown-preset-sxzz: ^0.6.0
 
 catalogs:
@@ -17,7 +17,7 @@ catalogs:
     eslint-typegen: ^2.3.1
     prettier: ^3.9.6
     rolldown-plugin-require-cjs: ^0.4.1
-    tsdown: ^0.22.13
+    tsdown: ^0.22.14
     typescript: ^6.0.3
   parsers:
     jsonc-eslint-parser: ^3.1.0
@@ -33,8 +33,8 @@ catalogs:
     eslint-plugin-baseline-js: ^0.7.0
     eslint-plugin-command: ^3.5.3
     eslint-plugin-de-morgan: ^2.1.3
-    eslint-plugin-importer: ^0.3.0
-    eslint-plugin-jsdoc: ^63.2.0
+    eslint-plugin-importer: ^0.4.1
+    eslint-plugin-jsdoc: ^63.3.0
     eslint-plugin-jsonc: ^3.3.0
     eslint-plugin-n: ^18.2.2
     eslint-plugin-perfectionist: ^5.10.0
