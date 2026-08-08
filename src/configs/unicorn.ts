@@ -12,13 +12,11 @@ export const unicorn = (): Config[] => [
     files: [GLOB_SRC],
     name: 'sxzz/unicorn',
     rules: {
-      'unicorn/catch-error-name': 'error',
-      'unicorn/consistent-empty-array-spread': 'error',
+      'unicorn/consistent-arrow-return-style': 'off',
       'unicorn/consistent-function-scoping': [
         'error',
         { checkArrowFunctions: false },
       ],
-      'unicorn/custom-error-definition': 'error',
       'unicorn/filename-case': [
         'error',
         {
@@ -33,6 +31,7 @@ export const unicorn = (): Config[] => [
       'unicorn/import-style': 'off',
       'unicorn/no-abusive-eslint-disable': 'off',
       'unicorn/no-array-for-each': 'off',
+      'unicorn/no-barrel-files': 'off',
       'unicorn/no-duplicate-set-values': 'error',
       'unicorn/no-empty-file': 'off',
       'unicorn/no-for-each': 'off',
@@ -56,6 +55,7 @@ export const unicorn = (): Config[] => [
       'unicorn/require-array-sort-compare': 'off',
       // https://github.com/sindresorhus/eslint-plugin-unicorn/issues/2710
       'unicorn/require-module-specifiers': 'off',
+      'unicorn/single-line-block-comment-style': 'off',
     },
   },
 ]
