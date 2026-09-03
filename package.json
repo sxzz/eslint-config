@@ -2,7 +2,6 @@
   "name": "@sxzz/eslint-config",
   "type": "module",
   "version": "8.5.0",
-  "packageManager": "pnpm@11.20.0",
   "description": "ESLint config for @sxzz.",
   "author": "Kevin Deng <sxzz@sxzz.moe>",
   "license": "MIT",
@@ -26,7 +25,14 @@
     "access": "public"
   },
   "engines": {
-    "node": "^22.19.0 || ^24.11.0 || >=26.0.0"
+    "node": "^22.23.0 || ^24.15.0 || >=26.0.0"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "^12.3.1",
+      "onFail": "download"
+    }
   },
   "scripts": {
     "dev": "eslint-config-inspector --config eslint-inspector.config.ts",
