@@ -47,6 +47,7 @@ export const sortPackageJson = (): Config[] => [
             'icon',
             'files',
             'engines',
+            'devEngines',
             'activationEvents',
             'contributes',
             'scripts',
