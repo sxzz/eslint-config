@@ -165,6 +165,7 @@ export const sortTsconfig = (): Config[] => [
             'noImplicitThis',
             'noPropertyAccessFromIndexSignature',
             'noUncheckedIndexedAccess',
+            'noUncheckedSideEffectImports',
             'noUnusedLocals',
             'noUnusedParameters',
             'useUnknownInCatchVariables',
