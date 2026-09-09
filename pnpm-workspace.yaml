@@ -17,7 +17,7 @@ catalogs:
     eslint-typegen: ^2.3.1
     prettier: ^3.9.6
     rolldown-plugin-require-cjs: ^0.4.1
-    tsdown: ^0.22.14
+    tsdown: ^0.23.0
     typescript: ^6.0.3
   parsers:
     jsonc-eslint-parser: ^3.3.0
