@@ -14,6 +14,7 @@
   "bugs": {
     "url": "https://github.com/sxzz/eslint-config/issues"
   },
+  "sideEffects": false,
   "exports": {
     ".": "./dist/index.mjs",
     "./package.json": "./package.json"
