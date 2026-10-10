@@ -31,7 +31,7 @@
   "devEngines": {
     "packageManager": {
       "name": "pnpm",
-      "version": "12.5.0",
+      "version": "12.10.1",
       "onFail": "download"
     }
   },
@@ -45,7 +45,7 @@
     "lint:fix": "pnpm run lint --fix",
     "format": "prettier --write .",
     "release": "bumpp",
-    "typecheck": "tsgo --noEmit",
+    "typecheck": "tsc --noEmit",
     "prepublishOnly": "pnpm run build"
   },
   "peerDependencies": {
