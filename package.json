@@ -83,7 +83,7 @@
     "eslint-plugin-sxzz": "catalog:plugins",
     "eslint-plugin-unicorn": "catalog:plugins",
     "eslint-plugin-unused-imports": "catalog:plugins",
-    "eslint-plugin-vue": "catalog:plugins",
+    "eslint-plugin-vuekit": "catalog:plugins",
     "eslint-plugin-yml": "catalog:plugins",
     "globals": "catalog:",
     "jsonc-eslint-parser": "catalog:parsers",

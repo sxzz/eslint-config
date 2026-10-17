@@ -2,7 +2,6 @@ import { GLOB_VUE } from '../globs.ts'
 import { parserVue, pluginVue, tseslint } from '../plugins.ts'
 import { typescriptCore } from './typescript.ts'
 import type { Config } from '../types.ts'
-import type { ESLint } from 'eslint'
 
 const vueTs: Config[] = typescriptCore
   .filter((config) => config.name !== 'typescript-eslint/base')
@@ -14,7 +13,7 @@ const vueTs: Config[] = typescriptCore
     }
   })
 
-const recommendedRules = pluginVue.configs['flat/recommended']
+const recommendedRules = pluginVue.configs.recommended
   .map((c) => c.rules)
   .reduce((acc, c) => ({ ...acc, ...c }), {}) as any
 
@@ -35,10 +34,10 @@ export const vue = (): Config[] => [
     },
     name: 'sxzz/vue',
     plugins: {
-      '@typescript-eslint': tseslint.plugin as ESLint.Plugin,
+      '@typescript-eslint': tseslint.plugin,
       vue: pluginVue,
     },
-    processor: pluginVue.processors['.vue'],
+    processor: pluginVue.processors.vue,
     rules: {
       ...recommendedRules,
 
