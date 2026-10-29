@@ -2,10 +2,12 @@ import { writeFile } from 'node:fs/promises'
 import { styleText } from 'node:util'
 import { flatConfigsToRulesDTS } from 'eslint-typegen/core'
 import { builtinRules } from 'eslint/use-at-your-own-risk'
+import { oxfmt } from '../src/configs/index.ts'
 import { presetAll } from '../src/presets.ts'
 
 const configs = [
   ...(await presetAll()),
+  ...(await oxfmt()),
   {
     plugins: { '': { rules: Object.fromEntries(builtinRules) } },
   },
