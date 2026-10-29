@@ -62,6 +62,7 @@
     }
   },
   "dependencies": {
+    "@e18e/eslint-plugin": "catalog:plugins",
     "@eslint-community/eslint-plugin-eslint-comments": "catalog:plugins",
     "@eslint/js": "catalog:",
     "@eslint/markdown": "catalog:plugins",

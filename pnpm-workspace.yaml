@@ -1,4 +1,15 @@
+minimumReleaseAge: 0
+minimumReleaseAgeExcludePrune: true
+trustLockfile: true
+trustPolicy: no-downgrade
+trustPolicyIgnoreAfter: 10080 # 7 days
+trustPolicyExcludePrune: true
+shellEmulator: true
+
 packages: []
+
+allowBuilds:
+  esbuild: false
 
 catalog:
   '@eslint/js': ^10.0.1
@@ -23,6 +34,7 @@ catalogs:
     jsonc-eslint-parser: ^3.3.0
     vue-eslint-parser: ^10.4.1
   plugins:
+    '@e18e/eslint-plugin': ^0.8.1
     '@eslint-community/eslint-plugin-eslint-comments': ^4.8.1
     '@eslint/markdown': ^8.0.3
     '@unocss/eslint-plugin': ^66.11.0
@@ -47,12 +59,3 @@ catalogs:
     eslint-plugin-vuekit: ^11.0.0-beta.0
     eslint-plugin-yml: ^3.9.0
     typescript-eslint: ^8.72.0
-
-allowBuilds:
-  esbuild: false
-
-minimumReleaseAge: 0
-shellEmulator: true
-trustLockfile: true
-trustPolicy: no-downgrade
-trustPolicyIgnoreAfter: 10080 # 7 days

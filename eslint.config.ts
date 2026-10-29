@@ -8,6 +8,16 @@ export default sxzz({
   },
 }).append(
   {
+    files: ['package.json'],
+    rules: {
+      // aliased to `typescript@7`, alongside `typescript@6`
+      'e18e/ban-dependencies': [
+        'error',
+        { allowed: ['@typescript/native-preview'] },
+      ],
+    },
+  },
+  {
     files: ['src/**/*.ts'],
     rules: {
       'perfectionist/sort-objects': 'error',

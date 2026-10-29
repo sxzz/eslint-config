@@ -9,6 +9,7 @@ import {
   command,
   comments,
   deMorgan,
+  e18e,
   ignores,
   imports,
   javascript,
@@ -31,7 +32,7 @@ import {
   yml,
   type BaselineOptions,
 } from './configs/index.ts'
-import { hasAstro, hasUnocss, hasVue } from './env.ts'
+import { hasAstro, hasPnpmWorkspace, hasUnocss, hasVue } from './env.ts'
 import type { ConfigNames } from './typegen.ts'
 import type { Config } from './types.ts'
 import type { Linter } from 'eslint'
@@ -47,6 +48,7 @@ export const presetJavaScript = (): Config[] => [
   ...jsdoc(),
   ...regexp(),
   ...deMorgan(),
+  ...e18e(),
 ]
 /** Includes basic json(c) file support and sorting json keys */
 export const presetJsonc = (): Config[] => [
@@ -99,7 +101,7 @@ export interface Options {
   command?: boolean
   /** markdown support. @default true */
   markdown?: boolean
-  /** @default false */
+  /** pnpm support. Auto-enable if `pnpm-workspace.yaml` is found. */
   pnpm?: boolean
   /** Prettier support. @default true */
   prettier?: boolean
@@ -121,7 +123,7 @@ export function sxzz(
     baseline: enableBaseline = true,
     command: enableCommand = true,
     markdown: enableMarkdown = true,
-    pnpm: enablePnpm = false,
+    pnpm: enablePnpm = hasPnpmWorkspace(),
     prettier: enablePrettier = true,
     unocss: enableUnocss = hasUnocss(),
     vue: enableVue = hasVue(),
