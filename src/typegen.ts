@@ -3504,6 +3504,11 @@ export interface Rules {
    */
   'operator-linebreak'?: Linter.RuleEntry<OperatorLinebreak>
   /**
+   * Format code via oxfmt
+   * @see https://github.com/ntnyq/eslint-plugin-oxfmt
+   */
+  'oxfmt/oxfmt'?: Linter.RuleEntry<OxfmtOxfmt>
+  /**
    * Require or disallow padding within blocks
    * @see https://eslint.org/docs/latest/rules/padded-blocks
    * @deprecated
@@ -11781,6 +11786,321 @@ type OperatorLinebreak = []|[("after" | "before" | "none" | null)]|[("after" | "
     [k: string]: ("after" | "before" | "none" | "ignore") | undefined
   }
 }]
+// ----- oxfmt/oxfmt -----
+type OxfmtOxfmt = []|[{
+  
+  arrowParens?: ("always" | "avoid")
+  
+  astro?: (boolean | {
+    
+    allowShorthand?: boolean
+    
+    compressHTML?: ("jsx" | "html" | "none")
+    
+    skipFrontmatter?: boolean
+  })
+  
+  bracketSameLine?: boolean
+  
+  bracketSpacing?: boolean
+  
+  embeddedLanguageFormatting?: ("auto" | "off")
+  
+  endOfLine?: ("lf" | "crlf" | "cr")
+  
+  experimentalOperatorPosition?: ("start" | "end")
+  
+  htmlWhitespaceSensitivity?: ("css" | "ignore" | "strict")
+  
+  ignorePatterns?: string[]
+  
+  insertFinalNewline?: boolean
+  
+  jsdoc?: (boolean | {
+    
+    addDefaultToDescription?: boolean
+    
+    bracketSpacing?: boolean
+    
+    capitalizeDescriptions?: boolean
+    
+    commentLineStrategy?: ("singleLine" | "multiline" | "keep")
+    
+    descriptionTag?: boolean
+    
+    descriptionWithDot?: boolean
+    
+    keepUnparsableExampleIndent?: boolean
+    
+    lineWrappingStyle?: ("greedy" | "balance")
+    
+    preferCodeFences?: boolean
+    
+    separateReturnsFromParam?: boolean
+    
+    separateTagGroups?: boolean
+  })
+  
+  jsxSingleQuote?: boolean
+  
+  objectWrap?: ("preserve" | "collapse")
+  
+  printWidth?: number
+  
+  proseWrap?: ("always" | "never" | "preserve")
+  
+  quoteProps?: ("as-needed" | "consistent" | "preserve")
+  
+  semi?: boolean
+  
+  singleAttributePerLine?: boolean
+  
+  singleQuote?: boolean
+  
+  sortImports?: (boolean | {
+    
+    customGroups?: {
+      
+      elementNamePattern?: string[]
+      
+      groupName?: string
+      
+      modifiers?: string[]
+      
+      selector?: string
+    }[]
+    
+    groups?: (string | string[] | {
+      
+      newlinesBetween: boolean
+    })[]
+    
+    ignoreCase?: boolean
+    
+    internalPattern?: string[]
+    
+    newlinesBetween?: boolean
+    
+    order?: ("asc" | "desc")
+    
+    partitionByComment?: boolean
+    
+    partitionByNewline?: boolean
+    
+    sortSideEffects?: boolean
+  })
+  
+  sortPackageJson?: (boolean | {
+    
+    sortScripts?: boolean
+  })
+  
+  sortTailwindcss?: (boolean | {
+    
+    attributes?: string[]
+    
+    config?: string
+    
+    functions?: string[]
+    
+    preserveDuplicates?: boolean
+    
+    preserveWhitespace?: boolean
+    
+    stylesheet?: string
+  })
+  
+  svelte?: (boolean | {
+    
+    allowShorthand?: boolean
+    
+    indentScriptAndStyle?: boolean
+    
+    sortOrder?: string
+  })
+  
+  tabWidth?: number
+  
+  trailingComma?: ("all" | "es5" | "none")
+  
+  useTabs?: boolean
+  
+  vueIndentScriptAndStyle?: boolean
+  
+  configPath?: string
+  
+  disableNestedConfig?: boolean
+  
+  editorconfig?: (boolean | {
+    
+    cwd?: string
+    
+    onlyCwd?: boolean
+  })
+  
+  ignorePath?: (string | string[])
+  
+  respectOxfmtDefaultIgnores?: boolean
+  
+  useConfig?: boolean
+  
+  withNodeModules?: boolean
+  
+  associations?: {
+    
+    excludeFiles?: string[]
+    
+    files: string[]
+    
+    language: ("javascript" | "jsx" | "typescript" | "tsx" | "json" | "jsonc" | "json5" | "css" | "scss" | "less" | "graphql" | "yaml" | "markdown" | "toml" | "html" | "angular-html" | "vue" | "svelte" | "astro" | "handlebars" | "mdx")
+  }[]
+  
+  overrides?: {
+    
+    excludeFiles?: string[]
+    
+    files: string[]
+    
+    options?: {
+      
+      arrowParens?: ("always" | "avoid")
+      
+      astro?: (boolean | {
+        
+        allowShorthand?: boolean
+        
+        compressHTML?: ("jsx" | "html" | "none")
+        
+        skipFrontmatter?: boolean
+      })
+      
+      bracketSameLine?: boolean
+      
+      bracketSpacing?: boolean
+      
+      embeddedLanguageFormatting?: ("auto" | "off")
+      
+      endOfLine?: ("lf" | "crlf" | "cr")
+      
+      experimentalOperatorPosition?: ("start" | "end")
+      
+      htmlWhitespaceSensitivity?: ("css" | "ignore" | "strict")
+      
+      insertFinalNewline?: boolean
+      
+      jsdoc?: (boolean | {
+        
+        addDefaultToDescription?: boolean
+        
+        bracketSpacing?: boolean
+        
+        capitalizeDescriptions?: boolean
+        
+        commentLineStrategy?: ("singleLine" | "multiline" | "keep")
+        
+        descriptionTag?: boolean
+        
+        descriptionWithDot?: boolean
+        
+        keepUnparsableExampleIndent?: boolean
+        
+        lineWrappingStyle?: ("greedy" | "balance")
+        
+        preferCodeFences?: boolean
+        
+        separateReturnsFromParam?: boolean
+        
+        separateTagGroups?: boolean
+      })
+      
+      jsxSingleQuote?: boolean
+      
+      objectWrap?: ("preserve" | "collapse")
+      
+      printWidth?: number
+      
+      proseWrap?: ("always" | "never" | "preserve")
+      
+      quoteProps?: ("as-needed" | "consistent" | "preserve")
+      
+      semi?: boolean
+      
+      singleAttributePerLine?: boolean
+      
+      singleQuote?: boolean
+      
+      sortImports?: (boolean | {
+        
+        customGroups?: {
+          
+          elementNamePattern?: string[]
+          
+          groupName?: string
+          
+          modifiers?: string[]
+          
+          selector?: string
+        }[]
+        
+        groups?: (string | string[] | {
+          
+          newlinesBetween: boolean
+        })[]
+        
+        ignoreCase?: boolean
+        
+        internalPattern?: string[]
+        
+        newlinesBetween?: boolean
+        
+        order?: ("asc" | "desc")
+        
+        partitionByComment?: boolean
+        
+        partitionByNewline?: boolean
+        
+        sortSideEffects?: boolean
+      })
+      
+      sortPackageJson?: (boolean | {
+        
+        sortScripts?: boolean
+      })
+      
+      sortTailwindcss?: (boolean | {
+        
+        attributes?: string[]
+        
+        config?: string
+        
+        functions?: string[]
+        
+        preserveDuplicates?: boolean
+        
+        preserveWhitespace?: boolean
+        
+        stylesheet?: string
+      })
+      
+      svelte?: (boolean | {
+        
+        allowShorthand?: boolean
+        
+        indentScriptAndStyle?: boolean
+        
+        sortOrder?: string
+      })
+      
+      tabWidth?: number
+      
+      trailingComma?: ("all" | "es5" | "none")
+      
+      useTabs?: boolean
+      
+      vueIndentScriptAndStyle?: boolean
+    }
+  }[]
+}]
 // ----- padded-blocks -----
 type PaddedBlocks = []|[(("always" | "never") | {
   blocks?: ("always" | "never")
@@ -19328,4 +19648,4 @@ type Yoda = []|[("always" | "never")]|[("always" | "never"), {
   onlyEquality?: boolean
 }]
 // Names of all the configs
-export type ConfigNames = 'sxzz/global-ignores' | 'sxzz/gitignore' | 'sxzz/js/recommended' | 'sxzz/js' | 'sxzz/comments/recommended' | 'sxzz/comments' | 'sxzz/imports' | 'sxzz/unicorn/unopinionated' | 'sxzz/unicorn' | 'sxzz/node' | 'sxzz/jsdoc' | 'sxzz/regexp' | 'sxzz/de-morgan' | 'sxzz/e18e' | 'sxzz/typescript > typescript-eslint/base' | 'sxzz/typescript > typescript-eslint/eslint-recommended' | 'sxzz/typescript > typescript-eslint/recommended' | 'sxzz/typescript' | 'sxzz/typescript/dts-rules' | 'sxzz/typescript/cjs-rules' | 'sxzz/sort/imports' | 'sxzz/markdown/recommended/plugin' | 'sxzz/markdown/recommended/processor' | 'sxzz/markdown/recommended/code-blocks' | 'sxzz/markdown-rules' | 'sxzz/yaml/standard' | 'sxzz/yaml/standard' | 'sxzz/yaml/standard' | 'sxzz/yaml/standard' | 'sxzz/yaml' | 'sxzz/jsonc/recommended' | 'sxzz/jsonc/recommended' | 'sxzz/jsonc/recommended' | 'sxzz/jsonc' | 'sxzz/sort/package.json' | 'sxzz/sort/tsconfig' | 'sxzz/sort/pnpm-workspace' | 'sxzz/astro/base/plugin' | 'sxzz/astro/base' | 'sxzz/astro/base/javascript' | 'sxzz/astro/base/typescript' | 'sxzz/astro/recommended' | 'sxzz/vue/typescript > typescript-eslint/base' | 'sxzz/vue/typescript > typescript-eslint/eslint-recommended' | 'sxzz/vue/typescript > typescript-eslint/recommended' | 'sxzz/vue/typescript' | 'sxzz/vue' | 'sxzz/unocss' | 'sxzz/prettier' | 'sxzz/command' | 'sxzz/pnpm/package-json' | 'sxzz/pnpm/pnpm-workspace-yaml' | 'sxzz/baseline' | 'sxzz/special/cli' | 'sxzz/special/tests' | 'sxzz/special/allow-default-export' | 'sxzz/special/github' | 'sxzz/special/components'
+export type ConfigNames = 'sxzz/global-ignores' | 'sxzz/gitignore' | 'sxzz/js/recommended' | 'sxzz/js' | 'sxzz/comments/recommended' | 'sxzz/comments' | 'sxzz/imports' | 'sxzz/unicorn/unopinionated' | 'sxzz/unicorn' | 'sxzz/node' | 'sxzz/jsdoc' | 'sxzz/regexp' | 'sxzz/de-morgan' | 'sxzz/e18e' | 'sxzz/typescript > typescript-eslint/base' | 'sxzz/typescript > typescript-eslint/eslint-recommended' | 'sxzz/typescript > typescript-eslint/recommended' | 'sxzz/typescript' | 'sxzz/typescript/dts-rules' | 'sxzz/typescript/cjs-rules' | 'sxzz/sort/imports' | 'sxzz/markdown/recommended/plugin' | 'sxzz/markdown/recommended/processor' | 'sxzz/markdown/recommended/code-blocks' | 'sxzz/markdown-rules' | 'sxzz/yaml/standard' | 'sxzz/yaml/standard' | 'sxzz/yaml/standard' | 'sxzz/yaml/standard' | 'sxzz/yaml' | 'sxzz/jsonc/recommended' | 'sxzz/jsonc/recommended' | 'sxzz/jsonc/recommended' | 'sxzz/jsonc' | 'sxzz/sort/package.json' | 'sxzz/sort/tsconfig' | 'sxzz/sort/pnpm-workspace' | 'sxzz/astro/base/plugin' | 'sxzz/astro/base' | 'sxzz/astro/base/javascript' | 'sxzz/astro/base/typescript' | 'sxzz/astro/recommended' | 'sxzz/vue/typescript > typescript-eslint/base' | 'sxzz/vue/typescript > typescript-eslint/eslint-recommended' | 'sxzz/vue/typescript > typescript-eslint/recommended' | 'sxzz/vue/typescript' | 'sxzz/vue' | 'sxzz/unocss' | 'sxzz/prettier' | 'sxzz/command' | 'sxzz/pnpm/package-json' | 'sxzz/pnpm/pnpm-workspace-yaml' | 'sxzz/baseline' | 'sxzz/special/cli' | 'sxzz/special/tests' | 'sxzz/special/allow-default-export' | 'sxzz/special/github' | 'sxzz/special/components' | 'sxzz/oxfmt'

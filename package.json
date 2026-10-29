@@ -51,13 +51,17 @@
   "peerDependencies": {
     "@unocss/eslint-plugin": ">=65.0.0",
     "eslint": "^9.5.0 || ^10.0.0",
-    "eslint-plugin-astro": "^1.5.0 || ^2.0.0 || ^3.0.0"
+    "eslint-plugin-astro": "^1.5.0 || ^2.0.0 || ^3.0.0",
+    "eslint-plugin-oxfmt": ">=0.30.0"
   },
   "peerDependenciesMeta": {
     "@unocss/eslint-plugin": {
       "optional": true
     },
     "eslint-plugin-astro": {
+      "optional": true
+    },
+    "eslint-plugin-oxfmt": {
       "optional": true
     }
   },
@@ -100,7 +104,9 @@
     "bumpp": "catalog:dev",
     "eslint": "catalog:",
     "eslint-plugin-astro": "catalog:plugins",
+    "eslint-plugin-oxfmt": "catalog:plugins",
     "eslint-typegen": "catalog:dev",
+    "oxfmt": "catalog:plugins",
     "prettier": "catalog:dev",
     "rolldown-plugin-require-cjs": "catalog:dev",
     "tsdown": "catalog:dev",

@@ -19,6 +19,7 @@ export const hasVue = (): boolean =>
   isPackageExists('vitepress') ||
   isPackageExists('@slidev/cli')
 export const hasAstro = (): boolean => isPackageExists('astro')
+export const hasOxfmt = (): boolean => isPackageExists('oxfmt')
 export const hasUnocss = (): boolean =>
   isPackageExists('unocss') ||
   isPackageExists('@unocss/webpack') ||

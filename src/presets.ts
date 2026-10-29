@@ -17,6 +17,7 @@ import {
   jsonc,
   markdown,
   node,
+  oxfmt,
   pnpm,
   prettier,
   regexp,
@@ -32,7 +33,13 @@ import {
   yml,
   type BaselineOptions,
 } from './configs/index.ts'
-import { hasAstro, hasPnpmWorkspace, hasUnocss, hasVue } from './env.ts'
+import {
+  hasAstro,
+  hasOxfmt,
+  hasPnpmWorkspace,
+  hasUnocss,
+  hasVue,
+} from './env.ts'
 import type { ConfigNames } from './typegen.ts'
 import type { Config } from './types.ts'
 import type { Linter } from 'eslint'
@@ -101,9 +108,14 @@ export interface Options {
   command?: boolean
   /** markdown support. @default true */
   markdown?: boolean
+  /**
+   * Oxfmt support, replaces Prettier by default. Auto-enable if `oxfmt` is detected.
+   * Requires `eslint-plugin-oxfmt`.
+   */
+  oxfmt?: boolean
   /** pnpm support. Auto-enable if `pnpm-workspace.yaml` is found. */
   pnpm?: boolean
-  /** Prettier support. @default true */
+  /** Prettier support. @default true, or false if `oxfmt` is enabled */
   prettier?: boolean
   /** UnoCSS support. Auto-enable if detected. */
   unocss?: boolean
@@ -123,8 +135,9 @@ export function sxzz(
     baseline: enableBaseline = true,
     command: enableCommand = true,
     markdown: enableMarkdown = true,
+    oxfmt: enableOxfmt = hasOxfmt(),
     pnpm: enablePnpm = hasPnpmWorkspace(),
-    prettier: enablePrettier = true,
+    prettier: enablePrettier = !enableOxfmt,
     unocss: enableUnocss = hasUnocss(),
     vue: enableVue = hasVue(),
   } = options
@@ -149,6 +162,9 @@ export function sxzz(
   }
   if (enablePrettier) {
     configs.push(prettier())
+  }
+  if (enableOxfmt) {
+    configs.push(oxfmt())
   }
   if (enableCommand) {
     configs.push(command())

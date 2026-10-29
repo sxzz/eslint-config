@@ -28,10 +28,11 @@ Require Node.js >= 20.0.0, and ESLint >= 9.5.0.
 
 ### Optional Dependencies
 
-| Feature | Optional Dependency     |
-| ------- | ----------------------- |
-| Astro   | `eslint-plugin-astro`   |
-| UnoCSS  | `@unocss/eslint-plugin` |
+| Feature | Optional Dependency            |
+| ------- | ------------------------------ |
+| Astro   | `eslint-plugin-astro`          |
+| UnoCSS  | `@unocss/eslint-plugin`        |
+| Oxfmt   | `eslint-plugin-oxfmt`, `oxfmt` |
 
 ## Usage
 
@@ -41,6 +42,7 @@ export default sxzz(
   // Features: it'll detect installed dependency and enable necessary features automatically
   {
     prettier: true,
+    oxfmt: false, // auto detection, format with Oxfmt instead of Prettier
     markdown: true,
     vue: true, // auto detection
     astro: false, // auto detection
