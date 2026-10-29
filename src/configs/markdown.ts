@@ -24,6 +24,8 @@ export const markdown = (): Config[] => [
 
       'baseline-js/use-baseline': 'off',
 
+      'e18e/prefer-static-regex': 'off',
+
       'no-alert': 'off',
       'no-console': 'off',
       'no-restricted-imports': 'off',
