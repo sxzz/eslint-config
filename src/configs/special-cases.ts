@@ -14,6 +14,7 @@ export const specialCases = (): Config[] => [
     name: 'sxzz/special/cli',
     rules: {
       'baseline-js/use-baseline': 'off',
+      'e18e/prefer-static-regex': 'off',
       'no-console': 'off',
     },
   },
@@ -22,6 +23,7 @@ export const specialCases = (): Config[] => [
     name: 'sxzz/special/tests',
     rules: {
       'baseline-js/use-baseline': 'off',
+      'e18e/prefer-static-regex': 'off',
       'no-unused-expressions': 'off',
       'unicorn/consistent-function-scoping': 'off',
     },
