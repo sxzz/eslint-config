@@ -70,6 +70,10 @@ export const sortPackageJson = (): Config[] => [
           pathPattern: '^$',
         },
         {
+          order: ['cpu', 'os', 'libc', 'runtime', 'packageManager'],
+          pathPattern: '^devEngines$',
+        },
+        {
           order: { type: 'asc' },
           pathPattern: '^(?:dev|peer|optional|bundled)?[Dd]ependencies(Meta)?$',
         },
@@ -80,6 +84,31 @@ export const sortPackageJson = (): Config[] => [
         {
           order: { type: 'asc' },
           pathPattern: String.raw`^(?:resolutions|overrides|pnpm\.overrides)$`,
+        },
+        {
+          order: { type: 'asc' },
+          pathPattern: String.raw`^workspaces\.catalog$`,
+        },
+        {
+          order: { type: 'asc' },
+          pathPattern: String.raw`^workspaces\.catalogs(?:\.[^.]+|\[".+"\])$`,
+        },
+        {
+          // client hooks only, in git's execution order
+          order: [
+            'pre-commit',
+            'prepare-commit-msg',
+            'commit-msg',
+            'post-commit',
+            'pre-rebase',
+            'post-rewrite',
+            'post-checkout',
+            'post-merge',
+            'pre-push',
+            'pre-auto-gc',
+          ],
+          // jsonc renders non-identifier keys in bracket notation
+          pathPattern: String.raw`^(?:gitHooks|husky|\["simple-git-hooks"\])$`,
         },
       ],
     },
@@ -223,10 +252,198 @@ export const sortPnpmWorkspace = (): Config[] => [
         'error',
         {
           order: [
-            'packages',
-            'overrides',
-            'patchedDependencies',
+            // Workspace
+            'dedupeInjectedDeps',
+            'disallowWorkspaceCycles',
+            'failIfNoMatch',
+            'ignoreWorkspaceCycles',
+            'ignoreWorkspaceRootCheck',
+            'includeWorkspaceRoot',
+            'injectWorkspacePackages',
+            'legacyDirFiltering',
+            'linkWorkspacePackages',
+            'preferWorkspacePackages',
+            'saveWorkspaceProtocol',
+            'sharedWorkspaceLockfile',
+            'syncInjectedDepsAfterScripts',
 
+            // Catalogs
+            'catalogMode',
+            'catalogPrune',
+            'cleanupUnusedCatalogs',
+
+            // Dependency resolution
+            'allowedDeprecatedVersions',
+            'blockExoticSubdeps',
+            'ignoredOptionalDependencies',
+            'minimumReleaseAge',
+            'minimumReleaseAgeIgnoreMissingTime',
+            'minimumReleaseAgeStrict',
+            'minimumReleaseAgeExcludePrune',
+            'minimumReleaseAgeExclude',
+            'registrySupportsTimeField',
+            'resolutionMode',
+            'supportedArchitectures',
+            'trustLockfile',
+            'trustPolicy',
+            'trustPolicyIgnoreAfter',
+            'trustPolicyExcludePrune',
+            'trustPolicyExclude',
+            'update',
+
+            // Peer dependencies
+            'autoInstallPeers',
+            'dedupePeerDependents',
+            'dedupePeers',
+            'peerDependencyRules',
+            'resolvePeersFromWorkspaceRoot',
+            'strictPeerDependencies',
+
+            // Registry and network
+            'fetchMinSpeedKiBps',
+            'fetchRetries',
+            'fetchRetryFactor',
+            'fetchRetryMaxtimeout',
+            'fetchRetryMintimeout',
+            'fetchTimeout',
+            'fetchWarnTimeoutMs',
+            'gitShallowHosts',
+            'httpProxy',
+            'httpsProxy',
+            'localAddress',
+            'maxsockets',
+            'namedRegistries',
+            'networkConcurrency',
+            'noProxy',
+            'registries',
+            'registry',
+            'strictSsl',
+
+            // node_modules
+            'dlxCacheMaxAge',
+            'enableGlobalVirtualStore',
+            'enableModulesDir',
+            'extendNodePath',
+            'modulesCacheMaxAge',
+            'modulesDir',
+            'nodeExperimentalPackageMap',
+            'nodeLinker',
+            'nodePackageMapType',
+            'packageImportMethod',
+            'preferSymlinkedExecutables',
+            'symlink',
+            'virtualStoreDir',
+            'virtualStoreDirMaxLength',
+            'virtualStoreOnly',
+            'virtualStoreType',
+
+            // Hoisting
+            'hoist',
+            'hoistingLimits',
+            'hoistPattern',
+            'hoistWorkspacePackages',
+            'publicHoistPattern',
+            'shamefullyHoist',
+
+            // Store
+            'frozenStore',
+            'storeDir',
+            'strictStorePkgContentCheck',
+            'useRunningStoreServer',
+            'verifyStoreIntegrity',
+
+            // Lockfile
+            'gitBranchLockfile',
+            'lockfile',
+            'lockfileIncludeTarballUrl',
+            'mergeGitBranchLockfilesBranchPattern',
+            'peersSuffixMaxLength',
+            'preferFrozenLockfile',
+
+            // Scripts and builds
+            'childConcurrency',
+            'dangerouslyAllowAllBuilds',
+            'enablePrePostScripts',
+            'ignoreDepScripts',
+            'ignoreScripts',
+            'nodeOptions',
+            'requiredScripts',
+            'scriptShell',
+            'shellEmulator',
+            'sideEffectsCache',
+            'sideEffectsCacheReadonly',
+            'strictDepBuilds',
+            'unsafePerm',
+            'verifyDepsBeforeRun',
+
+            // Node.js and package manager versions
+            'managePackageManagerVersions',
+            'nodeDownloadMirrors',
+            'nodeVersion',
+            'packageManagerStrict',
+            'packageManagerStrictVersion',
+            'pmOnFail',
+            'runtimeOnFail',
+
+            // CLI and output
+            'ci',
+            'color',
+            'engineStrict',
+            'loglevel',
+            'npmPath',
+            'recursiveInstall',
+            'updateNotifier',
+            'useBetaCli',
+            'useStderr',
+
+            // Directories and pnpmfile
+            'cacheDir',
+            'globalBinDir',
+            'globalDir',
+            'globalPnpmfile',
+            'globalShims',
+            'ignorePnpmfile',
+            'npmrcAuthFile',
+            'pnpmfile',
+            'stateDir',
+
+            // Audit and versioning
+            'audit',
+            'versioning',
+
+            // Misc
+            'allowNonAppliedPatches',
+            'dedupeDirectDeps',
+            'deployAllFiles',
+            'ignoreCompatibilityDb',
+            'initAuthorEmail',
+            'initAuthorName',
+            'initAuthorUrl',
+            'initLicense',
+            'initVersion',
+            'optimisticRepeatInstall',
+            'saveExact',
+            'savePrefix',
+            'tag',
+
+            // Workspace layout and dependency declarations, ordered by how
+            // a `pnpm-workspace.yaml` usually reads top to bottom
+            'packages',
+            'packageConfigs',
+            'overrides',
+            'packageExtensions',
+            'patchedDependencies',
+            'configDependencies',
+
+            // Build approvals
+            'allowBuilds',
+            // Superseded by `allowBuilds` in pnpm v11
+            'ignoredBuiltDependencies',
+            'neverBuiltDependencies',
+            'onlyBuiltDependencies',
+            'onlyBuiltDependenciesFile',
+
+            // Catalogs, usually the largest blocks
             'defines',
             'catalog',
             'catalogs',

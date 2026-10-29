@@ -1,3 +1,5 @@
+import { existsSync, readFileSync } from 'node:fs'
+import path from 'node:path'
 import process from 'node:process'
 
 const cwd = process.cwd()
@@ -23,22 +25,24 @@ export const hasUnocss = (): boolean =>
   isPackageExists('@unocss/nuxt') ||
   isPackageExists('@unocss/eslint-plugin')
 
-export function isInEditorEnv(): boolean {
-  if (process.env.CI) return false
-  if (isInGitHooksOrLintStaged()) return false
-  return !!(
-    process.env.VSCODE_PID ||
-    process.env.VSCODE_CWD ||
-    process.env.JETBRAINS_IDE ||
-    process.env.VIM ||
-    process.env.NVIM
-  )
+const RE_CATALOGS = /^catalogs?:/m
+
+export function findPnpmWorkspace(): string | undefined {
+  let dir = cwd
+  while (true) {
+    const file = path.join(dir, 'pnpm-workspace.yaml')
+    if (existsSync(file)) return file
+    const parent = path.dirname(dir)
+    if (parent === dir) return
+    dir = parent
+  }
 }
 
-export function isInGitHooksOrLintStaged(): boolean {
-  return !!(
-    process.env.GIT_PARAMS ||
-    process.env.VSCODE_GIT_COMMAND ||
-    process.env.npm_lifecycle_script?.startsWith('lint-staged')
-  )
+export const hasPnpmWorkspace = (): boolean => !!findPnpmWorkspace()
+
+export function hasPnpmCatalogs(): boolean {
+  const file = findPnpmWorkspace()
+  if (!file) return false
+  const content = readFileSync(file, 'utf8')
+  return RE_CATALOGS.test(content)
 }

@@ -15,6 +15,7 @@ import pluginJsdoc from 'eslint-plugin-jsdoc'
 import pluginIgnore from 'eslint-config-flat-gitignore'
 import pluginDeMorgan from 'eslint-plugin-de-morgan'
 import pluginPnpm from 'eslint-plugin-pnpm'
+import pluginE18e from '@e18e/eslint-plugin'
 
 import pluginImport from 'eslint-plugin-importer'
 import pluginJsonc from 'eslint-plugin-jsonc'
@@ -34,6 +35,7 @@ export {
   parserVue,
   pluginAntfu,
   pluginDeMorgan,
+  pluginE18e,
   pluginIgnore,
   pluginImport,
   pluginJsdoc,
