@@ -6,7 +6,7 @@ This package publishes the `@sxzz/eslint-config` flat ESLint configuration. Sour
 
 ## Build, Test, and Development Commands
 
-Use pnpm (the repository pins pnpm 12.5.0).
+Use pnpm; the version is pinned by `packageManager` in `package.json`.
 
 - `pnpm install` installs dependencies.
 - `pnpm build` generates types and bundles `dist/` with tsdown.

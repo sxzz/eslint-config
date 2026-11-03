@@ -17767,7 +17767,7 @@ type UnicornNameReplacements = []|[{
   replacements?: _UnicornNameReplacements_NameReplacements
   
   extendDefaultAllowList?: boolean
-  allowList?: _UnicornNameReplacements_BooleanObject
+  allowList?: _UnicornNameReplacements_BooleanObject1
   
   ignore?: (string | {
     [k: string]: unknown | undefined
@@ -17778,6 +17778,9 @@ interface _UnicornNameReplacements_NameReplacements {
   [k: string]: _UnicornNameReplacementsReplacements | undefined
 }
 interface _UnicornNameReplacements_BooleanObject {
+  [k: string]: boolean | undefined
+}
+interface _UnicornNameReplacements_BooleanObject1 {
   [k: string]: boolean | undefined
 }
 // ----- unicorn/no-array-callback-reference -----

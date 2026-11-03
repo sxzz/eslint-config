@@ -13,9 +13,9 @@ allowBuilds:
 
 catalog:
   '@eslint/js': ^10.0.1
-  eslint: ^10.13.0
+  eslint: ^10.14.0
   eslint-flat-config-utils: ^3.2.0
-  globals: ^17.13.0
+  globals: ^17.14.0
   tsdown-preset-sxzz: ^0.7.1
 
 catalogs:
@@ -25,10 +25,10 @@ catalogs:
     '@types/node': ^26.6.6
     '@typescript/native-preview': npm:typescript@7.0.2
     bumpp: ^12.3.0
-    eslint-typegen: ^2.3.1
+    eslint-typegen: ^2.3.2
     prettier: ^3.9.10
     rolldown-plugin-require-cjs: ^0.4.2
-    tsdown: ^0.23.3
+    tsdown: ^0.23.4
     typescript: ^6.0.3
   parsers:
     jsonc-eslint-parser: ^3.3.0
@@ -42,7 +42,7 @@ catalogs:
     eslint-config-prettier: ^10.1.8
     eslint-plugin-antfu: ^3.3.1
     eslint-plugin-astro: ^3.2.1
-    eslint-plugin-baseline-js: ^0.7.6
+    eslint-plugin-baseline-js: ^0.7.7
     eslint-plugin-command: ^4.0.0
     eslint-plugin-de-morgan: ^2.3.0
     eslint-plugin-importer: ^0.4.1
@@ -53,11 +53,11 @@ catalogs:
     eslint-plugin-perfectionist: ^5.13.0
     eslint-plugin-pnpm: ^1.9.1
     eslint-plugin-prettier: ^5.5.7
-    eslint-plugin-regexp: ^3.3.2
+    eslint-plugin-regexp: ^3.3.3
     eslint-plugin-sxzz: ^0.5.1
     eslint-plugin-unicorn: ^76.0.0
     eslint-plugin-unused-imports: ^4.4.1
     eslint-plugin-vuekit: ^11.0.0-beta.1
     eslint-plugin-yml: ^3.9.0
-    oxfmt: ^0.75.0
+    oxfmt: ^0.76.0
     typescript-eslint: ^8.72.1
